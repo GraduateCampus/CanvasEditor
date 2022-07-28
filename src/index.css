@@ -1,0 +1,422 @@
+body {
+  background-color: #3c3c3b;
+}
+
+/* Teilen für Editor und ViewBox */
+
+.split {
+  width: 60%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.left {
+  left: 0;
+  max-width: 30%;
+  max-height: 80%;
+  border: 1px solid #bea602;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 100px 30px 30px 30px;
+}
+.right{
+  background-color: white;
+  right: 0;
+  max-width: 60%;
+  max-height: 80%;
+  height: 100%;
+  overflow: scroll;
+  border: 1px solid #bea602;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 100px 30px 30px 30px;
+}
+
+/* Headerstyling */
+.header {
+  position:relative;
+  overflow: hidden;
+  border-bottom: 1px solid white;
+}
+.header h1 {
+  color: white;
+  float:left;
+  margin-left: 30px;
+}
+.header-center{
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.header ul {
+  list-style-type: none;
+  margin:0;
+  padding: 0;
+}
+.header li {
+  display: inline-block;
+  padding: 10px 10px;
+  margin: 10px 10px;
+  text-decoration: none;
+  text-align: center;
+  background-color: #bea602;
+}
+.exportbtn {
+  padding: 10px 10px;
+  margin: 20px 10px;
+  float: right;
+  border-radius: 5px;
+  border-color: #bea602;
+  background-color: #bea602;
+}
+
+/* Editornavbarstyling */
+
+.navbar-ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar-li {
+  display: block;
+  color: white;
+  margin: 10px 10px;
+  padding: 10px 10px;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #bea602;
+}
+.navbar-li:hover {
+  background-color: #111111;
+}
+.container {
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+}
+label {
+  display: inline-block;
+  margin: 5%;
+}
+
+/*styling für WelcomeBox*/
+
+.vWelcomeBox {
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(to right, #f2edb4, #d9c65a);
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 40px 40px rgba(0,0,0,0.15);
+}
+.headerimage {
+  float: right;
+  width: auto;
+  height: auto;
+  max-height: 300px;
+}
+.headline {
+  position: absolute;
+  height: fit-content;
+  margin: auto;
+  padding-bottom: 50px;
+  top: 0;
+  bottom: 10%;
+  left: 5%;
+  right: 0;
+  color: #808080;
+  font-size: xx-large;
+  font-family: Oswald Light;
+}
+.kursname {
+  position: absolute;
+  height: fit-content;
+  margin: auto;
+  padding-top: 20px;
+  top: 10%;
+  bottom: 0;
+  left: 5%;
+  right: 0;
+  color: #8c7c02;
+  font-size: xxx-large;
+  font-family: Oswald;
+}
+.deletebutton {
+  margin-left: 20px;
+}
+
+/* Styling für Kurseinstieg */
+
+.vKurseinstieg {
+  position: relative;
+  overflow: hidden;
+  background-color: #e5e5e5;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 40px 40px rgba(0,0,0,0.15);
+}
+.rakete {
+  object-fit: cover;
+  width: auto;
+  height: auto;
+  max-height: 500px;
+}
+.kurseinstiegtitle {
+  position: absolute;
+  height: fit-content;
+  margin:auto;
+  top:0;
+  bottom:50%;
+  left:50%;
+  right:0;
+  color: #bea602;
+  font-size: xx-large;
+  font-family: Oswald;
+}
+.kursbeschreibung {
+  position: absolute;
+  margin:auto;
+  top:30%;
+  bottom:0;
+  left:50%;
+  right:0;
+  font-size: large;
+  font-family: Open Sans, sans-serif;
+  color: #000000;
+}
+.kursbeschreibungtext {
+  height: fit-content;
+}
+.modulbutton {
+  position: absolute;
+  height: fit-content;
+  margin:auto;
+  padding: 5px;
+  width: 30%;
+  top:85%;
+  left:60%;
+  right: 0;
+  border-radius: 5px;
+  color: white;
+  background-color: #d9c65a;
+  font-family: Oswald;
+}
+
+/* Styling für Modulplan */
+
+.vModulplan {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0px 40px 40px rgba(0,0,0,0.15);
+  border-radius: 20px;
+}
+.modulplanimg {
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Styling für Editor OVerview */
+
+.overview-ul {
+  list-style-type: none;
+  margin:0;
+  padding: 0;
+  position: relative;
+  border: 1px solid #111111;
+  width: 100%;
+}
+.overview-li {
+  padding: 5px;
+  border: 1px solid #bea602;
+}
+.dropdown-form {
+  display: grid;
+  padding: 10px;
+  margin: 10px;
+  color:white;
+  background-color: rgba(0,0,0,0.1);
+}
+.standardbtn{
+  border-radius: 5px;
+  border-color: #bea602;
+  background-color: #bea602;
+  min-width: 50%;
+}
+.submitbtn{
+  margin: 10px;
+  text-align: center;
+  border-radius: 5px;
+  border-color: #bea602;
+  background-color: #bea602;
+  width:50%;
+}
+
+/* Styling für ViewOverview */
+.vOverViewSeperate {
+  padding: 20px;
+  column-count: 2;
+}
+.vOverView {
+  position: relative;
+  overflow: hidden;
+  background-color: #f2f2f2;
+  border-color: #8c7c02;
+  min-height: 300px;
+  padding-top: 50px;
+  padding-bottom:0px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  box-shadow: 0px 40px 40px rgba(0,0,0,0.15);
+}
+.kapitel {
+  position: absolute;
+  margin: auto;
+  z-index: 2;
+  width: 100px;
+  height: 100px;
+  top: 0;
+  right: 0;
+  bottom: 30%;
+  left: 0;
+  background-color: #8c7c02;
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+}
+.ovgoldcolor {
+  position: absolute;
+  z-index: 1;
+  background-color: #d9c65a;
+  width: 100%;
+  height: 30%;
+  top: 0;
+  padding:10px;
+  font-family: Oswald;
+  font-size: xx-large;
+  color: #8c7c02;
+  text-align: left;
+}
+.ovTitle {
+  position: absolute;
+  height: fit-content;
+  margin:0;
+  top:60%;
+  right:0;
+  left:0;
+  bottom:0;
+  text-align: center;
+  font-size: xx-large;
+  font-family: Oswald;
+  color: #4d4d4d;
+}
+.ovChapter {
+  position: absolute;
+  height: fit-content;
+  margin:0;
+  top:80%;
+  right:0;
+  left:10%;
+  bottom:0;
+  font-size: small;
+  font-family: Open Sans, sans-serif;
+  color: #4d4d4d;
+}
+.ovDuration {
+  position: absolute;
+  height: fit-content;
+  margin:0;
+  top:80%;
+  right:0;
+  left:80%;
+  bottom:0;
+  font-size: small;
+  font-family: Open Sans, sans-serif;
+  color: #4d4d4d;
+}
+
+/* Styling für Neu bei Canvas */
+
+.vCanvasNeu {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 15%;
+  background-image: linear-gradient(to bottom right, #e5d8a7, #d9c65a );
+  box-shadow: 0px 40px 40px rgba(0,0,0,0.15);
+  border-radius: 20px;
+}
+.canvasneutitle {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-size: x-large;
+  font-family: Oswald;
+  color: #ffffff;
+}
+.moreinfos {
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  font-size: medium;
+  font-family: Oswald;
+  color: #ffffff;
+}
+.canvasbtn {
+  position: absolute;
+  width: 20%;
+  height: 30%;
+  padding: 5px;
+  top: 40%;
+  left: 70%;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  color: #c7a315;
+  font-family: Oswald;
+  border-radius: 5px;
+}
+.scrollbtn {
+  position: fixed;
+  left: 85%;
+  bottom: 30px;
+  height: 20px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* VIEWCONTACTS */
+
+.vContacts {
+  border-radius: 5px;
+  background: #6a6969;
+  width: 40%;
+  height: 60%;
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
+}
+.box {
+  margin: auto;
+  padding: 10px;
+  width: 50%;
+  background: aliceblue;
+  border-radius: 50%;
+  max-height: 20px;
+  max-width: 20px;
+  text-align: center;
+}
+.idkyet h1 {
+  color: #bea602;
+  font-family: Oswald;
+}
+.vContacts {
+  color: white;
+}
