@@ -37,10 +37,14 @@ export const CanvasneuState = atom ( {
 export const ContactState = atom ( {
     key: 'Contacts',
     default: {
-        Bild: "",
-        Title: [],
-        Name: [],
-        Beschreibung: [],
-        eMail: [],
+        items: [
+            {
+                bild:"",
+                rolle:"",
+                name:"",
+                beschreibung:"",
+                email:"",
+            }
+        ]
     },
 });

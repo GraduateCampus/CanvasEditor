@@ -26,15 +26,12 @@ function Overview() {
     const itemChanged = ({ target: { value, name } }, index) => {
         let items = [...courseNavigationstate.items];
         let item = { ...items[index] };
-        let iconstring = "icon";
         item[name] = value;
         items[index] = item;
         setCourseNavigation((prev) => ({
             ...prev,
             items: items,
         }));
-        console.log(value);
-        console.log(name);
     };
     const deleteItem = (event, index) => {
         let items = [...courseNavigationstate.items];
