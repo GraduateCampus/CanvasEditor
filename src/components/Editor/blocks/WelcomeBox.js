@@ -1,43 +1,58 @@
 import {useRecoilState} from "recoil";
-import {kursnameState, welcomeHeaderState} from "../../services/atoms"
+import {welcomeBoxCourse, welcomeBoxImage, welcomeBoxText} from "../../services/atoms"
 import {useState} from "react";
 
 function WelcomeBox () {
-    const [welcomeText, setWelcomeText] = useState("");
-    const [kursName, setKursname] = useRecoilState(kursnameState);
-    const [header, setTextState] = useRecoilState(welcomeHeaderState);
+    const [stateImage, setStateImage] = useState("");
+    const [stateText, setStateText] = useState("");
+    const [stateCourse, setStateCourse] = useState("");
+    const [welcomeImage, setWelcomeImage] = useRecoilState(welcomeBoxImage);
+    const [welcomeText, setWelcomeText] = useRecoilState(welcomeBoxText);
+    const [welcomeCourse, setWelcomeCourse] = useRecoilState(welcomeBoxCourse);
 
-    const addText = (e) => {
+    const addWelcomeImage = (e) => {
         e.preventDefault()
-        var wText = document.getElementById("1");
-        if ( wText && wText.value) {
-            setTextState([...header, welcomeText]);
-            setWelcomeText("");
-        }
+        setWelcomeImage(stateImage);
+        setStateImage("");
+    }
+    const addWelcomeText = (e) => {
+        e.preventDefault()
+        setWelcomeText(stateText);
+        setStateText("");
+    }
+    const addWelcomeCourse = (e) => {
+        e.preventDefault()
+        setWelcomeCourse(stateCourse);
+        setStateCourse("");
     }
     return (
         <div className="container">
             <form name="welcomeBox">
                 <div className="field">
-                    <label>Headline:</label>
+                    <div className="editorTextColor">Hintergrundbild:</div>
                     <input
                         type="text"
-                        id="1"
-                        value={welcomeText}
+                        value={stateImage}
+                        placeholder="Hintergrundbild"
+                        onChange={(e) => setStateImage(e.target.value)}
+                    />
+                    <button onClick={addWelcomeImage}>Submit</button>
+                    <div className="editorTextColor">Headline:</div>
+                    <input
+                        type="text"
+                        value={stateText}
                         placeholder="Willkommen"
-                        onChange={(e) => setWelcomeText(e.target.value)}
+                        onChange={(e) => setStateText(e.target.value)}
                     />
-                    <button onClick={addText}>
-                        Submit
-                    </button>
-                    <label>Kursname:</label>
+                    <button onClick={addWelcomeText}>Submit</button>
+                    <div className="editorTextColor">Kursname:</div>
                     <input
                         type="text"
-                        id="2"
-                        value={kursName}
+                        value={stateCourse}
                         placeholder="Kursname"
-                        onChange={(e) => setKursname(e.target.value)}
+                        onChange={(e) => setStateCourse(e.target.value)}
                     />
+                    <button onClick={addWelcomeCourse}>Submit</button>
                 </div>
             </form>
         </div>

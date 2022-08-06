@@ -1,51 +1,26 @@
 import Editor from "./Editor/Editor";
-import ViewWelcomeBox from "./View/ViewWelcomeBox";
-import ViewKurseinstieg from "./View/ViewKurseinstieg";
+import ViewWelcomeBox from "./View/blocks/ViewWelcomeBox";
+import ViewKurseinstieg from "./View/blocks/ViewKurseinstieg";
 import React, {useState} from "react";
-import ViewCanvasNeu from "./View/ViewCanvasNeu";
-import ViewOverView from "./View/ViewOverView";
-import ViewContacts from "./View/ViewContacts";
-import ViewModulplan from "./View/ViewModulplan";
+import ViewCanvasNeu from "./View/blocks/ViewCanvasNeu";
+import ViewOverView from "./View/blocks/ViewOverView";
+import ViewContacts from "./View/blocks/ViewContacts";
+import ViewModulplan from "./View/blocks/ViewModulplan";
 
 function Layout1() {
-    const [ovDuration, setOvDuration] = useState('');
-    const [ovTitle, setOvTitle] =useState('');
-    const [ovChapter, setOvChapter] =useState('');
-    const [showCanvas, setShowCanvas] =useState(false);
     return (
         <div className="App">
             <div className="split">
                 <div className="split left">
-                    <Editor
-                        showCanvasNeu={showCanvas}
-                        setShowCanvasNeu={setShowCanvas}
-                        ovDuration={ovDuration}
-                        setOvDuration={setOvDuration}
-                        ovTitle={ovTitle}
-                        setOvTitle={setOvTitle}
-                        ovChapter={ovChapter}
-                        setOvChapter={setOvChapter}
-                    />
+                    <Editor/>
                 </div>
                 <div className="split right">
                     <ViewWelcomeBox />
                     <ViewKurseinstieg />
                     <ViewModulplan />
-                    <ViewOverView
-                        ovDuration={ovDuration}
-                        setOvDuration={setOvDuration}
-                        ovTitle={ovTitle}
-                        setOvTitle={setOvTitle}
-                        ovChapter={ovChapter}
-                        setOvChapter={setOvChapter}
-                    />
-                    <ViewCanvasNeu
-                        showCanvas={showCanvas}
-                        setShowCanvas={setShowCanvas}
-                    />
-                    <ViewContacts
-
-                    />
+                    <ViewOverView />
+                    <ViewCanvasNeu/>
+                    <ViewContacts/>
                 </div>
             </div>
         </div>

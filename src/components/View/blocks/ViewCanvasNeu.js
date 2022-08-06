@@ -1,4 +1,4 @@
-function ViewCanvasNeu ({showCanvas, setShowCanvas}) {
+function ViewCanvasNeu () {
 
     return (
         <div className="vCanvasNeu">

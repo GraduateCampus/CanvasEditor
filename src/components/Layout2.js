@@ -1,6 +1,6 @@
 import Editor from "./Editor/Editor";
-import ViewWelcomeBox from "./View/ViewWelcomeBox";
-import ViewKurseinstieg from "./View/ViewKurseinstieg";
+import ViewWelcomeBox from "./View/blocks/ViewWelcomeBox";
+import ViewKurseinstieg from "./View/blocks/ViewKurseinstieg";
 import React, {useState} from "react";
 
 function Layout2() {
@@ -12,20 +12,11 @@ function Layout2() {
     return (
         <div className="split">
             <div className="split left">
-                <Editor
-                    welcomeText={welcomeText}
-                    setWelcomeText={setWelcomeText}
-                    kursName={kursName}
-                    setKursName={setKursName}
-                />
+                <Editor/>
             </div>
             <div className="split right">
-                <ViewWelcomeBox
-                    welcomeText={welcomeText}
-                    setWelcomeText={setWelcomeText}
-                    kursName={kursName}
-                    setKursName={setKursName}
-                />
+                <ViewWelcomeBox/>
+                <h1>TEST</h1>
             </div>
         </div>
     );

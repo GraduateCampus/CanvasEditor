@@ -1,13 +1,19 @@
 import {atom} from "recoil";
-
-export const welcomeHeaderState = atom ( {
-    key: 'welcomeHeaderState',
-    default: [],
+export const modalState = atom ( {
+    key: 'modalState',
+    default: false,
+})
+export const welcomeBoxImage = atom ( {
+    key: 'welcomeBoxImage',
+    default: "https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Headerbild_ObjProg.png?raw=true",
+})
+export const welcomeBoxText = atom ( {
+    key: 'welcomeBoxText',
+    default: "",
 });
-export const kursnameState = atom ( {
-    key: 'kursnameState',
-    default: ""
-    ,
+export const welcomeBoxCourse = atom ( {
+    key: 'welcomeBoxCourse',
+    default: "",
 });
 export const KurseinstiegState = atom ( {
     key: 'Kurseinstieg',
@@ -29,10 +35,6 @@ export const OverviewState = atom ( {
             }
         ]
     },
-});
-export const CanvasneuState = atom ( {
-    key: 'Canvasneu',
-    default: "",
 });
 export const ContactState = atom ( {
     key: 'Contacts',

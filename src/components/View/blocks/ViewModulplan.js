@@ -1,5 +1,5 @@
 import {useRecoilValue} from "recoil";
-import {ModulplanState} from "../services/atoms";
+import {ModulplanState} from "../../services/atoms";
 
 export default function ViewModulplan() {
     const modulplan = useRecoilValue(ModulplanState);

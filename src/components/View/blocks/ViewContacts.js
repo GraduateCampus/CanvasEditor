@@ -1,5 +1,5 @@
 import {useRecoilValue} from "recoil";
-import {ContactState, OverviewState} from "../services/atoms";
+import {ContactState, OverviewState} from "../../services/atoms";
 
 function ViewContacts () {
     const contactObjects = useRecoilValue(ContactState);

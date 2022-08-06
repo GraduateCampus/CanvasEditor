@@ -1,7 +1,7 @@
-import rakete from "../images/rakete.png";
+import rakete from "../../images/rakete.png";
 import {useCallback} from "react";
 import {useRecoilValue} from "recoil";
-import {KurseinstiegState} from "../services/atoms";
+import {KurseinstiegState} from "../../services/atoms";
 
 function ViewKurseinstieg () {
     const einstiegstext = useRecoilValue(KurseinstiegState)

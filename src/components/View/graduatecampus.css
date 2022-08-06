@@ -1,0 +1,264 @@
+/* Styling for WelcomeBox */
+
+.welcomeBox {
+    position:relative;
+    overflow: hidden;
+    background-image: linear-gradient(to right, #f2edb4, #d9c65a);
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 40px 40px rgba(0,0,0,0.15);
+}
+.welcomeImage {
+    float: right;
+    width: auto;
+    height: auto;
+    max-height: 300px;
+}
+.welcomeHeadline {
+    position: absolute;
+    height: fit-content;
+    margin: auto;
+    padding-bottom: 50px;
+    top: 0;
+    bottom: 10%;
+    left: 5%;
+    right: 0;
+    color: #808080;
+    font-size: xx-large;
+    font-family: Oswald Light;
+}
+.welcomeTitle {
+    position: absolute;
+    height: fit-content;
+    margin: auto;
+    padding-top: 20px;
+    top: 10%;
+    bottom: 0;
+    left: 5%;
+    right: 0;
+    color: #8c7c02;
+    font-size: xxx-large;
+    font-family: Oswald;
+}
+
+/* Styling for Kurseinstieg */
+
+.courseEntry {
+    position: relative;
+    overflow: hidden;
+    background-color: #e5e5e5;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 40px 40px rgba(0,0,0,0.15);
+}
+.courseImage {
+    object-fit: cover;
+    width: auto;
+    height: auto;
+    max-height: 500px;
+}
+.courseHeadline {
+    position: absolute;
+    height: fit-content;
+    margin:auto;
+    top:0;
+    bottom:50%;
+    left:50%;
+    right:0;
+    color: #bea602;
+    font-size: xx-large;
+    font-family: Oswald;
+}
+.courseDescription {
+    position: absolute;
+    margin:auto;
+    top:30%;
+    bottom:0;
+    left:50%;
+    right:0;
+    font-size: large;
+    font-family: Open Sans, sans-serif;
+    color: #000000;
+}
+.courseModulbutton {
+    position: absolute;
+    height: fit-content;
+    margin:auto;
+    padding: 5px;
+    width: 30%;
+    top:85%;
+    left:60%;
+    right: 0;
+    border-radius: 5px;
+    color: white;
+    background-color: #d9c65a;
+    font-family: Oswald;
+}
+
+/* Styling for Modulplan */
+
+.modulplan {
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    margin-bottom: 20px;
+    box-shadow: 0px 40px 40px rgba(0,0,0,0.15);
+    border-radius: 20px;
+}
+.modulplanimg {
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Styling for Overview */
+
+.overViewSeperate {
+    padding: 20px;
+    column-count: 2;
+    height: auto;
+}
+.overview {
+    position: relative;
+    overflow: hidden;
+    background-color: #f2f2f2;
+    border-color: #8c7c02;
+    min-height: 300px;
+    padding-top: 50px;
+    padding-bottom:0px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    box-shadow: 0px 40px 40px rgba(0,0,0,0.15);
+}
+.overviewIcon {
+    position: absolute;
+    margin: auto;
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    right: 0;
+    bottom: 30%;
+    left: 0;
+    background-color: #8c7c02;
+    padding: 10px;
+    border-radius: 50%;
+}
+.overviewGoldbox {
+    position: absolute;
+    z-index: 1;
+    background-color: #d9c65a;
+    width: 100%;
+    height: 30%;
+    top: 0;
+    padding:10px;
+    font-family: Oswald;
+    font-size: xx-large;
+    color: #8c7c02;
+    text-align: left;
+}
+.overviewTitle {
+    position: absolute;
+    height: fit-content;
+    margin:0;
+    top:60%;
+    right:0;
+    left:0;
+    bottom:0;
+    text-align: center;
+    font-size: xx-large;
+    font-family: Oswald;
+    color: #4d4d4d;
+}
+.overviewNuggets {
+    position: absolute;
+    height: fit-content;
+    margin:0;
+    top:80%;
+    right:0;
+    left:10%;
+    bottom:0;
+    font-size: small;
+    font-family: Open Sans, sans-serif;
+    color: #4d4d4d;
+}
+.overviewDuration {
+    position: absolute;
+    height: fit-content;
+    margin:0;
+    top:80%;
+    right:0;
+    left:80%;
+    bottom:0;
+    font-size: small;
+    font-family: Open Sans, sans-serif;
+    color: #4d4d4d;
+}
+/* Styling for CanvasNew */
+
+.canvasNew {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    background-image: linear-gradient(to bottom right, #e5d8a7, #d9c65a );
+    box-shadow: 0px 40px 40px rgba(0,0,0,0.15);
+    border-radius: 20px;
+}
+.canvasNewTitle {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: x-large;
+    font-family: Oswald;
+    color: #ffffff;
+}
+.canvasNewInfos {
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    font-size: medium;
+    font-family: Oswald;
+    color: #ffffff;
+}
+.canvasNewModulbutton {
+    position: absolute;
+    width: 20%;
+    height: 30%;
+    padding: 5px;
+    top: 40%;
+    left: 70%;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    color: #c7a315;
+    font-family: Oswald;
+    border-radius: 5px;
+}
+/* Styling for Contacts */
+
+.contacts {
+    border-radius: 5px;
+    background: #6a6969;
+    width: 40%;
+    height: 60%;
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+}
+.contactsIcon {
+    margin: auto;
+    padding: 10px;
+    width: 50%;
+    background: aliceblue;
+    border-radius: 50%;
+    max-height: 20px;
+    max-width: 20px;
+    text-align: center;
+}
+.contactsRole {
+
+}

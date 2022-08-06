@@ -1,5 +1,5 @@
 import {useRecoilValue} from "recoil";
-import {OverviewState} from "../services/atoms";
+import {OverviewState} from "../../services/atoms";
 function ViewOverView () {
     const overviewObjects = useRecoilValue(OverviewState);
     function courseItem({ icon, title, nuggets, duration}, index) {
