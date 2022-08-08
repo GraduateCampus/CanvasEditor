@@ -1,36 +1,38 @@
 import {useRecoilValue} from "recoil";
-import {ContactState, OverviewState} from "../../services/atoms";
-
+import {ContactAvatar, ContactState} from "../../services/atoms";
 function ViewContacts () {
     const contactObjects = useRecoilValue(ContactState);
+    const avatar = useRecoilValue(ContactAvatar);
+
     function courseItem({ bild, rolle, name, beschreibung, email}, index) {
+        function convertEmail() {
+            window.location.href = "mailto:" + email
+        }
         return (
             <div className="vContacts">
-                <div className="box">
-                    1
-                </div>
-                <img alt="not found" className="333" width={"250px"} src={bild} />
-                <h1 className="0" type="text" >
+                <img alt={index} className="contactsIcon" width={"250px"} src={bild} />
+                <div className="contactsRole" >
                     {rolle}
-                </h1>
-                <label className="1" type="text">
+                </div>
+                <div className="contactsName">
                     {name}
-                </label>
-                <label className="2" type="text">
+                </div>
+                <div className="contactsDescription">
                     {beschreibung}
-                </label>
-                <label className="3" type="text">
+                </div>
+                <a className="contactsEmail" type="text" onClick={convertEmail}>
                     {email}
-                </label>
+                </a>
             </div>
         );
     }
     return (
-        <div className="11">
-            <div className="22">
+        <div className="contactsBigBox">
+            <div className="contactsSmallBox">
                 {contactObjects.items.map((beschreibung, index) => {
                     return courseItem(beschreibung, index);
                 })}
+                <img alt="not found" className="test" width={"250px"} src={avatar} />
             </div>
         </div>
     );

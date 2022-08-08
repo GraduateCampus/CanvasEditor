@@ -3,6 +3,10 @@ export const modalState = atom ( {
     key: 'modalState',
     default: false,
 })
+export const dataState = atom ( {
+    key: 'dataState',
+    default: "",
+})
 export const welcomeBoxImage = atom ( {
     key: 'welcomeBoxImage',
     default: "https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Headerbild_ObjProg.png?raw=true",
@@ -17,6 +21,10 @@ export const welcomeBoxCourse = atom ( {
 });
 export const KurseinstiegState = atom ( {
     key: 'Kurseinstieg',
+    default: "",
+});
+export const Modulbutton = atom ( {
+    key: 'modulbutton',
     default: "",
 });
 export const ModulplanState = atom ( {
@@ -49,4 +57,8 @@ export const ContactState = atom ( {
             }
         ]
     },
+});
+export const ContactAvatar = atom ( {
+    key: 'avatar',
+    default: "",
 });

@@ -36,7 +36,7 @@ function WelcomeBox () {
                         placeholder="Hintergrundbild"
                         onChange={(e) => setStateImage(e.target.value)}
                     />
-                    <button onClick={addWelcomeImage}>Submit</button>
+                    <button className="editorsubmitbtn" onClick={addWelcomeImage}>Submit</button>
                     <div className="editorTextColor">Headline:</div>
                     <input
                         type="text"
@@ -44,7 +44,7 @@ function WelcomeBox () {
                         placeholder="Willkommen"
                         onChange={(e) => setStateText(e.target.value)}
                     />
-                    <button onClick={addWelcomeText}>Submit</button>
+                    <button className="editorsubmitbtn" onClick={addWelcomeText}>Submit</button>
                     <div className="editorTextColor">Kursname:</div>
                     <input
                         type="text"
@@ -52,7 +52,7 @@ function WelcomeBox () {
                         placeholder="Kursname"
                         onChange={(e) => setStateCourse(e.target.value)}
                     />
-                    <button onClick={addWelcomeCourse}>Submit</button>
+                    <button className="editorsubmitbtn" onClick={addWelcomeCourse}>Submit</button>
                 </div>
             </form>
         </div>

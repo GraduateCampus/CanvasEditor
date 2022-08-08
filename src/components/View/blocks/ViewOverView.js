@@ -16,7 +16,7 @@ function ViewOverView () {
                     {nuggets}
                 </label>
                 <label className="ovDuration" type="text">
-                    {duration}
+                    🕑{duration}
                 </label>
             </div>
         );

@@ -58,19 +58,16 @@ function Overview() {
             setShow(newArr);
         }
     }
-    const log = () => {
-        console.log(show)
-    }
     function courseItem({ icon,title,nuggets,duration }, index) {
         return (
             <div className="courseItemBigWrapper">
                 <div className="buttonsOverview">
-                    <button className="standardbtn" onClick={(event) => showChapter(event, index)}>{index}</button>
-                    <button className="deletebutton" onClick={(event) => deleteItem(event, index)}>Delete</button>
+                    <button className="standardbtn" onClick={(event) => showChapter(event, index)}>Modulinhalt: {index +1}</button>
+                    <button className="submitbtn" onClick={(event) => deleteItem(event, index)}>Delete</button>
                 </div>
                 {show[index] && <div className="dropdown-form">
-                    <div className="inputIcon">
-                        <div className="inputIconName">Icon:</div>
+                    <div className="ov inputIcon">
+                        <div className="ov inputIconName">Icon:</div>
                         <input
                             type="text"
                             name="icon"
@@ -79,8 +76,8 @@ function Overview() {
                             onChange={(value) => itemChanged(value, index)}
                         />
                     </div>
-                    <div className="inputTitle">
-                        <div className="inputTitleName">Title:</div>
+                    <div className="ov inputTitle">
+                        <div className="ov inputTitleName">Title:</div>
                         <input
                             type="text"
                             name="title"
@@ -89,8 +86,8 @@ function Overview() {
                             onChange={(value) => itemChanged(value, index)}
                         />
                     </div>
-                    <div className="inputNuggets">
-                        <div className="inputNuggetsName">Nuggets:</div>
+                    <div className="ov inputNuggets">
+                        <div className="ov inputNuggetsName">Nuggets:</div>
                         <input
                             type="text"
                             name="nuggets"
@@ -99,12 +96,13 @@ function Overview() {
                             onChange={(value) => itemChanged(value, index)}
                         />
                     </div>
-                    <div className="inputDuration">
-                        <div className="inputDurationName">Duration:</div>
+                    <div className="ov inputDuration">
+                        <div className="ov inputDurationName">Duration:</div>
                         <input
                             type="text"
                             name="duration"
                             className="input durationInput"
+                            placeholder="Zeit der Nuggets"
                             value={duration}
                             onChange={(value) => itemChanged(value, index)}
                         />
@@ -117,7 +115,9 @@ function Overview() {
     return (
         <ul className="overview-ul">
             <li className="overview-li">
-                <button className="standardbtn" onClick={log} >CourseNavigation</button>
+                <div className="editorTextColor">
+                    Inhalte:
+                </div>
                 <form className="dropdown-form">
                     {courseNavigationstate.items.map((item, index) => {
                         return courseItem(item, index);

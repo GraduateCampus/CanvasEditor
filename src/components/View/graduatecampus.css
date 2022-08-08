@@ -1,13 +1,20 @@
+@import url(https://use.typekit.net/amc6vvt.css);
+
+.everything {
+    width: 1300px;
+    margin-left:auto;
+    margin-right:auto;
+}
 /* Styling for WelcomeBox */
 
 .welcomeBox {
     position:relative;
     overflow: hidden;
-    background-image: linear-gradient(to right, #f2edb4, #d9c65a);
-    height: auto;
+    background-image: linear-gradient(to right, rgba(242, 237, 180, 0.4), rgba(217, 198, 90, 0.8));
+    max-height: 380px;
     border-radius: 20px;
     margin-bottom: 20px;
-    box-shadow: 0px 40px 40px rgba(0,0,0,0.15);
+    box-shadow: 10px 40px 40px 10px rgba(0,0,0,0.15);
 }
 .welcomeImage {
     float: right;
@@ -21,25 +28,32 @@
     margin: auto;
     padding-bottom: 50px;
     top: 0;
-    bottom: 10%;
-    left: 5%;
-    right: 0;
+    bottom: 30%;
+    left: 10%;
+    right: 60%;
     color: #808080;
-    font-size: xx-large;
-    font-family: Oswald Light;
+    font-size: 30px;
+    font-family: Oswald, sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    width: auto;
 }
 .welcomeTitle {
     position: absolute;
     height: fit-content;
     margin: auto;
     padding-top: 20px;
-    top: 10%;
+    top: 0;
     bottom: 0;
-    left: 5%;
-    right: 0;
+    left: 10%;
+    right: 60%;
     color: #8c7c02;
-    font-size: xxx-large;
-    font-family: Oswald;
+    font-size: 40px;
+    font-family: oswald, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    width: auto;
+    word-break: normal;
 }
 
 /* Styling for Kurseinstieg */
@@ -54,7 +68,7 @@
     box-shadow: 0px 40px 40px rgba(0,0,0,0.15);
 }
 .courseImage {
-    object-fit: cover;
+    float: left;
     width: auto;
     height: auto;
     max-height: 500px;
@@ -113,11 +127,11 @@
 }
 
 /* Styling for Overview */
-
-.overViewSeperate {
+.overviewBox {
     padding: 20px;
-    column-count: 2;
-    height: auto;
+}
+.overViewSeperate {
+    width: 100%;
 }
 .overview {
     position: relative;
@@ -128,8 +142,10 @@
     padding-top: 50px;
     padding-bottom:0px;
     border-radius: 20px;
-    margin-bottom: 50px;
+    margin: 10px 5% 10px 5%;
     box-shadow: 0px 40px 40px rgba(0,0,0,0.15);
+    width:40%;
+    float: left;
 }
 .overviewIcon {
     position: absolute;
@@ -239,12 +255,21 @@
     border-radius: 5px;
 }
 /* Styling for Contacts */
-
+.contactsBigBox {
+    padding: 20px;
+}
+.contactsSmallBox {
+    width: 100%;
+    color: #ffffff;
+}
 .contacts {
-    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
     background: #6a6969;
-    width: 40%;
-    height: 60%;
+    width: 30%;
+    float: left;
+    min-height: 300px;
     text-align: center;
     margin: 10px;
     padding: 20px;
@@ -252,7 +277,8 @@
 .contactsIcon {
     margin: auto;
     padding: 10px;
-    width: 50%;
+    min-width: 150px;
+    min-height: 150px;
     background: aliceblue;
     border-radius: 50%;
     max-height: 20px;
@@ -260,5 +286,26 @@
     text-align: center;
 }
 .contactsRole {
-
+    font-family: oswald, sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 20px;
+}
+.contactsName {
+    font-family: oswald, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+}
+.contactsDescription {
+    font-family: oswald, sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 20px;
+}
+.contactsEmail {
+    font-family: oswald, sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 20px;
 }

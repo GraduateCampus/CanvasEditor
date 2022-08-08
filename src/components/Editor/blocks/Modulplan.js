@@ -13,10 +13,11 @@ function Modulplan() {
             setModulplan("");
         }
     }
-    console.log(modulplan);
-    console.log(modulplanstate);
     return (
         <div className="container">
+            <div className="editorTextColor">
+                Modulplan:
+            </div>
             <input
                 type="text"
                 id="1"
@@ -24,7 +25,7 @@ function Modulplan() {
                 placeholder="Bildlink hier einfügen"
                 onChange={(e) => setModulplan(e.target.value)}
             />
-            <button onClick={addImage}>
+            <button className="editorsubmitbtn" onClick={addImage}>
                 Submit
             </button>
         </div>
