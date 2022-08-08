@@ -69,7 +69,7 @@ function Contacts() {
     }
     function contactItem({ bild, rolle, name, beschreibung, email}, index) {
         return (
-            <div className="courseItemBigWrapper">
+            <div className="courseItemBigWrapper" key={index}>
                 <div className="buttonsOverview">
                     <button className="standardbtn" onClick={(event) => showChapter(event, index)}>Kontakt Nummer:{index +1}</button>
                     <button className="editorsubmitbtn" onClick={(event) => deleteItem(event, index)}>Delete</button>

@@ -9,7 +9,7 @@ function ViewContacts () {
             window.location.href = "mailto:" + email
         }
         return (
-            <div className="vContacts">
+            <div className="vContacts" key={index}>
                 <img alt={index} className="contactsIcon" width={"250px"} src={bild} />
                 <div className="contactsRole" >
                     {rolle}

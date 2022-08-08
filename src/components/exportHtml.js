@@ -39,7 +39,7 @@ function makeContacts(contacts) {
             <div class="contactsDescription">
                 ${item.beschreibung}
             </div>
-            <a class="contactsEmail" href={"mailto:${item.email}"}>
+            <a class="contactsEmail" href="mailto:${item.email}">
                 ${item.email}
             </a>
             </div>`;
@@ -49,7 +49,7 @@ function makeContacts(contacts) {
     return contact;
 }
 
-export default function makeHtml(welcomeImage, welcomeText, welcomeCourse, kurseinstieg, modulplan, overview, contacts, avatar) {
+export default function makeHtml(welcomeImage, welcomeText, welcomeCourse, kurseinstieg, modulplan, overview, contacts, avatar, modulbutton) {
 
     return `<!DOCTYPE html>
     <html lang="en">
@@ -78,7 +78,7 @@ export default function makeHtml(welcomeImage, welcomeText, welcomeCourse, kurse
             <span class="courseDescription">
                 ${kurseinstieg}
             </span>
-            <a class="courseModulbutton">
+            <a class="courseModulbutton" href="/courses/${modulbutton}/modules">
                 Direkt zu den Modulen
             </a>
         </div>
@@ -103,6 +103,7 @@ export default function makeHtml(welcomeImage, welcomeText, welcomeCourse, kurse
                 ${makeContacts(contacts.items)}
                 <img alt="Avatar bitte einfuegen" src="${avatar}">
         </div>
+        <a href="#top"></a>
     </div>
     </body>
     </html>

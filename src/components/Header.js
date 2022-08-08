@@ -6,7 +6,7 @@ import {
     OverviewState,
     welcomeBoxText,
     welcomeBoxCourse,
-    welcomeBoxImage, dataState, ContactAvatar
+    welcomeBoxImage, dataState, ContactAvatar, Modulbutton
 } from "./services/atoms";
 import React, {useState} from "react";
 import {useRecoilState, useRecoilValue} from "recoil";
@@ -28,6 +28,7 @@ function Header () {
     const overview = useRecoilValue(OverviewState);
     const contacts = useRecoilValue(ContactState);
     const avatar = useRecoilValue(ContactAvatar);
+    const modulbutton = useRecoilValue(Modulbutton);
     const [data,setData] = useRecoilState(dataState);
 
     const showTab = (e) => {
@@ -43,7 +44,11 @@ function Header () {
 
     const exportData = () => {
         setShowModal(!showModal);
-        const index = makeHtml(welcomeImage, welcomeText, welcomeCourse, kurseinstieg, modulplan, overview, contacts, avatar);
+        const index = makeHtml(welcomeImage,
+            welcomeText, welcomeCourse,
+            kurseinstieg, modulplan,
+            overview, contacts,
+            avatar, modulbutton);
         setData(index)
     };
     return (

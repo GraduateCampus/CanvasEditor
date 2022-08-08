@@ -60,7 +60,7 @@ function Overview() {
     }
     function courseItem({ icon,title,nuggets,duration }, index) {
         return (
-            <div className="courseItemBigWrapper">
+            <div className="courseItemBigWrapper" key={index}>
                 <div className="buttonsOverview">
                     <button className="standardbtn" onClick={(event) => showChapter(event, index)}>Modulinhalt: {index +1}</button>
                     <button className="submitbtn" onClick={(event) => deleteItem(event, index)}>Delete</button>

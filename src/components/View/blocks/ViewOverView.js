@@ -4,7 +4,7 @@ function ViewOverView () {
     const overviewObjects = useRecoilValue(OverviewState);
     function courseItem({ icon, title, nuggets, duration}, index) {
         return (
-            <div className="vOverView">
+            <div className="vOverView" key={index}>
                 <div className="ovgoldcolor">
                     {index+1}
                 </div>

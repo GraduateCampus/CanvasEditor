@@ -4,7 +4,6 @@ import {KurseinstiegState, Modulbutton} from "../../services/atoms";
 function Kurseinstieg() {
     const [kursBeschreibung, setKursbeschreibung] = useRecoilState(KurseinstiegState);
     const [kursnummer, setKursnummer] = useRecoilState(Modulbutton);
-    console.log(kursnummer)
     return (
         <div className="container">
             <div className="editorTextColor">Kursbeschreibung:</div>
