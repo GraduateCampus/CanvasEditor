@@ -1,326 +1,398 @@
-@import url(https://use.typekit.net/amc6vvt.css);
-html {
-    scroll-behavior: smooth;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Oswald:wght@300;400&display=swap');
+* {
+    box-sizing: border-box;
 }
 .everything {
-    width: 100%;
+    width: 90%;
     margin-left:auto;
     margin-right:auto;
 }
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
 /* Styling for WelcomeBox */
 
 .welcomeBox {
-    position:relative;
-    overflow: hidden;
     background-image: linear-gradient(to right, rgba(242, 237, 180, 0.4), rgba(217, 198, 90, 0.8));
-    max-height: 5%;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    box-shadow: 10px 40px 40px 10px rgba(0,0,0,0.15);
+    display: flex;
+    border-radius: 50px;
+    box-shadow: 10px 40px 40px 10px rgba(0,0,0,0.15);;
 }
 .welcomeImage {
+    padding: 10px;
     float: right;
-    width: auto;
-    height: auto;
-    max-height: 250px;
+    width: 100%;
+    flex: 2;
+}
+.welcomeText {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .welcomeHeadline {
-    position: absolute;
-    height: fit-content;
-    margin: auto;
-    padding-bottom: 50px;
-    top: 0;
-    bottom: 30%;
-    left: 10%;
-    right: 60%;
     color: #808080;
-    font-size: 30px;
     font-family: Oswald, sans-serif;
     font-style: normal;
-    font-weight: 200;
-    width: auto;
+    font-weight: 300;
+    text-align: center;
 }
 .welcomeTitle {
-    position: absolute;
-    height: fit-content;
-    margin: auto;
-    padding-top: 20px;
-    top: 0;
-    bottom: 0;
-    left: 10%;
-    right: 60%;
+    word-break: normal;
     color: #8c7c02;
-    font-size: 40px;
-    font-family: oswald, sans-serif;
+    font-family: Oswald, sans-serif;
     font-style: normal;
     font-weight: 400;
-    width: auto;
-    word-break: normal;
+    text-align: center;
 }
 
-/* Styling for Kurseinstieg */
+/* Styling for CourseEntry */
 
 .courseEntry {
-    position: relative;
-    overflow: hidden;
     background-color: #e5e5e5;
-    height: auto;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0px 40px 40px rgba(0,0,0,0.15);
+    border-radius: 50px;
+    box-shadow: 10px 40px 40px 10px rgba(0,0,0,0.15);
+    display: flex;
+    max-height: 700px;
+}
+.courseImageBox {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 .courseImage {
-    float: left;
-    width: auto;
+    width: 100%;
     height: auto;
-    max-height: 500px;
+}
+.courseBox {
+    flex: 2;
 }
 .courseHeadline {
-    position: absolute;
-    height: fit-content;
-    margin:auto;
-    top:0;
-    bottom:50%;
-    left:50%;
-    right:0;
     color: #bea602;
-    font-size: xx-large;
-    font-family: Oswald;
+    font-family: Oswald, sans-serif;
+    font-style: normal;
+    font-weight: 400;
 }
-.courseDescription {
-    position: absolute;
-    margin:auto;
-    top:30%;
-    bottom:0;
-    left:50%;
-    right:0;
-    font-size: large;
-    font-family: Open Sans, sans-serif;
+.courseText {
     color: #000000;
+    font-family: open-sans, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    white-space: pre-line;
+    white-space: pre-wrap;
 }
 .courseModulbutton {
-    position: absolute;
-    height: fit-content;
-    margin:auto;
-    padding: 5px;
-    width: 30%;
-    top:85%;
-    left:60%;
-    right: 0;
-    border-radius: 5px;
-    color: white;
+    color: #ffffff;
+    font-family: Oswald, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 5%;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 15px;
     background-color: #d9c65a;
-    font-family: Oswald;
+    float: right;
 }
-
-/* Styling for Modulplan */
-
+/* Styling for ModulePlan */
 .modulplan {
-    position: relative;
-    overflow: hidden;
-    height: auto;
-    margin-bottom: 20px;
-    box-shadow: 0px 40px 40px rgba(0,0,0,0.15);
-    border-radius: 20px;
-}
-.modulplanimg {
-    object-fit: cover;
     width: 100%;
 }
 
-/* Styling for Overview */
-.overviewBox {
-    padding: 20px;
+/* Styling for OverviewBoxes */
+
+.ovHeader {
+    color: #bea602;
+    font-family: Oswald, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    margin-right: 50px;
 }
 .overViewSeperate {
-    width: 100%;
-}
-.overview {
-    position: relative;
-    overflow: hidden;
-    background-color: #f2f2f2;
-    border-color: #8c7c02;
-    min-height: 300px;
-    padding-top: 50px;
-    padding-bottom:0px;
-    border-radius: 20px;
-    margin: 10px 5% 10px 5%;
-    box-shadow: 0px 40px 40px rgba(0,0,0,0.15);
-    width:40%;
-    float: left;
-}
-.test {
-    position: absolute;
-    z-index: 2;
-    left: 42%;
-    margin-left: auto;
-    margin-right: auto;
-    vertical-align: middle;
-    background-color: #8c7c02;
-    border-radius: 50%;
-}
-.overviewIcon {
-    display: flex;
-    width: 100px;
-    height: 100px;
+    color: #bea602;
+    font-family: Oswald, sans-serif;
+    font-style: normal;
+    font-weight: 400;
 }
 .overviewGoldbox {
-    position: absolute;
-    z-index: 1;
     background-color: #d9c65a;
-    width: 100%;
-    height: 30%;
-    top: 0;
-    padding:10px;
-    font-family: oswald, sans-serif;
+    color: #8c7c02;
+    font-size: 80px;
+    padding-left: 50px;
+    text-align: left;
+    font-family: Oswald, sans-serif;
     font-style: normal;
     font-weight: 400;
-    color: #8c7c02;
-    text-align: left;
+    border-radius: 20px 20px 0px 0px;
+}
+.overview {
+    background-color: #f2f2f2;
+    position: relative;
+    text-align: center;
+    border-radius: 20px;
+    margin-right: 8%;
+    min-height: 400px;
+    float: left;
+}
+.overviewImageBigBox {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #8c7c02;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+}
+.overviewImageSmallBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+}
+.overviewIcon {
+    width: 100%;
 }
 .overviewTitle {
-    position: absolute;
-    height: fit-content;
-    margin:0;
-    top:60%;
-    right:0;
-    left:0;
-    bottom:0;
-    text-align: center;
-    font-size: xx-large;
-    font-family: oswald, sans-serif;
+    font-family: Oswald, sans-serif;
     font-style: normal;
     font-weight: 400;
     color: #4d4d4d;
-}
-.overviewNuggets {
-    position: absolute;
-    height: fit-content;
-    margin:0;
-    top:80%;
-    right:0;
-    left:10%;
-    bottom:0;
-    font-size: small;
-    font-family: open-sans-condensed, sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    color: #4d4d4d;
-}
-.overviewDuration {
-    position: absolute;
-    height: fit-content;
-    margin:0;
-    top:80%;
-    right:0;
-    left:80%;
-    bottom:0;
-    font-size: small;
-    font-family: open-sans-condensed, sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    color: #4d4d4d;
-}
-/* Styling for CanvasNew */
-
-.canvasNew {
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 20px;
-    width: 100%;
-    height: auto;
-    min-height: 100px;
-    background-image: linear-gradient(to bottom right, #e5d8a7, #d9c65a );
-    box-shadow: 0px 40px 40px rgba(0,0,0,0.15);
-    border-radius: 20px;
-}
-.canvasNewTitle {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    font-size: x-large;
-    font-family: Oswald;
-    color: #ffffff;
-}
-.canvasNewInfos {
     position: absolute;
     top: 60%;
-    left: 10%;
-    font-size: medium;
-    font-family: Oswald;
-    color: #ffffff;
+    left: 50%;
+    font-size: 40px;
+    transform: translate(-50%, -50%);
 }
-.canvasNewModulbutton {
+.overviewNuggets {
+    font-family: Open Sans, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    color: #4d4d4d;
     position: absolute;
-    width: 20%;
-    height: 30%;
-    padding: 5px;
-    top: 40%;
-    left: 70%;
-    right: 0;
-    bottom: 0;
-    background-color: white;
+    top: 80%;
+    left: 5%;
+}
+.overviewDuration {
+    font-family: Open Sans, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    color: #4d4d4d;
+    position: absolute;
+    top: 80%;
+    right: 5%;
+}
+
+/* Styling for NewCanvas */
+
+.newCanvasBox {
+    background-image: linear-gradient(to bottom right, #e8dca0, #d9c65a );
+    box-shadow: 0px 40px 40px rgba(0,0,0,0.15);
+    border-radius: 20px;
+    display: flex;
+    min-height: 200px;
+}
+.newCanvasHeadline {
+    color: #ffffff;
+    font-size: 25px;
+    margin-left: 15%;
+    font-family: Oswald, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+}
+.newCanvasText {
+    color: #ffffff;
+    font-size: 30px;
+    margin-left: 15%;
+    font-family: Oswald, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+}
+.newCanvasButton {
     color: #c7a315;
-    font-family: Oswald;
-    border-radius: 5px;
+    font-family: Oswald, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    border-radius: 20px;
+    margin: 10%;
+    padding: 10px;
+    text-decoration: none;
+    background-color: white;
+    float: right;
 }
 /* Styling for Contacts */
-.contactsBigBox {
-    padding: 20px;
-}
-.contactsSmallBox {
-    width: 100%;
-    color: #ffffff;
-}
 .contacts {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    background: #6a6969;
-    width: 30%;
-    float: left;
-    min-height: 300px;
+    background-color: grey;
+    margin-right: 20px;
+    border-radius: 20px;
     text-align: center;
-    margin: 10px;
+    min-height: 300px;
     padding: 20px;
 }
 .contactsIcon {
-    margin: auto;
-    background: aliceblue;
-    border-radius: 50%;
-    max-height: 10%;
-    width: 50%;
-    text-align: center;
+    width: 25%;
 }
 .contactsRole {
-    font-family: oswald, sans-serif;
+    font-family: Oswald, sans-serif;
     font-style: normal;
-    font-weight: 200;
-    font-size: 20px;
+    font-weight: 300;
 }
 .contactsName {
-    font-family: oswald, sans-serif;
+    font-family: Oswald, sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 30px;
 }
 .contactsDescription {
-    font-family: oswald, sans-serif;
+    font-family: Oswald, sans-serif;
     font-style: normal;
-    font-weight: 200;
-    font-size: 20px;
+    font-weight: 300;
 }
 .contactsEmail {
-    font-family: oswald, sans-serif;
+    text-decoration: none;
+    font-family: Oswald, sans-serif;
     font-style: normal;
-    font-weight: 200;
-    font-size: 20px;
+    font-weight: 300;
 }
-.avatar {
-    padding: 10px;
-    max-height: 500px;
-}
-.tttbutton {
+.tothetopButon img {
     float: right;
-    max-height: 50px;
+    width: 100px;
+    scroll-behavior: smooth;
+}
+
+/* Styling for ToTheTopButton */
+
+@media only screen and (max-width: 600px) {
+    .col-5.overview {
+        width: 100%;
+    }
+    .row::after {
+        padding: 5px;
+    }
+    /* Styling for WelcomeBox */
+    .welcomeBox {
+        border-radius: 20px;
+        box-shadow: 5px 20px 20px 5px rgba(0,0,0,0.15);
+    }
+    .welcomeHeadline {
+        font-size: 10px;
+    }
+    .welcomeTitle {
+        font-size: 15px;
+    }
+    /* Styling for CourseEntry */
+    .courseEntry {
+        border-radius: 20px;
+        box-shadow: 5px 20px 20px 5px rgba(0,0,0,0.15);
+    }
+    .courseBox {
+        padding: 20px;
+    }
+    .courseHeadline {
+        font-size: 15px;
+    }
+    .courseText {
+        font-size: 8px;
+    }
+    .courseModulbutton {
+        padding: 5px;
+        border-radius: 10px;
+        font-size: 8px;
+    }
+}
+@media only screen and (min-width: 600px) {
+    .row::after {
+        padding: 10px;
+    }
+    /* Styling for WelcomeBox */
+    .welcomeBox {
+        border-radius: 35px;
+    }
+    .welcomeHeadline {
+        font-size: 20px;
+    }
+    .welcomeTitle {
+        font-size: 30px;
+    }
+    /* Styling for CourseEntry */
+    .courseEntry {
+        border-radius: 35px;
+    }
+    .courseBox {
+        padding: 50px;
+    }
+    .courseHeadline {
+        font-size: 30px;
+    }
+    .courseText {
+        font-size: 20px;
+    }
+    .courseModulbutton {
+        padding: 10px;
+        border-radius: 15px;
+        font-size: 20px;
+    }
+}
+@media only screen and (min-width: 1300px) {
+    .row::after {
+        padding: 15px;
+    }
+    /* Styling for WelcomeBox */
+    .welcomeHeadline {
+        font-size: 48px;
+    }
+    .welcomeTitle {
+        font-size: 72px;
+    }
+    /* Styling for CourseEntry */
+    .courseEntry {
+        border-radius: 50px;
+    }
+    .courseBox {
+        padding: 100px;
+    }
+    .courseHeadline {
+        font-size: 72px;
+    }
+    .courseText {
+        font-size: 30px;
+    }
+    .courseModulbutton {
+        font-size: 30px;
+    }
+    .contactsRole {
+        font-size: 20px;
+    }
+    .contactsName {
+        font-size: 30px;
+    }
+    .contactsDescription {
+        font-size: 20px;
+    }
+    .contactsEmail {
+        font-size: 20px;
+    }
 }

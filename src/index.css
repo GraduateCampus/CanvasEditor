@@ -293,6 +293,8 @@ body {
 }
 .kursbeschreibungtext {
   height: fit-content;
+  white-space: pre-line;
+  white-space: pre-wrap;
 }
 .modulbutton {
   position: absolute;

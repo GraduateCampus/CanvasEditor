@@ -29,11 +29,11 @@ function WelcomeBox () {
         <div className="container">
             <form name="welcomeBox">
                 <div className="field">
-                    <div className="editorTextColor">Hintergrundbild:</div>
+                    <div className="editorTextColor">Hintergrundbild / Dateiname:</div>
                     <input
                         type="text"
                         value={stateImage}
-                        placeholder="Hintergrundbild"
+                        placeholder="Hintergrundbild/Dateiname"
                         onChange={(e) => setStateImage(e.target.value)}
                     />
                     <button className="editorsubmitbtn" onClick={addWelcomeImage}>Submit</button>

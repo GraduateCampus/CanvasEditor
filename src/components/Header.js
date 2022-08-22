@@ -71,8 +71,8 @@ function Header () {
                 </button>
             </div>
             {showModal && <Modal>{data}</Modal>}
-            {selectedTab && <Layout1/>}
-            {selectedTab2 && <Layout2/>}
+            {selectedTab && <Layout1 layout1={selectedTab} layout2={selectedTab2}/>}
+            {selectedTab2 && <Layout2 layout1={selectedTab} layout2={selectedTab2}/>}
         </div>
     );
 }
