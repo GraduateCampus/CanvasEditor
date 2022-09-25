@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/CanvasEditor/static/css/main.1f0498be.css",
-    "main.js": "/CanvasEditor/static/js/main.7d7962eb.js",
+    "main.css": "/CanvasEditor/static/css/main.9013ea87.css",
+    "main.js": "/CanvasEditor/static/js/main.bea2a546.js",
     "static/js/787.9abb3539.chunk.js": "/CanvasEditor/static/js/787.9abb3539.chunk.js",
     "static/media/rakete.png": "/CanvasEditor/static/media/rakete.b5e589ed78f944432397.png",
     "static/media/Headerbild_ObjProg.png": "/CanvasEditor/static/media/Headerbild_ObjProg.875164aac0e3021e75bf.png",
+    "static/media/Gif-Rakete.gif": "/CanvasEditor/static/media/Gif-Rakete.744e25411e562e492a83.gif",
     "index.html": "/CanvasEditor/index.html",
-    "main.1f0498be.css.map": "/CanvasEditor/static/css/main.1f0498be.css.map",
-    "main.7d7962eb.js.map": "/CanvasEditor/static/js/main.7d7962eb.js.map",
+    "main.9013ea87.css.map": "/CanvasEditor/static/css/main.9013ea87.css.map",
+    "main.bea2a546.js.map": "/CanvasEditor/static/js/main.bea2a546.js.map",
     "787.9abb3539.chunk.js.map": "/CanvasEditor/static/js/787.9abb3539.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1f0498be.css",
-    "static/js/main.7d7962eb.js"
+    "static/css/main.9013ea87.css",
+    "static/js/main.bea2a546.js"
   ]
 }
