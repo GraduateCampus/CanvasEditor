@@ -5,7 +5,7 @@ import Modulplan from "./blocks/Modulplan";
 import Overview from "./blocks/Overview";
 import Contacts from "./blocks/Contacts";
 
-function Editor ()
+function Editor2 ()
 {
     const [showWelcomeBox, setShowWelcomeBox] = useState(false);
     const [showDescriptionBox, setShowDescriptionBox] = useState(false);
@@ -44,4 +44,4 @@ function Editor ()
         </div>
     );
 }
-export default Editor;
+export default Editor2;

@@ -1,4 +1,4 @@
-@import url(https://use.typekit.net/amc6vvt.css);
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Oswald:wght@300;400&display=swap');
 body {
   background-color: #3c3c3b;
 }
@@ -241,6 +241,19 @@ body {
   margin: auto;
   padding-top: 20px;
   top: 10%;
+  bottom: 0;
+  left: 5%;
+  right: 0;
+  color: #8c7c02;
+  font-size: xxx-large;
+  font-family: Oswald;
+}
+.kursname2 {
+  position: absolute;
+  height: fit-content;
+  margin: auto;
+  padding-top: 20px;
+  top: 45%;
   bottom: 0;
   left: 5%;
   right: 0;
@@ -601,4 +614,271 @@ body {
 }
 .vContacts {
   color: white;
+}
+
+/* Start for Learniac Styling */
+
+/*styling für WelcomeBox*/
+
+.lvWelcomeBox {
+  margin-bottom: 50px;
+}
+.lvHeaderimage {
+  width: 100%;
+  height: auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.lvTimeline {
+  position: relative;
+  max-width: 10px;
+  left: 10%;
+}
+.lvTimeline:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-left: 5px dashed #ffffff;
+  background: linear-gradient(to bottom, #111111, #bea602, #e5d8a7) border-box;
+}
+.alt {
+  border: 5px dashed #ffffff;
+}
+.lvContainer {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+.lvTimeline-icon {
+  position: absolute;
+  left: -50px;
+  width: 110px;
+  height: 110px;
+}
+.lvImageIcon {
+  width: 100%;
+}
+.lvContent {
+  position: relative;
+  left: 70px;
+  background: #8c7c02;
+  width: 800px;
+  min-height: 200px;
+  border-radius: 10px;
+  padding: 20px 20px 15px;
+  box-shadow: 0px 40px 40px rgba(0,0,0,0.15);
+}
+.lvContent:before {
+  content: '';
+  background: inherit;
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  left: -10px;
+  top: 40px;
+  transform: rotate(45deg);
+  border-radius: 0 0 0 2px;
+}
+.pointWelcomebg {
+  background: #3c3c3b;
+}
+.pointCoursebg {
+  background: #bfa602;
+}
+.pointLearningbg {
+  background: #c6b673;
+}
+.pointInfobg {
+  background: #ede4c5;
+}
+
+/* Styling für PointWelcome */
+
+.lvPointWelcomeHeader {
+  font-family: oswald, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: #bfa602;
+}
+.lvPointWelcomeText {
+  font-family: open-sans, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  color: #ffffff;
+  padding-bottom: 50px;
+  white-space: pre-line;
+}
+.lvModulButton {
+  float: right;
+  background: none;
+  border: 2px solid #bfa602;
+  border-radius: 25px;
+  color: #bfa602;
+  font-family: open-sans, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: large;
+  text-decoration: none;
+  padding: 5px 35px 5px 35px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+/* Styling für PointCourse */
+
+.lvPointCourseHeader {
+  font-family: oswald, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: #3c3c3b;
+}
+.lvPointCourseText {
+  font-family: open-sans, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  color: #3c3c3b;
+  white-space: pre-line;
+}
+
+/* Styling für PointLearning */
+
+.lvPointLearningHeader {
+  font-family: oswald, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: #3c3c3b;
+}
+.lvPointLearningText {
+  font-family: open-sans, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  color: #3c3c3b;
+  padding-bottom: 50px;
+  white-space: pre-line;
+}
+.lvDownload {
+  float: right;
+  background: none;
+  border: 2px solid #3c3c3b;
+  border-radius: 25px;
+  color: #3c3c3b;
+  font-family: open-sans, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: large;
+  text-decoration: none;
+  padding: 5px 35px 5px 35px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+/* Styling für PointInfo */
+
+.lvPointInfoHeader {
+  font-family: oswald, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: #3c3c3b;
+}
+.lvPointInfoText {
+  font-family: open-sans, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  color: #3c3c3b;
+  white-space: pre-line;
+}
+
+/* Styling für Rakete */
+.lvRocketBox {
+  margin: 100px;
+}
+.lvRocket {
+  display: block;
+  margin: auto;
+  width: 15%;
+}
+.lvRocketText {
+  text-align: center;
+  font-family: Oswald, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: x-large;
+  color: #3c3c3b;
+}
+
+/* Styling für Contacts */
+
+.lvContactBox {
+  width: 100%;
+  min-height: 600px;
+  background: #f2f2f2;
+}
+.boxPadding {
+  padding: 5% 10% 10% 10%;
+}
+.lvcTitle {
+  font-family: Oswald, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: xxx-large;
+  color: #3c3c3b;
+  padding-bottom: 30px;
+}
+.lvContactMiniBox {
+  background: #3c3c3b;
+  border-radius: 20px;
+  padding: 50px 10px 50px 50px;
+}
+.lvContactTitle {
+  font-family: Oswald, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: x-large;
+  padding-bottom: 10px;
+}
+.lvContactName {
+  font-family: Oswald, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: xx-large;
+  color: #bfa602;
+  padding-bottom: 10px;
+}
+.lvContactText {
+  font-family: open-sans, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  color: #ffffff;
+  padding-bottom: 10px;
+}
+.lvContactPhone {
+  font-family: open-sans, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  color: #ffffff;
+  padding-bottom: 10px;
+}
+.lvContactMobil {
+   font-family: open-sans, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+   color: #ffffff;
+   padding-bottom: 10px;
+}
+.lvContactMail {
+  font-family: open-sans, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  color: #ede4c5;
+}
+.lvcolumn {
+  display: inline-block;
+  width: 50%;
+}
+.lvContactBild {
+  display: block;
+  margin: auto;
 }

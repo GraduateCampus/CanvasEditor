@@ -6,14 +6,34 @@ import {
     OverviewState,
     welcomeBoxText,
     welcomeBoxCourse,
-    welcomeBoxImage, dataState, ContactAvatar, Modulbutton
+    welcomeBoxImage,
+    dataState,
+    ContactAvatar,
+    Modulbutton,
+    learniacWelcomeImage,
+    learniacWelcomeCourse,
+    learniacContactsName,
+    learniacContactsPhone,
+    learniacContactsMobil,
+    learniacContactsMail,
+    learniacContactsBild,
+    learniacPointWelcomeText,
+    learniacPointWelcomeImage,
+    learniacPointCourseText,
+    learniacPointCourseImage,
+    learniacPointLearningText,
+    learniacPointLearningImage,
+    learniacPointInfoText,
+    learniacPointInfoImage
 } from "./services/atoms";
 import React, {useState} from "react";
 import {useRecoilState, useRecoilValue} from "recoil";
 import Modal from "./Modal";
 import Layout1 from "./Layout1";
 import Layout2 from "./Layout2";
-import makeHtml from "./exportHtml";
+import makeHtml from "./exportHtmlLayout1";
+import Layout3 from "./Layout3";
+import makeHtml3 from "./exportHtmlLayout3";
 
 function Header () {
     const [selectedTab,setSelectedTab] = useState(false);
@@ -29,16 +49,38 @@ function Header () {
     const contacts = useRecoilValue(ContactState);
     const avatar = useRecoilValue(ContactAvatar);
     const modulbutton = useRecoilValue(Modulbutton);
+    const lcWelcomeImage = useRecoilValue(learniacWelcomeImage);
+    const lcWelcomeCourse = useRecoilValue(learniacWelcomeCourse);
+    const lcPointWelcomeText = useRecoilValue(learniacPointWelcomeText);
+    const lcPointWelcomeImage = useRecoilValue(learniacPointWelcomeImage);
+    const lcPointCourseText = useRecoilValue(learniacPointCourseText);
+    const lcPointCourseImage = useRecoilValue(learniacPointCourseImage);
+    const lcPointLearningText = useRecoilValue(learniacPointLearningText);
+    const lcPointLearningImage = useRecoilValue(learniacPointLearningImage);
+    const lcPointInfoText = useRecoilValue(learniacPointInfoText);
+    const lcPointInfoImage = useRecoilValue(learniacPointInfoImage);
+    const lcContactName = useRecoilValue(learniacContactsName);
+    const lcContactPhone = useRecoilValue(learniacContactsPhone);
+    const lcContactMobil = useRecoilValue(learniacContactsMobil);
+    const lcContactMail = useRecoilValue(learniacContactsMail);
+    const lcContactImage = useRecoilValue(learniacContactsBild);
     const [data,setData] = useRecoilState(dataState);
 
     const showTab = (e) => {
         if (e.target.className === "tab1") {
             setSelectedTab(true);
             setSelectedTab2(false);
+            setSelectedTab3(false);
         }
         if (e.target.className === "tab2") {
             setSelectedTab(false);
             setSelectedTab2(true);
+            setSelectedTab3(false);
+        }
+        if (e.target.className === "tab3") {
+            setSelectedTab(false);
+            setSelectedTab2(false);
+            setSelectedTab3(true);
         }
     }
 
@@ -51,6 +93,19 @@ function Header () {
             avatar, modulbutton);
         setData(index)
     };
+    const exportData2 = () => {
+        console.log("hooray")
+    }
+    const exportData3 = () => {
+        setShowModal(!showModal);
+        const index = makeHtml3(lcWelcomeImage,
+        lcWelcomeCourse, lcPointWelcomeText,
+        lcPointCourseText, lcPointLearningText,
+        lcPointInfoText, lcContactName,
+        lcContactPhone, lcContactMobil,
+        lcContactMail, lcContactImage);
+        setData(index);
+    }
     return (
         <div className="App">
             <div className="header">
@@ -66,13 +121,20 @@ function Header () {
                         Layout 3 Learniac
                     </li>
                 </ul>
-                <button className="exportbtn" onClick={exportData}>
+                {selectedTab &&<button className="exportbtn" onClick={exportData}>
                     Export
-                </button>
+                </button>}
+                {selectedTab2 &&<button className="exportbtn" onClick={exportData2}>
+                    Export
+                </button>}
+                {selectedTab3 &&<button className="exportbtn" onClick={exportData3}>
+                    Export
+                </button>}
             </div>
             {showModal && <Modal>{data}</Modal>}
-            {selectedTab && <Layout1 layout1={selectedTab} layout2={selectedTab2}/>}
-            {selectedTab2 && <Layout2 layout1={selectedTab} layout2={selectedTab2}/>}
+            {selectedTab && <Layout1 />}
+            {selectedTab2 && <Layout2/>}
+            {selectedTab3 && <Layout3/>}
         </div>
     );
 }

@@ -19,6 +19,10 @@ export const welcomeBoxCourse = atom ( {
     key: 'welcomeBoxCourse',
     default: "",
 });
+export const welcomeBoxCourse2 = atom ( {
+    key: 'welcomeBoxCourse2',
+    default: "",
+});
 export const KurseinstiegState = atom ( {
     key: 'Kurseinstieg',
     default: "",
@@ -60,5 +64,76 @@ export const ContactState = atom ( {
 });
 export const ContactAvatar = atom ( {
     key: 'avatar',
+    default: "",
+});
+
+//atoms for Learniac:
+
+export const learniacWelcomeImage = atom ( {
+    key: 'learniacWelcomeImage',
+    default: "https://github.com/Electressic/CanvasEditor/blob/main/headerbild.png?raw=true",
+});
+export const learniacWelcomeCourse = atom ( {
+    key: 'learniacWelcomeCourse',
+    default: "",
+});
+export const learniacWelcomeCourse2 = atom ( {
+    key: 'learniacWelcomeCourse2',
+    default: "",
+});
+export const learniacWelcomeCourse3 = atom ( {
+    key: 'learniacWelcomeCourse3',
+    default: "",
+});
+export const learniacPointWelcomeText = atom ( {
+    key: 'learniacPointWelcomeText',
+    default: "",
+});
+export const learniacPointWelcomeImage = atom ( {
+    key: 'learniacPointWelcomeImage',
+    default: "",
+});
+export const learniacPointCourseText = atom ( {
+    key: 'learniacPointCourseText',
+    default: "",
+});
+export const learniacPointCourseImage = atom ( {
+    key: 'learniacPointCourseImage',
+    default: "",
+});
+export const learniacPointLearningText = atom ( {
+    key: 'learniacPointLearningText',
+    default: "",
+});
+export const learniacPointLearningImage = atom ( {
+    key: 'learniacPointLearningImage',
+    default: "",
+});
+export const learniacPointInfoText = atom ( {
+    key: 'learniacPointInfoText',
+    default: "",
+});
+export const learniacPointInfoImage = atom ( {
+    key: 'learniacPointInfoImage',
+    default: "",
+});
+export const learniacContactsName = atom ( {
+    key: 'learniacContactsName',
+    default: "",
+});
+export const learniacContactsPhone = atom ( {
+    key: 'learniacContactsPhone',
+    default: "",
+});
+export const learniacContactsMobil = atom ( {
+    key: 'learniacContactsMobil',
+    default: "",
+});
+export const learniacContactsMail = atom ( {
+    key: 'learniacContactsMail',
+    default: "",
+});
+export const learniacContactsBild = atom ( {
+    key: 'learniacContactsBild',
     default: "",
 });

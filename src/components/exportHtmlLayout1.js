@@ -2,6 +2,7 @@ function makeOverview(overview) {
     let oV = `<div class="row">`;
     overview.map((item,index) => {
         let newOv =`
+                <a href="nix">
                 <div class="col-5 overview">
                     <div class="overviewGoldbox">
                         ${index +1}
@@ -18,9 +19,10 @@ function makeOverview(overview) {
                         ${item.nuggets}
                     </div>
                     <div class="overviewDuration">
-                        🕑${item.duration}
+                        🕑 ${item.duration}
                     </div>
-            </div>`;
+                </div>
+                </a>`;
         if (index % 2 === 0 && index > 1) {
             let row = `</div><div class="row">`;
             oV += row;
@@ -108,12 +110,15 @@ export default function makeHtml(welcomeImage, welcomeText, welcomeCourse, kurse
                 <img class="modulplan" src=${modulplan} />
             </div>
         </div>
+        <div class="overviewHeadline">
+            Inhaltsübersicht
+        </div>
         <div class="testing">   
             ${makeOverview(overview.items)}
         </div>
         <div class="row">
             <div class="newCanvasBox">
-                <div class="col-6">
+                <div class="col-6 newCanvasBoxSpacing">
                     <h1 class="newCanvasHeadline">
                         Neu bei Canvas?
                     </h1>
@@ -129,7 +134,7 @@ export default function makeHtml(welcomeImage, welcomeText, welcomeCourse, kurse
         <div class="row">
             <div class="contactsBigBox">
                 ${makeContacts(contacts.items)}
-                <div class="col-3">
+                <div class="col-3 bigImageBox">
                     <img alt="Avatar bitte einfuegen" src="${avatar}">
                 </div>
             </div>
