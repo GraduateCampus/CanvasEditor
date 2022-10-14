@@ -643,9 +643,6 @@ body {
   border-left: 5px dashed #ffffff;
   background: linear-gradient(to bottom, #111111, #bea602, #e5d8a7) border-box;
 }
-.alt {
-  border: 5px dashed #ffffff;
-}
 .lvContainer {
   position: relative;
   margin-bottom: 2.5rem;
@@ -881,4 +878,7 @@ body {
 .lvContactBild {
   display: block;
   margin: auto;
+}
+.learniacLogo {
+  float: right;
 }

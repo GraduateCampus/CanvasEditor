@@ -4,8 +4,8 @@ import {useState} from "react";
 
 function PointWelcome() {
     const [stateImage, setStateImage] = useState("");
-    const [pointWelcomeImage, setPointWelcomeImage] = useRecoilState(learniacPointWelcomeText);
-    const [pointWelcomeText, setPointWelcomeText] = useRecoilState(learniacPointWelcomeImage);
+    const [pointWelcomeImage, setPointWelcomeImage] = useRecoilState(learniacPointWelcomeImage);
+    const [pointWelcomeText, setPointWelcomeText] = useRecoilState(learniacPointWelcomeText);
 
     const addPointWelcomeImage = (e) => {
         e.preventDefault()

@@ -39,9 +39,9 @@
 }
 .lvWelcomeCourse {
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: 10%;
-    font-size: 50px;
+    font-size: 40px;
     font-family: Oswald, sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -50,22 +50,22 @@
 }
 .lvWelcomeHeadline {
     position: absolute;
-    font-size: 70px;
+    font-size: 60px;
     color: #3c3c3b;
     font-family: Oswald, sans-serif;
     font-style: normal;
     font-weight: 300;
 }
 .lvWelcomeHeadline.line1 {
-    top: 30%;
+    top: 25%;
     left: 10%;
 }
 .lvWelcomeHeadline.line2 {
-    top: 45%;
+    top: 40%;
     left: 10%;
 }
 .lvWelcomeHeadline.line3 {
-    top: 60%;
+    top: 55%;
     left: 10%;
 }
 .lvHeaderimage {
@@ -87,9 +87,6 @@
     height: 100%;
     border-left: 5px dashed #ffffff;
     background: linear-gradient(to bottom, #111111, #bea602, #e5d8a7) border-box;
-}
-.alt {
-    border: 5px dashed #ffffff;
 }
 .lvContainer {
     position: relative;
@@ -326,9 +323,11 @@
 .lvContactBild {
     display: block;
     margin: auto;
-    padding-left: 400px;
+    padding-left: 30%;
 }
-
+.learniacLogo {
+    float: right;
+}
 
 /* Styling for WelcomeBox */
 

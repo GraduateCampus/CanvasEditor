@@ -2,16 +2,23 @@ import ViewWelcomeBox from "./View/blocks_learniac/ViewWelcomeBox";
 import Editor3 from "./Editor/Editor3";
 import ViewPointWelcome from "./View/blocks_learniac/ViewPointWelcome";
 import ViewPointCourse from "./View/blocks_learniac/ViewPointCourse";
-import image2 from "../components/images/Element 2.png"
-import image3 from "../components/images/Element 3.png"
-import image4 from "../components/images/Element 4.png"
-import image5 from "../components/images/Element 5.png"
 import rakete from "../components/images/Gif-Rakete.gif"
 import ViewPointLearning from "./View/blocks_learniac/ViewPointLearning";
 import ViewPointInfo from "./View/blocks_learniac/ViewPointInfo";
 import ViewContact from "./View/blocks_learniac/ViewContact";
+import {useRecoilValue} from "recoil";
+import {
+    learniacPointCourseImage,
+    learniacPointInfoImage,
+    learniacPointLearningImage,
+    learniacPointWelcomeImage
+} from "./services/atoms";
 
 function Layout3() {
+    const image2 = useRecoilValue(learniacPointWelcomeImage);
+    const image3 = useRecoilValue(learniacPointCourseImage);
+    const image4 = useRecoilValue(learniacPointLearningImage);
+    const image5 = useRecoilValue(learniacPointInfoImage);
     return (
         <div className="split">
             <div className="split left">
@@ -72,6 +79,7 @@ function Layout3() {
                     </div>
                 </div>
                 <ViewContact/>
+                <img className="learniacLogo" src="https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Element%206.png?raw=true" />
             </div>
         </div>
     );

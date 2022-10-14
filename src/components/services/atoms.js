@@ -91,7 +91,7 @@ export const learniacPointWelcomeText = atom ( {
 });
 export const learniacPointWelcomeImage = atom ( {
     key: 'learniacPointWelcomeImage',
-    default: "",
+    default: "https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Element%202.png?raw=true",
 });
 export const learniacPointCourseText = atom ( {
     key: 'learniacPointCourseText',
@@ -99,7 +99,7 @@ export const learniacPointCourseText = atom ( {
 });
 export const learniacPointCourseImage = atom ( {
     key: 'learniacPointCourseImage',
-    default: "",
+    default: "https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Element%203.png?raw=true",
 });
 export const learniacPointLearningText = atom ( {
     key: 'learniacPointLearningText',
@@ -107,7 +107,7 @@ export const learniacPointLearningText = atom ( {
 });
 export const learniacPointLearningImage = atom ( {
     key: 'learniacPointLearningImage',
-    default: "",
+    default: "https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Element%204.png?raw=true",
 });
 export const learniacPointInfoText = atom ( {
     key: 'learniacPointInfoText',
@@ -115,7 +115,7 @@ export const learniacPointInfoText = atom ( {
 });
 export const learniacPointInfoImage = atom ( {
     key: 'learniacPointInfoImage',
-    default: "",
+    default: "https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Element%205.png?raw=true",
 });
 export const learniacContactsName = atom ( {
     key: 'learniacContactsName',

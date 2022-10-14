@@ -1,14 +1,14 @@
 import {useRecoilState} from "recoil";
 import {
+    learniacPointCourseImage,
     learniacPointCourseText,
-    learniacPointWelcomeImage,
 } from "../../services/atoms";
 import {useState} from "react";
 
 function PointCourse() {
     const [stateImage, setStateImage] = useState("");
     const [pointCourseText, setPointCourseText] = useRecoilState(learniacPointCourseText);
-    const [pointCourseImage, setPointCourseImage] = useRecoilState(learniacPointWelcomeImage);
+    const [pointCourseImage, setPointCourseImage] = useRecoilState(learniacPointCourseImage);
 
     const addPointCourseImage = (e) => {
         e.preventDefault()
