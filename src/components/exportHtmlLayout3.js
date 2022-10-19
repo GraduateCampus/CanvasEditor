@@ -11,22 +11,6 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeCourse,
     return `<!DOCTYPE html>
     <html lang="en">
     <head>
-        <!--
-        /**
-        * @license
-        * MyFonts Webfont Build ID 130028
-        *
-        * The fonts listed in this notice are subject to the End User License
-        * Agreement(s) entered into by the website owner. All other parties are
-        * explicitly restricted from using the Licensed Webfonts(s).
-        *
-        * You may obtain a valid license from one of MyFonts official sites.
-        * http://www.fonts.com
-        * http://www.myfonts.com
-        * http://www.linotype.com
-        *
-        */
-        -->
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,7 +18,6 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeCourse,
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Oswald:wght@300;400&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="MyFontsWebfontsKit.css">
     </head>
     <body>
     <div class="everything">
@@ -82,7 +65,7 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeCourse,
                     <div class="lvPointLearningText">
                         ${lcPointLearningText}
                        </div>
-                       <a href="/courses/${lcModulbutton}/modules" class="lvDownload">Download</a>
+                       <a href="https://graduatecampus.instructure.com/files/56220/download?download_frd=1" class="lvDownload">Download</a>
                 </div>            
             </div>
             <div class="lvContainer lvpWelcome">

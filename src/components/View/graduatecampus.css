@@ -1,4 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Oswald:wght@300;400&display=swap');
+@import url("//hello.myfonts.net/count/4266d3");
+
+@font-face {
+    font-family: "Facto-Medium";
+    src: url('https://github.com/Electressic/CanvasEditor/tree/main/src/fonts/MyFontsWebfontsKit-4/webFonts/FactoMedium/font.woff2') format('woff2'), url('https://github.com/Electressic/CanvasEditor/tree/main/src/fonts/MyFontsWebfontsKit-4/webFonts/FactoMedium/font.woff') format('woff');
+}
+@font-face {
+    font-family: "Facto-Italic";
+    src: url('https://github.com/Electressic/CanvasEditor/tree/main/src/fonts/MyFontsWebfontsKit-4/webFonts/FactoItalic/font.woff2') format('woff2'), url('https://github.com/Electressic/CanvasEditor/tree/main/src/fonts/MyFontsWebfontsKit-4/webFonts/FactoItalic/font.woff') format('woff');
+}
+@font-face {
+    font-family: "Facto-Bold";
+    src: url('https://github.com/Electressic/CanvasEditor/tree/main/src/fonts/MyFontsWebfontsKit-4/webFonts/FactoBold/font.woff2') format('woff2'), url('https://github.com/Electressic/CanvasEditor/tree/main/src/fonts/MyFontsWebfontsKit-4/webFonts/FactoBold/font.woff') format('woff');
+}
+@font-face {
+    font-family: "Facto-Regular";
+    src: url('https://github.com/Electressic/CanvasEditor/tree/main/src/fonts/MyFontsWebfontsKit-4/webFonts/FactoRegular/font.woff2') format('woff2'), url('https://github.com/Electressic/CanvasEditor/tree/main/src/fonts/MyFontsWebfontsKit-4/webFonts/FactoRegular/font.woff') format('woff');
+}
 * {
     box-sizing: border-box;
 }
@@ -143,6 +161,7 @@
 .lvPointWelcomeText {
     font-family: "Facto-Regular";
     color: #ffffff;
+    padding-right: 50px;
     white-space: pre-line;
     text-align: left;
 }
@@ -172,6 +191,7 @@
     font-family: "Facto-Regular";
     color: #3c3c3b;
     white-space: pre-line;
+    padding-right: 50px;
     text-align: left;
 }
 
@@ -186,6 +206,7 @@
 .lvPointLearningText {
     font-family: "Facto-Regular";
     color: #3c3c3b;
+    padding-right: 50px;
     white-space: pre-line;
     text-align: left;
 }
@@ -214,6 +235,7 @@
 .lvPointInfoText {
     font-family: "Facto-Regular";
     color: #3c3c3b;
+    padding-right: 50px;
     white-space: pre-line;
     text-align: left;
 }
