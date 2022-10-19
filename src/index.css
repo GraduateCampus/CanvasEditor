@@ -622,6 +622,37 @@ body {
 
 .lvWelcomeBox {
   margin-bottom: 50px;
+  position: relative;
+}
+.lvWelcomeHeadline {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-size: 40px;
+  font-family: Oswald, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #bfa602;
+}
+.lvWelcomeHeader {
+  position: absolute;
+  font-size: 60px;
+  color: #3c3c3b;
+  font-family: Oswald, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+.lvWelcomeHeader.line1 {
+  top: 25%;
+  left: 10%;
+}
+.lvWelcomeHeader.line2 {
+  top: 45%;
+  left: 10%;
+}
+.lvWelcomeHeader.line3 {
+  top: 65%;
+  left: 10%;
 }
 .lvHeaderimage {
   width: 100%;

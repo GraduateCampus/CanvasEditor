@@ -1,10 +1,10 @@
 import {useRecoilState} from "recoil";
 import {
+    learniacModulButton,
     learniacWelcomeCourse,
     learniacWelcomeCourse2,
     learniacWelcomeCourse3,
     learniacWelcomeImage,
-    Modulbutton
 } from "../../services/atoms";
 import {useState} from "react";
 
@@ -18,7 +18,7 @@ function WelcomeBox() {
     const [welcomeCourse, setWelcomeCourse] = useRecoilState(learniacWelcomeCourse);
     const [welcomeCourse2, setWelcomeCourse2] = useRecoilState(learniacWelcomeCourse2);
     const [welcomeCourse3, setWelcomeCourse3] = useRecoilState(learniacWelcomeCourse3);
-    const [kursnummer, setCourseNumber] = useRecoilState(Modulbutton);
+    const [kursnummer, setCourseNumber] = useRecoilState(learniacModulButton);
 
     const addWelcomeImage = (e) => {
         e.preventDefault()

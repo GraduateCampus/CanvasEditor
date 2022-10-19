@@ -1,18 +1,32 @@
-import image2 from "../components/images/Element 2.png";
-import image3 from "../components/images/Element 3.png";
-import image4 from "../components/images/Element 4.png";
-import image5 from "../components/images/Element 5.png";
-
-export default function makeHtml3(lcWelcomeImage,
-                                  lcWelcomeCourse, lcPointWelcome,
-                                  lcPointCourse, lcPointLearning,
-                                  lcPointInfo, lcContactName,
+export default function makeHtml3(lcWelcomeImage, lcWelcomeCourse,
+                                  lcWelcomeCourse2, lcWelcomeCourse3,
+                                  lcPointWelcomeText, lcPointWelcomeImage,
+                                  lcModulbutton, lcPointCourseText,
+                                  lcPointCourseImage, lcPointLearningText,
+                                  lcPointLearningImage, lcPointInfoText,
+                                  lcPointInfoImage, lcContactName,
                                   lcContactPhone, lcContactMobil,
                                   lcContactMail, lcContactImage) {
 
     return `<!DOCTYPE html>
     <html lang="en">
     <head>
+        <!--
+        /**
+        * @license
+        * MyFonts Webfont Build ID 130028
+        *
+        * The fonts listed in this notice are subject to the End User License
+        * Agreement(s) entered into by the website owner. All other parties are
+        * explicitly restricted from using the Licensed Webfonts(s).
+        *
+        * You may obtain a valid license from one of MyFonts official sites.
+        * http://www.fonts.com
+        * http://www.myfonts.com
+        * http://www.linotype.com
+        *
+        */
+        -->
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,72 +34,71 @@ export default function makeHtml3(lcWelcomeImage,
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="MyFontsWebfontsKit.css">
     </head>
     <body>
     <div class="everything">
         <div class="lvWelcomeBox">
-                    <span class="welcomeHeadline">
-                        ${lcWelcomeCourse}
-                    </span>
+            <span class="lvWelcomeCourse">Willkommen im Kurs</span>
+                    <span class="lvWelcomeHeadline line1">${lcWelcomeCourse}</span>
+                    <span class="lvWelcomeHeadline line2">${lcWelcomeCourse2}</span>
+                    <span class="lvWelcomeHeadline line3">${lcWelcomeCourse3}</span>
                 <img class="lvHeaderimage" src=${lcWelcomeImage}/>
         </div>
         <div class="lvTimeline">
-            <div class="lvTimeline alt">
-                <div class="lvContainer lvpWelcome">
-                    <div class="lvTimeline-icon">
-                        <div class="lvImage">
-                            <img class="lvImageIcon" src="images"/>
-                        </div>
-                    </div>            
-                    <div class="lvContent pointWelcomebg">
-                        <h1 class="lvPointWelcomeHeader">Willkommen im Kurs</h1>
-                        <div class="lvPointWelcomeText">
-                        ${lcPointWelcome}
-                        <br />
-                        <a href="images" class="lvModulButton">Zu den Modulen</a>
-                        </div>
+            <div class="lvContainer lvpWelcome">
+                <div class="lvTimeline-icon">
+                    <div class="lvImage">
+                        <img class="lvImageIcon" src="${lcPointWelcomeImage}"/>
+                    </div>
+                </div>            
+                <div class="lvContent pointWelcomebg">
+                    <h1 class="lvPointWelcomeHeader">Willkommen im Kurs</h1>
+                    <div class="lvPointWelcomeText">
+                    ${lcPointWelcomeText}
+                    </div>
+                    <a href="/courses/${lcModulbutton}/modules" class="lvModulButton">Zu den Modulen</a>
+                </div>
+            </div>
+            <div class="lvContainer lvpWelcome">
+                <div class="lvTimeline-icon">
+                    <div class="lvImage">
+                        <img class="lvImageIcon" src="${lcPointCourseImage}"/>
                     </div>
                 </div>
-                <div class="lvContainer lvpWelcome">
-                    <div class="lvTimeline-icon">
-                        <div class="lvImage">
-                            <img class="lvImageIcon" src="images"/>
-                        </div>
+                <div class="lvContent pointCoursebg">
+                    <h1 class="lvPointCourseHeader">Kursablauf</h1>
+                    <div class="lvPointCourseText">${lcPointCourseText}</div>
+                </div>         
+            </div>
+            <div class="lvContainer lvpWelcome">
+                <div class="lvTimeline-icon">
+                    <div class="lvImage">
+                        <img class="lvImageIcon" src="${lcPointLearningImage}"/>
                     </div>
-                    <div class="lvContent pointCoursebg">
-                        <h1 class="lvPointCourseHeader">Kursablauf</h1>
-                        <div class="lvPointCourseText">${lcPointCourse}</div>
-                    </div>         
                 </div>
-                <div class="lvContainer lvpWelcome">
-                    <div class="lvTimeline-icon">
-                        <div class="lvImage">
-                            <img class="lvImageIcon" src="images"/>
-                        </div>
+                <div class="lvContent pointLearningbg">
+                    <h1 class="lvPointLearningHeader">Mit E-Learnings lernen</h1>
+                    <div class="lvPointLearningText">
+                        ${lcPointLearningText}
+                       </div>
+                       <a href="/courses/${lcModulbutton}/modules" class="lvDownload">Download</a>
+                </div>            
+            </div>
+            <div class="lvContainer lvpWelcome">
+                <div class="lvTimeline-icon">
+                    <div class="lvImage">
+                        <img class="lvImageIcon" src="${lcPointInfoImage}"/>
                     </div>
-                    <div class="lvContent pointLearningbg">
-                        <h1 class="lvPointLearningHeader">Mit E-Learnings lernen</h1>
-                        <div class="lvPointLearningText">
-                            ${lcPointLearning}
-                            <a href="images" class="lvDownload">Download</a>
-                           </div>
-                    </div>            
-                </div>
-                <div class="lvContainer lvpWelcome">
-                    <div class="lvTimeline-icon">
-                        <div class="lvImage">
-                            <img class="lvImageIcon" src="images"/>
-                        </div>
-                    </div>    
-                    <div class="lvContent pointInfobg">
-                        <h1 class="lvPointInfoHeader">Wissenswertes</h1>
-                        <div class="lvPointInfoText">${lcPointInfo}</div>
-                    </div>        
-                </div>
+                </div>    
+                <div class="lvContent pointInfobg">
+                    <h1 class="lvPointInfoHeader">Wissenswertes</h1>
+                    <div class="lvPointInfoText">${lcPointInfoText}</div>
+                </div>        
             </div>
         </div>
         <div class="lvRocketBox">
-            <img class="lvRocket" src="images"/>
+            <img class="lvRocket" src="https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Gif-Rakete.gif?raw=true"/>
             <div class="lvRocketText">
                 VIEL SPASS UND ERFOLG BEIM BEARBEITEN DER INHALTE.
             </div>
@@ -93,7 +106,7 @@ export default function makeHtml3(lcWelcomeImage,
         <div class="lvContactBox">
             <div class="boxPadding">
                 <div class="lvcTitle">
-                    Ansprechpersonen
+                    Ansprechperson
                 </div>
                 <div class="lvContactMiniBox">
                     <div class="lvContactTextBox lvcolumn">
@@ -113,6 +126,7 @@ export default function makeHtml3(lcWelcomeImage,
                 </div>
             </div>
         </div>
+        <img class="learniacLogo" src="https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Element%206.png?raw=true" />
     </div>
     </body>
     </html>

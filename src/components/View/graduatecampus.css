@@ -3,7 +3,7 @@
     box-sizing: border-box;
 }
 .everything {
-    width: 90%;
+    width: 95%;
     margin-left:auto;
     margin-right:auto;
 }
@@ -39,33 +39,29 @@
 }
 .lvWelcomeCourse {
     position: absolute;
-    top: 15%;
+    top: 10%;
     left: 10%;
     font-size: 40px;
-    font-family: Oswald, sans-serif;
-    font-style: normal;
-    font-weight: 400;
+    font-family: "Briston-Regular";
+    font-weight: bold;
     color: #bfa602;
-
 }
 .lvWelcomeHeadline {
     position: absolute;
     font-size: 60px;
     color: #3c3c3b;
-    font-family: Oswald, sans-serif;
-    font-style: normal;
-    font-weight: 300;
+    font-family: "Facto-Bold";
 }
 .lvWelcomeHeadline.line1 {
     top: 25%;
     left: 10%;
 }
 .lvWelcomeHeadline.line2 {
-    top: 40%;
+    top: 45%;
     left: 10%;
 }
 .lvWelcomeHeadline.line3 {
-    top: 55%;
+    top: 65%;
     left: 10%;
 }
 .lvHeaderimage {
@@ -106,10 +102,10 @@
     left: 70px;
     background: #8c7c02;
     width: 1000px;
-    min-height: 200px;
     border-radius: 10px;
-    padding: 20px 20px 15px;
+    padding: 10px 30px 30px;
     box-shadow: 0px 40px 40px rgba(0,0,0,0.15);
+    text-align: right;
 }
 .lvContent:before {
     content: '';
@@ -139,97 +135,87 @@
 /* Styling für PointWelcome */
 
 .lvPointWelcomeHeader {
-    font-family: oswald, sans-serif;
-    font-style: normal;
-    font-weight: 500;
+    font-family: "Briston-Regular";
+    font-weight: bold;
     color: #bfa602;
+    text-align: left;
 }
 .lvPointWelcomeText {
-    font-family: open-sans, sans-serif;
-    font-style: normal;
-    font-weight: 300;
+    font-family: "Facto-Regular";
     color: #ffffff;
-    padding-bottom: 50px;
     white-space: pre-line;
+    text-align: left;
 }
 .lvModulButton {
-    float: right;
+    display: inline-block;
     background: none;
     border: 2px solid #bfa602;
     border-radius: 25px;
     color: #bfa602;
-    font-family: open-sans, sans-serif;
-    font-style: normal;
-    font-weight: 400;
+    font-family: "Facto-Medium";
     font-size: large;
     text-decoration: none;
     padding: 5px 35px 5px 35px;
-    margin-top: 20px;
+    text-align: left;
     margin-right: 20px;
 }
 
 /* Styling für PointCourse */
 
 .lvPointCourseHeader {
-    font-family: oswald, sans-serif;
-    font-style: normal;
-    font-weight: 500;
+    font-family: "Briston-Regular";
+    font-weight: bold;
     color: #3c3c3b;
+    text-align: left;
 }
 .lvPointCourseText {
-    font-family: open-sans, sans-serif;
-    font-style: normal;
-    font-weight: 300;
+    font-family: "Facto-Regular";
     color: #3c3c3b;
     white-space: pre-line;
+    text-align: left;
 }
 
 /* Styling für PointLearning */
 
 .lvPointLearningHeader {
-    font-family: oswald, sans-serif;
-    font-style: normal;
-    font-weight: 500;
+    font-family: "Briston-Regular";
+    font-weight: bold;
     color: #3c3c3b;
+    text-align: left;
 }
 .lvPointLearningText {
-    font-family: open-sans, sans-serif;
-    font-style: normal;
-    font-weight: 300;
+    font-family: "Facto-Regular";
     color: #3c3c3b;
-    padding-bottom: 50px;
     white-space: pre-line;
+    text-align: left;
 }
 .lvDownload {
-    float: right;
+    display: inline-block;
+    text-align: right;
     background: none;
     border: 2px solid #3c3c3b;
     border-radius: 25px;
     color: #3c3c3b;
-    font-family: open-sans, sans-serif;
-    font-style: normal;
-    font-weight: 400;
+    font-family: "Facto-Medium";
     font-size: large;
     text-decoration: none;
     padding: 5px 35px 5px 35px;
-    margin-top: 20px;
     margin-right: 20px;
 }
 
 /* Styling für PointInfo */
 
 .lvPointInfoHeader {
-    font-family: oswald, sans-serif;
-    font-style: normal;
-    font-weight: 500;
+    font-family: "Briston-Regular";
+    font-weight: bold;
     color: #3c3c3b;
+    text-align: left;
 }
 .lvPointInfoText {
-    font-family: open-sans, sans-serif;
-    font-style: normal;
-    font-weight: 300;
+    font-family: "Facto-Regular";
     color: #3c3c3b;
     white-space: pre-line;
+    text-align: left;
 }
 
 /* Styling für Rakete */
@@ -243,9 +229,8 @@
 }
 .lvRocketText {
     text-align: center;
-    font-family: Oswald, sans-serif;
-    font-style: normal;
-    font-weight: 400;
+    font-family: "Facto-Bold";
+    font-weight: bold;
     font-size: x-large;
     color: #3c3c3b;
 }
@@ -258,12 +243,11 @@
     background: #f2f2f2;
 }
 .boxPadding {
-    padding: 5% 10% 10% 10%;
+    padding: 5% 5% 5% 5%;
 }
 .lvcTitle {
-    font-family: Oswald, sans-serif;
-    font-style: normal;
-    font-weight: 400;
+    font-family: "Briston-Regular";
+    font-weight: bold;
     font-size: xxx-large;
     color: #3c3c3b;
     padding-bottom: 30px;
@@ -274,56 +258,45 @@
     padding: 50px 10px 50px 50px;
 }
 .lvContactTitle {
-    font-family: Oswald, sans-serif;
-    font-style: normal;
-    font-weight: 400;
+    font-family: "Facto-Bold";
     color: #ffffff;
-    font-size: x-large;
-    padding-bottom: 10px;
+    font-size: large;
 }
 .lvContactName {
-    font-family: Oswald, sans-serif;
-    font-style: normal;
-    font-weight: 400;
+    font-family: "Briston-Regular";
+    font-weight: bold;
     font-size: xx-large;
     color: #bfa602;
     padding-bottom: 10px;
 }
 .lvContactText {
-    font-family: open-sans, sans-serif;
-    font-style: normal;
-    font-weight: 300;
+    font-family: "Facto-Regular";
     color: #ffffff;
     padding-bottom: 20px;
 }
 .lvContactPhone {
-    font-family: open-sans, sans-serif;
-    font-style: normal;
-    font-weight: 300;
+    font-family: "Facto-Regular";
     color: #ffffff;
     padding-bottom: 10px;
 }
 .lvContactMobil {
-    font-family: open-sans, sans-serif;
-    font-style: normal;
-    font-weight: 300;
+    font-family: "Facto-Regular";
     color: #ffffff;
     padding-bottom: 10px;
 }
 .lvContactMail {
-    font-family: open-sans, sans-serif;
-    font-style: normal;
-    font-weight: 300;
+    font-family: "Facto-Regular";
     color: #ede4c5;
 }
 .lvcolumn {
     display: inline-block;
-    width: 40%;
+    width: 45%;
 }
 .lvContactBild {
     display: block;
     margin: auto;
-    padding-left: 30%;
+    width: 75%;
+    padding-left: 40%;
 }
 .learniacLogo {
     float: right;
@@ -372,12 +345,17 @@
     border-radius: 50px;
     box-shadow: 10px 40px 40px 10px rgba(0,0,0,0.15);
     display: flex;
-    max-height: 700px;
+    min-height: 500px;
+    text-align: right;
 }
 .courseImageBox {
     flex: 1;
     display: flex;
     justify-content: center;
+}
+.courseImage {
+    width: 100%;
+    height: auto;
 }
 .courseBox {
     flex: 2;
@@ -387,6 +365,7 @@
     font-family: Oswald, sans-serif;
     font-style: normal;
     font-weight: 400;
+    text-align: left;
 }
 .courseText {
     color: #000000;
@@ -394,19 +373,20 @@
     font-style: normal;
     font-weight: 400;
     white-space: pre-line;
+    text-align: left;
 }
 .courseModulbutton {
     color: #ffffff;
     font-family: Oswald, sans-serif;
     font-style: normal;
     font-weight: 400;
-    margin-top: 5%;
-    margin-right: 10%;
     padding: 50px 50px 50px 50px;
     text-decoration: none;
     border-radius: 15px;
+    margin-top: 5%;
     background-color: #d9c65a;
-    float: right;
+    display: inline-block;
+    text-align: right;
 }
 /* Styling for ModulePlan */
 .modulplan {
@@ -414,7 +394,11 @@
 }
 
 /* Styling for OverviewBoxes */
-
+.testing {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
 .overviewHeadline {
     color: #bea602;
     font-family: Oswald, sans-serif;
@@ -511,7 +495,11 @@
     right: 10%;
     font-size: 20px;
 }
-
+.overviewDurationIcon {
+    vertical-align: sub;
+    margin-right: 5px;
+    width: 20px;
+}
 /* Styling for NewCanvas */
 
 .newCanvasBox {
@@ -550,7 +538,7 @@
     font-weight: 400;
     font-size: 25px;
     border-radius: 20px;
-    margin: 10% 15% 10% 10%;
+    margin: 15% 15% 5% 10%;
     padding: 10px;
     text-decoration: none;
     background-color: white;
@@ -567,13 +555,13 @@
     color: white;
 }
 .contactsIcon {
-    width: 40%;
+    width: 50%;
 }
 .contactsRole {
     font-family: Oswald, sans-serif;
     font-style: normal;
     font-weight: 300;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 .contactsName {
     font-family: Oswald, sans-serif;
@@ -704,7 +692,7 @@
         border-radius: 50px;
     }
     .courseBox {
-        padding: 100px;
+        padding: 20px 50px 50px 50px;
     }
     .courseHeadline {
         font-size: 72px;

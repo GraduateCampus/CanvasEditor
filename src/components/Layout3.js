@@ -2,7 +2,6 @@ import ViewWelcomeBox from "./View/blocks_learniac/ViewWelcomeBox";
 import Editor3 from "./Editor/Editor3";
 import ViewPointWelcome from "./View/blocks_learniac/ViewPointWelcome";
 import ViewPointCourse from "./View/blocks_learniac/ViewPointCourse";
-import rakete from "../components/images/Gif-Rakete.gif"
 import ViewPointLearning from "./View/blocks_learniac/ViewPointLearning";
 import ViewPointInfo from "./View/blocks_learniac/ViewPointInfo";
 import ViewContact from "./View/blocks_learniac/ViewContact";
@@ -73,7 +72,7 @@ function Layout3() {
                     </div>
                 </div>
                 <div className="lvRocketBox">
-                    <img className="lvRocket" src={rakete}/>
+                    <img className="lvRocket" src="https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Gif-Rakete.gif?raw=true"/>
                     <div className="lvRocketText">
                         VIEL SPASS UND ERFOLG BEIM BEARBEITEN DER INHALTE.
                     </div>

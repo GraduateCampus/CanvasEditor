@@ -1,8 +1,8 @@
-function makeOverview(overview) {
+function makeOverview(overview, modulbutton) {
     let oV = `<div class="row">`;
     overview.map((item,index) => {
         let newOv =`
-                <a href="nix">
+                <a href=""/courses/${modulbutton}/modules"">
                 <div class="col-5 overview">
                     <div class="overviewGoldbox">
                         ${index +1}
@@ -19,7 +19,7 @@ function makeOverview(overview) {
                         ${item.nuggets}
                     </div>
                     <div class="overviewDuration">
-                        🕑 ${item.duration}
+                        <img class="overviewDurationIcon" src="https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Zeit-Icon.png?raw=true"> ${item.duration}
                     </div>
                 </div>
                 </a>`;
@@ -57,7 +57,7 @@ function makeContacts(contacts) {
     return contact;
 }
 
-export default function makeHtml(welcomeImage, welcomeText, welcomeCourse, kurseinstieg, modulplan, overview, contacts, avatar, modulbutton) {
+export default function makeHtml(welcomeImage, welcomeText, welcomeCourse, welcomeCourse2, kurseinstieg, modulplan, overview, contacts, avatar, modulbutton) {
 
     return `<!DOCTYPE html>
     <html lang="en">
@@ -81,6 +81,9 @@ export default function makeHtml(welcomeImage, welcomeText, welcomeCourse, kurse
                     <span class="welcomeTitle">
                         ${welcomeCourse}
                     </span>
+                    <span class="welcomeTitle">
+                        ${welcomeCourse2}
+                    </span>
                 </div>
                 <div class="col-5">
                     <img class="welcomeImage" src=${welcomeImage} />
@@ -89,7 +92,7 @@ export default function makeHtml(welcomeImage, welcomeText, welcomeCourse, kurse
         </div>
         <div class="row">
             <div class="col-12 courseEntry">
-                <div class="col-3 courseImageBox">
+                <div class="col-4 courseImageBox">
                     <img class="courseImage" src="https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/rakete.png?raw=true" />
                 </div>
                 <div class="col-9 courseBox">
@@ -110,11 +113,13 @@ export default function makeHtml(welcomeImage, welcomeText, welcomeCourse, kurse
                 <img class="modulplan" src=${modulplan} />
             </div>
         </div>
-        <div class="overviewHeadline">
-            Inhaltsübersicht
+        <div class="row">
+            <div class="overviewHeadline">
+                Inhaltsübersicht
+            </div>
         </div>
         <div class="testing">   
-            ${makeOverview(overview.items)}
+            ${makeOverview(overview.items, modulbutton)}
         </div>
         <div class="row">
             <div class="newCanvasBox">

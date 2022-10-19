@@ -137,3 +137,7 @@ export const learniacContactsBild = atom ( {
     key: 'learniacContactsBild',
     default: "",
 });
+export const learniacModulButton = atom ( {
+    key: 'learniacModulButton',
+    default: "",
+});

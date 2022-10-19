@@ -1,0 +1,49 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 4351699, 2022-02-07T10:13:30-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Facto-Bold by The Northern Block
+ * URL: https://www.myfonts.com/fonts/northernblock/facto/bold/
+ * 
+ * Webfont: Facto-Italic by The Northern Block
+ * URL: https://www.myfonts.com/fonts/northernblock/facto/italic/
+ * 
+ * Webfont: Facto-Medium by The Northern Block
+ * URL: https://www.myfonts.com/fonts/northernblock/facto/medium/
+ * 
+ * Webfont: Facto-Regular by The Northern Block
+ * URL: https://www.myfonts.com/fonts/northernblock/facto/regular/
+ * 
+ * 
+ * Webfonts copyright: Copyright © 2015 by Jonathan Hill. All rights reserved.
+ * 
+ * © 2022 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/4266d3");
+  
+@font-face {
+  font-family: "Facto-Medium";
+  src: url('webFonts/FactoMedium/font.woff2') format('woff2'), url('webFonts/FactoMedium/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Facto-Italic";
+  src: url('webFonts/FactoItalic/font.woff2') format('woff2'), url('webFonts/FactoItalic/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Facto-Bold";
+  src: url('webFonts/FactoBold/font.woff2') format('woff2'), url('webFonts/FactoBold/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Facto-Regular";
+  src: url('webFonts/FactoRegular/font.woff2') format('woff2'), url('webFonts/FactoRegular/font.woff') format('woff');
+}
+

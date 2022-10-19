@@ -12,9 +12,10 @@ function ViewWelcomeBox() {
     return (
         <div className="lvWelcomeBox">
             <div>
-                <p>{course}</p>
-                <p>{course2}</p>
-                <p>{course3}</p>
+                <div className="lvWelcomeHeadline">Willkommen im Kurs</div>
+                <span className="lvWelcomeHeader line1">{course}</span>
+                <span className="lvWelcomeHeader line2">{course2}</span>
+                <span className="lvWelcomeHeader line3">{course3}</span>
                 <img className="lvHeaderimage" src={image} />
             </div>
         </div>

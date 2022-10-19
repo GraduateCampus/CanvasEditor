@@ -24,7 +24,7 @@ import {
     learniacPointLearningText,
     learniacPointLearningImage,
     learniacPointInfoText,
-    learniacPointInfoImage
+    learniacPointInfoImage, learniacWelcomeCourse2, learniacWelcomeCourse3, learniacModulButton, welcomeBoxCourse2
 } from "./services/atoms";
 import React, {useState} from "react";
 import {useRecoilState, useRecoilValue} from "recoil";
@@ -43,6 +43,7 @@ function Header () {
     const welcomeImage = useRecoilValue(welcomeBoxImage);
     const welcomeText = useRecoilValue(welcomeBoxText);
     const welcomeCourse = useRecoilValue(welcomeBoxCourse);
+    const welcomeCourse2 = useRecoilValue(welcomeBoxCourse2);
     const kurseinstieg = useRecoilValue(KurseinstiegState);
     const modulplan = useRecoilValue(ModulplanState);
     const overview = useRecoilValue(OverviewState);
@@ -50,7 +51,10 @@ function Header () {
     const avatar = useRecoilValue(ContactAvatar);
     const modulbutton = useRecoilValue(Modulbutton);
     const lcWelcomeImage = useRecoilValue(learniacWelcomeImage);
+    const lcModulButton = useRecoilValue(learniacModulButton);
     const lcWelcomeCourse = useRecoilValue(learniacWelcomeCourse);
+    const lcWelcomeCourse2 = useRecoilValue(learniacWelcomeCourse2);
+    const lcWelcomeCourse3 = useRecoilValue(learniacWelcomeCourse3);
     const lcPointWelcomeText = useRecoilValue(learniacPointWelcomeText);
     const lcPointWelcomeImage = useRecoilValue(learniacPointWelcomeImage);
     const lcPointCourseText = useRecoilValue(learniacPointCourseText);
@@ -87,7 +91,7 @@ function Header () {
     const exportData = () => {
         setShowModal(!showModal);
         const index = makeHtml(welcomeImage,
-            welcomeText, welcomeCourse,
+            welcomeText, welcomeCourse, welcomeCourse2,
             kurseinstieg, modulplan,
             overview, contacts,
             avatar, modulbutton);
@@ -99,11 +103,12 @@ function Header () {
     const exportData3 = () => {
         setShowModal(!showModal);
         const index = makeHtml3(lcWelcomeImage,
-        lcWelcomeCourse, lcPointWelcomeText,
-        lcPointCourseText, lcPointLearningText,
-        lcPointInfoText, lcContactName,
-        lcContactPhone, lcContactMobil,
-        lcContactMail, lcContactImage);
+            lcWelcomeCourse, lcWelcomeCourse2, lcWelcomeCourse3,
+            lcPointWelcomeText, lcPointWelcomeImage, lcModulButton,
+            lcPointCourseText, lcPointCourseImage , lcPointLearningText,
+            lcPointLearningImage, lcPointInfoText, lcPointInfoImage,
+            lcContactName, lcContactPhone, lcContactMobil,
+            lcContactMail, lcContactImage);
         setData(index);
     }
     return (
