@@ -87,7 +87,8 @@ export const learniacWelcomeCourse3 = atom ( {
 });
 export const learniacPointWelcomeText = atom ( {
     key: 'learniacPointWelcomeText',
-    default: "",
+    default: "Zum Durchstarten klicken Sie im Kursmenü auf der linken Seite auf Module.\n" +
+        "Hier gelangen Sie zur Gesamtübersicht aller E-Learning Einheiten, den sog. Learning Nuggets.",
 });
 export const learniacPointWelcomeImage = atom ( {
     key: 'learniacPointWelcomeImage',
@@ -95,7 +96,10 @@ export const learniacPointWelcomeImage = atom ( {
 });
 export const learniacPointCourseText = atom ( {
     key: 'learniacPointCourseText',
-    default: "",
+    default: "Am besten arbeiten Sie von oben nach unten der Reihe nach die einzelnen Lerneinheiten durch.\n" +
+        "Am Ende eines jeden Learning Nuggets erwartet Sie ein kurzer Wissenscheck, um das Gelernte\n" +
+        "abschließend zu überprüfen. Sobald Sie alle Learning Nuggets bearbeitet haben, erhalten Sie\n" +
+        "automatisch per E-Mail Ihre Teilnahmebescheinigung zugesendet.",
 });
 export const learniacPointCourseImage = atom ( {
     key: 'learniacPointCourseImage',
@@ -103,7 +107,8 @@ export const learniacPointCourseImage = atom ( {
 });
 export const learniacPointLearningText = atom ( {
     key: 'learniacPointLearningText',
-    default: "",
+    default: "Mit E-Learnings lernen. Eine kurze Anleitung, wie Sie die Learning Nuggets bearbeiten können\n" +
+        "Sie sich gerne hier herunterladen.",
 });
 export const learniacPointLearningImage = atom ( {
     key: 'learniacPointLearningImage',
@@ -111,7 +116,11 @@ export const learniacPointLearningImage = atom ( {
 });
 export const learniacPointInfoText = atom ( {
     key: 'learniacPointInfoText',
-    default: "",
+    default: "Ab der Buchung und Bezahlung haben Sie 90 Tage Zugriff auf die Learning Nuggets.\n" +
+        "Die Lehrunterlagen sind nur für den persönlichen Gebrauch vorgesehen. Daher ist von sonstiger\n" +
+        "Verbreitung und Vervielfältigung abzusehen. Die Lehrunterlagen sind urheberrechtlich\n" +
+        "geschützt. Das Urheberrecht liegt, soweit nicht ausdrücklich anders gekennzeichnet, bei\n" +
+        "dem Graduate Campus Hochschule Aalen GmbH.",
 });
 export const learniacPointInfoImage = atom ( {
     key: 'learniacPointInfoImage',

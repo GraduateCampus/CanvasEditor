@@ -1,4 +1,24 @@
+@import url("//hello.myfonts.net/count/4266d3");
+@import url("//hello.myfonts.net/count/400885");
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Oswald:wght@300;400&display=swap');
+@font-face {
+  font-family: "Briston-Regular";
+  src: url('https://github.com/Electressic/CanvasEditor/tree/main/src/fonts/MyFontsWebfontsKit-4/webFonts/BristonRegular/font.woff2') format('woff2'), url('https://github.com/Electressic/CanvasEditor/tree/main/src/fonts/MyFontsWebfontsKit-4/webFonts/BristonRegular/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Facto-Medium";
+  src: url('https://github.com/Electressic/CanvasEditor/tree/main/src/fonts/MyFontsWebfontsKit-4/webFonts/FactoMedium/font.woff2') format('woff2'), url('https://github.com/Electressic/CanvasEditor/tree/main/src/fonts/MyFontsWebfontsKit-4/webFonts/FactoMedium/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Facto-Italic";
+  src: url('https://github.com/Electressic/CanvasEditor/tree/main/src/fonts/MyFontsWebfontsKit-4/webFonts/FactoItalic/font.woff2') format('woff2'), url('https://github.com/Electressic/CanvasEditor/tree/main/src/fonts/MyFontsWebfontsKit-4/webFonts/FactoItalic/font.woff') format('woff');}
+@font-face {
+  font-family: "Facto-Bold";
+  src: url('https://github.com/Electressic/CanvasEditor/tree/main/src/fonts/MyFontsWebfontsKit-4/webFonts/FactoBold/font.woff2') format('woff2'), url('https://github.com/Electressic/CanvasEditor/tree/main/src/fonts/MyFontsWebfontsKit-4/webFonts/FactoBold/font.woff') format('woff');}
+@font-face {
+  font-family: "Facto-Regular";
+  src: url('https://github.com/Electressic/CanvasEditor/tree/main/src/fonts/MyFontsWebfontsKit-4/webFonts/FactoRegular/font.woff2') format('woff2'), url('https://github.com/Electressic/CanvasEditor/tree/main/src/fonts/MyFontsWebfontsKit-4/webFonts/FactoRegular/font.woff') format('woff');}
+
 body {
   background-color: #3c3c3b;
 }
@@ -629,18 +649,14 @@ body {
   top: 10%;
   left: 10%;
   font-size: 40px;
-  font-family: Oswald, sans-serif;
-  font-style: normal;
-  font-weight: 400;
+  font-family: Briston-Regular;
   color: #bfa602;
 }
 .lvWelcomeHeader {
   position: absolute;
   font-size: 60px;
   color: #3c3c3b;
-  font-family: Oswald, sans-serif;
-  font-style: normal;
-  font-weight: 300;
+  font-family: Facto-Bold;
 }
 .lvWelcomeHeader.line1 {
   top: 25%;
