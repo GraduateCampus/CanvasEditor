@@ -29,54 +29,54 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeCourse,
                 <img class="lvHeaderimage" src=${lcWelcomeImage}/>
         </div>
         <div class="lvTimeline">
-            <div class="lvContainer lvpWelcome">
+            <div class="lvContainer">
                 <div class="lvTimeline-icon">
                     <div class="lvImage">
                         <img class="lvImageIcon" src="${lcPointWelcomeImage}"/>
                     </div>
                 </div>            
                 <div class="lvContent pointWelcomebg">
-                    <h1 class="lvPointWelcomeHeader">Willkommen im Kurs</h1>
-                    <div class="lvPointWelcomeText">
-                    ${lcPointWelcomeText}
+                    <h1 class="lvPointWelcomeHeader contentHeadline">Willkommen im Kurs</h1>
+                    <div class="lvPointWelcomeText contentText">${lcPointWelcomeText}</div>
+                    <div class="lvButtonBox button1">
+                        <a href="/courses/${lcModulbutton}/modules" class="lvModulButton">Zu den Modulen</a>
                     </div>
-                    <a href="/courses/${lcModulbutton}/modules" class="lvModulButton">Zu den Modulen</a>
                 </div>
             </div>
-            <div class="lvContainer lvpWelcome">
+            <div class="lvContainer">
                 <div class="lvTimeline-icon">
                     <div class="lvImage">
                         <img class="lvImageIcon" src="${lcPointCourseImage}"/>
                     </div>
                 </div>
                 <div class="lvContent pointCoursebg">
-                    <h1 class="lvPointCourseHeader">Kursablauf</h1>
-                    <div class="lvPointCourseText">${lcPointCourseText}</div>
+                    <h1 class="lvPointCourseHeader contentHeadline">Kursablauf</h1>
+                    <div class="lvPointCourseText contentText">${lcPointCourseText}</div>
                 </div>         
             </div>
-            <div class="lvContainer lvpWelcome">
+            <div class="lvContainer">
                 <div class="lvTimeline-icon">
                     <div class="lvImage">
                         <img class="lvImageIcon" src="${lcPointLearningImage}"/>
                     </div>
                 </div>
                 <div class="lvContent pointLearningbg">
-                    <h1 class="lvPointLearningHeader">Mit E-Learnings lernen</h1>
-                    <div class="lvPointLearningText">
-                        ${lcPointLearningText}
-                       </div>
-                       <a href="https://graduatecampus.instructure.com/files/56220/download?download_frd=1" class="lvDownload">Download</a>
+                    <h1 class="lvPointLearningHeader contentHeadline">Mit E-Learnings lernen</h1>
+                    <div class="lvPointLearningText contentText">${lcPointLearningText}</div>
+                    <div class="lvButtonBox button2">
+                        <a href="https://graduatecampus.instructure.com/files/56220/download?download_frd=1" class="lvDownload">Download</a>
+                    </div>
                 </div>            
             </div>
-            <div class="lvContainer lvpWelcome">
+            <div class="lvContainer">
                 <div class="lvTimeline-icon">
                     <div class="lvImage">
                         <img class="lvImageIcon" src="${lcPointInfoImage}"/>
                     </div>
                 </div>    
                 <div class="lvContent pointInfobg">
-                    <h1 class="lvPointInfoHeader">Wissenswertes</h1>
-                    <div class="lvPointInfoText">${lcPointInfoText}</div>
+                    <h1 class="lvPointInfoHeader contentHeadline">Wissenswertes</h1>
+                    <div class="lvPointInfoText contentText">${lcPointInfoText}</div>
                 </div>        
             </div>
         </div>
@@ -92,7 +92,7 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeCourse,
                     Ansprechperson
                 </div>
                 <div class="lvContactMiniBox">
-                    <div class="lvContactTextBox lvcolumn">
+                    <div class="lvContactTextBox lvcolumn1">
                         <div class="lvContactTitle">Kurskoordination</div>
                         <div class="lvContactName">${lcContactName}</div>
                         <div class="lvContactText">
@@ -103,7 +103,7 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeCourse,
                         <div class="lvContactMobil">${lcContactMobil}</div>
                         <a href="mailto:${lcContactMail}" class="lvContactMail">${lcContactMail}</a>
                     </div>
-                    <div class="imageBox lvcolumn">
+                    <div class="imageBox lvcolumn2">
                         <img class="lvContactBild" src="${lcContactImage}"/>
                     </div>
                 </div>
