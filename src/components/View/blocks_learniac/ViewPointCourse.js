@@ -1,11 +1,12 @@
 import { useRecoilValue} from "recoil";
-import {learniacPointCourseText} from "../../services/atoms";
+import {learniacPointCourseHeader, learniacPointCourseText} from "../../services/atoms";
 
 function ViewPointCourse() {
+    const header = useRecoilValue(learniacPointCourseHeader);
     const text = useRecoilValue(learniacPointCourseText);
     return (
         <div>
-            <h1 className="lvPointCourseHeader">Kursablauf</h1>
+            <h1 className="lvPointCourseHeader">{header}</h1>
             <div className="lvPointCourseText">{text}</div>
         </div>
     );

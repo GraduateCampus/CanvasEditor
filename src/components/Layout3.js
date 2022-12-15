@@ -10,10 +10,11 @@ import {
     learniacPointCourseImage,
     learniacPointInfoImage,
     learniacPointLearningImage,
-    learniacPointWelcomeImage
+    learniacPointWelcomeImage, learniacRocketText
 } from "./services/atoms";
 
 function Layout3() {
+    const rockettext = useRecoilValue(learniacRocketText);
     const image2 = useRecoilValue(learniacPointWelcomeImage);
     const image3 = useRecoilValue(learniacPointCourseImage);
     const image4 = useRecoilValue(learniacPointLearningImage);
@@ -74,7 +75,7 @@ function Layout3() {
                 <div className="lvRocketBox">
                     <img className="lvRocket" src="https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Gif-Rakete.gif?raw=true"/>
                     <div className="lvRocketText">
-                        VIEL SPASS UND ERFOLG BEIM BEARBEITEN DER INHALTE.
+                        {rockettext}
                     </div>
                 </div>
                 <ViewContact/>

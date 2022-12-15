@@ -1,4 +1,4 @@
-import {atom} from "recoil";
+import {atom, DefaultValue, selector} from "recoil";
 export const modalState = atom ( {
     key: 'modalState',
     default: false,
@@ -73,6 +73,10 @@ export const learniacWelcomeImage = atom ( {
     key: 'learniacWelcomeImage',
     default: "https://github.com/Electressic/CanvasEditor/blob/main/headerbild.png?raw=true",
 });
+export const learniacWelcomeText = atom ( {
+    key: 'learniacWelcomeText',
+    default: "Willkommen im Kurs",
+})
 export const learniacWelcomeCourse = atom ( {
     key: 'learniacWelcomeCourse',
     default: "",
@@ -85,6 +89,10 @@ export const learniacWelcomeCourse3 = atom ( {
     key: 'learniacWelcomeCourse3',
     default: "",
 });
+export const learniacPointWelcomeHeader = atom ({
+    key: 'learniacPointWelcomeHeader',
+    default: 'Willkommen im Kurs',
+})
 export const learniacPointWelcomeText = atom ( {
     key: 'learniacPointWelcomeText',
     default: "Zum Durchstarten klicken Sie im Kursmenü auf der linken Seite auf Module.\n" +
@@ -94,6 +102,10 @@ export const learniacPointWelcomeImage = atom ( {
     key: 'learniacPointWelcomeImage',
     default: "https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Element%202.png?raw=true",
 });
+export const learniacPointCourseHeader = atom ({
+    key: 'learniacPointCourseHeader',
+    default: "Kursablauf",
+})
 export const learniacPointCourseText = atom ( {
     key: 'learniacPointCourseText',
     default: "Am besten arbeiten Sie von oben nach unten der Reihe nach die einzelnen Lerneinheiten durch.\n" +
@@ -105,6 +117,10 @@ export const learniacPointCourseImage = atom ( {
     key: 'learniacPointCourseImage',
     default: "https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Element%203.png?raw=true",
 });
+export const learniacPointLearningHeader = atom ({
+    key: 'learniacPointLearningHeader',
+    default: 'Mit E-Learnings lernen',
+})
 export const learniacPointLearningText = atom ( {
     key: 'learniacPointLearningText',
     default: "Mit E-Learnings lernen. Eine kurze Anleitung, wie Sie die Learning Nuggets bearbeiten können\n" +
@@ -114,6 +130,10 @@ export const learniacPointLearningImage = atom ( {
     key: 'learniacPointLearningImage',
     default: "https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Element%204.png?raw=true",
 });
+export const learniacPointInfoHeader = atom ({
+    key: 'learniacPointInfoHeader',
+    default: 'Wissenswertes',
+})
 export const learniacPointInfoText = atom ( {
     key: 'learniacPointInfoText',
     default: "Ab der Buchung und Bezahlung haben Sie 90 Tage Zugriff auf die Learning Nuggets.\n" +
@@ -126,6 +146,23 @@ export const learniacPointInfoImage = atom ( {
     key: 'learniacPointInfoImage',
     default: "https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Element%205.png?raw=true",
 });
+export const learniacRocketText = atom ({
+    key: 'learniacRocketText',
+    default: 'VIEL SPASS UND ERFOLG BEIM BEARBEITEN DER INHALTE',
+})
+export const learniacContactsHeader = atom ({
+    key: 'learniacContactsHeader',
+    default: 'Ansprechpersonen'
+})
+export const learniacContactsHeader2 = atom ({
+    key: 'learniacContactsHeader2',
+    default: 'Kurskoordination'
+})
+export const learniacContactsText = atom ({
+    key: 'learniacContactsText',
+    default: 'Haben Sie Fragen oder Anregungen?\n' +
+        'Kontaktieren Sie mich gerne.'
+})
 export const learniacContactsName = atom ( {
     key: 'learniacContactsName',
     default: "",
@@ -150,3 +187,35 @@ export const learniacModulButton = atom ( {
     key: 'learniacModulButton',
     default: "",
 });
+export const learniacModulButtonText = atom ( {
+    key: 'learniacModulButtonText',
+    default: "Zu den Modulen",
+});
+export const selectEverything = selector({
+    key: 'everything',
+    get: ({get}) => {
+        const lcPointWelcomeHeader = get(learniacPointWelcomeHeader);
+        const lcPointWelcomeText = get(learniacPointWelcomeText);
+        const lcPointCourseHeader = get(learniacPointCourseHeader);
+        const lcPointCourseText = get(learniacPointCourseText);
+        const lcPointLearningHeader = get(learniacPointLearningHeader);
+        const lcPointLearningText = get(learniacPointLearningText);
+        const lcPointInfoHeader = get(learniacPointInfoHeader);
+        const lcPointInfoText = get(learniacPointInfoText);
+
+        return {lcPointWelcomeHeader, lcPointWelcomeText, lcPointCourseHeader, lcPointCourseText, lcPointLearningHeader, lcPointLearningText, lcPointInfoHeader, lcPointInfoText};
+    },
+    set: ({set}, value) => {
+        if (value instanceof DefaultValue) {
+            set(learniacPointWelcomeHeader, value);
+            set(learniacPointWelcomeText, value);
+            set(learniacPointCourseHeader, value);
+            set(learniacPointCourseText, value);
+            set(learniacPointLearningHeader, value);
+            set(learniacPointLearningText, value);
+            set(learniacPointInfoHeader, value);
+            set(learniacPointInfoText, value);
+            return;
+        }
+    }
+})
