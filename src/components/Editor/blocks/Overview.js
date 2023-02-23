@@ -22,11 +22,13 @@ function Overview() {
         e.preventDefault();
         setShow(oldArray => [...oldArray, true]);
     };
-
+    console.log(courseNavigationstate.items)
     const itemChanged = ({ target: { value, name } }, index) => {
         let items = [...courseNavigationstate.items];
         let item = { ...items[index] };
-        item[name] = value;
+        if (name === "title") {
+            item[name] = value.split(",");
+        }
         items[index] = item;
         setCourseNavigation((prev) => ({
             ...prev,
@@ -58,6 +60,7 @@ function Overview() {
             setShow(newArr);
         }
     }
+
     function courseItem({ icon,title,nuggets,duration }, index) {
         return (
             <div className="courseItemBigWrapper" key={index}>
@@ -80,7 +83,7 @@ function Overview() {
                         <div className="ov inputTitleName">Title:</div>
                         <input
                             type="text"
-                            name="title"
+                            name={"title-${titleIndex}"}
                             className="input titleInput"
                             value={title}
                             onChange={(value) => itemChanged(value, index)}

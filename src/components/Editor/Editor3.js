@@ -43,7 +43,7 @@ function Editor3 ()
                 {showPointInfo && <PointInfo/>}
 
                 <li className="navbar-li" onClick={() => setShowContacts(!showContacts)}>
-                    Ansprechpersonen
+                    Ansprechperson
                 </li>
                 {showContacts && <Contacts/>}
             </ul>

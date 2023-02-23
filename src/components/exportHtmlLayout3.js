@@ -39,7 +39,7 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcWelcomeCourse
                     <h1 class="lvPointWelcomeHeader contentHeadline">${lcPointWelcomeHeader}</h1>
                     <div class="lvPointWelcomeText contentText">${lcPointWelcomeText}</div>
                     <div class="lvButtonBox button1">
-                        <a href="/courses/${lcModulbutton}/modules" class="lvModulButton">$(lcModulButtonText)</a>
+                        <a href="/courses/${lcModulbutton}/modules" class="lvModulButton">${lcModulButtonText}</a>
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcWelcomeCourse
                     </div>
                 </div>
                 <div class="lvContent pointCoursebg">
-                    <h1 class="lvPointCourseHeader contentHeadline">$ {lcPointCourseHeader}</h1>
+                    <h1 class="lvPointCourseHeader contentHeadline">${lcPointCourseHeader}</h1>
                     <div class="lvPointCourseText contentText">${lcPointCourseText}</div>
                 </div>         
             </div>

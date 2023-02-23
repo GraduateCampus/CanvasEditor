@@ -1,10 +1,11 @@
 import Editor2 from "./Editor/Editor2";
-import ViewWelcomeBox from "./View/blocks/ViewWelcomeBox";
-import ViewKurseinstieg from "./View/blocks/ViewKurseinstieg";
-import ViewModulplan from "./View/blocks/ViewModulplan";
-import ViewOverView from "./View/blocks/ViewOverView";
-import ViewCanvasNeu from "./View/blocks/ViewCanvasNeu";
-import ViewContacts from "./View/blocks/ViewContacts";
+import ViewWelcomeBox from "./View/blocks_layout2/ViewWelcomeBox";
+import ViewKurseinstieg from "./View/blocks_layout2/ViewCourseEntry";
+import ViewModulplan from "./View/blocks_layout2/ViewModulplan";
+import ViewOverView from "./View/blocks_layout2/ViewOverview";
+import ViewBadges from "./View/blocks_layout2/ViewBadges";
+import ViewCanvasNeu from "./View/blocks_layout2/ViewCanvasNeu";
+import ViewContacts from "./View/blocks_layout2/ViewContacts";
 
 function Layout2() {
     return (
@@ -14,11 +15,7 @@ function Layout2() {
             </div>
             <div className="split right">
                 <ViewWelcomeBox/>
-                <ViewKurseinstieg/>
-                <ViewModulplan/>
                 <ViewOverView/>
-                <ViewCanvasNeu/>
-                <ViewContacts/>
             </div>
         </div>
     );

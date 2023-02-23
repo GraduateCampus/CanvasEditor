@@ -41,7 +41,7 @@ export const OverviewState = atom ( {
         items: [
             {
                 icon:"",
-                title:"",
+                title: "",
                 nuggets:"",
                 duration:"",
             }
@@ -66,7 +66,62 @@ export const ContactAvatar = atom ( {
     key: 'avatar',
     default: "",
 });
+//atoms for Layout2:
+export const l2WelcomeBackground = atom( {
+    key: 'l2WelcomeBackground',
+    default: "https://github.com/Electressic/CanvasEditor/blob/main/headerbild.png?raw=true",
+})
+export const l2WelcomeHeadline = atom ( {
+    key: 'l2WelcomeHeadline',
+    default: "Willkommen im Kurs",
+});
+export const l2WelcomeCourseName = atom ( {
+    key: 'l2WelcomeCourseName',
+    default: "",
+});
+export const l2WelcomeCourseName2 = atom ( {
+    key: 'l2WelcomeCourseName2',
+    default: "",
+});
+export const l2CourseEntry = atom ( {
+    key: 'l2WCourseEntry',
+    default: "",
+});
+export const l2CourseNr = atom ( {
+    key: 'l2CourseNr',
+    default: "",
+});
+export const l2Modulplan = atom ( {
+    key: 'l2Modulplan',
+    default: "",
+});
+export const l2Overview = atom ( {
+    key: 'l2Overview',
+    default: {
+        items: [
+            {
+                gif: "",
+                chapter: [""],
+            }
+        ]
+    }
+});
+export const boxesState = atom({
+    key: 'boxesState',
+    default: [],
+});
 
+export const boxGifLinkState = (boxIndex) =>
+    atom({
+        key: `boxGifLinkState` + boxIndex,
+        default: '',
+    });
+
+export const boxGifTitlesState = (boxIndex) =>
+    atom({
+        key: `boxGifTitlesState` + boxIndex,
+        default: [''],
+    });
 //atoms for Learniac:
 
 export const learniacWelcomeImage = atom ( {
@@ -196,6 +251,7 @@ export const selectEverything = selector({
     get: ({get}) => {
         const lcPointWelcomeHeader = get(learniacPointWelcomeHeader);
         const lcPointWelcomeText = get(learniacPointWelcomeText);
+        const lcModulButtonText = get(learniacModulButtonText);
         const lcPointCourseHeader = get(learniacPointCourseHeader);
         const lcPointCourseText = get(learniacPointCourseText);
         const lcPointLearningHeader = get(learniacPointLearningHeader);
@@ -203,10 +259,16 @@ export const selectEverything = selector({
         const lcPointInfoHeader = get(learniacPointInfoHeader);
         const lcPointInfoText = get(learniacPointInfoText);
 
-        return {lcPointWelcomeHeader, lcPointWelcomeText, lcPointCourseHeader, lcPointCourseText, lcPointLearningHeader, lcPointLearningText, lcPointInfoHeader, lcPointInfoText};
+        return {lcPointWelcomeHeader, lcPointWelcomeText, lcModulButtonText, lcPointCourseHeader, lcPointCourseText, lcPointLearningHeader, lcPointLearningText, lcPointInfoHeader, lcPointInfoText};
     },
     set: ({set}, value) => {
         if (value instanceof DefaultValue) {
+            set(learniacWelcomeText, value);
+            set(learniacModulButtonText,value);
+            set(learniacRocketText, value);
+            set(learniacContactsHeader, value);
+            set(learniacContactsHeader2, value);
+            set(learniacContactsText, value);
             set(learniacPointWelcomeHeader, value);
             set(learniacPointWelcomeText, value);
             set(learniacPointCourseHeader, value);
@@ -215,6 +277,7 @@ export const selectEverything = selector({
             set(learniacPointLearningText, value);
             set(learniacPointInfoHeader, value);
             set(learniacPointInfoText, value);
+            set(learniacModulButtonText, value);
             return;
         }
     }

@@ -1,9 +1,9 @@
 import React, {useState} from "react";
-import WelcomeBox from "./blocks/WelcomeBox";
-import Kurseinstieg from "./blocks/Kurseinstieg";
-import Modulplan from "./blocks/Modulplan";
-import Overview from "./blocks/Overview";
-import Contacts from "./blocks/Contacts";
+import WelcomeBox from "./blocks_layout2/WelcomeBox";
+import CourseEntry from "./blocks_layout2/CourseEntry";
+import Modulplan from "./blocks_layout2/Modulplan";
+import Overview from "./blocks_layout2/Overview";
+import Contacts from "./blocks_layout2/Contacts";
 
 function Editor2 ()
 {
@@ -24,7 +24,7 @@ function Editor2 ()
                 <li className="navbar-li" onClick={() => setShowDescriptionBox(!showDescriptionBox)}>
                     Kurseinstieg
                 </li>
-                {showDescriptionBox && <Kurseinstieg/>}
+                {showDescriptionBox && <CourseEntry/>}
 
                 <li className="navbar-li" onClick={() => setShowModulplan(!showModulplan)}>
                     Modulplan

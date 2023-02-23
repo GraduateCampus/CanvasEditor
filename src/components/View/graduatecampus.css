@@ -1,11 +1,9 @@
-@import url("//hello.myfonts.net/count/4266d3");
-@import url("//hello.myfonts.net/count/400885");
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Oswald:wght@300;400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @font-face {
     font-family: "Briston-Regular";
     src: url('../../fonts/MyFontsWebfontsKit-4/webFonts/BristonRegular/font.woff2') format('woff2'), url('../../fonts/MyFontsWebfontsKit-4/webFonts/BristonRegular/font.woff') format('woff');
 }
-
 @font-face {
     font-family: "Facto-Medium";
     src: url('../../fonts/MyFontsWebfontsKit-4/webFonts/FactoMedium/font.woff2') format('woff2'), url('../../fonts/MyFontsWebfontsKit-4/webFonts/FactoMedium/font.woff') format('woff');
@@ -19,6 +17,90 @@
 @font-face {
     font-family: "Facto-Regular";
     src: url('../../fonts/MyFontsWebfontsKit-4/webFonts/FactoRegular/font.woff2') format('woff2'), url('../../fonts/MyFontsWebfontsKit-4/webFonts/FactoRegular/font.woff') format('woff');}
+/**
+        * @license
+        * MyFonts Webfont Build ID 4196485, 2021-10-21T04:54:33-0400
+        *
+        * The fonts listed in this notice are subject to the End User License
+        * Agreement(s) entered into by the website owner. All other parties are
+        * explicitly restricted from using the Licensed Webfonts(s).
+        *
+        * You may obtain a valid license at the URLs below.
+        *
+        * Webfont: Briston-Regular by Fenotype
+        * URL: https://www.myfonts.com/fonts/fenotype/briston/regular/
+        * Copyright: Copyright (c) 2021 by Emil Bertell. All rights reserved.
+        *
+        *
+        *
+        * © 2021 MyFonts Inc
+       */
+
+@import url("//hello.myfonts.net/count/400885");
+
+@font-face {
+    font-family: 'Briston-Regular';
+    src: url("https://www.learniac.org/typo3conf/ext/learniac_distribution/Resources/Public/Fonts/BristonRegular/font.woff2") format("woff2"), url("https://www.learniac.org/typo3conf/ext/learniac_distribution/Resources/Public/Fonts/BristonRegular/font.woff") format("woff");
+}
+
+/**
+ * @license
+ * MyFonts Webfont Build ID 4351699, 2022-02-07T10:13:30-0500
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: Facto-Bold by The Northern Block
+ * URL: https://www.myfonts.com/fonts/northernblock/facto/bold/
+ *
+ * Webfont: Facto-Italic by The Northern Block
+ * URL: https://www.myfonts.com/fonts/northernblock/facto/italic/
+ *
+ * Webfont: Facto-Medium by The Northern Block
+ * URL: https://www.myfonts.com/fonts/northernblock/facto/medium/
+ *
+ * Webfont: Facto-Regular by The Northern Block
+ * URL: https://www.myfonts.com/fonts/northernblock/facto/regular/
+ *
+ *
+ * Webfonts copyright: Copyright © 2015 by Jonathan Hill. All rights reserved.
+ *
+ * © 2022 MyFonts Inc
+*/
+
+@import url("//hello.myfonts.net/count/4266d3");
+
+@font-face {
+    font-family: 'Facto-Regular';
+    src: url("https://www.learniac.org/typo3conf/ext/learniac_distribution/Resources/Public/Fonts/FactoRegular/font.woff2") format("woff2"), url("https://www.learniac.org/typo3conf/ext/learniac_distribution/Resources/Public/Fonts/FactoRegular/font.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Facto-Medium';
+    src: url("https://www.learniac.org/typo3conf/ext/learniac_distribution/Resources/Public/Fonts/FactoMedium/font.woff2") format("woff2"), url("https://www.learniac.org/typo3conf/ext/learniac_distribution/Resources/Public/Fonts/FactoMedium/font.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Facto-Bold';
+    src: url("https://www.learniac.org/typo3conf/ext/learniac_distribution/Resources/Public/Fonts/FactoBold/font.woff2") format("woff2"), url("https://www.learniac.org/typo3conf/ext/learniac_distribution/Resources/Public/Fonts/FactoBold/font.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Facto-Italic';
+    src: url("https://www.learniac.org/typo3conf/ext/learniac_distribution/Resources/Public/Fonts/FactoItalic/font.woff2") format("woff2"), url("https://www.learniac.org/typo3conf/ext/learniac_distribution/Resources/Public/Fonts/FactoItalic/font.woff") format("woff");
+}
+
+
+/*
+font-family: 'Open Sans', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Roboto', sans-serif;
+font-weight: 100-900
+*/
 * {
     box-sizing: border-box;
 }
@@ -628,12 +710,21 @@
     /* Learniac Styling */
 
     .lvWelcomeCourse {
-        font-size: 1.5vw;
+        font-size: 4vw;
         left: 5%;
     }
     .lvWelcomeHeadline {
-        font-size: 2vw;
+        font-size: 4vw;
         left: 5%;
+    }
+    .lvWelcomeHeadline.line1 {
+        top: 30%;
+    }
+    .lvWelcomeHeadline.line2 {
+        top: 50%;
+    }
+    .lvWelcomeHeadline.line3 {
+        top:70%;
     }
     .lvTimeline {
         left: 10%;

@@ -1,21 +1,15 @@
-import headerimgbg from "../../images/Headerbild_ObjProg.png";
 import { useRecoilValue} from "recoil";
 import {welcomeBoxCourse, welcomeBoxCourse2, welcomeBoxImage, welcomeBoxText} from "../../services/atoms";
 
 function ViewWelcomeBox() {
-    const image = useRecoilValue(welcomeBoxImage)
-    const welcomeText = useRecoilValue(welcomeBoxText)
-    const welcomeCourse = useRecoilValue(welcomeBoxCourse)
-    const welcomeCourse2 = useRecoilValue(welcomeBoxCourse2)
-    /* const deletewText = (id) =>  {
-        const newWtext = header.filter((_, item) => item !== id);
-        setHeaderState(newWtext);
-    }
-     */
+    const image = useRecoilValue(welcomeBoxImage);
+    const welcomeText = useRecoilValue(welcomeBoxText);
+    const welcomeCourse = useRecoilValue(welcomeBoxCourse);
+    const welcomeCourse2 = useRecoilValue(welcomeBoxCourse2);
     return (
         <div className="vWelcomeBox">
             <div>
-                <img className="headerimage" src={image} />
+                <img className="headerimage" alt={""} src={image} />
             </div>
             <div className="headline">
                 {welcomeText}
