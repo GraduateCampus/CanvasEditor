@@ -5,6 +5,7 @@ import PointCourse from "./blocks_learniac/PointCourse";
 import PointLearning from "./blocks_learniac/PointLearning";
 import PointInfo from "./blocks_learniac/PointInfo";
 import Contacts from "./blocks_learniac/Contacts";
+import PointUnits from "./blocks_learniac/PointUnits";
 function Editor3 ()
 {
     const [showWelcomeBox, setShowWelcomeBox] = useState(false);
@@ -31,6 +32,11 @@ function Editor3 ()
                     PointCourse
                 </li>
                 {showPointCourse && <PointCourse/>}
+
+                <li className="navbar-li" onClick={() => setShowPointLearning(!showPointLearning)}>
+                    PointUnits
+                </li>
+                {showPointLearning && <PointUnits/>}
 
                 <li className="navbar-li" onClick={() => setShowPointLearning(!showPointLearning)}>
                     PointLearning

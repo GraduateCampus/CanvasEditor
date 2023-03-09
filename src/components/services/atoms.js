@@ -1,4 +1,4 @@
-import {atom, DefaultValue, selector} from "recoil";
+import {atom, atomFamily, DefaultValue, selector} from "recoil";
 export const modalState = atom ( {
     key: 'modalState',
     default: false,
@@ -95,33 +95,41 @@ export const l2Modulplan = atom ( {
     key: 'l2Modulplan',
     default: "",
 });
-export const l2Overview = atom ( {
-    key: 'l2Overview',
-    default: {
-        items: [
-            {
-                gif: "",
-                chapter: [""],
-            }
-        ]
-    }
-});
-export const boxesState = atom({
-    key: 'boxesState',
+export const l2BoxesState = atom({
+    key: 'l2BoxesState',
     default: [],
 });
 
-export const boxGifLinkState = (boxIndex) =>
-    atom({
-        key: `boxGifLinkState` + boxIndex,
-        default: '',
-    });
+export const l2BoxGifLinkState = atomFamily({
+    key: 'l2BoxGifLinkState',
+    default: '',
+});
 
-export const boxGifTitlesState = (boxIndex) =>
-    atom({
-        key: `boxGifTitlesState` + boxIndex,
-        default: [''],
-    });
+export const l2BoxGifTitlesState = atomFamily({
+    key: 'l2BoxGifTitlesState',
+    default: [''],
+});
+export const l2ContactBoxes = atom ({
+    key: 'l2ConactBoxes',
+    default: [],
+})
+export const l2ContactIcon = atomFamily({
+    key: 'l2ContactIcon',
+    default: '',
+});
+export const l2ContactName = atomFamily({
+    key: 'l2ContactName',
+    default: '',
+});
+export const l2ContactDescription = atomFamily({
+    key: 'l2ContactDescription',
+    default: '',
+});
+export const l2ContactMail = atomFamily({
+    key: 'l2ContactMail',
+    default: '',
+});
+
 //atoms for Learniac:
 
 export const learniacWelcomeImage = atom ( {
@@ -171,6 +179,22 @@ export const learniacPointCourseText = atom ( {
 export const learniacPointCourseImage = atom ( {
     key: 'learniacPointCourseImage',
     default: "https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Element%203.png?raw=true",
+});
+export const learniacPointUnitsHeader = atom ( {
+    key: 'learniacPointUnitsHeader',
+    default: "Deine E-Learning Einheiten",
+});
+export const learniacPointUnitsText = atom ( {
+    key: 'learniacPointUnitsText',
+    default: "Folgende E-Learning Einheiten erwarten dich:",
+});
+export const learniacPointUnitsImage = atom ( {
+    key: 'learniacPointUnitsImage',
+    default: "",
+});
+export const learniacPointUnits = atom ( {
+    key: 'learniacPointUnits',
+    default: [""],
 });
 export const learniacPointLearningHeader = atom ({
     key: 'learniacPointLearningHeader',
@@ -253,13 +277,15 @@ export const selectEverything = selector({
         const lcPointWelcomeText = get(learniacPointWelcomeText);
         const lcModulButtonText = get(learniacModulButtonText);
         const lcPointCourseHeader = get(learniacPointCourseHeader);
+        const lcPointUnitsHeader = get(learniacPointUnitsHeader);
+        const lcPointUnitsText = get(learniacPointUnitsText);
         const lcPointCourseText = get(learniacPointCourseText);
         const lcPointLearningHeader = get(learniacPointLearningHeader);
         const lcPointLearningText = get(learniacPointLearningText);
         const lcPointInfoHeader = get(learniacPointInfoHeader);
         const lcPointInfoText = get(learniacPointInfoText);
 
-        return {lcPointWelcomeHeader, lcPointWelcomeText, lcModulButtonText, lcPointCourseHeader, lcPointCourseText, lcPointLearningHeader, lcPointLearningText, lcPointInfoHeader, lcPointInfoText};
+        return {lcPointWelcomeHeader, lcPointWelcomeText, lcModulButtonText, lcPointUnitsHeader, lcPointUnitsText, lcPointCourseHeader, lcPointCourseText, lcPointLearningHeader, lcPointLearningText, lcPointInfoHeader, lcPointInfoText};
     },
     set: ({set}, value) => {
         if (value instanceof DefaultValue) {
@@ -271,6 +297,8 @@ export const selectEverything = selector({
             set(learniacContactsText, value);
             set(learniacPointWelcomeHeader, value);
             set(learniacPointWelcomeText, value);
+            set(learniacPointUnitsHeader, value);
+            set(learniacPointUnitsText, value);
             set(learniacPointCourseHeader, value);
             set(learniacPointCourseText, value);
             set(learniacPointLearningHeader, value);

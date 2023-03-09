@@ -9,9 +9,10 @@ import {useRecoilValue} from "recoil";
 import {
     learniacPointCourseImage,
     learniacPointInfoImage,
-    learniacPointLearningImage,
+    learniacPointLearningImage, learniacPointUnitsImage,
     learniacPointWelcomeImage, learniacRocketText
 } from "./services/atoms";
+import ViewPointUnits from "./View/blocks_learniac/ViewPointUnits";
 
 function Layout3() {
     const rockettext = useRecoilValue(learniacRocketText);
@@ -19,6 +20,7 @@ function Layout3() {
     const image3 = useRecoilValue(learniacPointCourseImage);
     const image4 = useRecoilValue(learniacPointLearningImage);
     const image5 = useRecoilValue(learniacPointInfoImage);
+    const image6 = useRecoilValue(learniacPointUnitsImage);
     return (
         <div className="split">
             <div className="split left">
@@ -47,6 +49,17 @@ function Layout3() {
                         </div>
                         <div className="lvContent pointCoursebg">
                             <ViewPointCourse/>
+                        </div>
+                    </div>
+
+                    <div className="lvContainer lvpWelcome">
+                        <div className="lvTimeline-icon">
+                            <div className="lvImage">
+                                <img className="lvImageIcon" src={image6}/>
+                            </div>
+                        </div>
+                        <div className="lvContent pointUnitsbg">
+                            <ViewPointUnits/>
                         </div>
                     </div>
 

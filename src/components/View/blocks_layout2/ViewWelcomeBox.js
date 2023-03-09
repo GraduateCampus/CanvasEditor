@@ -4,7 +4,7 @@ import {useRecoilValue} from "recoil";
 function ViewWelcomeBox() {
     const welcomeBackground = useRecoilValue(l2WelcomeBackground);
     return (
-        <div>
+        <div className="vWelcomeBox">
         <img className="headerimage" src={welcomeBackground}>
         </img>
         </div>

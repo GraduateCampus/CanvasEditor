@@ -694,6 +694,35 @@ input:checked + .slider:before {
 .vContacts {
   color: white;
 }
+/* Start for Layout 2 */
+
+.l2OverviewBigBox {
+  width: 100%;
+}
+.l2OverviewSeperate {
+  position: relative;
+  overflow: hidden;
+  background-color: #F2F2F2;
+  min-height: 300px;
+  padding-top: 50px;
+  padding-bottom:50px;
+  margin: 10px 5% 10px 5%;
+  border-radius: 20px;
+  box-shadow: 0px 40px 40px rgba(0,0,0,0.15);
+  width:40%;
+  float: left;
+}
+.l2OverviewChapters {
+  padding: 1% 1% 1% 1%;
+  margin: 2% 5% 2% 5%;
+  min-height: 30px;
+  color: white;
+  background-color: #D9C65A;
+  display: flex;
+  align-items: center;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+}
 
 /* Start for Learniac Styling */
 
@@ -790,8 +819,11 @@ input:checked + .slider:before {
 .pointCoursebg {
   background: #bfa602;
 }
+.pointUnitsbg {
+  background: #C6B673;
+}
 .pointLearningbg {
-  background: #c6b673;
+  background: #DED69D;
 }
 .pointInfobg {
   background: #ede4c5;
@@ -843,6 +875,32 @@ input:checked + .slider:before {
   font-weight: 300;
   color: #3c3c3b;
   white-space: pre-line;
+}
+/* Styling für PointUnits */
+
+.lvPointUnitsEditorText {
+  color: white;
+}
+.lvPointUnitsEditorBox {
+  border: 1px #bea602 solid;
+}
+.lvPointUnitsEditorbreak {
+  margin: 1%;
+}
+.lvPointUnitsHeader {
+  font-family: "Playfair Display";
+  font-weight: 900;
+  color: #3c3c3b;
+}
+.lvPointUnitsText {
+  font-family: "Roboto";
+  color: #3c3c3b;
+}
+.lvPointUnits {
+  font-family: "Roboto";
+  color: #3c3c3b;
+  list-style-type: none;
+  margin: 1%;
 }
 
 /* Styling für PointLearning */

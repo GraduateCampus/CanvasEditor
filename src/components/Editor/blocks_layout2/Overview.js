@@ -1,34 +1,41 @@
-import {useRecoilState, useRecoilValue} from "recoil";
-import {boxesState, boxGifLinkState, boxGifTitlesState} from "../../services/atoms";
+import {useRecoilState, useResetRecoilState} from "recoil";
+import {l2BoxesState, l2BoxGifLinkState, l2BoxGifTitlesState} from "../../services/atoms";
 
 function Overview() {
-    const [boxes, setBoxes] = useRecoilState(boxesState);
+    const [boxes, setBoxes] = useRecoilState(l2BoxesState);
     const addBox = () => {
         setBoxes([...boxes, { gifLink: '', gifTitles: [''] }]);
     };
-    const handleDeleteBox = (index) => {
-        setBoxes(boxes.filter((box, i) => i !== index));
+    const HandleDeleteBox = (index) => {
+        //setBoxes(boxes.filter((_, i) => i !== index));
+        setBoxes((prevBoxes) => {
+            const newBoxes = [...prevBoxes];
+            newBoxes.splice(index, 1);
+            return newBoxes;
+        });
+        const resetGifLinkState = useResetRecoilState(l2BoxGifLinkState(index));
+        resetGifLinkState();
+        const resetGifTitlesState = useResetRecoilState(l2BoxGifTitlesState(index));
+        resetGifTitlesState();
     };
     return (
         <div className="dropdown-form">
             <button className="standardbtn" onClick={addBox}>Add Box</button>
             <div className="overview-ul">
                 {boxes.map((box,index)=> (
-                <Box key={index} index={index} handleDeleteBox={handleDeleteBox}/>
+                <Box key={index} index={index} handleDeleteBox={HandleDeleteBox}/>
                 ))}
             </div>
         </div>
     )
     function Box({index, handleDeleteBox}) {
-        const [gifLink, setGifLink] = useRecoilState(boxGifLinkState(index));
-        const [gifTitles, setGifTitles] = useRecoilState(boxGifTitlesState(index));
-
+        const [gifLink, setGifLink] = useRecoilState(l2BoxGifLinkState(index));
+        const [gifTitles, setGifTitles] = useRecoilState(l2BoxGifTitlesState(index));
         const handleLinkChange = (event) => {
             setGifLink(event.target.value);
         };
 
         const handleTitleChange = (event, titleIndex) => {
-            console.log(gifTitles);
             const newTitles = [...gifTitles];
             newTitles[titleIndex] = event.target.value;
             setGifTitles(newTitles);
@@ -44,7 +51,6 @@ function Overview() {
             <div className="overview-li">
                 <div className="dropdown-form">
                     <button onClick={() => handleDeleteBox(index)} className="standardbtn">Delete Box</button>
-
                 </div>
                 <input type="text" value={gifLink} onChange={handleLinkChange} placeholder="Enter GIF Link" />
                 <div>

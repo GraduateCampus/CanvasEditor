@@ -22,13 +22,10 @@ function Overview() {
         e.preventDefault();
         setShow(oldArray => [...oldArray, true]);
     };
-    console.log(courseNavigationstate.items)
     const itemChanged = ({ target: { value, name } }, index) => {
         let items = [...courseNavigationstate.items];
         let item = { ...items[index] };
-        if (name === "title") {
-            item[name] = value.split(",");
-        }
+        item[name] = value;
         items[index] = item;
         setCourseNavigation((prev) => ({
             ...prev,
@@ -83,7 +80,7 @@ function Overview() {
                         <div className="ov inputTitleName">Title:</div>
                         <input
                             type="text"
-                            name={"title-${titleIndex}"}
+                            name="title"
                             className="input titleInput"
                             value={title}
                             onChange={(value) => itemChanged(value, index)}

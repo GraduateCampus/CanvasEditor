@@ -1,24 +1,24 @@
 import {useRecoilState, useRecoilValue} from "recoil";
-import {boxesState, boxGifLinkState, boxGifTitlesState} from "../../services/atoms";
+import {l2BoxesState, l2BoxGifLinkState, l2BoxGifTitlesState} from "../../services/atoms";
 
 function ViewOverview () {
-    const boxes = useRecoilValue(boxesState);
+    const boxes = useRecoilValue(l2BoxesState);
     return (
-        <div>
+        <div className="l2OverviewBigBox">
             {boxes.map((box,index)=> (
                 <ViewTest key={index} index={index}/>
             ))}
         </div>
     )
     function ViewTest ({index}) {
-        const gifLink = useRecoilValue(boxGifLinkState(index));
-        const gifTitles = useRecoilValue(boxGifTitlesState(index));
+        const gifLink = useRecoilValue(l2BoxGifLinkState(index));
+        const gifTitles = useRecoilValue(l2BoxGifTitlesState(index));
 
         return (
-            <div>
+            <div className="l2OverviewSeperate">
                 {gifLink && <img src={gifLink} alt={gifTitles[0]} />}
                 {gifTitles.map((title, titleIndex) => (
-                    <div key={titleIndex}>{title}</div>
+                    <div className="l2OverviewChapters" key={titleIndex}>{title}</div>
                 ))}
             </div>
         );

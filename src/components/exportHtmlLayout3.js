@@ -1,7 +1,11 @@
+import {useRecoilValue} from "recoil";
+import {learniacPointUnits} from "./services/atoms";
+
 export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcWelcomeCourse,
                                   lcWelcomeCourse2, lcWelcomeCourse3, lcPointWelcomeHeader,
                                   lcPointWelcomeText, lcPointWelcomeImage, lcModulbutton,
-                                  lcModulButtonText, lcPointCourseHeader, lcPointCourseText,
+                                  lcModulButtonText, lcPointUnitsHeader, lcPointUnitsText,
+                                  lcPointUnits, lcPointUnitsImage, lcPointCourseHeader, lcPointCourseText,
                                   lcPointCourseImage, lcPointLearningHeader, lcPointLearningText,
                                   lcPointLearningImage, lcPointInfoHeader, lcPointInfoText,
                                   lcPointInfoImage, lcRocketText, lcContactsHeader, lcContactsHeader2,
@@ -42,6 +46,20 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcWelcomeCourse
                         <a href="/courses/${lcModulbutton}/modules" class="lvModulButton">${lcModulButtonText}</a>
                     </div>
                 </div>
+            </div>
+            <div class="lvContainer">
+                <div class="lvTimeline-icon">
+                    <div class="lvImage">
+                        <img class="lvImageIcon" src="${lcPointUnitsImage}"/>
+                    </div>
+                </div>
+                <div class="lvContent pointUnitsbg">
+                    <h1 class="lvPointUnitsHeader contentHeadline">${lcPointUnitsHeader}</h1>
+                    <div class="lvPointUnitsText contentText">${lcPointUnitsText}</div>
+                    <div>
+                    ${makeUnits(lcPointUnits)}
+                    </div>
+                </div>         
             </div>
             <div class="lvContainer">
                 <div class="lvTimeline-icon">
@@ -113,4 +131,15 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcWelcomeCourse
     </body>
     </html>
     `;
+}
+function makeUnits(lcPointUnits) {
+    let unitBox = `<div class="contactsSmallBox">`;
+    lcPointUnits.map((units, index) => {
+        let newUnits =`
+            <li className="lvPointUnits" key={index}>${index+1}. ${units}</li>
+        `;
+        unitBox += newUnits;
+    });
+    unitBox +=`</div>`;
+    return unitBox;
 }
