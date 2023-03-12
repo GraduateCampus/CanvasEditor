@@ -190,7 +190,7 @@ export const learniacPointUnitsText = atom ( {
 });
 export const learniacPointUnitsImage = atom ( {
     key: 'learniacPointUnitsImage',
-    default: "",
+    default: "https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Element%208.png?raw=true",
 });
 export const learniacPointUnits = atom ( {
     key: 'learniacPointUnits',

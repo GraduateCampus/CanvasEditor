@@ -50,26 +50,24 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcWelcomeCourse
             <div class="lvContainer">
                 <div class="lvTimeline-icon">
                     <div class="lvImage">
-                        <img class="lvImageIcon" src="${lcPointUnitsImage}"/>
-                    </div>
-                </div>
-                <div class="lvContent pointUnitsbg">
-                    <h1 class="lvPointUnitsHeader contentHeadline">${lcPointUnitsHeader}</h1>
-                    <div class="lvPointUnitsText contentText">${lcPointUnitsText}</div>
-                    <div>
-                    ${makeUnits(lcPointUnits)}
-                    </div>
-                </div>         
-            </div>
-            <div class="lvContainer">
-                <div class="lvTimeline-icon">
-                    <div class="lvImage">
                         <img class="lvImageIcon" src="${lcPointCourseImage}"/>
                     </div>
                 </div>
                 <div class="lvContent pointCoursebg">
                     <h1 class="lvPointCourseHeader contentHeadline">${lcPointCourseHeader}</h1>
                     <div class="lvPointCourseText contentText">${lcPointCourseText}</div>
+                </div>         
+            </div>
+            <div class="lvContainer">
+                <div class="lvTimeline-icon">
+                    <div class="lvImage">
+                        <img class="lvImageIcon" src="${lcPointUnitsImage}"/>
+                    </div>
+                </div>
+                <div class="lvContent pointUnitsbg">
+                    <h1 class="lvPointUnitsHeader contentHeadline">${lcPointUnitsHeader}</h1>
+                    <div class="lvPointUnitsText">${lcPointUnitsText}</div>
+                        ${makeUnits(lcPointUnits)}
                 </div>         
             </div>
             <div class="lvContainer">
@@ -133,13 +131,13 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcWelcomeCourse
     `;
 }
 function makeUnits(lcPointUnits) {
-    let unitBox = `<div class="contactsSmallBox">`;
+    let unitBox = `<ul class="lvPointUnits contentText">`;
     lcPointUnits.map((units, index) => {
-        let newUnits =`
-            <li className="lvPointUnits" key={index}>${index+1}. ${units}</li>
-        `;
+        let newUnits =`    
+                        <li>${index+1}.&emsp;${units}</li>`;
         unitBox += newUnits;
     });
-    unitBox +=`</div>`;
+    unitBox +=`
+                        </ul>`;
     return unitBox;
 }

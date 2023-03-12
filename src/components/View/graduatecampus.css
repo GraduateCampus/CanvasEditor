@@ -204,8 +204,11 @@ font-weight: 100-900
 .pointCoursebg {
     background: #bfa602;
 }
+.pointUnitsbg {
+    background: #C6B673;
+}
 .pointLearningbg {
-    background: #c6b673;
+    background: #DED69D;
 }
 .pointInfobg {
     background: #ede4c5;
@@ -264,6 +267,24 @@ font-weight: 100-900
 .lvPointCourseText {
     font-family: "Roboto";
     color: #3c3c3b;
+}
+
+/* Styling für PointUnits */
+.lvPointUnitsHeader {
+    font-family: "Playfair Display";
+    font-weight: 900;
+    color: #3c3c3b;
+}
+.lvPointUnitsText {
+    font-family: "Roboto";
+    color: #3c3c3b;
+    padding-bottom: 1%;
+}
+.lvPointUnits {
+    font-family: "Roboto";
+    color: #3c3c3b;
+    list-style-type: none;
+    margin: 0;
 }
 
 /* Styling für PointLearning */

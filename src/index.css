@@ -737,14 +737,15 @@ input:checked + .slider:before {
   top: 10%;
   left: 10%;
   font-size: 40px;
-  font-family: Briston-Regular;
+  font-family: "Playfair Display";
+  font-weight: 900;
   color: #bfa602;
 }
 .lvWelcomeHeader {
   position: absolute;
   font-size: 60px;
   color: #3c3c3b;
-  font-family: Facto-Bold;
+  font-family: "Roboto";
 }
 .lvWelcomeHeader.line1 {
   top: 25%;
@@ -832,15 +833,12 @@ input:checked + .slider:before {
 /* Styling für PointWelcome */
 
 .lvPointWelcomeHeader {
-  font-family: oswald, sans-serif;
-  font-style: normal;
-  font-weight: 500;
+  font-family: "Playfair Display";
+  font-weight: 900;
   color: #bfa602;
 }
 .lvPointWelcomeText {
-  font-family: open-sans, sans-serif;
-  font-style: normal;
-  font-weight: 300;
+  font-family: "Roboto";
   color: #ffffff;
   padding-bottom: 50px;
   white-space: pre-line;
@@ -864,15 +862,12 @@ input:checked + .slider:before {
 /* Styling für PointCourse */
 
 .lvPointCourseHeader {
-  font-family: oswald, sans-serif;
-  font-style: normal;
-  font-weight: 500;
+  font-family: "Playfair Display";
+  font-weight: 900;
   color: #3c3c3b;
 }
 .lvPointCourseText {
-  font-family: open-sans, sans-serif;
-  font-style: normal;
-  font-weight: 300;
+  font-family: "Roboto";
   color: #3c3c3b;
   white-space: pre-line;
 }
@@ -906,15 +901,12 @@ input:checked + .slider:before {
 /* Styling für PointLearning */
 
 .lvPointLearningHeader {
-  font-family: oswald, sans-serif;
-  font-style: normal;
-  font-weight: 500;
+  font-family: "Playfair Display";
+  font-weight: 900;
   color: #3c3c3b;
 }
 .lvPointLearningText {
-  font-family: open-sans, sans-serif;
-  font-style: normal;
-  font-weight: 300;
+  font-family: "Roboto";
   color: #3c3c3b;
   padding-bottom: 50px;
   white-space: pre-line;
@@ -938,15 +930,12 @@ input:checked + .slider:before {
 /* Styling für PointInfo */
 
 .lvPointInfoHeader {
-  font-family: oswald, sans-serif;
-  font-style: normal;
-  font-weight: 500;
+  font-family: "Playfair Display";
+  font-weight: 900;
   color: #3c3c3b;
 }
 .lvPointInfoText {
-  font-family: open-sans, sans-serif;
-  font-style: normal;
-  font-weight: 300;
+  font-family: "Roboto";
   color: #3c3c3b;
   white-space: pre-line;
 }
@@ -962,10 +951,8 @@ input:checked + .slider:before {
 }
 .lvRocketText {
   text-align: center;
-  font-family: Oswald, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: x-large;
+  font-family: "Playfair Display";
+  font-weight: 900;
   color: #3c3c3b;
 }
 
@@ -980,9 +967,8 @@ input:checked + .slider:before {
   padding: 5% 10% 10% 10%;
 }
 .lvcTitle {
-  font-family: Oswald, sans-serif;
-  font-style: normal;
-  font-weight: 400;
+  font-family: "Playfair Display";
+  font-weight: 900;
   font-size: xxx-large;
   color: #3c3c3b;
   padding-bottom: 30px;
@@ -993,46 +979,36 @@ input:checked + .slider:before {
   padding: 50px 10px 50px 50px;
 }
 .lvContactTitle {
-  font-family: Oswald, sans-serif;
-  font-style: normal;
-  font-weight: 400;
+  font-family: "Playfair Display";
+  font-weight: 900;
   color: #ffffff;
   font-size: x-large;
   padding-bottom: 10px;
 }
 .lvContactName {
-  font-family: Oswald, sans-serif;
-  font-style: normal;
-  font-weight: 400;
+  font-family: "Playfair Display";
+  font-weight: 900;
   font-size: xx-large;
   color: #bfa602;
   padding-bottom: 10px;
 }
 .lvContactText {
-  font-family: open-sans, sans-serif;
-  font-style: normal;
-  font-weight: 300;
+  font-family: "Roboto";
   color: #ffffff;
   padding-bottom: 10px;
 }
 .lvContactPhone {
-  font-family: open-sans, sans-serif;
-  font-style: normal;
-  font-weight: 300;
+  font-family: "Roboto";
   color: #ffffff;
   padding-bottom: 10px;
 }
 .lvContactMobil {
-   font-family: open-sans, sans-serif;
-   font-style: normal;
-   font-weight: 300;
+  font-family: "Roboto";
    color: #ffffff;
    padding-bottom: 10px;
 }
 .lvContactMail {
-  font-family: open-sans, sans-serif;
-  font-style: normal;
-  font-weight: 300;
+  font-family: "Roboto";
   color: #ede4c5;
 }
 .lvcolumn {
