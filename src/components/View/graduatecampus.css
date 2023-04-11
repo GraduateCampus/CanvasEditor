@@ -142,6 +142,7 @@ font-weight: 100-900
     position: relative;
     text-align: center;
     background-color: #ccc;
+    border-radius: 1vw;
 }
 .lvWelcomeCourse {
     font-family: "Roboto";
@@ -710,7 +711,10 @@ font-weight: 100-900
     /* Learniac Styling */
 
     .lvWelcomeCourse {
-        font-size: 4vw;
+        font-size: 18px;
+    }
+    .lvHeaderimage {
+        width: 40%;
     }
     .lvTimeline {
         left: 10%;
@@ -819,7 +823,10 @@ font-weight: 100-900
     /* Learniac Styling */
 
     .lvWelcomeCourse {
-        font-size: 1.5vw;
+        font-size: 25px;
+    }
+    .lvHeaderimage {
+        width: 45%;
     }
     .lvTimeline {
         left: 10%;

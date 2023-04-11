@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import WelcomeBox from "./blocks_learniac/WelcomeBox";
 import PointWelcome from "./blocks_learniac/PointWelcome";
 import PointCourse from "./blocks_learniac/PointCourse";
 import PointLearning from "./blocks_learniac/PointLearning";
@@ -8,7 +7,6 @@ import Contacts from "./blocks_learniac/Contacts";
 import PointUnits from "./blocks_learniac/PointUnits";
 function Editor3 ()
 {
-    const [showWelcomeBox, setShowWelcomeBox] = useState(false);
     const [showPointWelcome, setShowPointWelcome] = useState(false);
     const [showPointCourse, setShowPointCourse] = useState(false);
     const [showPointUnits, setShowPointUnits] = useState(false);
@@ -19,10 +17,6 @@ function Editor3 ()
     return (
         <nav className="editor-navbar">
             <ul>
-                <li>
-                    <button className={`editor-button ${showWelcomeBox ? 'active' : ''}`} onClick={() => setShowWelcomeBox(!showWelcomeBox)}>WelcomeBox</button>
-                    {showWelcomeBox && <WelcomeBox /> }
-                </li>
                 <li>
                     <button className={`editor-button ${showPointWelcome ? 'active' : ''}`} onClick={() => setShowPointWelcome(!showPointWelcome)}>Willkommen im Kurs</button>
                     {showPointWelcome && <PointWelcome/>}

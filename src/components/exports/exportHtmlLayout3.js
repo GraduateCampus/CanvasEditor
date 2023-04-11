@@ -1,5 +1,4 @@
-export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcWelcomeCourse,
-                                  lcWelcomeCourse2, lcWelcomeCourse3, lcPointWelcomeHeader,
+export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcPointWelcomeHeader,
                                   lcPointWelcomeText, lcPointWelcomeImage, lcModulbutton,
                                   lcModulButtonText, lcPointUnitsHeader, lcPointUnitsText,
                                   lcPointUnits, lcPointUnitsImage, lcPointCourseHeader, lcPointCourseText,
@@ -24,9 +23,6 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcWelcomeCourse
     <div class="everything">
         <div class="lvWelcomeBox">
             <span class="lvWelcomeCourse">${lcWelcomeText}</span>
-                    <span class="lvWelcomeHeadline line1">${lcWelcomeCourse}</span>
-                    <span class="lvWelcomeHeadline line2">${lcWelcomeCourse2}</span>
-                    <span class="lvWelcomeHeadline line3">${lcWelcomeCourse3}</span>
                 <img class="lvHeaderimage" src=${lcWelcomeImage}/>
         </div>
         <div class="lvTimeline">

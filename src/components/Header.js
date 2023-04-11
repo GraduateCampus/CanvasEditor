@@ -11,7 +11,6 @@ import {
     ContactAvatar,
     Modulbutton,
     learniacWelcomeImage,
-    learniacWelcomeCourse,
     learniacContactsName,
     learniacContactsPhone,
     learniacContactsMobil,
@@ -25,8 +24,6 @@ import {
     learniacPointLearningImage,
     learniacPointInfoText,
     learniacPointInfoImage,
-    learniacWelcomeCourse2,
-    learniacWelcomeCourse3,
     learniacModulButton,
     welcomeBoxCourse2,
     selectEverything,
@@ -71,7 +68,7 @@ function Header (index) {
     const resetAtom = useResetRecoilState(selectEverything);
     const [selectedTab,setSelectedTab] = useState(false);
     const [selectedTab2,setSelectedTab2] = useState(false);
-    const [selectedTab3,setSelectedTab3] = useState(false);
+    const [selectedTab3,setSelectedTab3] = useState(true);
     const [tab3Text, setTab3Text] = useState("Layout 3 Learniac Deutsch")
     const [showModal,setShowModal] = useRecoilState(modalState);
     const welcomeImage = useRecoilValue(welcomeBoxImage);
@@ -105,9 +102,6 @@ function Header (index) {
     const lcModulButton = useRecoilValue(learniacModulButton);
     const [lcModulButtonText, setLcModulButtonText] = useRecoilState(learniacModulButtonText);
     const [lcWelcomeText, setLcWelcomeText] = useRecoilState(learniacWelcomeText);
-    const lcWelcomeCourse = useRecoilValue(learniacWelcomeCourse);
-    const lcWelcomeCourse2 = useRecoilValue(learniacWelcomeCourse2);
-    const lcWelcomeCourse3 = useRecoilValue(learniacWelcomeCourse3);
     const [lcPointWelcomeHeader, setLcPointWelcomeHeader] = useRecoilState(learniacPointWelcomeHeader);
     const [lcPointWelcomeText, setLcPointWelcomeText] = useRecoilState(learniacPointWelcomeText);
     const lcPointWelcomeImage = useRecoilValue(learniacPointWelcomeImage);
@@ -173,7 +167,6 @@ function Header (index) {
     const exportData3 = () => {
         setShowModal(!showModal);
         const index = makeHtml3(lcWelcomeImage, lcWelcomeText,
-            lcWelcomeCourse, lcWelcomeCourse2, lcWelcomeCourse3,
             lcPointWelcomeHeader, lcPointWelcomeText, lcPointWelcomeImage,
             lcModulButton, lcModulButtonText, lcPointUnitsHeader, lcPointUnitsText,
             lcPointUnits, lcPointUnitsImage, lcPointCourseHeader, lcPointCourseText,
@@ -187,7 +180,7 @@ function Header (index) {
         document.getElementById("checkLanguage")
         if (e.currentTarget.checked) {
             setTab3Text("Layout 3 Learniac Englisch")
-            setLcWelcomeText("Welcome to the Course")
+            setLcWelcomeText("Welcome to ")
             setLcPointWelcomeHeader("Welcome to the Course")
             setLcPointWelcomeText("To get started, click on \"Modules\" in the navigation bar on the left.\n" +
                 "This will take you to the complete overview of all e-learning units, the so-called learning nuggets.")

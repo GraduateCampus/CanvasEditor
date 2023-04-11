@@ -116,48 +116,6 @@ body {
   font-weight: 900;
   color: #3c3c3b;
 }
-/* Editornavbarstyling
-
-.navbar-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-.navbar-li {
-  display: block;
-  color: white;
-  margin: 10px 10px;
-  padding: 10px 10px;
-  text-decoration: none;
-  text-align: center;
-  border: 1px solid #bea602;
-  font-family: Oswald;
-  background-color: #4d4d4d;
-}
-.navbar-li:hover {
-  background-color: #111111;
-}
-.container {
-  text-align: center;
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-.inputMarginWelcomeBox {
-  margin-left: 51px;
-}
-.editorTextColor {
-  color:white;
-  margin: 10px;
-}
-.editorsubmitbtn {
-  margin-left: 5px;
-  border-radius: 5px;
-  border-color: #bea602;
-  background-color: #bea602;
-  font-family: Oswald;
-  cursor: pointer;
-}
-*/
 /*styling für WelcomeBox*/
 
 .vWelcomeBox {
@@ -557,37 +515,19 @@ body {
 .lvWelcomeBox {
   margin-bottom: 50px;
   position: relative;
+  text-align: center;
+  background-color: #cccccc;
+  border-radius: 20px;
 }
 .lvWelcomeHeadline {
-  position: absolute;
-  top: 10%;
-  left: 10%;
   font-size: 40px;
-  font-family: "Playfair Display";
-  font-weight: 900;
-  color: #bfa602;
-}
-.lvWelcomeHeader {
-  position: absolute;
-  font-size: 60px;
-  color: #3c3c3b;
   font-family: "Roboto";
-}
-.lvWelcomeHeader.line1 {
-  top: 25%;
-  left: 10%;
-}
-.lvWelcomeHeader.line2 {
-  top: 45%;
-  left: 10%;
-}
-.lvWelcomeHeader.line3 {
-  top: 65%;
-  left: 10%;
+  font-weight: 500;
+  color: #bfa602;
+  vertical-align: middle;
 }
 .lvHeaderimage {
-  width: 100%;
-  height: auto;
+  vertical-align: middle;
 }
 
 /* The actual timeline (the vertical ruler) */

@@ -134,24 +134,12 @@ export const l2ContactMail = atomFamily({
 
 export const learniacWelcomeImage = atom ( {
     key: 'learniacWelcomeImage',
-    default: "https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/Headerbild_PC.png?raw=true",
+    default: "https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/Learniac.png?raw=true",
 });
 export const learniacWelcomeText = atom ( {
     key: 'learniacWelcomeText',
-    default: "Willkommen im Kurs",
+    default: "Willkommen bei",
 })
-export const learniacWelcomeCourse = atom ( {
-    key: 'learniacWelcomeCourse',
-    default: "",
-});
-export const learniacWelcomeCourse2 = atom ( {
-    key: 'learniacWelcomeCourse2',
-    default: "",
-});
-export const learniacWelcomeCourse3 = atom ( {
-    key: 'learniacWelcomeCourse3',
-    default: "",
-});
 export const learniacPointWelcomeHeader = atom ({
     key: 'learniacPointWelcomeHeader',
     default: 'Willkommen im Kurs',
@@ -271,6 +259,7 @@ export const learniacModulButtonText = atom ( {
 export const selectEverything = selector({
     key: 'everything',
     get: ({get}) => {
+        const lcWelcomeCourse = get(learniacWelcomeText)
         const lcPointWelcomeHeader = get(learniacPointWelcomeHeader);
         const lcPointWelcomeText = get(learniacPointWelcomeText);
         const lcModulButtonText = get(learniacModulButtonText);
@@ -283,7 +272,7 @@ export const selectEverything = selector({
         const lcPointInfoHeader = get(learniacPointInfoHeader);
         const lcPointInfoText = get(learniacPointInfoText);
 
-        return {lcPointWelcomeHeader, lcPointWelcomeText, lcModulButtonText, lcPointUnitsHeader, lcPointUnitsText, lcPointCourseHeader, lcPointCourseText, lcPointLearningHeader, lcPointLearningText, lcPointInfoHeader, lcPointInfoText};
+        return {lcWelcomeCourse, lcPointWelcomeHeader, lcPointWelcomeText, lcModulButtonText, lcPointUnitsHeader, lcPointUnitsText, lcPointCourseHeader, lcPointCourseText, lcPointLearningHeader, lcPointLearningText, lcPointInfoHeader, lcPointInfoText};
     },
     set: ({set}, value) => {
         if (value instanceof DefaultValue) {
