@@ -15,6 +15,7 @@ function PointWelcome() {
 
     return (
         <div className="container">
+            <form>
             <div className="editorTextColor">Icon-Link eingeben:</div>
             <input
                 type="text"
@@ -28,10 +29,11 @@ function PointWelcome() {
                 type="text"
                 name="PointWelcomeText"
                 rows="5"
-                cols="70"
+                cols="40"
                 value={pointWelcomeText}
                 onChange={(e) => setPointWelcomeText(e.target.value)}
             />
+            </form>
         </div>
     );
 }

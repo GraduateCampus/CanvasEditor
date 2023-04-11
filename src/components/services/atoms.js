@@ -202,7 +202,7 @@ export const learniacPointLearningHeader = atom ({
 })
 export const learniacPointLearningText = atom ( {
     key: 'learniacPointLearningText',
-    default: "Mit E-Learnings lernen. Eine kurze Anleitung, wie Sie die Learning Nuggets bearbeiten können\n" +
+    default: "Eine kurze Anleitung, wie Sie die Learning Nuggets bearbeiten können\n" +
         "Sie sich gerne hier herunterladen.",
 });
 export const learniacPointLearningImage = atom ( {
@@ -239,8 +239,7 @@ export const learniacContactsHeader2 = atom ({
 })
 export const learniacContactsText = atom ({
     key: 'learniacContactsText',
-    default: 'Haben Sie Fragen oder Anregungen?\n' +
-        'Kontaktieren Sie mich gerne.'
+    default: 'Haben Sie Fragen oder Anregungen? <br /> Kontaktieren Sie mich gerne. <br />'
 })
 export const learniacContactsName = atom ( {
     key: 'learniacContactsName',
@@ -256,7 +255,7 @@ export const learniacContactsMobil = atom ( {
 });
 export const learniacContactsMail = atom ( {
     key: 'learniacContactsMail',
-    default: "",
+    default: "kurse@graduatecampus.de",
 });
 export const learniacContactsBild = atom ( {
     key: 'learniacContactsBild',

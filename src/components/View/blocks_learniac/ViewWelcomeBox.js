@@ -21,5 +21,12 @@ function ViewWelcomeBox() {
             </div>
         </div>
     );
+    /*
+    return (
+        <div className="testbox">
+                <h1>WILLKOMMEN BEI
+                    <img className="testimg" src="https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Element%206.png?raw=true"/></h1>
+        </div>
+    )*/
 }
 export default ViewWelcomeBox;

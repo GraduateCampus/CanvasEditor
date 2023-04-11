@@ -6,7 +6,6 @@ function Contacts() {
     const [contactState, setContactState] = useRecoilState(ContactState);
     const [contactAvatar, setContactAvatar] = useRecoilState(ContactAvatar);
     const [show, setShow] = useState([true]);
-    const [avatar, setAvatar] = useState("");
     const makeNewItem = (e) => {
         setContactState((prev) => ({
             ...prev,
@@ -59,20 +58,12 @@ function Contacts() {
             setShow(newArr);
         }
     }
-    const addImage = (e) => {
-        e.preventDefault()
-        var avatarlink = document.getElementById("10");
-        if (avatarlink && avatarlink.value) {
-            setContactAvatar(avatar);
-            setAvatar("");
-        }
-    }
     function contactItem({ bild, rolle, name, beschreibung, email}, index) {
         return (
-            <div className="courseItemBigWrapper" key={index}>
+            <div className="chapter-wrapper" key={index}>
                 <div className="buttonsOverview">
-                    <button className="standardbtn" onClick={(event) => showChapter(event, index)}>Kontakt Nummer:{index +1}</button>
-                    <button className="editorsubmitbtn" onClick={(event) => deleteItem(event, index)}>Delete</button>
+                    <button className="btn-chapter" onClick={(event) => showChapter(event, index)}>Kontakt {index +1}</button>
+                    <button className="btn-delete-chapter" onClick={(event) => deleteItem(event, index)}>X</button>
                 </div>
                 {show[index] && <div className="dropdown-form">
                     <div className="ov">
@@ -91,7 +82,7 @@ function Contacts() {
                             type="text"
                             name="rolle"
                             value={rolle}
-                            placeholder="Dozent oder was anderes"
+                            placeholder="Dozent etc."
                             onChange={(value) => itemChanged(value, index)}
                         />
                     </div>
@@ -130,16 +121,14 @@ function Contacts() {
         );
     }
     return (
+        <div className="container">
         <ul className="overview-ul">
             <li className="overview-li">
-                <div className="editorTextColor">
-                    Kontakte:
-                </div>
                 <form className="dropdown-form">
                     {contactState.items.map((item, index) => {
                         return contactItem(item, index);
                     })}
-                    <button className="submitbtn" onClick={makeNewItem}>
+                    <button className="btn-new-chapter" onClick={makeNewItem}>
                         New Item
                     </button>
                     <div className="editorTextColor">
@@ -148,18 +137,16 @@ function Contacts() {
                             <input
                                 type="text"
                                 id="10"
-                                value={avatar}
+                                value={contactAvatar}
                                 placeholder="Bildlink hier einfügen"
-                                onChange={(e) => setAvatar(e.target.value)}
+                                onChange={(e) => setContactAvatar(e.target.value)}
                             />
                         </div>
-                        <button className="editorsubmitbtn" onClick={addImage}>
-                            Submit
-                        </button>
                     </div>
                 </form>
             </li>
         </ul>
+        </div>
     );
 }
 export default Contacts;

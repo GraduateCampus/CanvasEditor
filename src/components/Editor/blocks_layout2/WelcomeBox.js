@@ -1,18 +1,12 @@
 import {useRecoilState} from "recoil";
 import {l2WelcomeBackground, l2WelcomeCourseName, l2WelcomeCourseName2, l2WelcomeHeadline} from "../../services/atoms";
-import {useState} from "react";
 
 function WelcomeBox () {
-    const [stateBackground, setStateBackground] = useState("");
     const [welcomeBackground, setWelcomeBackground] = useRecoilState(l2WelcomeBackground);
     const [welcomeHeadline, setWelcomeHeadline] = useRecoilState(l2WelcomeHeadline);
     const [welcomeCourseName, setWelcomeCourseName] = useRecoilState(l2WelcomeCourseName);
     const [welcomeCourseName2, setWelcomeCourseName2] = useRecoilState(l2WelcomeCourseName2);
-    const addWelcomeBackground = (e) => {
-        e.preventDefault();
-        setWelcomeBackground(stateBackground);
-        setStateBackground("");
-    }
+
     return (
         <div className="container">
             <form name="welcomeBox">
@@ -20,11 +14,10 @@ function WelcomeBox () {
                     <div className="editorTextColor">Hintergrundbild:</div>
                     <input className="inputMarginWelcomeBox"
                         type="text"
-                        value={stateBackground}
+                        value={welcomeBackground}
                         placeholder="Hier Link einfügen"
-                        onChange={(e) => setStateBackground(e.target.value)}
+                        onChange={(e) => setWelcomeBackground(e.target.value)}
                     />
-                    <button className="editorsubmitbtn" onClick={addWelcomeBackground}>Submit</button>
                     <div className="editorTextColor">Headline:</div>
                     <input
                         type="text"

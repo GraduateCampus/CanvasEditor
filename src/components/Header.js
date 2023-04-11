@@ -62,10 +62,10 @@ import {useRecoilState, useRecoilValue, useResetRecoilState} from "recoil";
 import Modal from "./Modal";
 import Layout1 from "./Layout1";
 import Layout2 from "./Layout2";
-import makeHtml from "./exportHtmlLayout1";
+import makeHtml from "./exports/exportHtmlLayout1";
 import Layout3 from "./Layout3";
-import makeHtml3 from "./exportHtmlLayout3";
-import makeHtml2 from "./exportHtmlLayout2";
+import makeHtml3 from "./exports/exportHtmlLayout3";
+import makeHtml2 from "./exports/exportHtmlLayout2";
 
 function Header (index) {
     const resetAtom = useResetRecoilState(selectEverything);
@@ -135,18 +135,18 @@ function Header (index) {
     const lcContactImage = useRecoilValue(learniacContactsBild);
     const [data,setData] = useRecoilState(dataState);
 
-    const showTab = (e) => {
-        if (e.target.className === "tab1") {
+    const showTab = (id) => {
+        if (id === "tab1") {
             setSelectedTab(true);
             setSelectedTab2(false);
             setSelectedTab3(false);
-        }
-        if (e.target.className === "tab2") {
+        } else
+        if (id === "tab2") {
             setSelectedTab(false);
             setSelectedTab2(true);
             setSelectedTab3(false);
-        }
-        if (e.target.className === "tab3") {
+        } else
+        if (id === "tab3") {
             setSelectedTab(false);
             setSelectedTab2(false);
             setSelectedTab3(true);
@@ -210,44 +210,77 @@ function Header (index) {
             resetAtom();
         }
     }
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
     return (
-        <div className="App">
-            <div className="header">
-                <h1>Canvas Pagebuilder</h1>
-                <ul className="header-center">
-                    <li className="tab1" onClick={(e) => showTab(e)}>
-                        Layout 1
-                    </li>
-                    <li className="tab2" onClick={(e) => showTab(e)}>
-                        Layout2
-                    </li>
-                    <li className="tab3" onClick={(e) => showTab(e)}>
-                        {tab3Text}
-                    </li>
-                    <label className="tab4">
-                        <input
-                            type="checkbox"
-                            id="checkLanguage"
-                            onChange={e => switchLanguage(e)}
-                        />
-                        <span className="slider round"></span>
-                    </label>
-                </ul>
-                {selectedTab &&<button className="exportbtn" onClick={exportData}>
-                    Export
-                </button>}
-                {selectedTab2 &&<button className="exportbtn" onClick={exportData2}>
-                    Export
-                </button>}
-                {selectedTab3 &&<button className="exportbtn" onClick={exportData3}>
-                    Export
-                </button>}
-            </div>
-            {showModal && <Modal>{data}</Modal>}
-            {selectedTab && <Layout1 />}
-            {selectedTab2 && <Layout2/>}
-            {selectedTab3 && <Layout3/>}
-        </div>
+      <div>
+          <nav className="navbarHeader">
+              <ul className="navbarHeader-left">
+                  <li className="navbarHeader-title">Canvas Editor</li>
+                  <li>
+                      <button className="infoButton" onClick={handleOpen}></button>
+                      <div
+                          open={open}
+                          onClose={handleClose}
+                          aria-labelledby="modal-modal-title"
+                          aria-describedby="modal-modal-description"
+                      >
+                      </div>
+                  </li>
+              </ul>
+              <ul className="navbarHeader-center">
+                  <li>
+                      <button className={selectedTab ? 'tab-active' : 'tab-hidden'} id="tab1" onClick={() => showTab("tab1")}>
+                      <span className="tab-container" id="tab1">
+                          <span className="tab-text" id="tab1">Layout 1</span>
+                      </span>
+                      </button>
+                  </li>
+                  <li>
+                      <button className={selectedTab2 ? 'tab-active' : 'tab-hidden'} id="tab2" onClick={() => showTab("tab2")}>
+                      <span className="tab-container" id="tab2">
+                          <span className="tab-text" id="tab2">Layout 2</span>
+                      </span>
+                      </button>
+                  </li>
+                  <li>
+                      <button className={selectedTab3 ? 'tab-active' : 'tab-hidden'} id="tab3" onClick={() => showTab("tab3")}>
+                      <span className="tab-container" id="tab3">
+                          <span className="tab-text" id="tab3">{tab3Text}</span>
+                      </span>
+                      </button>
+                  </li>
+                  <li>
+                      <label className="tab4">
+                          <input
+                              type="checkbox"
+                              id="checkLanguage"
+                              onChange={e => switchLanguage(e)}
+                          />
+                          <span className="slider"></span>
+                      </label>
+                  </li>
+              </ul>
+              <ul className="navbarHeader-right">
+                  <li>
+                      {selectedTab &&<button className="exportButton" onClick={exportData}>
+                          Export
+                      </button>}
+                      {selectedTab2 &&<button className="exportButton" onClick={exportData2}>
+                          Export
+                      </button>}
+                      {selectedTab3 &&<button className="exportButton" onClick={exportData3}>
+                          Export
+                      </button>}
+                  </li>
+              </ul>
+          </nav>
+          {showModal && <Modal>{data}</Modal>}
+          {selectedTab && <Layout1/>}
+          {selectedTab2 && <Layout2/>}
+          {selectedTab3 && <Layout3/>}
+      </div>
     );
 }
 export default Header;

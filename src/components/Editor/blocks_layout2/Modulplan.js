@@ -1,18 +1,12 @@
 import {useRecoilState} from "recoil";
 import {l2Modulplan} from "../../services/atoms";
-import {useState} from "react";
 
 function Modulplan() {
-    const [modulplan, setModulplan] = useState("");
-    const [modulplanstate, setModulplanstate] = useRecoilState(l2Modulplan);
-    const addImage = (e) => {
-        e.preventDefault()
-        setModulplanstate(modulplan);
-        setModulplan("");
-    }
+    const [modulplan, setModulplan] = useRecoilState(l2Modulplan);
     return (
         <div className="container">
-            <div className="editorTextColor">
+            <form>
+            <div>
                 Modulplan:
             </div>
             <input
@@ -22,10 +16,9 @@ function Modulplan() {
                 placeholder="Bildlink hier einfügen"
                 onChange={(e) => setModulplan(e.target.value)}
             />
-            <button className="editorsubmitbtn" onClick={addImage}>
-                Submit
-            </button>
+            </form>
         </div>
+
     );
 }
 export default Modulplan;

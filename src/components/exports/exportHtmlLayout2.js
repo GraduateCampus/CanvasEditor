@@ -1,5 +1,5 @@
 import { useRecoilValue } from "recoil";
-import { l2BoxesState, l2BoxGifLinkState, l2BoxGifTitlesState } from "./services/atoms";
+import { l2BoxesState, l2BoxGifLinkState, l2BoxGifTitlesState } from "../services/atoms";
 import ReactDOMServer from "react-dom/server";
 function MakeOverview() {
     const boxes = useRecoilValue(l2BoxesState);

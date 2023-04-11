@@ -17,6 +17,7 @@ function PointCourse() {
     }
     return (
         <div className="container">
+            <form>
             <div className="editorTextColor">Icon-Link eingeben:</div>
             <input
                 type="text"
@@ -30,10 +31,11 @@ function PointCourse() {
                 type="text"
                 name="PointCourseText"
                 rows="5"
-                cols="70"
+                cols="40"
                 value={pointCourseText}
                 onChange={(e) => setPointCourseText(e.target.value)}
             />
+        </form>
         </div>
     );
 }

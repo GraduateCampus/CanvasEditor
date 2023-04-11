@@ -1,0 +1,115 @@
+/* Styling for general navbar */
+.editor-navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.editor-navbar li {
+    background: #4d4d4d;
+    margin: 10px 0 10px 0;
+    border-radius: 5px;
+}
+.editor-button:hover {
+    background-color: #4d4d4d;
+    transform: translateY(0);
+}
+.editor-button {
+    position: relative;
+    overflow: hidden;
+    background-color: #4d4d4d;
+    color: #fff;
+    margin: 10px 0 10px 0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-family: Oswald;
+    font-size: large;
+    font-weight: 600;
+    color: white;
+}
+.editor-button.active {
+    background-color: #bea602;
+}
+.editor-button::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #ccc;
+    z-index: -1;
+    transition: height 0.3s ease-out;
+}
+.editor-button:hover::after {
+    height: 100%;
+}
+.editor-button:active::after {
+    height: 0;
+    transition: height 0.3s ease-in;
+}
+/* Styling for what's inside the li's */
+.container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    font-family: Oswald;
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+input {
+    margin: 10px 0 10px 0;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+}
+textarea {
+    margin: 10px 0 10px 0;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+/* Styling in specific for the overview in the first and second Layout (also works for contacts) */
+.chapter-wrapper {
+    background-color: #3c3c3b;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    min-width: 250px;
+}
+.btn-chapter {
+    background-color: #bea602;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    font-family: Oswald;
+    font-weight: 400;
+}
+.btn-delete-chapter {
+    background-color: #FE6464;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    font-family: Oswald;
+    font-weight: 600;
+}
+.btn-new-chapter {
+    background-color: #A3FF4B;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    font-family: Oswald;
+    font-weight: 400;
+    width: 200px;
+}

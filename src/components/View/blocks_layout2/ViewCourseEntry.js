@@ -1,4 +1,4 @@
-import rakete from "../../images/rakete.png";
+import rakete from "../../images/Rakete.png";
 import {useRecoilValue} from "recoil";
 import {l2CourseEntry} from "../../services/atoms";
 

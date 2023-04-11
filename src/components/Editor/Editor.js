@@ -1,10 +1,9 @@
 import React, {useState} from "react";
 import WelcomeBox from "./blocks/WelcomeBox";
-import Kurseinstieg from "./blocks/Kurseinstieg";
+import CourseEntry from "./blocks/CourseEntry";
 import Modulplan from "./blocks/Modulplan";
 import Overview from "./blocks/Overview";
 import Contacts from "./blocks/Contacts";
-
 function Editor ()
 {
     const [showWelcomeBox, setShowWelcomeBox] = useState(false);
@@ -12,36 +11,31 @@ function Editor ()
     const [showModulplan, setShowModulplan] = useState(false);
     const [showOverview, setShowOverview] = useState(false);
     const [showAnsprechperson, setShowAnsprechperson] = useState(false);
-
     return (
-        <div className="navbar">
-            <ul className="navbar-ul">
-                <li className="navbar-li" onClick={() => setShowWelcomeBox(!showWelcomeBox)}>
-                    WelcomeBox
-                </li>
-                {showWelcomeBox && <WelcomeBox /> }
-
-                <li className="navbar-li" onClick={() => setShowDescriptionBox(!showDescriptionBox)}>
-                    Kurseinstieg
-                </li>
-                {showDescriptionBox && <Kurseinstieg/>}
-
-                <li className="navbar-li" onClick={() => setShowModulplan(!showModulplan)}>
-                    Modulplan
-                </li>
-                {showModulplan && <Modulplan/>}
-
-                <li className="navbar-li" onClick={() => setShowOverview(!showOverview)}>
-                    Inhaltsübersicht
-                </li>
-                {showOverview && <Overview/>}
-
-                <li className="navbar-li" onClick={() => setShowAnsprechperson(!showAnsprechperson)}>
-                    Ansprechpersonen
-                </li>
-                {showAnsprechperson && <Contacts/>}
-            </ul>
-        </div>
+            <nav className="editor-navbar">
+                <ul>
+                    <li>
+                        <button className={`editor-button ${showWelcomeBox ? 'active' : ''}`} onClick={() => setShowWelcomeBox(!showWelcomeBox)}>WelcomeBox</button>
+                        {showWelcomeBox && <WelcomeBox /> }
+                    </li>
+                    <li>
+                        <button className={`editor-button ${showDescriptionBox ? 'active' : ''}`} onClick={() => setShowDescriptionBox(!showDescriptionBox)}>Kurseinstieg & Kursnummer</button>
+                        {showDescriptionBox && <CourseEntry/>}
+                    </li>
+                    <li>
+                        <button className={`editor-button ${showModulplan ? 'active' : ''}`} onClick={() => setShowModulplan(!showModulplan)}>Modulplan</button>
+                        {showModulplan && <Modulplan/>}
+                    </li>
+                    <li>
+                        <button className={`editor-button ${showOverview ? 'active' : ''}`} onClick={() => setShowOverview(!showOverview)}>Inhaltsübersicht</button>
+                        {showOverview && <Overview/>}
+                    </li>
+                    <li>
+                        <button className={`editor-button ${showAnsprechperson ? 'active' : ''}`} onClick={() => setShowAnsprechperson(!showAnsprechperson)}>Ansprechpersonen</button>
+                        {showAnsprechperson && <Contacts/>}
+                    </li>
+                </ul>
+            </nav>
     );
 }
 export default Editor;

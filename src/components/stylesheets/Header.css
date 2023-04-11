@@ -1,0 +1,163 @@
+.navbarHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4d4d4d;
+    height: 50px;
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;
+    font-family: Oswald;
+    font-size: x-large;
+    color: white;
+}
+.navbarHeader-left {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    background-color: #3c3c3b;
+    width: 300px;
+}
+.infoButton {
+    background-image: url("https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Element%205.png?raw=true");
+    border: none;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: transparent;
+    overflow: hidden;
+    cursor: pointer;
+    background-size: 100%;
+    margin-left: 60px;
+}
+.navbarHeader-right {
+    display: flex;
+    list-style: none;
+}
+.exportButton {
+    border: none;
+    height: 50px;
+    text-transform: uppercase;
+    padding: 0 10px 0 10px;
+    background-color: #bea602;
+    font-family: Oswald;
+    font-size: large;
+    cursor: pointer;
+}
+.navbarHeader-center {
+    display: flex;
+    list-style: none;
+    height: 100%;
+}
+.tab-hidden {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: button;
+    position: relative;
+    overflow:hidden;
+    z-index: 1;
+    height: 100%;
+    font-family: Oswald;
+    font-size: x-large;
+    text-transform: uppercase;
+    background: #4d4d4d;
+    color: #ffffff;
+    cursor: pointer;
+    border-style: none solid none solid;
+    border-color: #3c3c3b;
+    transition:         0.3s ease-in;
+    -o-transition:      0.3s ease-in;
+    -ms-transition:     0.3s ease-in;
+    -moz-transition:    0.3s ease-in;
+    -webkit-transition: 0.3s ease-in;
+}
+.tab-hidden:before {
+    content: "";
+    position: absolute;
+    background: #383736;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: -1;
+    -webkit-transition: top 0.2s ease-in;
+}
+.tab-hidden:hover:before {
+    top: 0;
+}
+.tab-active {
+    height: 100%;
+    font-family: Oswald;
+    font-size: x-large;
+    text-transform: uppercase;
+    background: #bea602;
+    border-style: none solid none solid;
+    border-color: #3c3c3b;
+    color: #ffffff;
+}
+.tab4 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 90px;
+    height: 34px;
+}
+.tab4 input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    display: none;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #3c3c3b;
+    -webkit-transition: .4s;
+    transition: .4s;
+    height: 50px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    bottom: 4px;
+    left: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+    transform: translate(-0%,-50%);
+    top: 50%;
+}
+input:checked + .slider {
+    background-color: #bea602;
+}
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translate(55px,-50%);
+}
+.slider:after
+{
+    content:'DE';
+    color: white;
+    display: block;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-size: large;
+    font-family: Oswald
+}
+input:checked + .slider:after
+{
+    content:'EN';
+}

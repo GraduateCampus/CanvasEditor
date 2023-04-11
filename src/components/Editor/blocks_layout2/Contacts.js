@@ -29,7 +29,7 @@ function Contacts () {
     }
     return (
         <div className="dropdown-form">
-            <button className="standardbtn" onClick={addBox}>Add Box</button>
+            <button className="btn-chapter" onClick={addBox}>Add Box</button>
             <div className="overview-ul">
                 {boxes.map((box,index)=> (
                     <Box key={index} index={index} handleDeleteBox={HandleDeleteBox}/>
@@ -55,9 +55,10 @@ function Contacts () {
             setMail(event.target.value);
         };
         return(
-            <div className="overview-li">
+            <div className="container">
+                <form className="chapter-wrapper">
                 <div className="dropdown-form">
-                    <button onClick={() => handleDeleteBox(index)} className="standardbtn">Delete Box</button>
+                    <button onClick={() => handleDeleteBox(index)} className="btn-delete-chapter">Delete Box</button>
                 </div>
                 <div>
                     <input type="text" value={icon} onChange={handleIconChange} placeholder="Enter Iconlink" />
@@ -71,6 +72,7 @@ function Contacts () {
                 <div>
                     <input type="text" value={mail} onChange={handleMailChange} placeholder="Enter Mail" />
                 </div>
+                </form>
             </div>
         )
     }

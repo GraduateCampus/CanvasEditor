@@ -13,7 +13,7 @@ import {
     learniacPointWelcomeImage, learniacRocketText
 } from "./services/atoms";
 import ViewPointUnits from "./View/blocks_learniac/ViewPointUnits";
-
+import "./stylesheets/Layout.css";
 function Layout3() {
     const rockettext = useRecoilValue(learniacRocketText);
     const image2 = useRecoilValue(learniacPointWelcomeImage);
@@ -22,11 +22,11 @@ function Layout3() {
     const image5 = useRecoilValue(learniacPointInfoImage);
     const image6 = useRecoilValue(learniacPointUnitsImage);
     return (
-        <div className="split">
-            <div className="split left">
+        <div className="layout">
+            <div className="layout-left">
                 <Editor3/>
             </div>
-            <div className="split right">
+            <div className="layout-right">
                 <ViewWelcomeBox/>
                 <div className="lvTimeline">
                     <div className="lvTimeline alt"/>

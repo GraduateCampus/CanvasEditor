@@ -42,6 +42,7 @@ function Contacts() {
     }
     return (
         <div className="container">
+            <form>
             <div className="editorTextColor">Kontaktnamen einfügen:</div>
             <input
                 type="text"
@@ -82,6 +83,7 @@ function Contacts() {
                 onChange={(e) => setStateContactsBild(e.target.value)}
             />
             <button className="editorsubmitbtn" onClick={event => addContactBild(stateContactsBild)}>Submit</button>
+            </form>
         </div>
     );
 }

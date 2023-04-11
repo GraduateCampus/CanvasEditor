@@ -14,34 +14,30 @@ function Editor2 ()
     const [showAnsprechperson, setShowAnsprechperson] = useState(false);
 
     return (
-        <div className="navbar">
-            <ul className="navbar-ul">
-                <li className="navbar-li" onClick={() => setShowWelcomeBox(!showWelcomeBox)}>
-                    WelcomeBox
+        <nav className="editor-navbar">
+            <ul>
+                <li>
+                    <button className={`editor-button ${showWelcomeBox ? 'active' : ''}`} onClick={() => setShowWelcomeBox(!showWelcomeBox)}>WelcomeBox</button>
+                    {showWelcomeBox && <WelcomeBox /> }
                 </li>
-                {showWelcomeBox && <WelcomeBox /> }
-
-                <li className="navbar-li" onClick={() => setShowDescriptionBox(!showDescriptionBox)}>
-                    Kurseinstieg
+                <li>
+                    <button className={`editor-button ${showDescriptionBox ? 'active' : ''}`} onClick={() => setShowDescriptionBox(!showDescriptionBox)}>Kurseinstieg & Kursnummer</button>
+                    {showDescriptionBox && <CourseEntry/>}
                 </li>
-                {showDescriptionBox && <CourseEntry/>}
-
-                <li className="navbar-li" onClick={() => setShowModulplan(!showModulplan)}>
-                    Modulplan
+                <li>
+                    <button className={`editor-button ${showModulplan ? 'active' : ''}`} onClick={() => setShowModulplan(!showModulplan)}>Modulplan</button>
+                    {showModulplan && <Modulplan/>}
                 </li>
-                {showModulplan && <Modulplan/>}
-
-                <li className="navbar-li" onClick={() => setShowOverview(!showOverview)}>
-                    Inhaltsübersicht
+                <li>
+                    <button className={`editor-button ${showOverview ? 'active' : ''}`} onClick={() => setShowOverview(!showOverview)}>Inhaltsübersicht</button>
+                    {showOverview && <Overview/>}
                 </li>
-                {showOverview && <Overview/>}
-
-                <li className="navbar-li" onClick={() => setShowAnsprechperson(!showAnsprechperson)}>
-                    Ansprechpersonen
+                <li>
+                    <button className={`editor-button ${showAnsprechperson ? 'active' : ''}`} onClick={() => setShowAnsprechperson(!showAnsprechperson)}>Ansprechpersonen</button>
+                    {showAnsprechperson && <Contacts/>}
                 </li>
-                {showAnsprechperson && <Contacts/>}
             </ul>
-        </div>
+        </nav>
     );
 }
 export default Editor2;

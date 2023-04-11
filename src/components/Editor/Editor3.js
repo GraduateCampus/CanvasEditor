@@ -11,49 +11,44 @@ function Editor3 ()
     const [showWelcomeBox, setShowWelcomeBox] = useState(false);
     const [showPointWelcome, setShowPointWelcome] = useState(false);
     const [showPointCourse, setShowPointCourse] = useState(false);
+    const [showPointUnits, setShowPointUnits] = useState(false);
     const [showPointLearning, setShowPointLearning] = useState(false);
     const [showPointInfo, setShowPointInfo] = useState(false);
     const [showContacts, setShowContacts] = useState(false);
 
     return (
-        <div className="navbar">
-            <ul className="navbar-ul">
-                <li className="navbar-li" onClick={() => setShowWelcomeBox(!showWelcomeBox)}>
-                    WelcomeBox
+        <nav className="editor-navbar">
+            <ul>
+                <li>
+                    <button className={`editor-button ${showWelcomeBox ? 'active' : ''}`} onClick={() => setShowWelcomeBox(!showWelcomeBox)}>WelcomeBox</button>
+                    {showWelcomeBox && <WelcomeBox /> }
                 </li>
-                {showWelcomeBox && <WelcomeBox /> }
-
-                <li className="navbar-li" onClick={() => setShowPointWelcome(!showPointWelcome)}>
-                    PointWelcome
+                <li>
+                    <button className={`editor-button ${showPointWelcome ? 'active' : ''}`} onClick={() => setShowPointWelcome(!showPointWelcome)}>Willkommen im Kurs</button>
+                    {showPointWelcome && <PointWelcome/>}
                 </li>
-                {showPointWelcome && <PointWelcome/>}
-
-                <li className="navbar-li" onClick={() => setShowPointCourse(!showPointCourse)}>
-                    PointCourse
+                <li>
+                    <button className={`editor-button ${showPointCourse ? 'active' : ''}`} onClick={() => setShowPointCourse(!showPointCourse)}>Kursablauf</button>
+                    {showPointCourse && <PointCourse/>}
                 </li>
-                {showPointCourse && <PointCourse/>}
-
-                <li className="navbar-li" onClick={() => setShowPointLearning(!showPointLearning)}>
-                    PointUnits
+                <li>
+                    <button className={`editor-button ${showPointUnits ? 'active' : ''}`} onClick={() => setShowPointUnits(!showPointUnits)}>Deine E-Learning Einheiten</button>
+                    {showPointUnits && <PointUnits/>}
                 </li>
-                {showPointLearning && <PointUnits/>}
-
-                <li className="navbar-li" onClick={() => setShowPointLearning(!showPointLearning)}>
-                    PointLearning
+                <li>
+                    <button className={`editor-button ${showPointLearning ? 'active' : ''}`} onClick={() => setShowPointLearning(!showPointLearning)}>Mit E-Learnings lernen</button>
+                    {showPointLearning && <PointLearning/>}
                 </li>
-                {showPointLearning && <PointLearning/>}
-
-                <li className="navbar-li" onClick={() => setShowPointInfo(!showPointInfo)}>
-                    PointInfo
+                <li>
+                    <button className={`editor-button ${showPointInfo ? 'active' : ''}`} onClick={() => setShowPointInfo(!showPointInfo)}>Wissenswertes</button>
+                    {showPointInfo && <PointInfo/>}
                 </li>
-                {showPointInfo && <PointInfo/>}
-
-                <li className="navbar-li" onClick={() => setShowContacts(!showContacts)}>
-                    Ansprechperson
+                <li>
+                    <button className={`editor-button ${showContacts ? 'active' : ''}`} onClick={() => setShowContacts(!showContacts)}>Ansprechperson</button>
+                    {showContacts && <Contacts/>}
                 </li>
-                {showContacts && <Contacts/>}
             </ul>
-        </div>
+        </nav>
     );
 }
 export default Editor3;

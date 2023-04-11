@@ -13,6 +13,7 @@ function PointInfo() {
     }
     return (
         <div className="container">
+            <form>
             <div className="editorTextColor">Icon-Link eingeben:</div>
             <input
                 type="text"
@@ -26,10 +27,11 @@ function PointInfo() {
                 type="text"
                 name="PointInfoText"
                 rows="5"
-                cols="70"
+                cols="40"
                 value={pointInfoText}
                 onChange={(e) => setPointInfoText(e.target.value)}
             />
+        </form>
         </div>
     );
 }

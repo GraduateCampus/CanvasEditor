@@ -1,5 +1,5 @@
 import {useRecoilValue} from "recoil";
-import {learniacPointUnits} from "./services/atoms";
+import {learniacPointUnits} from "../services/atoms";
 
 export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcWelcomeCourse,
                                   lcWelcomeCourse2, lcWelcomeCourse3, lcPointWelcomeHeader,
@@ -134,7 +134,7 @@ function makeUnits(lcPointUnits) {
     let unitBox = `<ul class="lvPointUnits contentText">`;
     lcPointUnits.map((units, index) => {
         let newUnits =`    
-                        <li>${index+1}.&emsp;${units}</li>`;
+                        <li>&emsp;${index+1}. ${units}</li>`;
         unitBox += newUnits;
     });
     unitBox +=`

@@ -3,7 +3,8 @@ import {l2BoxesState, l2BoxGifLinkState, l2BoxGifTitlesState} from "../../servic
 
 function Overview() {
     const [boxes, setBoxes] = useRecoilState(l2BoxesState);
-    const addBox = () => {
+    const addBox = (e) => {
+        e.preventDefault();
         setBoxes([...boxes, { gifLink: '', gifTitles: [''] }]);
     };
     const HandleDeleteBox = (index) => {
@@ -19,9 +20,11 @@ function Overview() {
         resetGifTitlesState();
     };
     return (
-        <div className="dropdown-form">
-            <button className="standardbtn" onClick={addBox}>Add Box</button>
-            <div className="overview-ul">
+        <div>
+            <div>
+            <button className="btn-chapter" onClick={addBox}>Add Box</button>
+            </div>
+            <div>
                 {boxes.map((box,index)=> (
                 <Box key={index} index={index} handleDeleteBox={HandleDeleteBox}/>
                 ))}
@@ -41,30 +44,33 @@ function Overview() {
             setGifTitles(newTitles);
         };
 
-        const handleAddTitle = () => {
+        const handleAddTitle = (e) => {
+            e.preventDefault();
             setGifTitles([...gifTitles, '']);
         };
         const handleDeleteTitle = (titleIndex) => {
             setGifTitles(gifTitles.filter((title, i) => i !== titleIndex));
         };
         return(
-            <div className="overview-li">
+            <div className="container">
+            <form className="chapter-wrapper">
                 <div className="dropdown-form">
-                    <button onClick={() => handleDeleteBox(index)} className="standardbtn">Delete Box</button>
+                    <button onClick={() => handleDeleteBox(index)} className="btn-delete-chapter">Delete this Box</button>
                 </div>
                 <input type="text" value={gifLink} onChange={handleLinkChange} placeholder="Enter GIF Link" />
                 <div>
-                    <button className="standardbtn" onClick={handleAddTitle}>Add Title</button>
+                    <button className="btn-new-chapter" onClick={handleAddTitle}>Add Title</button>
                 </div>
                 <div>
-                    <input type="text" value={gifTitles[0]} onChange={(event) => handleTitleChange(event, 0)} placeholder="Enter GIF Title" />
+                    <input type="text" value={gifTitles[0]} onChange={(event) => handleTitleChange(event, 0)} placeholder={1 + " Enter GIF Title"} />
                     {gifTitles.slice(1).map((title, titleIndex) => (
                         <div key={titleIndex}>
-                            <input type="text" value={title} onChange={(event) => handleTitleChange(event, titleIndex + 1)} placeholder="Enter GIF Title" />
+                            <input type="text" value={title} onChange={(event) => handleTitleChange(event, titleIndex + 1)} placeholder={titleIndex + 2 + " Enter GIF Title"} />
                             <button className="standardbtn" onClick={() => handleDeleteTitle(titleIndex + 1)}>Delete Title</button>
                         </div>
                     ))}
                 </div>
+            </form>
             </div>
         )
     }

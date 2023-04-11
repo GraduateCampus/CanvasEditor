@@ -6,11 +6,12 @@ function CourseEntry() {
     const [courseNr, setCourseNr] = useRecoilState(l2CourseNr);
     return (
         <div className="container">
+            <form>
             <div className="editorTextColor">Kursbeschreibung:</div>
             <textarea
                 id="beschreibung"
                 rows="10"
-                cols="70"
+                cols="40"
                 value={courseEntry}
                 placeholder="Kursbeschreibung hier einfügen"
                 onChange={(e) => setCourseEntry(e.target.value)}
@@ -24,6 +25,7 @@ function CourseEntry() {
                 onChange={(e) => setCourseNr(e.target.value)}
 
             />
+            </form>
         </div>
     );
 }

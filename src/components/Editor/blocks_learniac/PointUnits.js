@@ -11,7 +11,8 @@ function PointUnits() {
         setPointUnitsImage(stateImage);
         setStateImage("");
     }
-    const addUnit = () => {
+    const addUnit = (e) => {
+        e.preventDefault();
         setPointUnits([...pointUnits, '']);
     }
     const handleChange = (id, event) => {
@@ -21,7 +22,8 @@ function PointUnits() {
     }
     return (
         <div className="container">
-            <div className="editorTextColor">Icon-Link eingeben:</div>
+            <form>
+            <div>Icon-Link eingeben:</div>
             <input
                 type="text"
                 name="PointUnitsImage"
@@ -45,6 +47,7 @@ function PointUnits() {
                     </div>
                 ))}
             </div>
+        </form>
         </div>
     );
 

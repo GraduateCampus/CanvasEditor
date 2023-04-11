@@ -8,19 +8,17 @@ import ViewModulplan from "./View/blocks/ViewModulplan";
 
 function Layout1() {
     return (
-        <div className="App">
-            <div className="split">
-                <div className="split left">
-                    <Editor/>
-                </div>
-                <div className="split right">
-                    <ViewWelcomeBox />
-                    <ViewKurseinstieg />
-                    <ViewModulplan />
-                    <ViewOverView />
-                    <ViewCanvasNeu/>
-                    <ViewContacts/>
-                </div>
+        <div className="layout">
+            <div className="layout-left">
+                <Editor/>
+            </div>
+            <div className="layout-right">
+                <ViewWelcomeBox />
+                <ViewKurseinstieg />
+                <ViewModulplan />
+                <ViewOverView />
+                <ViewCanvasNeu/>
+                <ViewContacts/>
             </div>
         </div>
     );

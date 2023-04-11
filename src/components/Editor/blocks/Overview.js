@@ -60,10 +60,10 @@ function Overview() {
 
     function courseItem({ icon,title,nuggets,duration }, index) {
         return (
-            <div className="courseItemBigWrapper" key={index}>
-                <div className="buttonsOverview">
-                    <button className="standardbtn" onClick={(event) => showChapter(event, index)}>Modulinhalt: {index +1}</button>
-                    <button className="submitbtn" onClick={(event) => deleteItem(event, index)}>Delete</button>
+            <div className="chapter-wrapper" key={index}>
+                <div className="chapter-header">
+                    <button className="btn-chapter" onClick={(event) => showChapter(event, index)}>Modulinhalt {index +1}</button>
+                    <button className="btn-delete-chapter" onClick={(event) => deleteItem(event, index)}>X</button>
                 </div>
                 {show[index] && <div className="dropdown-form">
                     <div className="ov inputIcon">
@@ -73,6 +73,7 @@ function Overview() {
                             name="icon"
                             className="input iconInput"
                             value={icon}
+                            placeholder="Icon-Link"
                             onChange={(value) => itemChanged(value, index)}
                         />
                     </div>
@@ -83,6 +84,7 @@ function Overview() {
                             name="title"
                             className="input titleInput"
                             value={title}
+                            placeholder="Kapiteltitel"
                             onChange={(value) => itemChanged(value, index)}
                         />
                     </div>
@@ -93,6 +95,7 @@ function Overview() {
                             name="nuggets"
                             className="input nuggetsInput"
                             value={nuggets}
+                            placeholder="Anzahl der Nuggets"
                             onChange={(value) => itemChanged(value, index)}
                         />
                     </div>
@@ -113,21 +116,20 @@ function Overview() {
     }
 
     return (
-        <ul className="overview-ul">
-            <li className="overview-li">
-                <div className="editorTextColor">
-                    Inhalte:
-                </div>
-                <form className="dropdown-form">
-                    {courseNavigationstate.items.map((item, index) => {
-                        return courseItem(item, index);
-                    })}
-                    <button className="submitbtn" onClick={makeNewItem}>
-                        New Item
-                    </button>
-                </form>
-            </li>
-        </ul>
+        <div className="container">
+            <ul className="overview-ul">
+                <li className="overview-li">
+                    <form className="dropdown-form">
+                        {courseNavigationstate.items.map((item, index) => {
+                            return courseItem(item, index);
+                        })}
+                        <button className="btn-new-chapter" onClick={makeNewItem}>
+                            New Item
+                        </button>
+                    </form>
+                </li>
+            </ul>
+        </div>
     );
 }
 
