@@ -1,16 +1,9 @@
 import {useRecoilState} from "recoil";
 import {learniacPointUnits, learniacPointUnitsImage,} from "../../services/atoms";
-import {useMemo, useState} from "react";
-
 function PointUnits() {
-    const [stateImage, setStateImage] = useState("");
     const [pointUnits, setPointUnits] = useRecoilState(learniacPointUnits);
-    const [pointUnitsImage, setPointUnitsImage] = useRecoilState(learniacPointUnitsImage);
-    const addPointUnitsImage = (e) => {
-        e.preventDefault()
-        setPointUnitsImage(stateImage);
-        setStateImage("");
-    }
+    const [stateImage, setStateImage] = useRecoilState(learniacPointUnitsImage);
+
     const addUnit = (e) => {
         e.preventDefault();
         setPointUnits([...pointUnits, '']);
@@ -20,33 +13,40 @@ function PointUnits() {
         newUnits[id] = event.target.value;
         setPointUnits(newUnits);
     }
+    const deleteUnit = (id, event) => {
+        event.preventDefault();
+        const newUnits = [...pointUnits];
+        newUnits.splice(id,1);
+        setPointUnits(newUnits)
+    }
     return (
         <div className="container">
             <form>
-            <div>Icon-Link eingeben:</div>
-            <input
-                type="text"
-                name="PointUnitsImage"
-                value={stateImage}
-                onChange={(e) => setStateImage(e.target.value)}
-            />
-            <button className="editorsubmitbtn" onClick={addPointUnitsImage}>Submit</button>
-            <div className="editorTextColor">Kapitel einfügen:</div>
-            <button className="editorsubmitbtn" onClick={addUnit}>Add Units</button>
-            <div className="lvPointUnitsEditorBox">
-                {pointUnits.map((units, index) => (
-                    <div key={index}>
-                        <span className="lvPointUnitsEditorText">{index+1}</span>
-                        <input
-                            type="text"
-                            value={pointUnits[index]}
-                            onChange={(e) => handleChange(index, e)}
-                            placeholder="Kapitel einfügen:"
-                            className="lvPointUnitsEditorbreak"
-                        />
+                <div>Icon-Link eingeben:</div>
+                    <input
+                        type="text"
+                           name="PointUnitsImage"
+                        value={stateImage}
+                        onChange={(e) => setStateImage(e.target.value)}
+                    />
+                <div>Kapitel einfügen:</div>
+                <div className="chapter-wrapper">
+                    <button className="btn-chapter" onClick={addUnit}>Einheit hinzufügen</button>
+                    <div className="">
+                        {pointUnits.map((units, index) => (
+                            <div key={index}>
+                                <span>{index+1}. </span>
+                                <input
+                                    type="text"
+                                    value={pointUnits[index]}
+                                    onChange={(e) => handleChange(index, e)}
+                                    placeholder="Kapitel einfügen:"
+                                />
+                                <button className="btn-delete-chapter" onClick={(e) => deleteUnit(index, e)}>X</button>
+                            </div>
+                        ))}
                     </div>
-                ))}
-            </div>
+                </div>
         </form>
         </div>
     );

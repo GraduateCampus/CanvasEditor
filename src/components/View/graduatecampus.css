@@ -140,33 +140,15 @@ font-weight: 100-900
 .lvWelcomeBox {
     margin-bottom: 4vw;
     position: relative;
+    text-align: center;
+    background-color: #ccc;
 }
 .lvWelcomeCourse {
-    position: absolute;
-    top: 10%;
-    font-family: "Playfair Display";
-    font-weight: 900;
-    color: #bfa602;
-}
-.lvWelcomeHeadline {
-    position: absolute;
-    color: #3c3c3b;
     font-family: "Roboto";
+    font-weight: 500;
+    color: #bfa602;
+    vertical-align: middle;
 }
-.lvWelcomeHeadline.line1 {
-    top: 25%;
-}
-.lvWelcomeHeadline.line2 {
-    top: 45%;
-}
-.lvWelcomeHeadline.line3 {
-    top: 65%;
-}
-.lvHeaderimage {
-    width: 100%;
-    height: auto;
-}
-
 /* The timeline */
 .lvTimeline {
     position: relative;
@@ -729,20 +711,6 @@ font-weight: 100-900
 
     .lvWelcomeCourse {
         font-size: 4vw;
-        left: 5%;
-    }
-    .lvWelcomeHeadline {
-        font-size: 4vw;
-        left: 5%;
-    }
-    .lvWelcomeHeadline.line1 {
-        top: 30%;
-    }
-    .lvWelcomeHeadline.line2 {
-        top: 50%;
-    }
-    .lvWelcomeHeadline.line3 {
-        top:70%;
     }
     .lvTimeline {
         left: 10%;
@@ -852,11 +820,6 @@ font-weight: 100-900
 
     .lvWelcomeCourse {
         font-size: 1.5vw;
-        left: 5%;
-    }
-    .lvWelcomeHeadline {
-        font-size: 2vw;
-        left: 5%;
     }
     .lvTimeline {
         left: 10%;
@@ -974,12 +937,7 @@ font-weight: 100-900
     /* Learniac Styling */
 
     .lvWelcomeCourse {
-        font-size: 35px;
-        left: 10%;
-    }
-    .lvWelcomeHeadline {
-        font-size: 55px;
-        left: 10%;
+        font-size: 40px;
     }
     .lvTimeline {
         left: 10%;

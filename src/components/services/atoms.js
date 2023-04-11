@@ -9,7 +9,7 @@ export const dataState = atom ( {
 })
 export const welcomeBoxImage = atom ( {
     key: 'welcomeBoxImage',
-    default: "https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Headerbild_ObjProg.png?raw=true",
+    default: "https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/Headerbild_Code.png?raw=true",
 })
 export const welcomeBoxText = atom ( {
     key: 'welcomeBoxText',
@@ -69,7 +69,7 @@ export const ContactAvatar = atom ( {
 //atoms for Layout2:
 export const l2WelcomeBackground = atom( {
     key: 'l2WelcomeBackground',
-    default: "https://github.com/Electressic/CanvasEditor/blob/main/headerbild.png?raw=true",
+    default: "https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/Headerbild_PC.png?raw=true",
 })
 export const l2WelcomeHeadline = atom ( {
     key: 'l2WelcomeHeadline',
@@ -134,7 +134,7 @@ export const l2ContactMail = atomFamily({
 
 export const learniacWelcomeImage = atom ( {
     key: 'learniacWelcomeImage',
-    default: "https://github.com/Electressic/CanvasEditor/blob/main/headerbild.png?raw=true",
+    default: "https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/Headerbild_PC.png?raw=true",
 });
 export const learniacWelcomeText = atom ( {
     key: 'learniacWelcomeText',
@@ -158,12 +158,12 @@ export const learniacPointWelcomeHeader = atom ({
 })
 export const learniacPointWelcomeText = atom ( {
     key: 'learniacPointWelcomeText',
-    default: "Zum Durchstarten klicken Sie im Kursmenü auf der linken Seite auf Module.\n" +
-        "Hier gelangen Sie zur Gesamtübersicht aller E-Learning Einheiten, den sog. Learning Nuggets.",
+    default: "Zum Durchstarten klickst du im Kursmenü auf der linken Seite auf Module.\n" +
+        "Hier gelangst du zur Gesamtübersicht aller E-Learning Einheiten, den sog. Learning Nuggets.",
 });
 export const learniacPointWelcomeImage = atom ( {
     key: 'learniacPointWelcomeImage',
-    default: "https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Element%202.png?raw=true",
+    default: "https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/Icon_Hand.png?raw=true",
 });
 export const learniacPointCourseHeader = atom ({
     key: 'learniacPointCourseHeader',
@@ -171,14 +171,14 @@ export const learniacPointCourseHeader = atom ({
 })
 export const learniacPointCourseText = atom ( {
     key: 'learniacPointCourseText',
-    default: "Am besten arbeiten Sie von oben nach unten der Reihe nach die einzelnen Lerneinheiten durch.\n" +
-        "Am Ende eines jeden Learning Nuggets erwartet Sie ein kurzer Wissenscheck, um das Gelernte\n" +
-        "abschließend zu überprüfen. Sobald Sie alle Learning Nuggets bearbeitet haben, erhalten Sie\n" +
-        "automatisch per E-Mail Ihre Teilnahmebescheinigung zugesendet.",
+    default: "Am besten arbeitest du von oben nach unten der Reihe nach die einzelnen Lerneinheiten durch.\n" +
+        "Am Ende eines jeden Learning Nuggets erwartet dich ein kurzer Wissenscheck, um das Gelernte\n" +
+        "abschließend zu überprüfen. Sobald du alle Learning Nuggets bearbeitet hast, erhaltest du\n" +
+        "automatisch per E-Mail deine Teilnahmebescheinigung zugesendet.",
 });
 export const learniacPointCourseImage = atom ( {
     key: 'learniacPointCourseImage',
-    default: "https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Element%203.png?raw=true",
+    default: "https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/Icon_Navigation.png?raw=true",
 });
 export const learniacPointUnitsHeader = atom ( {
     key: 'learniacPointUnitsHeader',
@@ -190,7 +190,7 @@ export const learniacPointUnitsText = atom ( {
 });
 export const learniacPointUnitsImage = atom ( {
     key: 'learniacPointUnitsImage',
-    default: "https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Element%208.png?raw=true",
+    default: "https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/Icon_Book.png?raw=true",
 });
 export const learniacPointUnits = atom ( {
     key: 'learniacPointUnits',
@@ -202,12 +202,11 @@ export const learniacPointLearningHeader = atom ({
 })
 export const learniacPointLearningText = atom ( {
     key: 'learniacPointLearningText',
-    default: "Eine kurze Anleitung, wie Sie die Learning Nuggets bearbeiten können\n" +
-        "Sie sich gerne hier herunterladen.",
+    default: "Eine kurze Anleitung, wie du die Learning Nuggets bearbeitest, kannst du dir gerne hier herunterladen",
 });
 export const learniacPointLearningImage = atom ( {
     key: 'learniacPointLearningImage',
-    default: "https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Element%204.png?raw=true",
+    default: "https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/Icon_Lightbulb.png?raw=true",
 });
 export const learniacPointInfoHeader = atom ({
     key: 'learniacPointInfoHeader',
@@ -215,7 +214,7 @@ export const learniacPointInfoHeader = atom ({
 })
 export const learniacPointInfoText = atom ( {
     key: 'learniacPointInfoText',
-    default: "Ab der Buchung und Bezahlung haben Sie 90 Tage Zugriff auf die Learning Nuggets.\n" +
+    default: "Ab der Buchung und Bezahlung hast du 90 Tage Zugriff auf die Learning Nuggets.\n" +
         "Die Lehrunterlagen sind nur für den persönlichen Gebrauch vorgesehen. Daher ist von sonstiger\n" +
         "Verbreitung und Vervielfältigung abzusehen. Die Lehrunterlagen sind urheberrechtlich\n" +
         "geschützt. Das Urheberrecht liegt, soweit nicht ausdrücklich anders gekennzeichnet, bei\n" +
@@ -223,7 +222,7 @@ export const learniacPointInfoText = atom ( {
 });
 export const learniacPointInfoImage = atom ( {
     key: 'learniacPointInfoImage',
-    default: "https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Element%205.png?raw=true",
+    default: "https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/Icon_Info.png?raw=true",
 });
 export const learniacRocketText = atom ({
     key: 'learniacRocketText',
@@ -239,7 +238,7 @@ export const learniacContactsHeader2 = atom ({
 })
 export const learniacContactsText = atom ({
     key: 'learniacContactsText',
-    default: 'Haben Sie Fragen oder Anregungen? <br /> Kontaktieren Sie mich gerne. <br />'
+    default: 'Hast du Fragen oder Anregungen? <br /> Kontaktiere mich gerne. <br />'
 })
 export const learniacContactsName = atom ( {
     key: 'learniacContactsName',

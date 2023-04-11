@@ -1,7 +1,7 @@
 {
-  "name": "canvaseditor",
+  "name": "CanvasEditor",
   "version": "0.1.0",
-  "homepage": "https://Electressic.github.io/CanvasEditor",
+  "homepage": "https://graduatecampus.github.io/CanvasEditor",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",

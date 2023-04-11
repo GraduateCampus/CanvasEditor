@@ -86,13 +86,13 @@ function Layout3() {
                     </div>
                 </div>
                 <div className="lvRocketBox">
-                    <img className="lvRocket" src="https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Gif-Rakete.gif?raw=true"/>
+                    <img className="lvRocket" src="https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/Gif-Rakete.gif?raw=true"/>
                     <div className="lvRocketText">
                         {rockettext}
                     </div>
                 </div>
                 <ViewContact/>
-                <img className="learniacLogo" src="https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Element%206.png?raw=true" />
+                <img className="learniacLogo" src="https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/Learniac.png?raw=true" />
             </div>
         </div>
     );

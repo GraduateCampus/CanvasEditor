@@ -2,7 +2,9 @@
 
 ## Multiple Layouts
 
-So far working on 1 Layout gonna add Layout 2 and for different Branch also another Layout
+Layout 1: ZuKo<br>
+Layout 2: ZuKo<br>
+Layout 3: Learniac<br>
 
 ### `Go to Editor:`
-https://electressic.github.io/CanvasEditor/
+https://graduatecampus.github.io/CanvasEditor/

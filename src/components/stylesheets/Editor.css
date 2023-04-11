@@ -74,7 +74,7 @@ textarea {
     border-radius: 5px;
     border: none;
 }
-/* Styling in specific for the overview in the first and second Layout (also works for contacts) */
+/* Styling for buttons in Editor + a backgroundwrapper*/
 .chapter-wrapper {
     background-color: #3c3c3b;
     border-radius: 5px;

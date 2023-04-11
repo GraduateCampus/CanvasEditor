@@ -6,83 +6,52 @@ import {
     learniacContactsName,
     learniacContactsPhone
 } from "../../services/atoms";
-import {useState} from "react";
 
 function Contacts() {
-    const [stateContactsName, setStateContactsName] = useState("");
-    const [stateContactsPhone, setStateContactsPhone] = useState("");
-    const [stateContactsMobil, setStateContactsMobil] = useState("");
-    const [stateContactsMail, setStateContactsMail] = useState("");
-    const [stateContactsBild, setStateContactsBild] = useState("");
     const [contactsName, setContactsName] = useRecoilState(learniacContactsName);
     const [contactsPhone, setContactsPhone] = useRecoilState(learniacContactsPhone);
     const [contactsMobil, setContactsMobil] = useRecoilState(learniacContactsMobil);
     const [contactsMail, setContactsMail] = useRecoilState(learniacContactsMail);
     const [contactsBild, setContactsBild] = useRecoilState(learniacContactsBild);
 
-    const addContactName = (e) => {
-        setContactsName(e);
-        setStateContactsName("");
-    }
-    const addContactPhone = (e) => {
-        setContactsPhone(e);
-        setStateContactsPhone("");
-    }
-    const addContactMobil = (e) => {
-        setContactsMobil(e);
-        setStateContactsMobil("");
-    }
-    const addContactMail = (e) => {
-        setContactsMail(e);
-        setStateContactsMail("");
-    }
-    const addContactBild = (e) => {
-        setContactsBild(e);
-        setStateContactsBild("");
-    }
     return (
         <div className="container">
             <form>
-            <div className="editorTextColor">Kontaktnamen einfügen:</div>
+            <div>Kontaktnamen einfügen:</div>
             <input
                 type="text"
                 name="stateContactsName"
-                value={stateContactsName}
-                onChange={(e) => setStateContactsName(e.target.value)}
+                value={contactsName}
+                onChange={(e) => setContactsName(e.target.value)}
             />
-            <button id="1" className="editorsubmitbtn" onClick={event => addContactName(stateContactsName)}>Submit</button>
             <div className="editorTextColor">Nummer einfügen:</div>
             <input
                 type="text"
                 name="stateContactsPhone"
-                value={stateContactsPhone}
-                onChange={(e) => setStateContactsPhone(e.target.value)}
+                value={contactsPhone}
+                onChange={(e) => setContactsPhone(e.target.value)}
             />
-            <button className="editorsubmitbtn" onClick={event => addContactPhone(stateContactsPhone)}>Submit</button>
             <div className="editorTextColor">Mobilnummer einfügen:</div>
             <input
                 type="text"
                 name="stateContactsMobil"
-                value={stateContactsMobil}
-                onChange={(e) => setStateContactsMobil(e.target.value)}
+                value={contactsMobil}
+                onChange={(e) => setContactsMobil(e.target.value)}
             />
-            <button className="editorsubmitbtn" onClick={event => addContactMobil(stateContactsMobil)}>Submit</button>
             <div className="editorTextColor">E-Mail einfügen:</div>
             <input
                 type="text"
                 name="stateContactsMail"
-                value={stateContactsMail}
-                onChange={(e) => setStateContactsMail(e.target.value)}
+                value={contactsMail}
+                onChange={(e) => setContactsMail(e.target.value)}
             />
-            <button className="editorsubmitbtn" onClick={event => addContactMail(stateContactsMail)}>Submit</button>
             <div className="editorTextColor">Bild einfügen:</div>
             <input
                 type="text"
                 name="stateContactsBild"
-                value={stateContactsBild}
-                onChange={(e) => setStateContactsBild(e.target.value)}
+                value={contactsBild}
+                onChange={(e) => setContactsBild(e.target.value)}
             />
-            <button className="editorsubmitbtn" onClick={event => addContactBild(stateContactsBild)}>Submit</button>
             </form>
         </div>
     );

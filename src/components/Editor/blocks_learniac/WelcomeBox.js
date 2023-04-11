@@ -6,8 +6,6 @@ import {
     learniacWelcomeCourse3,
     learniacWelcomeImage,
 } from "../../services/atoms";
-import {useState} from "react";
-
 function WelcomeBox() {
     const [welcomeImage, setWelcomeImage] = useRecoilState(learniacWelcomeImage);
     const [welcomeCourse, setWelcomeCourse] = useRecoilState(learniacWelcomeCourse);

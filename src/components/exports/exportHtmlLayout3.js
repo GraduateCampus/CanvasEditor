@@ -1,6 +1,3 @@
-import {useRecoilValue} from "recoil";
-import {learniacPointUnits} from "../services/atoms";
-
 export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcWelcomeCourse,
                                   lcWelcomeCourse2, lcWelcomeCourse3, lcPointWelcomeHeader,
                                   lcPointWelcomeText, lcPointWelcomeImage, lcModulbutton,
@@ -97,7 +94,7 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcWelcomeCourse
             </div>
         </div>
         <div class="lvRocketBox">
-            <img class="lvRocket" src="https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Gif-Rakete.gif?raw=true"/>
+            <img class="lvRocket" src="https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/Gif-Rakete.gif?raw=true"/>
             <div class="lvRocketText">
                 ${lcRocketText}
             </div>
@@ -124,7 +121,7 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcWelcomeCourse
                 </div>
             </div>
         </div>
-        <img class="learniacLogo" src="https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Element%206.png?raw=true" />
+        <img class="learniacLogo" src="https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/Learniac.png?raw=true" />
     </div>
     </body>
     </html>
