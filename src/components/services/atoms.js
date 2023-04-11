@@ -161,8 +161,8 @@ export const learniacPointCourseText = atom ( {
     key: 'learniacPointCourseText',
     default: "Am besten arbeitest du von oben nach unten der Reihe nach die einzelnen Lerneinheiten durch.\n" +
         "Am Ende eines jeden Learning Nuggets erwartet dich ein kurzer Wissenscheck, um das Gelernte\n" +
-        "abschließend zu überprüfen. Sobald du alle Learning Nuggets bearbeitet hast, erhaltest du\n" +
-        "automatisch per E-Mail deine Teilnahmebescheinigung zugesendet.",
+        "abschließend zu überprüfen. Sobald du alle Learning Nuggets bearbeitet hast, erhältst du\n" +
+        "automatisch per E-Mail eine Teilnahmebescheinigung zugesendet.",
 });
 export const learniacPointCourseImage = atom ( {
     key: 'learniacPointCourseImage',
@@ -190,7 +190,7 @@ export const learniacPointLearningHeader = atom ({
 })
 export const learniacPointLearningText = atom ( {
     key: 'learniacPointLearningText',
-    default: "Eine kurze Anleitung, wie du die Learning Nuggets bearbeitest, kannst du dir gerne hier herunterladen",
+    default: "Eine kurze Anleitung, wie du mit den Learning Nuggets lernst, kannst du dir hier herunterladen.",
 });
 export const learniacPointLearningImage = atom ( {
     key: 'learniacPointLearningImage',
@@ -203,7 +203,7 @@ export const learniacPointInfoHeader = atom ({
 export const learniacPointInfoText = atom ( {
     key: 'learniacPointInfoText',
     default: "Ab der Buchung und Bezahlung hast du 90 Tage Zugriff auf die Learning Nuggets.\n" +
-        "Die Lehrunterlagen sind nur für den persönlichen Gebrauch vorgesehen. Daher ist von sonstiger\n" +
+        "Die Lehrunterlagen sind nur für den persönlichen Gebrauch vorgesehen, daher ist von sonstiger\n" +
         "Verbreitung und Vervielfältigung abzusehen. Die Lehrunterlagen sind urheberrechtlich\n" +
         "geschützt. Das Urheberrecht liegt, soweit nicht ausdrücklich anders gekennzeichnet, bei\n" +
         "dem Graduate Campus Hochschule Aalen GmbH.",
@@ -218,7 +218,7 @@ export const learniacRocketText = atom ({
 })
 export const learniacContactsHeader = atom ({
     key: 'learniacContactsHeader',
-    default: 'Ansprechpersonen'
+    default: 'Ansprechperson'
 })
 export const learniacContactsHeader2 = atom ({
     key: 'learniacContactsHeader2',

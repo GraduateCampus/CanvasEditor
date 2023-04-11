@@ -5,6 +5,7 @@ import PointLearning from "./blocks_learniac/PointLearning";
 import PointInfo from "./blocks_learniac/PointInfo";
 import Contacts from "./blocks_learniac/Contacts";
 import PointUnits from "./blocks_learniac/PointUnits";
+import Links from "./blocks_learniac/Links";
 function Editor3 ()
 {
     const [showPointWelcome, setShowPointWelcome] = useState(false);
@@ -13,6 +14,7 @@ function Editor3 ()
     const [showPointLearning, setShowPointLearning] = useState(false);
     const [showPointInfo, setShowPointInfo] = useState(false);
     const [showContacts, setShowContacts] = useState(false);
+    const [showLinks, setShowLinks] = useState(false);
 
     return (
         <nav className="editor-navbar">
@@ -40,6 +42,10 @@ function Editor3 ()
                 <li>
                     <button className={`editor-button ${showContacts ? 'active' : ''}`} onClick={() => setShowContacts(!showContacts)}>Ansprechperson</button>
                     {showContacts && <Contacts/>}
+                </li>
+                <li>
+                    <button className={`editor-button ${showLinks ? 'active' : ''}`} onClick={() => setShowLinks(!showLinks)}>Links</button>
+                    {showLinks && <Links/>}
                 </li>
             </ul>
         </nav>
