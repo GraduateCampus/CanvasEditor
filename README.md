@@ -8,3 +8,6 @@ Layout 3: Learniac<br>
 
 ### `Go to Editor:`
 https://graduatecampus.github.io/CanvasEditor/
+
+### `Go to Images:`
+https://github.com/GraduateCampus/CanvasEditor/tree/main/src/components/images
