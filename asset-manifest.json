@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/CanvasEditor/static/css/main.b75c0573.css",
-    "main.js": "/CanvasEditor/static/js/main.a23cd5d5.js",
+    "main.js": "/CanvasEditor/static/js/main.e59ce9c6.js",
     "static/js/787.6d9eac58.chunk.js": "/CanvasEditor/static/js/787.6d9eac58.chunk.js",
     "static/media/Rakete.png": "/CanvasEditor/static/media/Rakete.b5e589ed78f944432397.png",
     "index.html": "/CanvasEditor/index.html",
     "main.b75c0573.css.map": "/CanvasEditor/static/css/main.b75c0573.css.map",
-    "main.a23cd5d5.js.map": "/CanvasEditor/static/js/main.a23cd5d5.js.map",
+    "main.e59ce9c6.js.map": "/CanvasEditor/static/js/main.e59ce9c6.js.map",
     "787.6d9eac58.chunk.js.map": "/CanvasEditor/static/js/787.6d9eac58.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b75c0573.css",
-    "static/js/main.a23cd5d5.js"
+    "static/js/main.e59ce9c6.js"
   ]
 }
