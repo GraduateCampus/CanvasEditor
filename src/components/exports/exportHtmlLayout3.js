@@ -24,7 +24,7 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcPointWelcomeH
     <div class="everything">
         <div class="lvWelcomeBox col-11">
             <span class="lvWelcomeCourse">${lcWelcomeText}</span>
-                <img class="lvHeaderimage" alt="HeaderImage" src=${lcWelcomeImage}/>
+                <img class="lvHeaderImage" alt="HeaderImage" src=${lcWelcomeImage}/>
         </div>
         <div class="lvTimeline col-11">
             <div class="lvContainer">

@@ -311,7 +311,6 @@ font-weight: 100-900
     background: #3c3c3b;
     border-radius: 25px;
     color: white;
-    display: flex;
 }
 .lvContactTextBox {
     width: 75%;
@@ -376,79 +375,88 @@ font-weight: 100-900
     }
 
     /* Learniac Styling */
-
-    .lvWelcomeCourse {
-        font-size: 18px;
+    .lvWelcomeBox {
+        padding-left: 20px;
     }
-    .lvHeaderimage {
-        width: 40%;
+    .lvHeaderImage {
+        width: 50%;
     }
     .lvTimeline {
-        left: 10%;
+        padding-left: 20px;
     }
-    .lvTimeline:before{
-        left: 0;
-        top: 2vw;
+    .lvTimeline-iconBox {
+        width: 28%; /*Temporary fix for different Iconsizes */
     }
-    .lvTimeline-icon {
-        position: absolute;
-        left: -9%;
-        width: 20%;
-    }
-    .lvContainer {
-        display: flex;
+    .lvIcon {
+        left: -31px;
     }
     .lvContent {
-        width: 80%;
-        padding-left: 10%;
+        margin-left: -50px;
+        padding: 20px 0 20px 0;
     }
-    .contentText {
-        padding-right: 5%;
-        padding-bottom: 2vw;
+    .lvContentHeadline {
+        padding: 0 40px 0 40px;
+        font-size: 1.5em;
     }
-    .lvButtonBox {
-        margin-left: 40%;
-        margin-right: auto;
-        padding: 10px 10px 10px 10px;
-        width: 50%;
-        text-align: center;
+    .lvContentText {
+        padding: 0 40px 0 40px;
+    }
+    .lvModulButton {
+        margin: 1% 40px 0 auto;
+        padding: 10px 25px 10px 25px;
+    }
+    .lvDownloadButton {
+        margin: 1% 40px 0 auto;
+        padding: 10px 25px 10px 25px;
+    }
+    .lvRocketbox {
+        padding-left: 2%;
     }
     .lvRocket {
-        width: 20%;
-    }
-    .lvRocketText {
-        font-size: 20px;
-    }
-    .lvContactBox {
-        min-height: 30vw;
-    }
-    .lvcTitle {
-        text-align: center;
-        font-size: 30px;
-    }
-    .lvContactMiniBox {
-        padding: 30px 30px 30px 30px;
-        font-size: 18px;
-        text-align: center;
-    }
-    .lvcolumn2 {
-        display: inline-block;
-    }
-    .lvContactTextBox {
-        margin-bottom: 25px;
-    }
-    .lvContactName {
-        font-size: 30px;
-    }
-    .lvContactMail {
-        font-size: 14px;
-    }
-    .learniacLogo {
+        width: 50%;
         display: block;
         margin: auto;
     }
+    .lvRocketText {
+        font-size: 18px;
+    }
+    .lvContactBox {
+        padding: 20px;
+    }
+    .lvContactHeader {
+        font-size: 30px;
+        margin-bottom: 2%;
+    }
+    .lvContactMiniBox {
+        padding: 15px 15px 15px 15px;
+        font-size: 14px;
+    }
+    .lvContacTtextBox {
+        padding-bottom: 2%;
+    }
+    .lvContactText {
+        padding-bottom: 3%;
+    }
+    .lvContactName {
+        font-size: 30px;
+        padding-bottom: 1%;
+    }
+    .lvContactPhone {
+        padding-bottom: 1%;
+    }
+    .lvContactMobil {
+        padding-bottom: 1%;
+    }
+    .lvContactImageBox {
+        display: flex;
+        align-items: center;
+    }
+    .learniacLogo {
+        float: right;
+        margin-right: 4.33%;
+    }
 }
-@media only screen and (min-width: 600px) and (max-width: 1299px) {
+@media only screen and (min-width: 600px) and (max-width: 999px) {
     .row::after {
         padding: 50px;
     }
@@ -481,73 +489,201 @@ font-weight: 100-900
         font-size: 20px;
     }
     /* Learniac Styling */
-
+    .lvWelcomeBox {
+        padding-left: 20px;
+    }
     .lvWelcomeCourse {
         font-size: 25px;
     }
-    .lvHeaderimage {
+    .lvHeaderImage {
         width: 45%;
     }
     .lvTimeline {
-        left: 10%;
+        padding-left: 20px;
     }
     .lvTimeline:before{
-        left: 0;
-        top: 2vw;
+        left: 55px;
     }
-    .lvTimeline-icon {
-        position: absolute;
-        left: -9%;
-        width: 20%;
+    .lvTimeline-iconBox {
+        width: 30%;
     }
-    .lvContainer {
-        display: flex;
+    .lvIcon {
+        left: -8px;
     }
     .lvContent {
-        width: 80%;
-        padding-left: 10%;
+        margin-left: -40px;
+        padding: 20px 0 20px 0;
     }
-    .contentText {
-        padding-right: 5%;
-        padding-bottom: 2vw;
+    .lvContentHeadline {
+        padding: 0 40px 0 40px;
+        font-size: 1.5em;
     }
-    .lvButtonBox {
-        margin-left: 40%;
-        margin-right: auto;
-        padding: 10px 10px 10px 10px;
-        width: 50%;
-        text-align: center;
+    .lvContentText {
+        padding: 0 40px 0 40px;
+    }
+    .lvModulButton {
+        margin: 1% 40px 0 auto;
+        padding: 5px 12px 5px 12px;
+    }
+    .lvDownloadButton {
+        margin: 1% 40px 0 auto;
+        padding: 5px 12px 5px 12px;
+    }
+    .lvRocketBox {
+        padding-left: 20px;
     }
     .lvRocket {
-        width: 20%;
+        width: 40%;
+        display: block;
+        margin: auto;
     }
     .lvRocketText {
         font-size: 20px;
     }
     .lvContactBox {
-        min-height: 30vw;
+        padding: 20px;
     }
-    .lvcTitle {
-        text-align: center;
+    .lvContactHeader {
         font-size: 30px;
+        margin-bottom: 2%;
     }
     .lvContactMiniBox {
-        padding: 30px 30px 30px 30px;
-        font-size: 18px;
-        text-align: center;
-    }
-    .lvcolumn2 {
-        display: inline-block;
+        padding: 15px 15px 15px 30px;
+        font-size: 16px;
     }
     .lvContactTextBox {
-        margin-bottom: 25px;
+        padding-bottom: 2%;
+    }
+    .lvContactText {
+        padding-bottom: 3%;
     }
     .lvContactName {
         font-size: 30px;
+        padding-bottom: 1%;
+    }
+    .lvContactPhone {
+        padding-bottom: 1%;
+    }
+    .lvContactMobil {
+        padding-bottom: 1%;
     }
     .learniacLogo {
+        float: right;
+        margin-right: 4.33%;
+    }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1299px) {
+    .row::after {
+        padding: 50px;
+    }
+    /* Styling for WelcomeBox */
+    .welcomeBox {
+        border-radius: 35px;
+    }
+    .welcomeHeadline {
+        font-size: 20px;
+    }
+    .welcomeTitle {
+        font-size: 30px;
+    }
+    /* Styling for CourseEntry */
+    .courseEntry {
+        border-radius: 35px;
+    }
+    .courseBox {
+        padding: 50px;
+    }
+    .courseHeadline {
+        font-size: 30px;
+    }
+    .courseText {
+        font-size: 20px;
+    }
+    .courseModulbutton {
+        padding: 10px;
+        border-radius: 15px;
+        font-size: 20px;
+    }
+    /* Learniac Styling */
+    .lvWelcomeBox {
+        padding-left: 20px;
+    }
+    .lvWelcomeCourse {
+        font-size: 25px;
+    }
+    .lvHeaderImage {
+        width: 45%;
+    }
+    .lvTimeline {
+        padding-left: 20px;
+    }
+    .lvTimeline:before{
+        left: 69px;
+    }
+    .lvIcon {
+        left: -12px;
+    }
+    .lvContent {
+        margin-left: -40px;
+        padding: 20px 0 20px 0;
+    }
+    .lvContentHeadline {
+        padding: 0 40px 0 40px;
+        font-size: 1.5em;
+    }
+    .lvContentText {
+        padding: 0 40px 0 40px;
+    }
+    .lvModulButton {
+        margin: 1% 40px 0 auto;
+        padding: 5px 12px 5px 12px;
+    }
+    .lvDownloadButton {
+        margin: 1% 40px 0 auto;
+        padding: 5px 12px 5px 12px;
+    }
+    .lvRocketBox {
+        padding-left: 20px;
+    }
+    .lvRocket {
+        width: 40%;
         display: block;
         margin: auto;
+    }
+    .lvRocketText {
+        font-size: 20px;
+    }
+    .lvContactBox {
+        padding: 20px;
+    }
+    .lvContactHeader {
+        font-size: 30px;
+        margin-bottom: 2%;
+    }
+    .lvContactMiniBox {
+        padding: 15px 15px 15px 30px;
+        font-size: 16px;
+        display: flex;
+    }
+    .lvContactTextBox {
+        padding-bottom: 2%;
+    }
+    .lvContactText {
+        padding-bottom: 3%;
+    }
+    .lvContactName {
+        font-size: 30px;
+        padding-bottom: 1%;
+    }
+    .lvContactPhone {
+        padding-bottom: 1%;
+    }
+    .lvContactMobil {
+        padding-bottom: 1%;
+    }
+    .learniacLogo {
+        float: right;
+        margin-right: 6.33%;
     }
 }
 @media only screen and (min-width: 1300px) and (max-width: 2299px) {
@@ -627,8 +763,8 @@ font-weight: 100-900
         margin: 1% 40px 0 auto;
         padding: 10px 25px 10px 25px;
     }
-    .lvRocketbox {
-        padding-left: 2%;
+    .lvRocketBox {
+        padding-left: 20px;
     }
     .lvRocket {
         width: 20%;
@@ -639,7 +775,7 @@ font-weight: 100-900
         font-size: 30px;
     }
     .lvContactBox {
-        padding: 2%;
+        padding: 20px;
     }
     .lvContactHeader {
         font-size: 30px;
@@ -648,6 +784,7 @@ font-weight: 100-900
     .lvContactMiniBox {
         padding: 30px 30px 30px 30px;
         font-size: 18px;
+        display: flex;
     }
     .lvContactText {
         padding-bottom: 3%;
@@ -714,77 +851,88 @@ font-weight: 100-900
     .contactsEmail {
         font-size: 28px;
     }
-    /* Learniac Design */
+    /* Learniac Styling */
     .lvWelcomeBox {
-        width: 59.9vw;
+        padding-left: 20px;
     }
     .lvWelcomeCourse {
         font-size: 40px;
     }
     .lvTimeline {
-        left: 10%;
+        padding-left: 20px;
     }
     .lvTimeline:before{
-        left: 0;
-        top: 2vw;
-        height: 100%;
-        border-left: 0.5vw dashed #ffffff;
+        left: 75px;
     }
-    .lvTimeline-icon {
-        position: absolute;
-        left: -3.6vw;
-        width: 8vw;
-        height: 8vw;
+    .lvIcon {
+        left: -12px;
     }
     .lvContent {
-        width: 50vw;
-        height: 10vw;
+        margin-left: -50px;
+        padding: 2% 0 2% 0;
+        width: 97%;
     }
-    .contentText {
-        padding-right: 5%;
-        padding-bottom: 1vw;
+    .lvContentHeadline {
+        padding: 0 40px 0 40px;
     }
-    .lvButtonBox {
-        margin-left: 70%;
-        margin-right: 2%;
-        padding: 10px 40px 10px 40px;
+    .lvContentText {
+        padding: 0 40px 0 40px;
+    }
+    .lvModulButton {
+        margin: 1% 40px 0 auto;
+        padding: 10px 25px 10px 25px;
+    }
+    .lvDownloadButton {
+        margin: 1% 40px 0 auto;
+        padding: 10px 25px 10px 25px;
+    }
+    .lvRocketbox {
+        padding-left: 2%;
     }
     .lvRocket {
         width: 20%;
+        display: block;
+        margin: auto;
     }
     .lvRocketText {
         font-size: 30px;
     }
     .lvContactBox {
-        min-height: 30vw;
+        padding: 2%;
     }
-    .lvcTitle {
+    .lvContactHeader {
         font-size: 30px;
+        margin-bottom: 2%;
     }
     .lvContactMiniBox {
         padding: 30px 30px 30px 30px;
         font-size: 18px;
+        display: flex;
     }
-    .lvcolumn1 {
-        width: 60%;
-        display: inline-block;
-        position: relative;
-        top: -15%;
-    }
-    .lvcolumn2 {
-        width: 35%;
-        display: inline-block;
-        position: relative;
-        top: -35%;
+    .lvContactText {
+        padding-bottom: 3%;
     }
     .lvContactName {
         font-size: 30px;
+        padding-bottom: 1%;
     }
-    .lvContactBild {
-        width: 26.5%;
+    .lvContactPhone {
+        padding-bottom: 1%;
+    }
+    .lvContactMobil {
+        padding-bottom: 1%;
+    }
+    .lvContactImageBox {
+        display: flex;
+        align-items: center;
+        width: 25%;
+    }
+    .lvContactImage {
+        width: 50%;
     }
     .learniacLogo {
         float: right;
+        margin-right: 7.8%;
     }
 }
 /* Styling for other Courses */
