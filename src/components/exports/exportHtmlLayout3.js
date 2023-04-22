@@ -11,7 +11,6 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcPointWelcomeH
     return `<!DOCTYPE html>
     <html lang="en">
     <head>
-        <title>LEARNIAC</title>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,8 +31,8 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcPointWelcomeH
                         <img class="lvIcon" alt="Icon: winkende Hand" src="${lcPointWelcomeImage}"/>
                 </div>            
                 <div class="lvContent pointWelcomebg">
-                    <h1 class="lvPointWelcomeHeader contentHeadline">${lcPointWelcomeHeader}</h1>
-                    <div class="lvPointWelcomeText contentText">${lcPointWelcomeText}</div>
+                    <h1 class="lvPointWelcomeHeader lvContentHeadline">${lcPointWelcomeHeader}</h1>
+                    <div class="lvPointWelcomeText lvContentText">${lcPointWelcomeText}</div>
                         <a href="/courses/${lcModulbutton}/modules" class="lvModulButton">${lcModulButtonText}</a>
                 </div>
             </div>
@@ -42,8 +41,8 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcPointWelcomeH
                         <img class="lvIcon" alt="Icon: Weg von Punkt A zu Punkt B" src="${lcPointCourseImage}"/>
                 </div>
                 <div class="lvContent pointCoursebg">
-                    <h1 class="lvPointCourseHeader contentHeadline">${lcPointCourseHeader}</h1>
-                    <div class="lvPointCourseText contentText">${lcPointCourseText}</div>
+                    <h1 class="lvPointCourseHeader lvContentHeadline">${lcPointCourseHeader}</h1>
+                    <div class="lvPointCourseText lvContentText">${lcPointCourseText}</div>
                 </div>         
             </div>
             <div class="lvContainer">
@@ -51,7 +50,7 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcPointWelcomeH
                         <img class="lvIcon" alt="Icon: PC-Monitor zeigt Buch" src="${lcPointUnitsImage}"/>
                 </div>
                 <div class="lvContent pointUnitsbg">
-                    <h1 class="lvPointUnitsHeader contentHeadline">${lcPointUnitsHeader}</h1>
+                    <h1 class="lvPointUnitsHeader lvContentHeadline">${lcPointUnitsHeader}</h1>
                     <div class="lvPointUnitsText">${lcPointUnitsText}</div>
                         ${makeUnits(lcPointUnits)}
                 </div>         
@@ -61,8 +60,8 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcPointWelcomeH
                         <img class="lvIcon" alt="Icon: Glühbirne" src="${lcPointLearningImage}"/>
                 </div>
                 <div class="lvContent pointLearningbg">
-                    <h1 class="lvPointLearningHeader contentHeadline">${lcPointLearningHeader}</h1>
-                    <div class="lvPointLearningText contentText">${lcPointLearningText}</div>
+                    <h1 class="lvPointLearningHeader lvContentHeadline">${lcPointLearningHeader}</h1>
+                    <div class="lvPointLearningText lvContentText">${lcPointLearningText}</div>
                         <a href="https://graduatecampus.instructure.com/files/56220/download?download_frd=1" class="lvDownloadButton">Download</a>
                 </div>            
             </div>
@@ -71,8 +70,8 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcPointWelcomeH
                         <img class="lvImageIcon" alt="Icon: i" src="${lcPointInfoImage}"/>
                 </div>    
                 <div class="lvContent pointInfobg">
-                    <h1 class="lvPointInfoHeader contentHeadline">${lcPointInfoHeader}</h1>
-                    <div class="lvPointInfoText contentText">${lcPointInfoText}</div>
+                    <h1 class="lvPointInfoHeader lvContentHeadline">${lcPointInfoHeader}</h1>
+                    <div class="lvPointInfoText lvContentText">${lcPointInfoText}</div>
                 </div>        
             </div>
         </div>
@@ -105,7 +104,7 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcPointWelcomeH
     `;
 }
 function makeUnits(lcPointUnits) {
-    let unitBox = `<ul class="lvPointUnits contentText">`;
+    let unitBox = `<ul class="lvPointUnits lvContentText">`;
     lcPointUnits.map((units, index) => {
         let newUnits =`    
                         <li>&emsp;${index+1}. ${units}</li>`;

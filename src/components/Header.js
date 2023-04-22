@@ -204,8 +204,16 @@ function Header (index) {
         }
     }
     const [open, setOpen] = useState(false);
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
+    const handleOpen = () => {
+        let modal = document.getElementById("infoModal");
+        let img = document.getElementById("infoImage");
+        modal.style.display = "block";
+        img.style.display = "block";
+    }
+    const handleClose = () => {
+        let modal = document.getElementById("infoModal");
+        modal.style.display = "none";
+    }
     return (
       <div>
           <nav className="navbarHeader">
@@ -213,13 +221,6 @@ function Header (index) {
                   <li className="navbarHeader-title">Canvas Editor</li>
                   <li>
                       <button className="infoButton" onClick={handleOpen}></button>
-                      <div
-                          open={open}
-                          onClose={handleClose}
-                          aria-labelledby="modal-modal-title"
-                          aria-describedby="modal-modal-description"
-                      >
-                      </div>
                   </li>
               </ul>
               <ul className="navbarHeader-center">
@@ -269,6 +270,10 @@ function Header (index) {
                   </li>
               </ul>
           </nav>
+          <div className="myModal" id="infoModal">
+              <button className="btn-close-modal" onClick={handleClose}>&times;</button>
+              <img className="modal-content" id="infoImage" src="https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/Infobutton%20CanvasEditor.png?raw=true"/>
+          </div>
           {showModal && <Modal>{data}</Modal>}
           {selectedTab && <Layout1/>}
           {selectedTab2 && <Layout2/>}
