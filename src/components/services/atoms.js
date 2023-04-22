@@ -3,6 +3,10 @@ export const modalState = atom ( {
     key: 'modalState',
     default: false,
 })
+export const infoModalState = atom ( {
+    key: 'infoModalState',
+    default: false,
+})
 export const dataState = atom ( {
     key: 'dataState',
     default: "",

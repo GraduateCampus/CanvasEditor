@@ -52,7 +52,7 @@ import {
     l2ContactName,
     l2ContactDescription,
     l2ContactMail,
-    learniacPointUnitsImage, learniacPointUnitsHeader, learniacPointUnitsText, learniacPointUnits,
+    learniacPointUnitsImage, learniacPointUnitsHeader, learniacPointUnitsText, learniacPointUnits, infoModalState,
 } from "./services/atoms";
 import React, {useState} from "react";
 import {useRecoilState, useRecoilValue, useResetRecoilState} from "recoil";
@@ -71,6 +71,7 @@ function Header (index) {
     const [selectedTab3,setSelectedTab3] = useState(true);
     const [tab3Text, setTab3Text] = useState("Layout 3 Learniac Deutsch")
     const [showModal,setShowModal] = useRecoilState(modalState);
+    const [showInfoModal,setShowInfoModal] = useRecoilState(infoModalState);
     const welcomeImage = useRecoilValue(welcomeBoxImage);
     const welcomeText = useRecoilValue(welcomeBoxText);
     const welcomeCourse = useRecoilValue(welcomeBoxCourse);
@@ -203,16 +204,8 @@ function Header (index) {
             resetAtom();
         }
     }
-    const [open, setOpen] = useState(false);
-    const handleOpen = () => {
-        let modal = document.getElementById("infoModal");
-        let img = document.getElementById("infoImage");
-        modal.style.display = "block";
-        img.style.display = "block";
-    }
-    const handleClose = () => {
-        let modal = document.getElementById("infoModal");
-        modal.style.display = "none";
+    const handleInfoModal = () => {
+        setShowInfoModal(!showInfoModal);
     }
     return (
       <div>
@@ -220,7 +213,7 @@ function Header (index) {
               <ul className="navbarHeader-left">
                   <li className="navbarHeader-title">Canvas Editor</li>
                   <li>
-                      <button className="infoButton" onClick={handleOpen}></button>
+                      <button className="infoButton" onClick={handleInfoModal}></button>
                   </li>
               </ul>
               <ul className="navbarHeader-center">
@@ -270,10 +263,12 @@ function Header (index) {
                   </li>
               </ul>
           </nav>
-          <div className="myModal" id="infoModal">
-              <button className="btn-close-modal" onClick={handleClose}>&times;</button>
-              <img className="modal-content" id="infoImage" src="https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/Infobutton%20CanvasEditor.png?raw=true"/>
-          </div>
+          {showInfoModal &&
+              <div className="myModal">
+                  <button className="btn-close-modal" onClick={handleInfoModal}>&times;</button>
+                  <img className="modal-content" src="https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/Infobutton%20CanvasEditor.png?raw=true"/>
+              </div>
+          }
           {showModal && <Modal>{data}</Modal>}
           {selectedTab && <Layout1/>}
           {selectedTab2 && <Layout2/>}
