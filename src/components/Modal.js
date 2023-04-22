@@ -1,5 +1,5 @@
 import{modalState} from "./services/atoms";
-import {useRecoilState, useRecoilValue} from "recoil";
+import {useRecoilState} from "recoil";
 import {useRef} from "react";
 const Modal = ({children}) => {
     const textAreaRef = useRef(null)
@@ -17,23 +17,24 @@ const Modal = ({children}) => {
         popup.classList.toggle("show");
     }
     return (
-        <div className="modal">
-            <div className="modal-main">
-                <button className="modalbuttons" onClick={copyToClipboard}>
+        <div className="myModal">
+            <div className="modal-content">
+                <button className="btn-copy-modal" onClick={copyToClipboard}>
                     Copy
                     <div className="popup" id="myPopup">Copy Success!</div>
                 </button>
                 <textarea className="modalText"
                     rows="20"
+                    cols="200"
                     classname="modal-input"
                     value={children}
                     readOnly={true}
                     ref={textAreaRef}
                 />
-                <button className="modalbuttons" onClick={hideModal}>
-                    Close
-                </button>
             </div>
+            <button className="btn-close-modal" onClick={hideModal}>
+                &times;
+            </button>
         </div>
     )
 }
