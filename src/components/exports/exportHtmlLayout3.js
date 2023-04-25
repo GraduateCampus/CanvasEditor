@@ -51,7 +51,7 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcPointWelcomeH
                 </div>
                 <div class="lvContent pointUnitsbg">
                     <h1 class="lvPointUnitsHeader lvContentHeadline">${lcPointUnitsHeader}</h1>
-                    <div class="lvPointUnitsText">${lcPointUnitsText}</div>
+                    <div class="lvPointUnitsText lvContentText">${lcPointUnitsText}</div>
                         ${makeUnits(lcPointUnits)}
                 </div>         
             </div>
