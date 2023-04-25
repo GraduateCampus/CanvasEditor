@@ -67,7 +67,7 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcPointWelcomeH
             </div>
             <div class="lvContainer">
                 <div class="lvTimeline-iconBox">
-                        <img class="lvImageIcon" alt="Icon: i" src="${lcPointInfoImage}"/>
+                        <img class="lvIcon" alt="Icon: i" src="${lcPointInfoImage}"/>
                 </div>    
                 <div class="lvContent pointInfobg">
                     <h1 class="lvPointInfoHeader lvContentHeadline">${lcPointInfoHeader}</h1>
