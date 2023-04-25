@@ -376,7 +376,7 @@ font-weight: 100-900
 
     /* Learniac Styling */
     .lvWelcomeBox {
-        padding-left: 20px;
+        padding: 20px 0 20px 20px;
     }
     .lvHeaderImage {
         width: 50%;
@@ -490,7 +490,7 @@ font-weight: 100-900
     }
     /* Learniac Styling */
     .lvWelcomeBox {
-        padding-left: 20px;
+        padding: 20px 0 20px 20px;
     }
     .lvWelcomeCourse {
         font-size: 25px;
@@ -606,7 +606,7 @@ font-weight: 100-900
     }
     /* Learniac Styling */
     .lvWelcomeBox {
-        padding-left: 20px;
+        padding: 20px 0 20px 20px;
     }
     .lvWelcomeCourse {
         font-size: 25px;
@@ -731,7 +731,7 @@ font-weight: 100-900
     }
     /* Learniac Styling */
     .lvWelcomeBox {
-        padding-left: 20px;
+        padding: 20px 0 20px 20px;
     }
     .lvWelcomeCourse {
         font-size: 40px;
@@ -853,7 +853,7 @@ font-weight: 100-900
     }
     /* Learniac Styling */
     .lvWelcomeBox {
-        padding-left: 20px;
+        padding: 20px 0 20px 20px;
     }
     .lvWelcomeCourse {
         font-size: 40px;
