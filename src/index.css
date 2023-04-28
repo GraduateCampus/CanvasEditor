@@ -27,6 +27,7 @@ body {
 /* Modalstyling */
 .btn-copy-modal{
   padding: 15px 15px;
+  margin-left: 10px;
   border-radius: 5px;
   border-color: #bea602;
   background-color: #bea602;

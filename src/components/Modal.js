@@ -19,6 +19,9 @@ const Modal = ({children}) => {
     return (
         <div className="myModal">
             <div className="modal-content">
+                <button className="btn-close-modal" onClick={hideModal}>
+                    &times;
+                </button>
                 <button className="btn-copy-modal" onClick={copyToClipboard}>
                     Copy
                     <div className="popup" id="myPopup">Copy Success!</div>
@@ -32,9 +35,6 @@ const Modal = ({children}) => {
                     ref={textAreaRef}
                 />
             </div>
-            <button className="btn-close-modal" onClick={hideModal}>
-                &times;
-            </button>
         </div>
     )
 }
