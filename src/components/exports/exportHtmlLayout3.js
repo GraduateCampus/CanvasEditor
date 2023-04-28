@@ -1,7 +1,7 @@
 export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcPointWelcomeHeader,
                                   lcPointWelcomeText, lcPointWelcomeImage, lcModulbutton,
                                   lcModulButtonText, lcPointUnitsHeader, lcPointUnitsText,
-                                  lcPointUnits, lcPointUnitsImage, lcPointCourseHeader, lcPointCourseText,
+                                  lcPointUnits, lcPointUnitsNumber, lcPointUnitsImage, lcPointCourseHeader, lcPointCourseText,
                                   lcPointCourseImage, lcPointLearningHeader, lcPointLearningText,
                                   lcPointLearningImage, lcPointInfoHeader, lcPointInfoText,
                                   lcPointInfoImage, lcRocketText, lcContactsHeader, lcContactsHeader2,
@@ -33,7 +33,7 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcPointWelcomeH
                 <div class="lvContent pointWelcomebg">
                     <h1 class="lvPointWelcomeHeader lvContentHeadline">${lcPointWelcomeHeader}</h1>
                     <div class="lvPointWelcomeText lvContentText">${lcPointWelcomeText}</div>
-                        <a href="/courses/${lcModulbutton}/modules" class="lvModulButton">${lcModulButtonText}</a>
+                        <a href="https://graduatecampus.instructure.com/courses/${lcModulbutton}/modules" class="lvModulButton">${lcModulButtonText}</a>
                 </div>
             </div>
             <div class="lvContainer">
@@ -52,7 +52,7 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcPointWelcomeH
                 <div class="lvContent pointUnitsbg">
                     <h1 class="lvPointUnitsHeader lvContentHeadline">${lcPointUnitsHeader}</h1>
                     <div class="lvPointUnitsText lvContentText">${lcPointUnitsText}</div>
-                        ${makeUnits(lcPointUnits)}
+                        ${makeUnits(lcPointUnits, lcPointUnitsNumber, lcModulbutton)}
                 </div>         
             </div>
             <div class="lvContainer">
@@ -103,11 +103,11 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcPointWelcomeH
     </html>
     `;
 }
-function makeUnits(lcPointUnits) {
+function makeUnits(lcPointUnits, lcPointUnitsNumber, lcModulbutton) {
     let unitBox = `<ul class="lvPointUnits lvContentText">`;
     lcPointUnits.map((units, index) => {
         let newUnits =`    
-                        <li>&emsp;${index+1}. ${units}</li>`;
+                        <li><a class="lvUnits" href="https://graduatecampus.instructure.com/courses/${lcModulbutton}/modules#module_${lcPointUnitsNumber[index]}">&emsp;${index+1}. ${units}</a></li>`;
         unitBox += newUnits;
     });
     unitBox +=`
