@@ -188,6 +188,10 @@ export const learniacPointUnits = atom ( {
     key: 'learniacPointUnits',
     default: [""],
 });
+export const learniacPointUnitsNumber = atom ( {
+    key: 'learniacPointUnitsNumber',
+    default: [""],
+});
 export const learniacPointLearningHeader = atom ({
     key: 'learniacPointLearningHeader',
     default: 'Mit E-Learnings lernen',
@@ -234,15 +238,15 @@ export const learniacContactsText = atom ({
 })
 export const learniacContactsName = atom ( {
     key: 'learniacContactsName',
-    default: "",
+    default: "Johanna Singl",
 });
 export const learniacContactsPhone = atom ( {
     key: 'learniacContactsPhone',
-    default: "",
+    default: "07361 576 1459",
 });
 export const learniacContactsMobil = atom ( {
     key: 'learniacContactsMobil',
-    default: "",
+    default: "0152 3357 1261",
 });
 export const learniacContactsMail = atom ( {
     key: 'learniacContactsMail',
@@ -250,7 +254,7 @@ export const learniacContactsMail = atom ( {
 });
 export const learniacContactsBild = atom ( {
     key: 'learniacContactsBild',
-    default: "",
+    default: "https://www.graduatecampus.de/fileadmin/50_redaktion/05_Team/singl_web_01.jpg",
 });
 export const learniacModulButton = atom ( {
     key: 'learniacModulButton',

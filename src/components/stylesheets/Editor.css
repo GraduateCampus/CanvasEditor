@@ -74,6 +74,22 @@ textarea {
     border-radius: 5px;
     border: none;
 }
+/* Styling for PointUnits chapters*/
+.units-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.units-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.unit-deletebtn {
+    width: 30px;
+    height: 100px;
+    align-self: center;
+}
 /* Styling for buttons in Editor + a backgroundwrapper*/
 .chapter-wrapper {
     background-color: #3c3c3b;

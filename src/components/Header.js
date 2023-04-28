@@ -52,7 +52,12 @@ import {
     l2ContactName,
     l2ContactDescription,
     l2ContactMail,
-    learniacPointUnitsImage, learniacPointUnitsHeader, learniacPointUnitsText, learniacPointUnits, infoModalState,
+    learniacPointUnitsImage,
+    learniacPointUnitsHeader,
+    learniacPointUnitsText,
+    learniacPointUnits,
+    infoModalState,
+    learniacPointUnitsNumber,
 } from "./services/atoms";
 import React, {useState} from "react";
 import {useRecoilState, useRecoilValue, useResetRecoilState} from "recoil";
@@ -112,6 +117,7 @@ function Header (index) {
     const [lcPointUnitsHeader, setLcPointUnitsHeader] = useRecoilState(learniacPointUnitsHeader);
     const [lcPointUnitsText, setLcPointUnitsText] = useRecoilState(learniacPointUnitsText);
     const [lcPointUnits, setLcPointUnits] = useRecoilState(learniacPointUnits);
+    const lcPointUnitsNumber = useRecoilValue(learniacPointUnitsNumber);
     const lcPointUnitsImage = useRecoilValue(learniacPointUnitsImage);
     const [lcPointLearningHeader, setLcPointLearningHeader] = useRecoilState(learniacPointLearningHeader);
     const [lcPointLearningText, setLcPointLearningText] = useRecoilState(learniacPointLearningText);
@@ -170,7 +176,7 @@ function Header (index) {
         const index = makeHtml3(lcWelcomeImage, lcWelcomeText,
             lcPointWelcomeHeader, lcPointWelcomeText, lcPointWelcomeImage,
             lcModulButton, lcModulButtonText, lcPointUnitsHeader, lcPointUnitsText,
-            lcPointUnits, lcPointUnitsImage, lcPointCourseHeader, lcPointCourseText,
+            lcPointUnits, lcPointUnitsNumber, lcPointUnitsImage, lcPointCourseHeader, lcPointCourseText,
             lcPointCourseImage, lcPointLearningHeader, lcPointLearningText,
             lcPointLearningImage, lcPointInfoHeader, lcPointInfoText, lcPointInfoImage,
             lcRocketText, lcContactsHeader, lcContactsHeader2, lcContactsText, lcContactName,

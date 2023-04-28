@@ -226,6 +226,7 @@ font-weight: 100-900
     color: #bea602;
     font-weight: 500;
     font-family: "Roboto";
+    text-decoration: none !important;
 }
 .lvModulButton:hover {
     background: #bea602;
@@ -254,8 +255,14 @@ font-weight: 100-900
 }
 .lvPointUnits {
     font-family: "Roboto";
-    color: #3c3c3b;
     list-style-type: none;
+}
+.lvUnits {
+    color: #3c3c3b;
+    text-decoration: none !important;
+}
+.lvUnits:hover {
+    color: black;
 }
 /* Styling für PointLearning */
 .lvPointLearningHeader {
@@ -273,6 +280,7 @@ font-weight: 100-900
     color: #3c3c3b;
     font-family: "Roboto";
     font-weight: 500;
+    text-decoration: none !important;
 }
 .lvDownloadButton:hover {
     background: #3c3c3b;
@@ -297,6 +305,7 @@ font-weight: 100-900
     font-family: "Roboto";
     font-weight: bold;
     color: #3c3c3b;
+    margin-bottom: 20px;
 }
 /* Styling für Kontakte */
 .lvContactBox {
@@ -306,11 +315,13 @@ font-weight: 100-900
     font-family: "Playfair Display";
     font-weight: 900;
     color: #3c3c3b;
+    margin-left: 1%;
 }
 .lvContactMiniBox {
     background: #3c3c3b;
     border-radius: 25px;
     color: white;
+    margin: 1%;
 }
 .lvContactTextBox {
     width: 75%;
@@ -421,7 +432,7 @@ font-weight: 100-900
         font-size: 18px;
     }
     .lvContactBox {
-        padding: 20px;
+        padding: 4%;
     }
     .lvContactHeader {
         font-size: 30px;
@@ -541,7 +552,7 @@ font-weight: 100-900
         font-size: 20px;
     }
     .lvContactBox {
-        padding: 20px;
+        padding: 4%;
     }
     .lvContactHeader {
         font-size: 30px;
@@ -654,7 +665,7 @@ font-weight: 100-900
         font-size: 20px;
     }
     .lvContactBox {
-        padding: 20px;
+        padding: 4%;
     }
     .lvContactHeader {
         font-size: 30px;
@@ -748,6 +759,7 @@ font-weight: 100-900
     .lvContent {
         margin-left: -50px;
         padding: 2% 0 2% 0;
+        width: 94%;
     }
     .lvContentHeadline {
         padding: 0 40px 0 40px;
@@ -775,7 +787,7 @@ font-weight: 100-900
         font-size: 30px;
     }
     .lvContactBox {
-        padding: 20px;
+        padding: 4%;
     }
     .lvContactHeader {
         font-size: 30px;
@@ -898,7 +910,7 @@ font-weight: 100-900
         font-size: 30px;
     }
     .lvContactBox {
-        padding: 2%;
+        padding: 4%;
     }
     .lvContactHeader {
         font-size: 30px;
@@ -926,9 +938,7 @@ font-weight: 100-900
         display: flex;
         align-items: center;
         width: 25%;
-    }
-    .lvContactImage {
-        width: 50%;
+        flex-direction: row-reverse;
     }
     .learniacLogo {
         float: right;
