@@ -203,8 +203,7 @@ function Header (index) {
             setLcRocketText("Have fun and success working on the topics.")
             setLcContactsHeader("Contact")
             setLcContactsHeader2("Course Coordination")
-            setLcContactsText("Do you have any questions or suggestions?\n" +
-                "Feel free to contact me.")
+            setLcContactsText("Do you have any questions or suggestions?<br /> Feel free to contact me. <br />")
         } else {
             setTab3Text("Layout 3 Learniac Deutsch")
             resetAtom();
