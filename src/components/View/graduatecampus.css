@@ -1,98 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@font-face {
-    font-family: "Briston-Regular";
-    src: url('../../fonts/MyFontsWebfontsKit-4/webFonts/BristonRegular/font.woff2') format('woff2'), url('../../fonts/MyFontsWebfontsKit-4/webFonts/BristonRegular/font.woff') format('woff');
-}
-@font-face {
-    font-family: "Facto-Medium";
-    src: url('../../fonts/MyFontsWebfontsKit-4/webFonts/FactoMedium/font.woff2') format('woff2'), url('../../fonts/MyFontsWebfontsKit-4/webFonts/FactoMedium/font.woff') format('woff');
-}
-@font-face {
-    font-family: "Facto-Italic";
-    src: url('../../fonts/MyFontsWebfontsKit-4/webFonts/FactoItalic/font.woff2') format('woff2'), url('../../fonts/MyFontsWebfontsKit-4/webFonts/FactoItalic/font.woff') format('woff');}
-@font-face {
-    font-family: "Facto-Bold";
-    src: url('../../fonts/MyFontsWebfontsKit-4/webFonts/FactoBold/font.woff2') format('woff2'), url('../../fonts/MyFontsWebfontsKit-4/webFonts/FactoBold/font.woff') format('woff');}
-@font-face {
-    font-family: "Facto-Regular";
-    src: url('../../fonts/MyFontsWebfontsKit-4/webFonts/FactoRegular/font.woff2') format('woff2'), url('../../fonts/MyFontsWebfontsKit-4/webFonts/FactoRegular/font.woff') format('woff');}
-/**
-        * @license
-        * MyFonts Webfont Build ID 4196485, 2021-10-21T04:54:33-0400
-        *
-        * The fonts listed in this notice are subject to the End User License
-        * Agreement(s) entered into by the website owner. All other parties are
-        * explicitly restricted from using the Licensed Webfonts(s).
-        *
-        * You may obtain a valid license at the URLs below.
-        *
-        * Webfont: Briston-Regular by Fenotype
-        * URL: https://www.myfonts.com/fonts/fenotype/briston/regular/
-        * Copyright: Copyright (c) 2021 by Emil Bertell. All rights reserved.
-        *
-        *
-        *
-        * © 2021 MyFonts Inc
-       */
-
-@import url("//hello.myfonts.net/count/400885");
-
-@font-face {
-    font-family: 'Briston-Regular';
-    src: url("https://www.learniac.org/typo3conf/ext/learniac_distribution/Resources/Public/Fonts/BristonRegular/font.woff2") format("woff2"), url("https://www.learniac.org/typo3conf/ext/learniac_distribution/Resources/Public/Fonts/BristonRegular/font.woff") format("woff");
-}
-
-/**
- * @license
- * MyFonts Webfont Build ID 4351699, 2022-02-07T10:13:30-0500
- *
- * The fonts listed in this notice are subject to the End User License
- * Agreement(s) entered into by the website owner. All other parties are
- * explicitly restricted from using the Licensed Webfonts(s).
- *
- * You may obtain a valid license at the URLs below.
- *
- * Webfont: Facto-Bold by The Northern Block
- * URL: https://www.myfonts.com/fonts/northernblock/facto/bold/
- *
- * Webfont: Facto-Italic by The Northern Block
- * URL: https://www.myfonts.com/fonts/northernblock/facto/italic/
- *
- * Webfont: Facto-Medium by The Northern Block
- * URL: https://www.myfonts.com/fonts/northernblock/facto/medium/
- *
- * Webfont: Facto-Regular by The Northern Block
- * URL: https://www.myfonts.com/fonts/northernblock/facto/regular/
- *
- *
- * Webfonts copyright: Copyright © 2015 by Jonathan Hill. All rights reserved.
- *
- * © 2022 MyFonts Inc
-*/
-
-@import url("//hello.myfonts.net/count/4266d3");
-
-@font-face {
-    font-family: 'Facto-Regular';
-    src: url("https://www.learniac.org/typo3conf/ext/learniac_distribution/Resources/Public/Fonts/FactoRegular/font.woff2") format("woff2"), url("https://www.learniac.org/typo3conf/ext/learniac_distribution/Resources/Public/Fonts/FactoRegular/font.woff") format("woff");
-}
-
-@font-face {
-    font-family: 'Facto-Medium';
-    src: url("https://www.learniac.org/typo3conf/ext/learniac_distribution/Resources/Public/Fonts/FactoMedium/font.woff2") format("woff2"), url("https://www.learniac.org/typo3conf/ext/learniac_distribution/Resources/Public/Fonts/FactoMedium/font.woff") format("woff");
-}
-
-@font-face {
-    font-family: 'Facto-Bold';
-    src: url("https://www.learniac.org/typo3conf/ext/learniac_distribution/Resources/Public/Fonts/FactoBold/font.woff2") format("woff2"), url("https://www.learniac.org/typo3conf/ext/learniac_distribution/Resources/Public/Fonts/FactoBold/font.woff") format("woff");
-}
-
-@font-face {
-    font-family: 'Facto-Italic';
-    src: url("https://www.learniac.org/typo3conf/ext/learniac_distribution/Resources/Public/Fonts/FactoItalic/font.woff2") format("woff2"), url("https://www.learniac.org/typo3conf/ext/learniac_distribution/Resources/Public/Fonts/FactoItalic/font.woff") format("woff");
-}
-
-
 /*
 font-family: 'Open Sans', sans-serif;
 font-family: 'Oswald', sans-serif;
@@ -139,7 +45,7 @@ font-weight: 100-900
     align-items: center;
 }
 .lvWelcomeCourse {
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     font-weight: 500;
     color: #3c3c3b;
     margin-right: 1%;
@@ -225,7 +131,7 @@ font-weight: 100-900
     border-radius: 25px;
     color: #bea602;
     font-weight: 500;
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     text-decoration: none !important;
 }
 .lvModulButton:hover {
@@ -309,25 +215,19 @@ font-weight: 100-900
 }
 /* Styling für Kontakte */
 .lvContactBox {
-    background: #F2F2F2;
+    background: #ccc;
 }
 .lvContactHeader {
     font-family: "Playfair Display";
     font-weight: 900;
     color: #3c3c3b;
-    margin-left: 1%;
-}
-.lvContactMiniBox {
-    background: #3c3c3b;
-    border-radius: 25px;
-    color: white;
-    margin: 1%;
 }
 .lvContactTextBox {
     width: 75%;
 }
 .lvContactTitle {
     font-family: "Roboto";
+    color: #3c3c3b;
 }
 .lvContactName {
     font-family: "Playfair Display";
@@ -336,16 +236,19 @@ font-weight: 100-900
 }
 .lvContactText {
     font-family: "Roboto";
+    color: #3c3c3b;
 }
 .lvContactPhone {
     font-family: "Roboto";
+    color: #3c3c3b;
 }
 .lvContactMobil {
     font-family: "Roboto";
+    color: #3c3c3b;
 }
 .lvContactMail {
     font-family: "Roboto";
-    color: #ede4c5;
+    color: #bfa602;
 }
 @media only screen and (max-width: 600px) {
     .col-5.overview {
@@ -438,11 +341,8 @@ font-weight: 100-900
         font-size: 30px;
         margin-bottom: 2%;
     }
-    .lvContactMiniBox {
-        padding: 15px 15px 15px 15px;
-        font-size: 14px;
-    }
-    .lvContacTtextBox {
+    .lvContactTextBox {
+        width: 95%;
         padding-bottom: 2%;
     }
     .lvContactText {
@@ -559,8 +459,7 @@ font-weight: 100-900
         margin-bottom: 2%;
     }
     .lvContactMiniBox {
-        padding: 15px 15px 15px 30px;
-        font-size: 16px;
+        padding: 15px 15px 15px 15px;
     }
     .lvContactTextBox {
         padding-bottom: 2%;
@@ -672,8 +571,7 @@ font-weight: 100-900
         margin-bottom: 2%;
     }
     .lvContactMiniBox {
-        padding: 15px 15px 15px 30px;
-        font-size: 16px;
+        padding: 15px 15px 15px 15px;
         display: flex;
     }
     .lvContactTextBox {
@@ -787,16 +685,15 @@ font-weight: 100-900
         font-size: 30px;
     }
     .lvContactBox {
-        padding: 4%;
+        padding: 2%;
+        display: flex;
     }
     .lvContactHeader {
         font-size: 30px;
         margin-bottom: 2%;
     }
-    .lvContactMiniBox {
-        padding: 30px 30px 30px 30px;
-        font-size: 18px;
-        display: flex;
+    .lvContactTextBox {
+        width: 70%;
     }
     .lvContactText {
         padding-bottom: 3%;
@@ -813,7 +710,7 @@ font-weight: 100-900
     }
     .lvContactImageBox {
         display: flex;
-        align-items: center;
+        width: 30%;
     }
     .learniacLogo {
         float: right;
@@ -865,7 +762,7 @@ font-weight: 100-900
     }
     /* Learniac Styling */
     .lvWelcomeBox {
-        padding: 20px 0 20px 20px;
+        padding: 30px 0 30px 20px;
     }
     .lvWelcomeCourse {
         font-size: 40px;
@@ -875,6 +772,7 @@ font-weight: 100-900
     }
     .lvTimeline:before{
         left: 75px;
+        width: 8px;
     }
     .lvIcon {
         left: -12px;
@@ -910,19 +808,16 @@ font-weight: 100-900
         font-size: 30px;
     }
     .lvContactBox {
-        padding: 4%;
+        display: flex;
+        padding: 2%;
     }
     .lvContactHeader {
         font-size: 30px;
         margin-bottom: 2%;
-    }
-    .lvContactMiniBox {
-        padding: 30px 30px 30px 30px;
-        font-size: 18px;
-        display: flex;
+        padding-left: 30px;
     }
     .lvContactText {
-        padding-bottom: 3%;
+        padding-bottom: 1%;
     }
     .lvContactName {
         font-size: 30px;
@@ -936,9 +831,7 @@ font-weight: 100-900
     }
     .lvContactImageBox {
         display: flex;
-        align-items: center;
         width: 25%;
-        flex-direction: row-reverse;
     }
     .learniacLogo {
         float: right;
@@ -1367,7 +1260,6 @@ font-weight: 100-900
     border-radius: 20px;
     color: white;
     width: 100px;
-    display: flex;
     justify-content: center;
     background-color: #bea000;
     text-decoration: none !important;
@@ -1532,7 +1424,7 @@ font-weight: 100-900
 }
 .alleModuleCard li:hover {
     background-color: black;
-    box-shadow: 0px 5px 10px #dfe6f0;
+    box-shadow: 0 5px 10px #dfe6f0;
     -webkit-transform: translateY(-5px);
     transform: translateY(-5px);
 }
@@ -1542,7 +1434,7 @@ font-weight: 100-900
 
 .nummercard {
     position: relative;
-    left: 0px;
+    left: 0;
 }
 
 .InhalteHeader {
@@ -1592,7 +1484,6 @@ font-weight: 100-900
     font-family: sans-serif;
     text-decoration: none;
     color: white;
-    font-family: sans-serif;
 }
 .KontaktCardContainer a {
     text-decoration: none;
