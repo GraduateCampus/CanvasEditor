@@ -82,19 +82,17 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcPointWelcomeH
             </div>
         </div>
         <div class="lvContactBox col-11">
-            <div class="lvContactHeader">${lcContactsHeader}</div>
-            <div class="lvContactMiniBox">
-                <div class="lvContactTextBox">
-                    <div class="lvContactTitle">${lcContactsHeader2}</div>
-                    <div class="lvContactName">${lcContactName}</div>
-                    <div class="lvContactText">${lcContactsText}</div>
-                    <div class="lvContactPhone">${lcContactPhone}</div>
-                    <div class="lvContactMobil">${lcContactMobil}</div>
-                    <a href="mailto:${lcContactMail}" class="lvContactMail">${lcContactMail}</a>
-                </div>
-                <div class="lvContactImageBox">
+            <div class="lvContactTextBox">
+                <div class="lvContactHeader">${lcContactsHeader}</div>
+                <div class="lvContactTitle">${lcContactsHeader2}</div>
+                <div class="lvContactName">${lcContactName}</div>
+                <div class="lvContactText">${lcContactsText}</div>
+                <div class="lvContactPhone">${lcContactPhone}</div>
+                <div class="lvContactMobil">${lcContactMobil}</div>
+                <a href="mailto:${lcContactMail}" class="lvContactMail">${lcContactMail}</a>
+            </div>
+            <div class="lvContactImageBox">
                     <img class="lvContactBild" alt="Kontaktbild" src="${lcContactImage}"/>
-                </div>
             </div>
         </div>
         <img class="learniacLogo" alt="LEARNIAC" src="https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/Learniac.png?raw=true" />

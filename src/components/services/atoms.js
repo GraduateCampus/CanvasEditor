@@ -146,7 +146,7 @@ export const learniacWelcomeText = atom ( {
 })
 export const learniacPointWelcomeHeader = atom ({
     key: 'learniacPointWelcomeHeader',
-    default: 'Willkommen im Kurs',
+    default: 'Hi! Werde jetzt ein LEARNIAC',
 })
 export const learniacPointWelcomeText = atom ( {
     key: 'learniacPointWelcomeText',
