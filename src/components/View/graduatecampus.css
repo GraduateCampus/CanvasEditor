@@ -69,7 +69,7 @@ font-weight: 100-900
                     rgba(255, 255, 255, 1),
                     rgba(255, 255, 255, 1) 2%,
                     transparent 2%,
-                    transparent 6%),
+                    transparent 5%),
             linear-gradient(
                     rgba(17, 17, 17, 1),
                     rgba(190, 166, 2, 1),
@@ -814,7 +814,6 @@ font-weight: 100-900
     .lvContactHeader {
         font-size: 30px;
         margin-bottom: 2%;
-        padding-left: 30px;
     }
     .lvContactText {
         padding-bottom: 1%;

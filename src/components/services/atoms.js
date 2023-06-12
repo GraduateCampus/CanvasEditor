@@ -254,7 +254,7 @@ export const learniacContactsMail = atom ( {
 });
 export const learniacContactsBild = atom ( {
     key: 'learniacContactsBild',
-    default: "https://www.graduatecampus.de/fileadmin/50_redaktion/05_Team/singl_web_01.jpg",
+    default: "https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/Icon_Johanna_Round.png?raw=true",
 });
 export const learniacModulButton = atom ( {
     key: 'learniacModulButton',
