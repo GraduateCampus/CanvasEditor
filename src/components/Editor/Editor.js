@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import WelcomeBox from "./blocks/WelcomeBox";
 import CourseEntry from "./blocks/CourseEntry";
-import Modulplan from "./blocks/Modulplan";
+import Metroplan from "./blocks/Metroplan";
 import Overview from "./blocks/Overview";
 import Contacts from "./blocks/Contacts";
 function Editor ()
@@ -15,7 +15,7 @@ function Editor ()
             <nav className="editor-navbar">
                 <ul>
                     <li>
-                        <button className={`editor-button ${showWelcomeBox ? 'active' : ''}`} onClick={() => setShowWelcomeBox(!showWelcomeBox)}>WelcomeBox</button>
+                        <button className={`editor-button ${showWelcomeBox ? 'active' : ''}`} onClick={() => setShowWelcomeBox(!showWelcomeBox)}>Willkommen im Kurs</button>
                         {showWelcomeBox && <WelcomeBox /> }
                     </li>
                     <li>
@@ -23,8 +23,8 @@ function Editor ()
                         {showDescriptionBox && <CourseEntry/>}
                     </li>
                     <li>
-                        <button className={`editor-button ${showModulplan ? 'active' : ''}`} onClick={() => setShowModulplan(!showModulplan)}>Modulplan</button>
-                        {showModulplan && <Modulplan/>}
+                        <button className={`editor-button ${showModulplan ? 'active' : ''}`} onClick={() => setShowModulplan(!showModulplan)}>Metroplan</button>
+                        {showModulplan && <Metroplan/>}
                     </li>
                     <li>
                         <button className={`editor-button ${showOverview ? 'active' : ''}`} onClick={() => setShowOverview(!showOverview)}>Inhaltsübersicht</button>

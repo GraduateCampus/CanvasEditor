@@ -6,7 +6,7 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcPointWelcomeH
                                   lcPointLearningImage, lcPointInfoHeader, lcPointInfoText,
                                   lcPointInfoImage, lcRocketText, lcContactsHeader, lcContactsHeader2,
                                   lcContactsText, lcContactName, lcContactPhone,
-                                  lcContactMobil, lcContactMail, lcContactImage) {
+                                  lcContactMobil, lcContactMail) {
 
     return `<!DOCTYPE html>
     <html lang="en">
@@ -90,9 +90,6 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcPointWelcomeH
                 <div class="lvContactPhone">${lcContactPhone}</div>
                 <div class="lvContactMobil">${lcContactMobil}</div>
                 <a href="mailto:${lcContactMail}" class="lvContactMail">${lcContactMail}</a>
-            </div>
-            <div class="lvContactImageBox">
-                    <img class="lvContactBild" alt="Kontaktbild" src="${lcContactImage}"/>
             </div>
         </div>
         <img class="learniacLogo" alt="LEARNIAC" src="https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/Learniac.png?raw=true" />

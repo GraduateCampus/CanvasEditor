@@ -18,7 +18,7 @@ function WelcomeBox () {
                         placeholder="Hier Link einfügen"
                         onChange={(e) => setWelcomeBackground(e.target.value)}
                     />
-                    <div className="editorTextColor">Headline:</div>
+                    <div className="editorTextColor">Überschrift:</div>
                     <input
                         type="text"
                         value={welcomeHeadline}

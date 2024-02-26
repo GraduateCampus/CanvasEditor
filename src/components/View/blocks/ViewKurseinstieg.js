@@ -1,9 +1,9 @@
 import rakete from "../../images/Rakete.png";
 import {useRecoilValue} from "recoil";
-import {KurseinstiegState} from "../../services/atoms";
+import {l1CourseEntry} from "../../services/atoms";
 
 function ViewKurseinstieg () {
-    const einstiegstext = useRecoilValue(KurseinstiegState)
+    const einstiegstext = useRecoilValue(l1CourseEntry)
     return (
         <div className="vKurseinstieg">
             <img className="rakete" src={rakete} />

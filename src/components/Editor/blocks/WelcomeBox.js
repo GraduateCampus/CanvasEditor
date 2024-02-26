@@ -1,40 +1,40 @@
 import {useRecoilState} from "recoil";
-import {welcomeBoxCourse, welcomeBoxCourse2, welcomeBoxImage, welcomeBoxText} from "../../services/atoms"
+import {l1WelcomeCourseName, l1WelcomeCourseName2, l1WelcomeBackground, l1WelcomeText} from "../../services/atoms"
 
 function WelcomeBox () {
-    const [welcomeImage, setWelcomeImage] = useRecoilState(welcomeBoxImage);
-    const [welcomeText, setWelcomeText] = useRecoilState(welcomeBoxText);
-    const [welcomeCourse, setWelcomeCourse] = useRecoilState(welcomeBoxCourse);
-    const [welcomeCourse2, setWelcomeCourse2] = useRecoilState(welcomeBoxCourse2);
+    const [welcomeBackground, setWelcomeBackground] = useRecoilState(l1WelcomeBackground);
+    const [welcomeText, setWelcomeText] = useRecoilState(l1WelcomeText);
+    const [welcomeCourse, setWelcomeCourse] = useRecoilState(l1WelcomeCourseName);
+    const [welcomeCourse2, setWelcomeCourse2] = useRecoilState(l1WelcomeCourseName2);
     return (
         <div className="container">
             <form name="welcomeBox">
                 <div>Hintergrundbild:</div>
                 <input
                     type="text"
-                    value={welcomeImage}
-                    placeholder="Hintergrundbild"
-                    onChange={(e) => setWelcomeImage(e.target.value)}
+                    value={welcomeBackground}
+                    placeholder="Hier Link einfügen"
+                    onChange={(e) => setWelcomeBackground(e.target.value)}
                 />
                 <div>Headline:</div>
                 <input
                     type="text"
                     value={welcomeText}
-                    placeholder="Willkommen"
+                    placeholder="Willkommen im Kurs..."
                     onChange={(e) => setWelcomeText(e.target.value)}
                 />
                 <div>Kursname 1. Zeile:</div>
                 <input
                     type="text"
                     value={welcomeCourse}
-                    placeholder="Kursname 1"
+                    placeholder="1. Zeile für Kursnamen"
                     onChange={(e) => setWelcomeCourse(e.target.value)}
                 />
                 <div>Kursname 2. Zeile:</div>
                 <input
                     type="text"
                     value={welcomeCourse2}
-                    placeholder="Kursname 2"
+                    placeholder="2. Zeile für Kursnamen"
                     onChange={(e) => setWelcomeCourse2(e.target.value)}
                 />
             </form>

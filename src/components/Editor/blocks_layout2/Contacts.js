@@ -1,80 +1,93 @@
-import {useRecoilState, useResetRecoilState} from "recoil";
-import {
-    l2ContactBoxes,
-    l2ContactDescription,
-    l2ContactIcon,
-    l2ContactMail,
-    l2ContactName
-} from "../../services/atoms";
+import React, { useState } from 'react';
+import { useRecoilState } from 'recoil';
+import {l2Avatar, l2ContactBoxes} from "../../services/atoms";
 
-function Contacts () {
+function Contacts() {
     const [boxes, setBoxes] = useRecoilState(l2ContactBoxes);
-    const addBox = () => {
-        setBoxes([...boxes, {icon: '', name: '', description: '', mail: ''}]);
+    const [selectedBoxId, setSelectedBoxId] = useState(null);
+    const [avatar, setAvatar] = useRecoilState(l2Avatar);
+    const toggleSelectedBox = (id) => {
+        if (selectedBoxId === id) {
+            setSelectedBoxId(null);
+        } else {
+            setSelectedBoxId(id);
+        }
     };
-    const HandleDeleteBox = (index) => {
-        setBoxes((prevBoxes) => {
-            const newBoxes = [...prevBoxes];
-            newBoxes.splice(index, 1);
-            return newBoxes;
-        });
-        const resetIcon = useResetRecoilState(l2ContactIcon(index));
-        resetIcon();
-        const resetName = useResetRecoilState(l2ContactName(index));
-        resetName();
-        const resetDescription = useResetRecoilState(l2ContactDescription(index));
-        resetDescription();
-        const resetMail = useResetRecoilState(l2ContactMail(index));
-        resetMail();
-    }
+    const addBox = () => {
+        const newBox = { id: Date.now(), icon: '', description: '', name: '', number: '', mail: '' };
+        setBoxes([...boxes, newBox]);
+    };
+    const deleteBox = (id) => {
+        setBoxes(boxes.filter(box => box.id !== id));
+    };
+    const update = (id, field, value) => {
+        setBoxes(boxes.map(box =>
+            box.id === id ? {...box, [field]: value } : box
+        ));
+    };
     return (
         <div className="dropdown-form">
-            <button className="btn-chapter" onClick={addBox}>Add Box</button>
-            <div className="overview-ul">
-                {boxes.map((box,index)=> (
-                    <Box key={index} index={index} handleDeleteBox={HandleDeleteBox}/>
-                ))}
-            </div>
-        </div>
-    )
-    function Box({index, handleDeleteBox}) {
-        const [icon, setIcon] = useRecoilState(l2ContactIcon(index));
-        const [name, setName] = useRecoilState(l2ContactName(index));
-        const [description, setDescription] = useRecoilState(l2ContactDescription(index));
-        const [mail, setMail] = useRecoilState(l2ContactMail(index));
-        const handleIconChange = (event) => {
-            setIcon(event.target.value);
-        };
-        const handleNameChange = (event) => {
-            setName(event.target.value);
-        };
-        const handleDescriptionChange = (event) => {
-            setDescription(event.target.value);
-        };
-        const handleMailChange = (event) => {
-            setMail(event.target.value);
-        };
-        return(
+            <button className="btn-chapter" onClick={addBox}>Karte hinzufügen</button>
+            {boxes.map((box, index) => (
+                <div key={box.id}>
+                    <div className="chapter-wrapper">
+                        <button className="btn-chapter" onClick={() => toggleSelectedBox(box.id)}>
+                            {selectedBoxId === box.id ? 'Karte schließen' : 'Karte editieren'}
+                        </button>
+                        <div>{selectedBoxId === box.id ? (
+                            <>
+                                <input
+                                    name="icon"
+                                    value={box.icon}
+                                    onChange={(e) => update(box.id,"icon", e.target.value)}
+                                    placeholder="Icon-Link hier einfügen"
+                                />
+                                <input
+                                    name="description"
+                                    value={box.description}
+                                    onChange={(e) => update(box.id,"description", e.target.value)}
+                                    placeholder="Beschreibung hier einfügen"
+                                />
+                                <input
+                                    name="name"
+                                    value={box.name}
+                                    onChange={(e) => update(box.id,"name", e.target.value)}
+                                    placeholder="Name hier einfügen"
+                                />
+                                <input
+                                    name="number"
+                                    value={box.number}
+                                    onChange={(e) => update(box.id,"number", e.target.value)}
+                                    placeholder="Telefonnummer hier einfügen"
+                                />
+                                <input
+                                    name="mail"
+                                    value={box.mail}
+                                    onChange={(e) => update(box.id,"mail", e.target.value)}
+                                    placeholder="E-Mail hier einfügen"
+                                />
+                            </>
+                        ) : (
+                            <div className="btn-new-chapter" style={{cursor: "default"}}>Kontakt {index +1}</div>
+                        )}
+                        </div>
+                        <button className="btn-delete-chapter" onClick={() => deleteBox(box.id)}>Karte löschen</button>
+                    </div>
+                </div>
+            ))}
             <div className="container">
-                <form className="chapter-wrapper">
-                <div className="dropdown-form">
-                    <button onClick={() => handleDeleteBox(index)} className="btn-delete-chapter">Delete Box</button>
-                </div>
-                <div>
-                    <input type="text" value={icon} onChange={handleIconChange} placeholder="Enter Iconlink" />
-                </div>
-                <div>
-                    <input type="text" value={name} onChange={handleNameChange} placeholder="Enter Name" />
-                </div>
-                <div>
-                    <input type="text" value={description} onChange={handleDescriptionChange} placeholder="Enter Description" />
-                </div>
-                <div>
-                    <input type="text" value={mail} onChange={handleMailChange} placeholder="Enter Mail" />
-                </div>
+                <form>
+                <div className="editorTextColor">Avatar einfügen:</div>
+                <input
+                    name="avatar"
+                    value={avatar}
+                    onChange={(e) => setAvatar(e.target.value)}
+                    placeholder="Avatar-Link hier einfügen"
+                />
                 </form>
             </div>
-        )
-    }
+        </div>
+    );
 }
+
 export default Contacts;

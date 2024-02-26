@@ -69,7 +69,7 @@ font-weight: 100-900
                     rgba(255, 255, 255, 1),
                     rgba(255, 255, 255, 1) 2%,
                     transparent 2%,
-                    transparent 5%),
+                    transparent 4%),
             linear-gradient(
                     rgba(17, 17, 17, 1),
                     rgba(190, 166, 2, 1),
@@ -717,6 +717,11 @@ font-weight: 100-900
         margin-right: 8.33%;
     }
 }
+@media only screen and (min-width: 1300px) and (max-width: 1650px) {
+.lvContactImageBox {
+    width: 60%; !important;
+}
+}
 @media only screen and (min-width: 2300px) {
     .row::after {
         padding: 30px;
@@ -837,6 +842,7 @@ font-weight: 100-900
         margin-right: 7.8%;
     }
 }
+
 /* Styling for other Courses */
 
 /* Styling for WelcomeBox */
@@ -931,208 +937,62 @@ font-weight: 100-900
 }
 
 /* Styling for OverviewBoxes */
-.testing {
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
+.l1OverViewBox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 200px;
+    margin-bottom: 20px;
 }
-.overviewHeadline {
-    color: #bea602;
-    font-family: 'Oswald', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-}
-.ovHeader {
-    color: #bea602;
-    font-family: 'Oswald', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    margin-right: 50px;
-}
-.overViewSeperate {
-    color: #bea602;
-    font-family: 'Oswald', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-}
-.overviewGoldbox {
-    background-color: #d9c65a;
-    color: #8c7c02;
-    font-size: 80px;
-    padding: 15px 0 15px 75px;
-    text-align: left;
-    font-family: 'Oswald', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    border-radius: 20px 20px 0 0;
-}
-.overview {
-    background-color: #f2f2f2;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 20px;
-    margin-right: 8%;
-    min-height: 450px;
-    float: left;
-    box-shadow: 10px 40px 40px 10px rgba(0,0,0,0.15);
-}
-.overviewImageBigBox {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #8c7c02;
-    border-radius: 50%;
-    width: 175px;
-    height: 175px;
+.l1OverviewCard {
+    background: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
     display: flex;
-    justify-content: center;
-    box-shadow: 10px 40px 40px 10px rgba(0,0,0,0.15);
-}
-.overviewImageSmallBox {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-}
-.overviewIcon {
-    width: 100%;
-}
-.overviewTitle {
-    font-family: 'Oswald', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    color: #4d4d4d;
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    font-size: 30px;
-    transform: translate(-50%, -50%);
-    line-height: 100%;
-}
-.overviewNuggets {
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    color: #4d4d4d;
-    position: absolute;
-    top: 80%;
-    left: 10%;
-    font-size: 20px;
-}
-.overviewDuration {
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    color: #4d4d4d;
-    position: absolute;
-    top: 80%;
-    right: 10%;
-    font-size: 20px;
-}
-.overviewDurationIcon {
-    vertical-align: sub;
-    margin-right: 5px;
-    width: 20px;
-}
-/* Styling for NewCanvas */
-
-.newCanvasBox {
-    background-image: linear-gradient(to bottom right, #e8dca0, #d9c65a );
-    box-shadow: 0 40px 40px rgba(0,0,0,0.15);
-    border-radius: 20px;
-    display: flex;
-    min-height: 200px;
-}
-.newCanvasBoxSpacing {
-    display: flex;
-    justify-content: center;
     flex-direction: column;
-    padding-left: 10%;
+    align-items: center;
 }
-.newCanvasHeadline {
-    color: #ffffff;
-    font-family: 'Oswald', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 45px;
-    text-align: left;
+.l1OverviewCard h1 {
+    font-family: Oswald;
+    color: #4d4d4d;
 }
-.newCanvasText {
-    color: #ffffff;
-    font-size: 25px;
-    font-family: 'Oswald', sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    text-align: left;
+.l1OverviewNumber {
+    background: #d9c65a;
+    color: #8c7c02;
+    font-size: 3rem;
+    width: 100%;
+    padding: 20px 10px 20px 50px;
 }
-.newCanvasButton {
-    color: #c7a315;
-    font-family: 'Oswald', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 25px;
-    border-radius: 20px;
-    margin: 15% 15% 5% 10%;
-    padding: 10px;
-    text-decoration: none;
-    background-color: white;
-    float: right;
-}
-/* Styling for Contacts */
-.contacts {
-    background-color: grey;
-    margin-right: 40px;
-    border-radius: 20px;
-    text-align: center;
-    min-height: 550px;
-    padding: 40px 20px 40px 20px;
-    color: white;
-}
-.contactsIcon {
-    width: 50%;
-}
-.contactsRole {
-    font-family: 'Oswald', sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    margin-top: 20px;
-}
-.contactsName {
-    font-family: 'Oswald', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-}
-.contactsDescription {
-    font-family: 'Oswald', sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    margin-bottom: 25px;
-}
-.contactsEmail {
-    text-decoration: none;
-    font-family: 'Oswald', sans-serif;
-    font-style: normal;
-    font-weight: 300;
-}
-.contacts a:link {color: white;}
-.contacts a:visited {color: white;}
-.contacts a:hover {color: white;}
-.contacts a:active {color: white;}
-
-.bigImageBox {
-    width: 270px;
-    height: 550px;
+.l1OverviewIcon {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #8c7c02;
+    margin-top: -10%;
 }
-.avatar {
-    display: inherit;
+.l1OverviewIcon img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+.l1OverviewTextbox {
+    text-align: center;
+    color: #4d4d4d;
+    font-family: Open Sans, sans-serif;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-    height: 100%;
+    padding: 0 50px 20px 50px;
+    box-sizing: border-box;
+}
+.l1OverviewTextbox img {
+    vertical-align: sub;
+    width: 20px;
+    margin-right: 5px;
 }
 .tothetopButon img {
     float: right;
@@ -1140,8 +1000,244 @@ font-weight: 100-900
     scroll-behavior: smooth;
 }
 /* Styling for ToTheTopButton */
-/* Layout 2 */
 
+/* Layout 2 */
+.everything {
+    display: grid;
+    grid-gap: 30px;
+    margin: 0 auto;
+}
+.l2WelcomeBox {
+    position: relative;
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+}
+.l2WelcomeBoxBackground {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+.l2WelcomeBoxTextBox {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+.l2WelcomeBoxHeadline {
+    color: #808080;
+    font-size: 1.5vw;
+    font-family: Oswald Light;
+}
+.l2WelcomeBoxText {
+    color: #8c7c02;
+    font-size: 2vw;
+    font-family: Oswald;
+    margin: 0;
+}
+.l2CourseEntryBox {
+    display: flex;
+    border-radius: 10px; /* Rounded corners for the box */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Shadow for the box */
+    background-color: #e5e5e5;
+}
+.l2CourseEntryImageBox {
+    flex: 0 0 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+.l2CourseEntryBoxRakete {
+    max-width: 100%;
+    height: auto;
+}
+.l2CourseEntryTextBox {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.l2CourseEntryBoxHeadline {
+    margin: 0;
+    font-size: 2rem;
+    font-family: Oswald, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #bea602;
+}
+.l2CourseEntryBoxText {
+    margin-right: 20px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+.l2CourseEntryBoxButton {
+    padding: 10px 20px;
+    background-color: #d9c65a;
+    color: #FFFFFF;
+    font-family: Oswald, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none !important;
+    border-radius: 15px;
+    align-self: flex-end;
+    margin-right: 20px;
+    white-space: nowrap;
+}
+.l2MetroplanBox {
+    width: 100%;
+    overflow: hidden;
+}
+.l2MetroplanImage {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.l2OverviewBigBox {
+    width: 100%;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    grid-template-rows: auto;
+    align-items: start;
+}
+.l2OverviewBox {
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    box-shadow: 0px 40px 40px rgba(0,0,0,0.15);
+    height: 100%;
+    padding: 10px;
+}
+.l2OverviewBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    max-height: 250px;
+}
+.l2OverviewTitles {
+    padding: 20px 20px 20px 20px;
+    min-height: 50px;
+    color: white;
+    background-color: #D9C65A;
+    display: flex;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    border-radius: 20px;
+}
+.newCanvasBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-height: 200px;
+    background-image: linear-gradient(to bottom right, #e8dca0, #d9c65a );
+    box-shadow: 0 40px 40px rgba(0,0,0,0.15);
+    border-radius: 20px;
+    min-height: 200px;
+}
+.newCanvasBoxText {
+    flex-grow: 1;
+    padding-right: 20px;
+}
+.newCanvasHeadline {
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2vw;
+    margin: 0;
+}
+.newCanvasText {
+    color: #ffffff;
+    font-size: 1.5vw;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    margin: 0;
+}
+.newCanvasButton {
+    width: 20%;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none !important;
+    background-color: #fff;
+    color: #c7a315;
+    border: none;
+    border-radius: 15px;
+    margin-right: 10%;
+    font-size: 1.5vw;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+.l2ContactBox {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+    grid-template-rows: 500px;
+    align-items: start;
+}
+
+.l2ContactBoxCard {
+    background: #6A6969;
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    height: 100%;
+}
+.l2ContactBoxIcon {
+    width: 70%;
+    height: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.l2ContactBoxIcon img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.l2ContactBoxAvatar {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    object-fit: contain;
+    grid-row: 1;
+    grid-column: 3;
+    height: 100%;
+}
+
+.l2ContactBoxAvatar img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+}
+.l2ContactBoxText {
+    color: #FFFFFF;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+}
 /* Layout von Ali */
 .ic-DashboardCard__header_image .ic-DashboardCard__header_hero {
     background: none !important;
@@ -1499,4 +1595,42 @@ font-weight: 100-900
     background: linear-gradient(to right, #bea000, #5c5c5a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+/* Style for Canvas-Tutorialpage */
+.gc_accordion {
+    display: flex;
+    background-color: #eee;
+    color: #3c3c3c;
+    cursor: pointer;
+    padding: 20px;
+    width: 70%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+}
+.gc_accordion::-webkit-details-marker {
+    display: none;
+}
+.gc_accordion:hover {
+    background-color: #ccc;
+}
+.gc_panel {
+    padding: 0 18px;
+    background-color: white;
+    overflow: hidden;
+    width: 70%;
+}
+.gc_accordion:after {
+    content: '\02795';
+    font-size: 13px;
+    color: #3c3c3c;
+}
+details[open] .gc_accordion:after {
+    content: "\2796";
+}
+.gc_details {
+    margin: 20px 0 20px 0;
 }

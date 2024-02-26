@@ -1,6 +1,5 @@
 import {useRecoilState} from "recoil";
 import {
-    learniacContactsBild,
     learniacContactsMail,
     learniacContactsMobil,
     learniacContactsName,
@@ -12,7 +11,6 @@ function Contacts() {
     const [contactsPhone, setContactsPhone] = useRecoilState(learniacContactsPhone);
     const [contactsMobil, setContactsMobil] = useRecoilState(learniacContactsMobil);
     const [contactsMail, setContactsMail] = useRecoilState(learniacContactsMail);
-    const [contactsBild, setContactsBild] = useRecoilState(learniacContactsBild);
 
     return (
         <div className="container">
@@ -44,13 +42,6 @@ function Contacts() {
                 name="stateContactsMail"
                 value={contactsMail}
                 onChange={(e) => setContactsMail(e.target.value)}
-            />
-            <div className="editorTextColor">Bild einfügen:</div>
-            <input
-                type="text"
-                name="stateContactsBild"
-                value={contactsBild}
-                onChange={(e) => setContactsBild(e.target.value)}
             />
             </form>
         </div>

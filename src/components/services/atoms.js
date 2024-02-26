@@ -11,70 +11,47 @@ export const dataState = atom ( {
     key: 'dataState',
     default: "",
 })
-export const welcomeBoxImage = atom ( {
-    key: 'welcomeBoxImage',
+export const l1WelcomeBackground = atom ( {
+    key: 'l1WelcomeBoxBackground',
     default: "https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/Headerbild_Code.png?raw=true",
 })
-export const welcomeBoxText = atom ( {
-    key: 'welcomeBoxText',
+export const l1WelcomeText = atom ( {
+    key: 'l1WelcomeText',
     default: "",
 });
-export const welcomeBoxCourse = atom ( {
-    key: 'welcomeBoxCourse',
+export const l1WelcomeCourseName = atom ( {
+    key: 'l1WelcomeCourseName',
     default: "",
 });
-export const welcomeBoxCourse2 = atom ( {
-    key: 'welcomeBoxCourse2',
+export const l1WelcomeCourseName2 = atom ( {
+    key: 'l1WelcomeCourseName2',
     default: "",
 });
-export const KurseinstiegState = atom ( {
-    key: 'Kurseinstieg',
+export const l1CourseEntry = atom ( {
+    key: 'l1CourseEntry',
     default: "",
 });
-export const Modulbutton = atom ( {
-    key: 'modulbutton',
+export const l1CourseNr = atom ( {
+    key: 'l1CourseNr',
     default: "",
 });
-export const ModulplanState = atom ( {
-    key: 'Modulplan',
+export const l1Metroplan = atom ( {
+    key: 'l1Metroplan',
     default: "",
 });
-export const OverviewState = atom ( {
-    key: 'Overview',
-    default: {
-        items: [
-            {
-                icon:"",
-                title: "",
-                nuggets:"",
-                duration:"",
-            }
-        ]
-    },
-});
-export const ContactState = atom ( {
-    key: 'Contacts',
-    default: {
-        items: [
-            {
-                bild:"",
-                rolle:"",
-                name:"",
-                beschreibung:"",
-                email:"",
-            }
-        ]
-    },
-});
-export const ContactAvatar = atom ( {
-    key: 'avatar',
-    default: "",
-});
+export const l1OverviewBoxes = atom({
+    key: 'l1OverviewBoxes',
+    default: [],
+})
+export const l1ContactBoxes = atom ({
+    key: 'l1ContactBoxes',
+    default: [],
+})
 //atoms for Layout2:
 export const l2WelcomeBackground = atom( {
     key: 'l2WelcomeBackground',
     default: "https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/Headerbild_PC.png?raw=true",
-})
+});
 export const l2WelcomeHeadline = atom ( {
     key: 'l2WelcomeHeadline',
     default: "Willkommen im Kurs",
@@ -95,45 +72,22 @@ export const l2CourseNr = atom ( {
     key: 'l2CourseNr',
     default: "",
 });
-export const l2Modulplan = atom ( {
-    key: 'l2Modulplan',
+export const l2Metroplan = atom ( {
+    key: 'l2Metroplan',
     default: "",
 });
-export const l2BoxesState = atom({
-    key: 'l2BoxesState',
+export const l2OverviewBoxes = atom({
+    key: 'boxState',
     default: [],
-});
-
-export const l2BoxGifLinkState = atomFamily({
-    key: 'l2BoxGifLinkState',
-    default: '',
-});
-
-export const l2BoxGifTitlesState = atomFamily({
-    key: 'l2BoxGifTitlesState',
-    default: [''],
 });
 export const l2ContactBoxes = atom ({
-    key: 'l2ConactBoxes',
+    key: 'l2ContactBoxes',
     default: [],
 })
-export const l2ContactIcon = atomFamily({
-    key: 'l2ContactIcon',
+export const l2Avatar = atom( {
+    key: 'l2Avatar',
     default: '',
-});
-export const l2ContactName = atomFamily({
-    key: 'l2ContactName',
-    default: '',
-});
-export const l2ContactDescription = atomFamily({
-    key: 'l2ContactDescription',
-    default: '',
-});
-export const l2ContactMail = atomFamily({
-    key: 'l2ContactMail',
-    default: '',
-});
-
+})
 //atoms for Learniac:
 
 export const learniacWelcomeImage = atom ( {
@@ -238,7 +192,7 @@ export const learniacContactsText = atom ({
 })
 export const learniacContactsName = atom ( {
     key: 'learniacContactsName',
-    default: "Johanna Singl",
+    default: "Andrea Mezger",
 });
 export const learniacContactsPhone = atom ( {
     key: 'learniacContactsPhone',
@@ -251,10 +205,6 @@ export const learniacContactsMobil = atom ( {
 export const learniacContactsMail = atom ( {
     key: 'learniacContactsMail',
     default: "kurse@graduatecampus.de",
-});
-export const learniacContactsBild = atom ( {
-    key: 'learniacContactsBild',
-    default: "https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/Icon_Johanna_Round.png?raw=true",
 });
 export const learniacModulButton = atom ( {
     key: 'learniacModulButton',

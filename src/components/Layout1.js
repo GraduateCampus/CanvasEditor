@@ -2,7 +2,7 @@ import Editor from "./Editor/Editor";
 import ViewWelcomeBox from "./View/blocks/ViewWelcomeBox";
 import ViewKurseinstieg from "./View/blocks/ViewKurseinstieg";
 import ViewCanvasNeu from "./View/blocks/ViewCanvasNeu";
-import ViewOverView from "./View/blocks/ViewOverView";
+import ViewOverview from "./View/blocks/ViewOverview";
 import ViewContacts from "./View/blocks/ViewContacts";
 import ViewModulplan from "./View/blocks/ViewModulplan";
 
@@ -16,7 +16,7 @@ function Layout1() {
                 <ViewWelcomeBox />
                 <ViewKurseinstieg />
                 <ViewModulplan />
-                <ViewOverView />
+                <ViewOverview />
                 <ViewCanvasNeu/>
                 <ViewContacts/>
             </div>

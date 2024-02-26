@@ -1,40 +1,26 @@
 import {useRecoilValue} from "recoil";
-import {ContactAvatar, ContactState} from "../../services/atoms";
+import {
+    l1ContactBoxes
+} from "../../services/atoms";
 function ViewContacts () {
-    const contactObjects = useRecoilValue(ContactState);
-    const avatar = useRecoilValue(ContactAvatar);
-
-    function courseItem({ bild, rolle, name, beschreibung, email}, index) {
-        function convertEmail() {
-            window.location.href = "mailto:" + email
-        }
-        return (
-            <div className="vContacts" key={index}>
-                <img alt={index} className="contactsIcon" width={"250px"} src={bild} />
-                <div className="contactsRole" >
-                    {rolle}
-                </div>
-                <div className="contactsName">
-                    {name}
-                </div>
-                <div className="contactsDescription">
-                    {beschreibung}
-                </div>
-                <a className="contactsEmail" type="text" onClick={convertEmail}>
-                    {email}
-                </a>
-            </div>
-        );
-    }
+    const contactBoxes = useRecoilValue(l1ContactBoxes);
     return (
-        <div className="contactsBigBox">
-            <div className="contactsSmallBox">
-                {contactObjects.items.map((beschreibung, index) => {
-                    return courseItem(beschreibung, index);
-                })}
-                <img alt="not found" className="test" width={"250px"} src={avatar} />
-            </div>
+        <div className="l2ContactBox">
+            {contactBoxes.map((box) => (
+                <div className="l2ContactBoxCard" key={box.id}>
+                    <div className="l2ContactBoxIcon">
+                        <img alt="Icon" src={box.icon} />
+                    </div>
+                    <div className="l2ContactBoxText">
+                        <p>{box.description}</p>
+                        <h3>{box.name}</h3>
+                        <p>{box.number}</p>
+                        <p href="">{box.mail}</p>
+                    </div>
+                </div>
+            ))}
         </div>
     );
+
 }
 export default ViewContacts;

@@ -1,64 +1,39 @@
-function makeOverview(overview, modulbutton) {
-    let oV = `<div class="row">`;
-    overview.map((item,index) => {
-        let newOv =`
-                <a href=""/courses/${modulbutton}/modules"">
-                <div class="col-5 overview">
-                    <div class="overviewGoldbox">
-                        ${index +1}
+
+
+export default function makeHtml(l1welcomeBackground, l1welcomeHeadline, l1welcomeCourseName,
+                                 l1welcomeCourseName2, l1courseEntry, l1courseNr, l1modulplan,
+                                 l1boxes, l1contactBoxes) {
+    const overviewBoxes = l1boxes.map((box, index) => `
+        <div class="l1OverviewCard" key={box.id}>
+                    <div class="l1OverviewNumber">
+                        ${index+1}
                     </div>
-                    <div class="overviewImageBigBox">
-                        <div class="overviewImageSmallBox">
-                            <img class="overviewIcon" src="${item.icon}" />
-                        </div>
+                    <div class="l1OverviewIcon">
+                        <img src="${box.icon}" alt="Gif" />
                     </div>
-                    <div class="overviewTitle">
-                        ${item.title}
-                    </div>
-                    <div class="overviewNuggets">
-                        ${item.nuggets}
-                    </div>
-                    <div class="overviewDuration">
-                        <img class="overviewDurationIcon" src="https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Zeit-Icon.png?raw=true"> ${item.duration}
+                        <h1>${box.title}</h1>
+                    <div class="l1OverviewTextbox">
+                        <span>${box.nuggets}</span>
+                        <span>
+                            <img src="https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/Zeit-Icon.png?raw=true" />
+                            ${box.duration}
+                        </span>
                     </div>
                 </div>
-                </a>`;
-        if (index % 2 === 0 && index > 1) {
-            let row = `</div><div class="row">`;
-            oV += row;
-        }
-        oV += newOv;
-    });
-    oV +=`</div>`;
-    return oV;
-}
-function makeContacts(contacts) {
-    let contact = `<div class="contactsSmallBox">`;
-    contacts.map((item) => {
-        let newContact =`
-        <div class="col-4 contacts">
-            <img class="contactsIcon" src="${item.bild}">
-            <div class="contactsRole">
-                ${item.rolle}
+    `).join('');
+    const contactBoxes = l1contactBoxes.map((box, index) => `
+        <div class="l2ContactBoxCard">
+            <div class="l2ContactBoxIcon">
+                <img src="${box.icon}" alt="Icon for box ${index + 1}" />
             </div>
-            <div class="contactsName">
-                ${item.name}
+            <div class="l2ContactBoxText">
+            <p>${box.description}</p>
+            <h3>${box.name}</h3>
+            <p>${box.number}</p>
+            <a href="mailto:${box.mail}">${box.mail}</a>
             </div>
-            <div class="contactsDescription">
-                ${item.beschreibung}
-            </div>
-            <a class="contactsEmail" href="mailto:${item.email}">
-                ${item.email}
-            </a>
-            </div>`;
-        contact += newContact;
-    });
-    contact +=`</div>`;
-    return contact;
-}
-
-export default function makeHtml(welcomeImage, welcomeText, welcomeCourse, welcomeCourse2, kurseinstieg, modulplan, overview, contacts, avatar, modulbutton) {
-
+        </div>
+    `).join('');
     return `<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -72,79 +47,40 @@ export default function makeHtml(welcomeImage, welcomeText, welcomeCourse, welco
     </head>
     <body>
     <div class="everything">
-        <div class="row">
-            <div class="col-12 welcomeBox">
-                <div class="col-7 welcomeText">
-                    <span class="welcomeHeadline">
-                        ${welcomeText}
-                    </span>
-                    <span class="welcomeTitle">
-                        ${welcomeCourse}
-                    </span>
-                    <span class="welcomeTitle">
-                        ${welcomeCourse2}
-                    </span>
-                </div>
-                <div class="col-5">
-                    <img class="welcomeImage" src=${welcomeImage} />
-                </div>
+        <div class="l2WelcomeBox">
+            <img class="l2WelcomeBoxBackground" alt="Willkommensbild" src="${l1welcomeBackground}" />
+            <div class="l2WelcomeBoxTextBox">
+                <p class="l2WelcomeBoxHeadline">${l1welcomeHeadline}</p>
+                <p class="l2WelcomeBoxText">${l1welcomeCourseName}</p>
+                <p class="l2WelcomeBoxText">${l1welcomeCourseName2}</p>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12 courseEntry">
-                <div class="col-4 courseImageBox">
-                    <img class="courseImage" src="https://github.com/Electressic/CanvasEditor/blob/main/src/components/images/rakete.png?raw=true" />
-                </div>
-                <div class="col-9 courseBox">
-                    <h1 class="courseHeadline">
-                        Kurseinstieg
-                    </h1>
-                    <p class="courseText">
-                    ${kurseinstieg}
-                    </p>
-                    <a class ="courseModulbutton" href="/courses/${modulbutton}/modules">
-                    Direkt zu den Modulen
-                    </a>
-                </div>
+        <div class="l2CourseEntryBox">
+            <div class="l2CourseEntryImageBox">
+            <img class="l2CourseEntryBoxRakete" src="https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/rakete2.png?raw=true"/>
+            </div>
+            <div class="l2CourseEntryTextBox">
+            <h1 class="l2CourseEntryBoxHeadline">Kurseinstieg</h1>
+            <p class="l2CourseEntryBoxText">${l1courseEntry}</p>
+            <a class="l2CourseEntryBoxButton" href="/courses/${l1courseNr}/modules">Direkt zu den Modulen</a>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12">
-                <img class="modulplan" src=${modulplan} />
+        <div class="l2MetroplanBox">
+            <img class="l2MetroPlanImage" alt="Metroplan" src="${l1modulplan}" />
+        </div>
+        <div class="l2OverviewBigBox">
+            ${overviewBoxes}
+        </div>
+        <div class="newCanvasBox">
+            <div class="newCanvasBoxText">
+                <p class="newCanvasHeadline">Neu bei Canvas?</p>
+                <p class="newCanvasText"> Weitere Informationen zu Canvas finden Sie hier:</p>
             </div>
+            <a class="newCanvasButton" href="/courses/${l1courseNr}/modules">Zu Canvas Modul</a>
         </div>
-        <div class="row">
-            <div class="overviewHeadline">
-                Inhaltsübersicht
-            </div>
+        <div class="l2ContactBox">
+            ${contactBoxes}
         </div>
-        <div class="testing">   
-            ${makeOverview(overview.items, modulbutton)}
-        </div>
-        <div class="row">
-            <div class="newCanvasBox">
-                <div class="col-6 newCanvasBoxSpacing">
-                    <h1 class="newCanvasHeadline">
-                        Neu bei Canvas?
-                    </h1>
-                    <span class="newCanvasText">
-                        Weitere Informationen zu Canvas finden Sie hier:
-                    </span>
-                </div>
-                <div class="col-6">
-                    <a class="newCanvasButton" href="/courses/${modulbutton}/modules">Zu Canvas Modul</a>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="contactsBigBox">
-                ${makeContacts(contacts.items)}
-                <div class="col-3 bigImageBox">
-                    <img alt="Avatar bitte einfuegen" src="${avatar}">
-                </div>
-            </div>
-        </div>
-        <a class="tothetopButon" href="#top"></a>
     </div>
     </body>
     </html>

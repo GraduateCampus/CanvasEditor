@@ -1,29 +1,3 @@
-import { useRecoilValue } from "recoil";
-import { l2BoxesState, l2BoxGifLinkState, l2BoxGifTitlesState } from "../services/atoms";
-import ReactDOMServer from "react-dom/server";
-function MakeOverview() {
-    const boxes = useRecoilValue(l2BoxesState);
-    const overview = boxes.map((box, index) => (
-        <MakeAgain key={index} index={index} />
-    ));
-    return <div>{overview}</div>;
-}
-
-function MakeAgain({ index }) {
-    const gifLink = useRecoilValue(l2BoxGifLinkState(index));
-    const gifTitles = useRecoilValue(l2BoxGifTitlesState(index));
-    return (
-        <div className="l2OverviewSeperate">
-            {gifLink && <img src={gifLink} alt={gifTitles[0]} />}
-            {gifTitles.map((title, titleIndex) => (
-                <div className="l2OverviewChapters" key={titleIndex}>
-                    {title}
-                </div>
-            ))}
-        </div>
-    );
-}
-
 export default function makeHtml2(
     l2welcomeBackground,
     l2welcomeHeadline,
@@ -32,15 +6,28 @@ export default function makeHtml2(
     l2courseEntry,
     l2courseNr,
     l2modulplan,
-    l2boxesState,
-    l2boxGifLinkState,
-    l2boxGifTitlesState,
     l2contactBoxes,
-    l2contactIcon,
-    l2contactName,
-    l2contactDescription,
-    l2contactMail
+    l2boxes
 ) {
+    const overviewBoxes = l2boxes.map((box, index) => `
+        <div class="l2OverviewBox">
+            <img src="${box.gifLink}" alt="Gif for box ${index + 1}" />
+            ${box.titles.map((title,idx) => `<p class="l2OverviewTitles">${idx + 1}. ${title}</p>`).join('')}
+        </div>
+    `).join('');
+    const contactBoxes = l2contactBoxes.map((box, index) => `
+        <div class="l2ContactBoxCard">
+            <div class="l2ContactBoxIcon">
+                <img src="${box.icon}" alt="Icon for box ${index + 1}" />
+            </div>
+            <div class="l2ContactBoxText">
+            <p>${box.description}</p>
+            <h3>${box.name}</h3>
+            <p>${box.number}</p>
+            <a href="mailto:${box.mail}">${box.mail}</a>
+            </div>
+        </div>
+    `).join('');
     return `<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -54,8 +41,42 @@ export default function makeHtml2(
     </head>
     <body>
     <div class="everything">
-        <div>
-            ${ReactDOMServer.renderToStaticMarkup(<MakeOverview />)}
+        <div class="l2WelcomeBox">
+            <img class="l2WelcomeBoxBackground" alt="Willkommensbild" src="${l2welcomeBackground}" />
+            <div class="l2WelcomeBoxTextBox">
+                <p class="l2WelcomeBoxHeadline">${l2welcomeHeadline}</p>
+                <p class="l2WelcomeBoxText">${l2welcomeCourseName}</p>
+                <p class="l2WelcomeBoxText">${l2welcomeCourseName2}</p>
+            </div>
+        </div>
+        <div class="l2CourseEntryBox">
+            <div class="l2CourseEntryImageBox">
+            <img class="l2CourseEntryBoxRakete" src="https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/rakete2.png?raw=true"/>
+            </div>
+            <div class="l2CourseEntryTextBox">
+            <h1 class="l2CourseEntryBoxHeadline">Kurseinstieg</h1>
+            <p class="l2CourseEntryBoxText">${l2courseEntry}</p>
+            <a class="l2CourseEntryBoxButton" href="/courses/${l2courseNr}/modules">Direkt zu den Modulen</a>
+            </div>
+        </div>
+        <div class="l2MetroplanBox">
+            <img class="l2MetroPlanImage" alt="Metroplan" src="${l2modulplan}" />
+        </div>
+        <div class="l2OverviewBigBox">
+            ${overviewBoxes}
+        </div>
+        <div class="newCanvasBox">
+            <div class="newCanvasBoxText">
+                <p class="newCanvasHeadline">Neu bei Canvas?</p>
+                <p class="newCanvasText"> Weitere Informationen zu Canvas finden Sie hier:</p>
+            </div>
+            <a class="newCanvasButton" href="/courses/${l2courseNr}/modules">Zu Canvas Modul</a>
+        </div>
+        <div class="l2ContactBox">
+            ${contactBoxes}
+            <div class="l2ContactBoxAvatar">
+                <img src="https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/Prof_Herrmann2.png?raw=true" alt="Avatar" />
+            </div>
         </div>
     </div>
     </body>

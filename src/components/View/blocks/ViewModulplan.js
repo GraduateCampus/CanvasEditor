@@ -1,8 +1,8 @@
 import {useRecoilValue} from "recoil";
-import {ModulplanState} from "../../services/atoms";
+import {l1Metroplan} from "../../services/atoms";
 
 export default function ViewModulplan() {
-    const modulplan = useRecoilValue(ModulplanState);
+    const modulplan = useRecoilValue(l1Metroplan);
     return (
         <div className="vModulplan">
             <img className="modulplanimg" src={modulplan} />

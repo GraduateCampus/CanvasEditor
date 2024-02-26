@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import WelcomeBox from "./blocks_layout2/WelcomeBox";
 import CourseEntry from "./blocks_layout2/CourseEntry";
-import Modulplan from "./blocks_layout2/Modulplan";
+import Metroplan from "./blocks_layout2/Metroplan";
 import Overview from "./blocks_layout2/Overview";
 import Contacts from "./blocks_layout2/Contacts";
 
@@ -17,7 +17,7 @@ function Editor2 ()
         <nav className="editor-navbar">
             <ul>
                 <li>
-                    <button className={`editor-button ${showWelcomeBox ? 'active' : ''}`} onClick={() => setShowWelcomeBox(!showWelcomeBox)}>WelcomeBox</button>
+                    <button className={`editor-button ${showWelcomeBox ? 'active' : ''}`} onClick={() => setShowWelcomeBox(!showWelcomeBox)}>Willkommen im Kurs</button>
                     {showWelcomeBox && <WelcomeBox /> }
                 </li>
                 <li>
@@ -25,15 +25,15 @@ function Editor2 ()
                     {showDescriptionBox && <CourseEntry/>}
                 </li>
                 <li>
-                    <button className={`editor-button ${showModulplan ? 'active' : ''}`} onClick={() => setShowModulplan(!showModulplan)}>Modulplan</button>
-                    {showModulplan && <Modulplan/>}
+                    <button className={`editor-button ${showModulplan ? 'active' : ''}`} onClick={() => setShowModulplan(!showModulplan)}>Metroplan</button>
+                    {showModulplan && <Metroplan/>}
                 </li>
                 <li>
                     <button className={`editor-button ${showOverview ? 'active' : ''}`} onClick={() => setShowOverview(!showOverview)}>Inhaltsübersicht</button>
                     {showOverview && <Overview/>}
                 </li>
                 <li>
-                    <button className={`editor-button ${showAnsprechperson ? 'active' : ''}`} onClick={() => setShowAnsprechperson(!showAnsprechperson)}>Ansprechpersonen</button>
+                    <button className={`editor-button ${showAnsprechperson ? 'active' : ''}`} onClick={() => setShowAnsprechperson(!showAnsprechperson)}>Ansprechpersonen & Avatar</button>
                     {showAnsprechperson && <Contacts/>}
                 </li>
             </ul>
