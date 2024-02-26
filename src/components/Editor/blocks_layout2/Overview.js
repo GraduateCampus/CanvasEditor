@@ -1,78 +1,93 @@
-import {useRecoilState, useResetRecoilState} from "recoil";
-import {l2BoxesState, l2BoxGifLinkState, l2BoxGifTitlesState} from "../../services/atoms";
+import React, { useState } from 'react';
+import { useRecoilState } from 'recoil';
+import { l2OverviewBoxes } from "../../services/atoms";
 
 function Overview() {
-    const [boxes, setBoxes] = useRecoilState(l2BoxesState);
-    const addBox = (e) => {
-        e.preventDefault();
-        setBoxes([...boxes, { gifLink: '', gifTitles: [''] }]);
+    const [boxes, setBoxes] = useRecoilState(l2OverviewBoxes);
+    const [selectedBoxId, setSelectedBoxId] = useState(null);
+    const [titleInputs, setTitleInputs] = useState({});
+
+    const toggleSelectedBox = (id) => {
+        if (selectedBoxId === id) {
+            setSelectedBoxId(null);
+        } else {
+            setSelectedBoxId(id);
+            if (!titleInputs[id]) {
+                const currentBox = boxes.find(box => box.id === id);
+                setTitleInputs(prev => ({ ...prev, [id]: currentBox ? [...currentBox.titles] : [''] }));
+            }
+        }
     };
-    const HandleDeleteBox = (index) => {
-        //setBoxes(boxes.filter((_, i) => i !== index));
-        setBoxes((prevBoxes) => {
-            const newBoxes = [...prevBoxes];
-            newBoxes.splice(index, 1);
-            return newBoxes;
-        });
-        const resetGifLinkState = useResetRecoilState(l2BoxGifLinkState(index));
-        resetGifLinkState();
-        const resetGifTitlesState = useResetRecoilState(l2BoxGifTitlesState(index));
-        resetGifTitlesState();
+
+    const addBox = () => {
+        const newBox = { id: Date.now(), gifLink: '', titles: [] };
+        setBoxes([...boxes, newBox]);
     };
+
+    const deleteBox = (id) => {
+        setBoxes(boxes.filter(box => box.id !== id));
+    };
+
+    const updateGifLink = (id, link) => {
+        setBoxes(boxes.map(box => box.id === id ? { ...box, gifLink: link } : box));
+    };
+
+    const addTitleInput = (boxId) => {
+        const newTitles = [...(titleInputs[boxId] || []), ''];
+        setTitleInputs(prev => ({ ...prev, [boxId]: newTitles }));
+    };
+
+    const updateTitleInput = (boxId, index, title) => {
+        const newTitles = [...titleInputs[boxId]];
+        newTitles[index] = title;
+        setTitleInputs(prev => ({ ...prev, [boxId]: newTitles }));
+        setBoxes(boxes.map(box => box.id === boxId ? { ...box, titles: newTitles } : box));
+    };
+
+    const deleteTitleInput = (boxId, index) => {
+        const filteredTitles = titleInputs[boxId].filter((_, idx) => idx !== index);
+        setTitleInputs(prev => ({ ...prev, [boxId]: filteredTitles }));
+        setBoxes(boxes.map(box => box.id === boxId ? { ...box, titles: filteredTitles } : box));
+    };
+
     return (
-        <div>
-            <div>
-            <button className="btn-chapter" onClick={addBox}>Add Box</button>
-            </div>
-            <div>
-                {boxes.map((box,index)=> (
-                <Box key={index} index={index} handleDeleteBox={HandleDeleteBox}/>
-                ))}
-            </div>
+        <div className="dropdown-form">
+            <button className="btn-chapter" onClick={addBox}>Karte hinzufügen</button>
+            {boxes.map((box, index) => (
+                <div key={box.id}>
+                    <div className="chapter-wrapper">
+                    <button className="btn-chapter" onClick={() => toggleSelectedBox(box.id)}>
+                        {selectedBoxId === box.id ? 'Karte schließen' : 'Karte editieren'}
+                    </button>
+                    <div>{selectedBoxId === box.id ? (
+                        <>
+                            <input
+                                value={box.gifLink}
+                                onChange={(e) => updateGifLink(box.id, e.target.value)}
+                                placeholder="GIF-Link hier einfügen"
+                            />
+                            {titleInputs[box.id]?.map((title, idx) => (
+                                <div key={idx}>
+                                    <input
+                                        value={title}
+                                        onChange={(e) => updateTitleInput(box.id, idx, e.target.value)}
+                                        placeholder="Titel einfügen"
+                                    />
+                                    <button className="btn-delete-chapter" onClick={() => deleteTitleInput(box.id, idx)}>X</button>
+                                </div>
+                            ))}
+                            <button className="btn-new-chapter" onClick={() => addTitleInput(box.id)}>Titel hinzufügen</button>
+                        </>
+                    ) : (
+                        <div className="btn-new-chapter" style={{cursor: "default"}}>Karte {index +1}</div>
+                    )}
+                    </div>
+                    <button className="btn-delete-chapter" onClick={() => deleteBox(box.id)}>Karte löschen</button>
+                    </div>
+                </div>
+            ))}
         </div>
-    )
-    function Box({index, handleDeleteBox}) {
-        const [gifLink, setGifLink] = useRecoilState(l2BoxGifLinkState(index));
-        const [gifTitles, setGifTitles] = useRecoilState(l2BoxGifTitlesState(index));
-        const handleLinkChange = (event) => {
-            setGifLink(event.target.value);
-        };
-
-        const handleTitleChange = (event, titleIndex) => {
-            const newTitles = [...gifTitles];
-            newTitles[titleIndex] = event.target.value;
-            setGifTitles(newTitles);
-        };
-
-        const handleAddTitle = (e) => {
-            e.preventDefault();
-            setGifTitles([...gifTitles, '']);
-        };
-        const handleDeleteTitle = (titleIndex) => {
-            setGifTitles(gifTitles.filter((title, i) => i !== titleIndex));
-        };
-        return(
-            <div className="container">
-            <form className="chapter-wrapper">
-                <div className="dropdown-form">
-                    <button onClick={() => handleDeleteBox(index)} className="btn-delete-chapter">Delete this Box</button>
-                </div>
-                <input type="text" value={gifLink} onChange={handleLinkChange} placeholder="Enter GIF Link" />
-                <div>
-                    <button className="btn-new-chapter" onClick={handleAddTitle}>Add Title</button>
-                </div>
-                <div>
-                    <input type="text" value={gifTitles[0]} onChange={(event) => handleTitleChange(event, 0)} placeholder={1 + " Enter GIF Title"} />
-                    {gifTitles.slice(1).map((title, titleIndex) => (
-                        <div key={titleIndex}>
-                            <input type="text" value={title} onChange={(event) => handleTitleChange(event, titleIndex + 1)} placeholder={titleIndex + 2 + " Enter GIF Title"} />
-                            <button className="standardbtn" onClick={() => handleDeleteTitle(titleIndex + 1)}>Delete Title</button>
-                        </div>
-                    ))}
-                </div>
-            </form>
-            </div>
-        )
-    }
+    );
 }
+
 export default Overview;

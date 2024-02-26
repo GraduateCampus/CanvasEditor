@@ -1,134 +1,75 @@
-import React, {useState} from "react";
-import { useRecoilState } from "recoil";
-import {OverviewState} from "../../services/atoms";
+import React, { useState } from 'react';
+import { useRecoilState } from 'recoil';
+import { l1OverviewBoxes } from "../../services/atoms";
 
 function Overview() {
-    const [courseNavigationstate, setCourseNavigation] =
-        useRecoilState(OverviewState);
-    const [show, setShow] = useState([true]);
-    const makeNewItem = (e) => {
-        setCourseNavigation((prev) => ({
-            ...prev,
-            items: [
-                ...prev.items,
-                {
-                    icon:"",
-                    title:"",
-                    nuggets:"",
-                    duration:"",
-                },
-            ],
-        }));
-        e.preventDefault();
-        setShow(oldArray => [...oldArray, true]);
-    };
-    const itemChanged = ({ target: { value, name } }, index) => {
-        let items = [...courseNavigationstate.items];
-        let item = { ...items[index] };
-        item[name] = value;
-        items[index] = item;
-        setCourseNavigation((prev) => ({
-            ...prev,
-            items: items,
-        }));
-    };
-    const deleteItem = (event, index) => {
-        let items = [...courseNavigationstate.items];
-        let newArr = [...show];
-        if (index !== -1) {
-            items.splice(index, 1);
-            newArr.splice(index, 1);
-            setCourseNavigation((prev) => ({
-                ...prev,
-                items: items,
-            }));
-            setShow(newArr);
-        }
-        event.preventDefault();
-    };
-    const showChapter = (event, index) => {
-        event.preventDefault();
-        let newArr = [...show];
-        if (newArr[index] === true) {
-            newArr[index] = false;
-            setShow(newArr);
+    const [boxes, setBoxes] = useRecoilState(l1OverviewBoxes);
+    const [selectedBoxId, setSelectedBoxId] = useState(null);
+
+    const toggleSelectedBox = (id) => {
+        if (selectedBoxId === id) {
+            setSelectedBoxId(null);
         } else {
-            newArr[index] = true;
-            setShow(newArr);
+            setSelectedBoxId(id);
         }
-    }
+    };
+    const addBox = () => {
+        const newBox = { id: Date.now(), icon: '', title: '', nuggets: '', duration: '' };
+        setBoxes([...boxes, newBox]);
+    };
 
-    function courseItem({ icon,title,nuggets,duration }, index) {
-        return (
-            <div className="chapter-wrapper" key={index}>
-                <div className="chapter-header">
-                    <button className="btn-chapter" onClick={(event) => showChapter(event, index)}>Modulinhalt {index +1}</button>
-                    <button className="btn-delete-chapter" onClick={(event) => deleteItem(event, index)}>X</button>
-                </div>
-                {show[index] && <div className="dropdown-form">
-                    <div className="ov inputIcon">
-                        <div className="ov inputIconName">Icon:</div>
-                        <input
-                            type="text"
-                            name="icon"
-                            className="input iconInput"
-                            value={icon}
-                            placeholder="Icon-Link"
-                            onChange={(value) => itemChanged(value, index)}
-                        />
-                    </div>
-                    <div className="ov inputTitle">
-                        <div className="ov inputTitleName">Title:</div>
-                        <input
-                            type="text"
-                            name="title"
-                            className="input titleInput"
-                            value={title}
-                            placeholder="Kapiteltitel"
-                            onChange={(value) => itemChanged(value, index)}
-                        />
-                    </div>
-                    <div className="ov inputNuggets">
-                        <div className="ov inputNuggetsName">Nuggets:</div>
-                        <input
-                            type="text"
-                            name="nuggets"
-                            className="input nuggetsInput"
-                            value={nuggets}
-                            placeholder="Anzahl der Nuggets"
-                            onChange={(value) => itemChanged(value, index)}
-                        />
-                    </div>
-                    <div className="ov inputDuration">
-                        <div className="ov inputDurationName">Duration:</div>
-                        <input
-                            type="text"
-                            name="duration"
-                            className="input durationInput"
-                            placeholder="Zeit der Nuggets"
-                            value={duration}
-                            onChange={(value) => itemChanged(value, index)}
-                        />
-                    </div>
-                </div>}
-            </div>
-        );
-    }
-
+    const deleteBox = (id) => {
+        setBoxes(boxes.filter(box => box.id !== id));
+    };
+    const update = (id, field, value) => {
+        setBoxes(boxes.map(box =>
+            box.id === id ? {...box, [field]: value } : box
+        ));
+    };
     return (
-        <div className="container">
-            <ul className="overview-ul">
-                <li className="overview-li">
-                    <form className="dropdown-form">
-                        {courseNavigationstate.items.map((item, index) => {
-                            return courseItem(item, index);
-                        })}
-                        <button className="btn-new-chapter" onClick={makeNewItem}>
-                            New Item
+        <div className="dropdown-form">
+            <button className="btn-chapter" onClick={addBox}>Karte hinzufügen</button>
+            {boxes.map((box, index) => (
+                <div key={box.id}>
+                    <div className="chapter-wrapper">
+                        <button className="btn-chapter" onClick={() => toggleSelectedBox(box.id)}>
+                            {selectedBoxId === box.id ? 'Karte schließen' : 'Karte editieren'}
                         </button>
-                    </form>
-                </li>
-            </ul>
+                        <div>{selectedBoxId === box.id ? (
+                            <>
+                                <input
+                                    name="icon"
+                                    value={box.icon}
+                                    onChange={(e) => update(box.id, "icon", e.target.value)}
+                                    placeholder="Icon-Link hier einfügen"
+                                />
+                                <input
+                                    name="title"
+                                    value={box.title}
+                                    onChange={(e) => update(box.id, "title", e.target.value)}
+                                    placeholder="Titel hier einfügen"
+                                />
+                                <input
+                                    name="nuggets"
+                                    value={box.nuggets}
+                                    onChange={(e) => update(box.id, "nuggets", e.target.value)}
+                                    placeholder="Anzahl der Nuggets hier einfügen"
+                                />
+                                <input
+                                    name="duration"
+                                    value={box.duration}
+                                    onChange={(e) => update(box.id, "duration", e.target.value)}
+                                    placeholder="Dauer hier einfügen"
+                                />
+                            </>
+                        ) : (
+                            <div className="btn-new-chapter" style={{cursor: "default"}}>Karte {index +1}</div>
+                        )}
+                        </div>
+                        <button className="btn-delete-chapter" onClick={() => deleteBox(box.id)}>Karte löschen</button>
+                    </div>
+                </div>
+            ))}
         </div>
     );
 }

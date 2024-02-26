@@ -1,6 +1,6 @@
 import { useRecoilValue} from "recoil";
 import {
-    learniacContactsBild, learniacContactsHeader, learniacContactsHeader2,
+    learniacContactsHeader, learniacContactsHeader2,
     learniacContactsMail,
     learniacContactsMobil,
     learniacContactsName,
@@ -14,7 +14,6 @@ function ViewContact() {
     const phone = useRecoilValue(learniacContactsPhone);
     const mobil = useRecoilValue(learniacContactsMobil);
     const mail = useRecoilValue(learniacContactsMail);
-    const kontaktbild = useRecoilValue(learniacContactsBild);
     return (
         <div className="lvContactBox">
             <div className="boxPadding">
@@ -31,9 +30,6 @@ function ViewContact() {
                         <div className="lvContactPhone">{phone}</div>
                         <div className="lvContactMobil">{mobil}</div>
                         <a href="mailto" className="lvContactMail">{mail}</a>
-                    </div>
-                    <div className="imageBox lvcolumn">
-                        <img className="lvContactBild" src={kontaktbild}/>
                     </div>
                 </div>
             </div>

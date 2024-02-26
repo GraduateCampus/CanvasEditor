@@ -1,28 +1,28 @@
 import {useRecoilState} from "recoil";
-import {KurseinstiegState, Modulbutton} from "../../services/atoms";
+import {l1CourseEntry, l1CourseNr} from "../../services/atoms";
 
 function CourseEntry() {
-    const [kursBeschreibung, setKursbeschreibung] = useRecoilState(KurseinstiegState);
-    const [kursnummer, setKursnummer] = useRecoilState(Modulbutton);
+    const [courseEntry, setCourseEntry] = useRecoilState(l1CourseEntry);
+    const [courseNr, setCourseNr] = useRecoilState(l1CourseNr);
     return (
         <div className="container">
-            <form name="CourseEntry">
+            <form>
                 <div className="editorTextColor">Kursbeschreibung:</div>
             <textarea
                 id="beschreibung"
                 rows="10"
                 cols="40"
-                value={kursBeschreibung}
+                value={courseEntry}
                 placeholder="Kursbeschreibung hier einfügen"
-                onChange={(e) => setKursbeschreibung(e.target.value)}
+                onChange={(e) => setCourseEntry(e.target.value)}
             />
             <div className="editorTextColor">Kursnummer einfügen:</div>
             <input
                 type="text"
                 name="Kursnummer"
-                value={kursnummer}
-                placeholder="Nummer von der URL einfügen"
-                onChange={(e) => setKursnummer(e.target.value)}
+                value={courseNr}
+                placeholder="Kursnummer hier einfügen"
+                onChange={(e) => setCourseNr(e.target.value)}
             />
             </form>
         </div>

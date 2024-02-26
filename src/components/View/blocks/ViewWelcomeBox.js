@@ -1,11 +1,11 @@
 import { useRecoilValue} from "recoil";
-import {welcomeBoxCourse, welcomeBoxCourse2, welcomeBoxImage, welcomeBoxText} from "../../services/atoms";
+import {l1WelcomeCourseName, l1WelcomeCourseName2, l1WelcomeBackground, l1WelcomeText} from "../../services/atoms";
 
 function ViewWelcomeBox() {
-    const image = useRecoilValue(welcomeBoxImage);
-    const welcomeText = useRecoilValue(welcomeBoxText);
-    const welcomeCourse = useRecoilValue(welcomeBoxCourse);
-    const welcomeCourse2 = useRecoilValue(welcomeBoxCourse2);
+    const image = useRecoilValue(l1WelcomeBackground);
+    const welcomeText = useRecoilValue(l1WelcomeText);
+    const welcomeCourse = useRecoilValue(l1WelcomeCourseName);
+    const welcomeCourse2 = useRecoilValue(l1WelcomeCourseName2);
     return (
         <div className="vWelcomeBox">
             <div>

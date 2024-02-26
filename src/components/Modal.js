@@ -10,8 +10,6 @@ const Modal = ({children}) => {
     function copyToClipboard(e) {
         textAreaRef.current.select()
         document.execCommand("copy");
-        // This is just personal preference.
-        // I prefer to not show the whole text area selected.
         e.target.focus();
         var popup = document.getElementById("myPopup");
         popup.classList.toggle("show");

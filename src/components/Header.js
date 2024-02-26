@@ -1,21 +1,17 @@
 import {
-    ContactState,
-    KurseinstiegState,
+    l1CourseEntry,
     modalState,
-    ModulplanState,
-    OverviewState,
-    welcomeBoxText,
-    welcomeBoxCourse,
-    welcomeBoxImage,
+    l1Metroplan,
+    l1WelcomeText,
+    l1WelcomeCourseName,
+    l1WelcomeBackground,
     dataState,
-    ContactAvatar,
-    Modulbutton,
+    l1CourseNr,
     learniacWelcomeImage,
     learniacContactsName,
     learniacContactsPhone,
     learniacContactsMobil,
     learniacContactsMail,
-    learniacContactsBild,
     learniacPointWelcomeText,
     learniacPointWelcomeImage,
     learniacPointCourseText,
@@ -25,7 +21,7 @@ import {
     learniacPointInfoText,
     learniacPointInfoImage,
     learniacModulButton,
-    welcomeBoxCourse2,
+    l1WelcomeCourseName2,
     selectEverything,
     learniacWelcomeText,
     learniacPointWelcomeHeader,
@@ -43,21 +39,14 @@ import {
     l2WelcomeCourseName2,
     l2CourseEntry,
     l2CourseNr,
-    l2Modulplan,
-    l2BoxesState,
-    l2BoxGifLinkState,
-    l2BoxGifTitlesState,
+    l2Metroplan,
     l2ContactBoxes,
-    l2ContactIcon,
-    l2ContactName,
-    l2ContactDescription,
-    l2ContactMail,
     learniacPointUnitsImage,
     learniacPointUnitsHeader,
     learniacPointUnitsText,
     learniacPointUnits,
     infoModalState,
-    learniacPointUnitsNumber,
+    learniacPointUnitsNumber, l2OverviewBoxes, l1OverviewBoxes, l1ContactBoxes,
 } from "./services/atoms";
 import React, {useState} from "react";
 import {useRecoilState, useRecoilValue, useResetRecoilState} from "recoil";
@@ -77,16 +66,15 @@ function Header (index) {
     const [tab3Text, setTab3Text] = useState("Layout 3 Learniac Deutsch")
     const [showModal,setShowModal] = useRecoilState(modalState);
     const [showInfoModal,setShowInfoModal] = useRecoilState(infoModalState);
-    const welcomeImage = useRecoilValue(welcomeBoxImage);
-    const welcomeText = useRecoilValue(welcomeBoxText);
-    const welcomeCourse = useRecoilValue(welcomeBoxCourse);
-    const welcomeCourse2 = useRecoilValue(welcomeBoxCourse2);
-    const kurseinstieg = useRecoilValue(KurseinstiegState);
-    const modulplan = useRecoilValue(ModulplanState);
-    const overview = useRecoilValue(OverviewState);
-    const contacts = useRecoilValue(ContactState);
-    const avatar = useRecoilValue(ContactAvatar);
-    const modulbutton = useRecoilValue(Modulbutton);
+    const welcomeImage = useRecoilValue(l1WelcomeBackground);
+    const welcomeText = useRecoilValue(l1WelcomeText);
+    const welcomeCourse = useRecoilValue(l1WelcomeCourseName);
+    const welcomeCourse2 = useRecoilValue(l1WelcomeCourseName2);
+    const kurseinstieg = useRecoilValue(l1CourseEntry);
+    const modulplan = useRecoilValue(l1Metroplan);
+    const modulbutton = useRecoilValue(l1CourseNr);
+    const l1boxes = useRecoilValue(l1OverviewBoxes);
+    const l1contactBoxes = useRecoilValue(l1ContactBoxes);
     /* Layout 2 States: */
     const l2welcomeBackground = useRecoilValue(l2WelcomeBackground);
     const l2welcomeHeadline = useRecoilValue(l2WelcomeHeadline);
@@ -94,15 +82,9 @@ function Header (index) {
     const l2welcomeCourseName2 = useRecoilValue(l2WelcomeCourseName2);
     const l2courseEntry = useRecoilValue(l2CourseEntry);
     const l2courseNr = useRecoilValue(l2CourseNr);
-    const l2modulplan = useRecoilValue(l2Modulplan);
-    const l2boxesState = useRecoilValue(l2BoxesState);
-    const l2boxGifLinkState = useRecoilValue(l2BoxGifLinkState(index));
-    const l2boxGifTitlesState = useRecoilValue(l2BoxGifTitlesState(index));
+    const l2modulplan = useRecoilValue(l2Metroplan);
+    const l2boxes = useRecoilValue(l2OverviewBoxes);
     const l2contactBoxes = useRecoilValue(l2ContactBoxes);
-    const l2contactIcon = useRecoilValue(l2ContactIcon(index));
-    const l2contactName = useRecoilValue(l2ContactName(index));
-    const l2contactDescription = useRecoilValue(l2ContactDescription(index));
-    const l2contactMail = useRecoilValue(l2ContactMail(index));
     /* Learniac States: */
     const lcWelcomeImage = useRecoilValue(learniacWelcomeImage);
     const lcModulButton = useRecoilValue(learniacModulButton);
@@ -133,7 +115,6 @@ function Header (index) {
     const lcContactPhone = useRecoilValue(learniacContactsPhone);
     const lcContactMobil = useRecoilValue(learniacContactsMobil);
     const lcContactMail = useRecoilValue(learniacContactsMail);
-    const lcContactImage = useRecoilValue(learniacContactsBild);
     const [data,setData] = useRecoilState(dataState);
 
     const showTab = (id) => {
@@ -158,17 +139,14 @@ function Header (index) {
         setShowModal(!showModal);
         const index = makeHtml(welcomeImage,
             welcomeText, welcomeCourse, welcomeCourse2,
-            kurseinstieg, modulplan,
-            overview, contacts,
-            avatar, modulbutton);
+            kurseinstieg, modulplan, modulbutton, l1boxes, l1contactBoxes);
         setData(index);
     };
     const exportData2 = () => {
         setShowModal(!showModal);
         const index = makeHtml2(l2welcomeBackground, l2welcomeHeadline,
             l2welcomeCourseName, l2welcomeCourseName2, l2courseEntry, l2courseNr, l2modulplan,
-            l2boxesState, l2boxGifLinkState, l2boxGifTitlesState, l2contactBoxes ,l2contactIcon,
-            l2contactName, l2contactDescription, l2contactMail);
+            l2contactBoxes, l2boxes);
         setData(index);
     }
     const exportData3 = () => {
@@ -180,7 +158,7 @@ function Header (index) {
             lcPointCourseImage, lcPointLearningHeader, lcPointLearningText,
             lcPointLearningImage, lcPointInfoHeader, lcPointInfoText, lcPointInfoImage,
             lcRocketText, lcContactsHeader, lcContactsHeader2, lcContactsText, lcContactName,
-            lcContactPhone, lcContactMobil, lcContactMail, lcContactImage);
+            lcContactPhone, lcContactMobil, lcContactMail);
         setData(index);
     }
     const switchLanguage = (e) => {
