@@ -940,7 +940,7 @@ font-weight: 100-900
 .l1OverViewBox {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 200px;
+    gap: 300px;
     margin-bottom: 20px;
 }
 .l1OverviewCard {

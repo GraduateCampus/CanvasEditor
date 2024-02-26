@@ -1,8 +1,8 @@
 import {useRecoilState} from "recoil";
-import {l2Metroplan} from "../../services/atoms";
+import {l1Metroplan} from "../../services/atoms";
 
 function Metroplan() {
-    const [metroplan, setMetroplan] = useRecoilState(l2Metroplan);
+    const [metroplan, setMetroplan] = useRecoilState(l1Metroplan);
     return (
         <div className="container">
             <form>
