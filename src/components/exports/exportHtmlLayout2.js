@@ -10,10 +10,10 @@ export default function makeHtml2(
     l2boxes
 ) {
     const overviewBoxes = l2boxes.map((box, index) => `
-        <div class="l2OverviewBox">
+        <a href="/courses/${l2courseNr}/modules" class="l2OverviewBox">
             <img src="${box.gifLink}" alt="Gif for box ${index + 1}" />
             ${box.titles.map((title,idx) => `<p class="l2OverviewTitles">${idx + 1}. ${title}</p>`).join('')}
-        </div>
+        </a>
     `).join('');
     const contactBoxes = l2contactBoxes.map((box, index) => `
         <div class="l2ContactBoxCard">
@@ -70,7 +70,7 @@ export default function makeHtml2(
                 <p class="newCanvasHeadline">Neu bei Canvas?</p>
                 <p class="newCanvasText"> Weitere Informationen zu Canvas finden Sie hier:</p>
             </div>
-            <a class="newCanvasButton" href="/courses/${l2courseNr}/modules">Zu Canvas Modul</a>
+            <a class="newCanvasButton" href="https://graduatecampus.instructure.com/courses/354">Zu Canvas Modul</a>
         </div>
         <div class="l2ContactBox">
             ${contactBoxes}

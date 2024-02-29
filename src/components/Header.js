@@ -72,7 +72,7 @@ function Header (index) {
     const welcomeCourse2 = useRecoilValue(l1WelcomeCourseName2);
     const kurseinstieg = useRecoilValue(l1CourseEntry);
     const modulplan = useRecoilValue(l1Metroplan);
-    const modulbutton = useRecoilValue(l1CourseNr);
+    const l1courseNr = useRecoilValue(l1CourseNr);
     const l1boxes = useRecoilValue(l1OverviewBoxes);
     const l1contactBoxes = useRecoilValue(l1ContactBoxes);
     /* Layout 2 States: */
@@ -139,7 +139,7 @@ function Header (index) {
         setShowModal(!showModal);
         const index = makeHtml(welcomeImage,
             welcomeText, welcomeCourse, welcomeCourse2,
-            kurseinstieg, modulplan, modulbutton, l1boxes, l1contactBoxes);
+            kurseinstieg, modulplan, l1courseNr, l1boxes, l1contactBoxes);
         setData(index);
     };
     const exportData2 = () => {

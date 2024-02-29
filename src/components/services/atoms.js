@@ -105,7 +105,7 @@ export const learniacPointWelcomeHeader = atom ({
 export const learniacPointWelcomeText = atom ( {
     key: 'learniacPointWelcomeText',
     default: "Zum Durchstarten klickst du im Kursmenü auf der linken Seite auf Module.\n" +
-        "Hier gelangst du zur Gesamtübersicht aller E-Learning Einheiten, den sog. Learning Nuggets.",
+        "Hier gelangst du zur Gesamtübersicht aller E-Learning Einheiten, den sogenannten Learning Nuggets.",
 });
 export const learniacPointWelcomeImage = atom ( {
     key: 'learniacPointWelcomeImage',
