@@ -10,7 +10,7 @@ function ViewOverView () {
                     <img src={box.gifLink} alt="Gif" />
                     <div>
                         {box.titles.map((title, index) => (
-                            <p className="l2OverviewChapters" key={index}>{index+1}. {title}</p>
+                            <p className="l2OverviewChapters" key={index}>{index+1}. {title.test}</p>
                         ))}
                     </div>
                 </div>

@@ -946,7 +946,6 @@ font-weight: 100-900
 .l1OverviewCard {
     background: #f2f2f2;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -963,6 +962,7 @@ font-weight: 100-900
     font-size: 3rem;
     width: 100%;
     padding: 20px 10px 20px 50px;
+    font-family: Oswald;
 }
 .l1OverviewIcon {
     width: 150px;
@@ -1011,14 +1011,16 @@ font-weight: 100-900
 .l2WelcomeBox {
     position: relative;
     width: 100%;
-    max-height: 400px;
     overflow: hidden;
+    background-image: linear-gradient(to right, #f2edb4, #d9c65a);
+    border-radius: 10px;
 }
 .l2WelcomeBoxBackground {
-    width: 100%;
+    width: 50%;
     height: auto;
     object-fit: cover;
     object-position: center;
+    float: right;
 }
 .l2WelcomeBoxTextBox {
     position: absolute;
@@ -1040,8 +1042,7 @@ font-weight: 100-900
 }
 .l2CourseEntryBox {
     display: flex;
-    border-radius: 10px; /* Rounded corners for the box */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Shadow for the box */
+    border-radius: 10px;
     background-color: #e5e5e5;
 }
 .l2CourseEntryImageBox {
@@ -1063,7 +1064,7 @@ font-weight: 100-900
 }
 .l2CourseEntryBoxHeadline {
     margin: 0;
-    font-size: 2rem;
+    font-size: 2vw;
     font-family: Oswald, sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -1076,6 +1077,7 @@ font-weight: 100-900
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
+    font-size: 1vw;
 }
 .l2CourseEntryBoxButton {
     padding: 10px 20px;
@@ -1112,7 +1114,6 @@ font-weight: 100-900
 .l2OverviewBox {
     background-color: #F2F2F2;
     border-radius: 20px;
-    box-shadow: 0px 40px 40px rgba(0,0,0,0.15);
     height: 100%;
     padding: 10px;
     text-decoration: none !important;
@@ -1142,7 +1143,6 @@ font-weight: 100-900
     padding: 20px;
     max-height: 200px;
     background-image: linear-gradient(to bottom right, #e8dca0, #d9c65a );
-    box-shadow: 0 40px 40px rgba(0,0,0,0.15);
     border-radius: 20px;
     min-height: 200px;
 }
@@ -1200,7 +1200,7 @@ font-weight: 100-900
     flex-direction: column;
     align-items: center;
     margin: 5px;
-    height: 100%;
+    font-size: 1.4em;
 }
 .l2ContactBoxIcon {
     width: 70%;
@@ -1239,6 +1239,14 @@ font-weight: 100-900
     font-family: 'Oswald', sans-serif;
     font-style: normal;
     font-weight: 300;
+}
+@media only screen and (min-width: 1800px) {
+    .l1OverviewIcon {
+        margin-top: -5%;
+    }
+    .l2ContactBoxAvatar {
+        height: auto;
+    }
 }
 /* Layout von Ali */
 .ic-DashboardCard__header_image .ic-DashboardCard__header_hero {

@@ -4,7 +4,7 @@ export default function makeHtml(l1welcomeBackground, l1welcomeHeadline, l1welco
                                  l1welcomeCourseName2, l1courseEntry,l1modulplan, l1courseNr,
                                  l1boxes, l1contactBoxes) {
     const overviewBoxes = l1boxes.map((box, index) => `
-        <a href="/courses/${l1courseNr}/modules" class="l1OverviewCard" key={box.id}>
+        <a href="/courses/${l1courseNr}/modules/$${box.modullink}" class="l1OverviewCard" key={box.id}>
                     <div class="l1OverviewNumber">
                         ${index+1}
                     </div>
@@ -76,7 +76,7 @@ export default function makeHtml(l1welcomeBackground, l1welcomeHeadline, l1welco
                 <p class="newCanvasHeadline">Neu bei Canvas?</p>
                 <p class="newCanvasText"> Weitere Informationen zu Canvas finden Sie hier:</p>
             </div>
-            <a class="newCanvasButton" href="https://graduatecampus.instructure.com/courses/354">Zu Canvas Modul</a>
+            <a class="newCanvasButton" href="https://graduatecampus.instructure.com/courses/354" target="_blank">Zu Canvas Modul</a>
         </div>
         <div class="l2ContactBox">
             ${contactBoxes}

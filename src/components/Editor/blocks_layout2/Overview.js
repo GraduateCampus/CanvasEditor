@@ -14,13 +14,12 @@ function Overview() {
             setSelectedBoxId(id);
             if (!titleInputs[id]) {
                 const currentBox = boxes.find(box => box.id === id);
-                setTitleInputs(prev => ({ ...prev, [id]: currentBox ? [...currentBox.titles] : [''] }));
-            }
+                setTitleInputs(prev => ({ ...prev, [id]: currentBox ? currentBox.titles.map(title => ({ ...title })) : [{ test: '', nummer: '' }] }));            }
         }
     };
 
     const addBox = () => {
-        const newBox = { id: Date.now(), gifLink: '', titles: [] };
+        const newBox = { id: Date.now(), gifLink: '', titles: [{test:'', nummer: ''}] };
         setBoxes([...boxes, newBox]);
     };
 
@@ -33,15 +32,39 @@ function Overview() {
     };
 
     const addTitleInput = (boxId) => {
-        const newTitles = [...(titleInputs[boxId] || []), ''];
+        const newTitles = [...(titleInputs[boxId] || []), { test: '', nummer: '' }];
         setTitleInputs(prev => ({ ...prev, [boxId]: newTitles }));
     };
 
-    const updateTitleInput = (boxId, index, title) => {
-        const newTitles = [...titleInputs[boxId]];
-        newTitles[index] = title;
-        setTitleInputs(prev => ({ ...prev, [boxId]: newTitles }));
-        setBoxes(boxes.map(box => box.id === boxId ? { ...box, titles: newTitles } : box));
+    const updateTitleInput = (boxId, index, value, isNumber = false) => {
+        setTitleInputs(prevTitleInputs => {
+            // Clone the current state to avoid direct mutation
+            const updatedTitles = [...prevTitleInputs[boxId]];
+
+            // Update the specific title, ensuring we're creating a new object
+            updatedTitles[index] = isNumber
+                ? { ...updatedTitles[index], nummer: value }
+                : { ...updatedTitles[index], test: value };
+
+            // Return the updated state
+            return { ...prevTitleInputs, [boxId]: updatedTitles };
+        });
+
+        // Similarly, update the boxes state in an immutable way
+        setBoxes(prevBoxes => {
+            return prevBoxes.map(box => {
+                if (box.id === boxId) {
+                    // Clone and update the specific box, ensuring titles are also updated immutably
+                    return {
+                        ...box,
+                        titles: box.titles.map((title, idx) => idx === index
+                            ? isNumber ? { ...title, nummer: value } : { ...title, test: value }
+                            : title)
+                    };
+                }
+                return box;
+            });
+        });
     };
 
     const deleteTitleInput = (boxId, index) => {
@@ -56,33 +79,38 @@ function Overview() {
             {boxes.map((box, index) => (
                 <div key={box.id}>
                     <div className="chapter-wrapper">
-                    <button className="btn-chapter" onClick={() => toggleSelectedBox(box.id)}>
-                        {selectedBoxId === box.id ? 'Karte schließen' : 'Karte editieren'}
-                    </button>
-                    <div>{selectedBoxId === box.id ? (
-                        <>
-                            <input
-                                value={box.gifLink}
-                                onChange={(e) => updateGifLink(box.id, e.target.value)}
-                                placeholder="GIF-Link hier einfügen"
-                            />
-                            {titleInputs[box.id]?.map((title, idx) => (
-                                <div key={idx}>
-                                    <input
-                                        value={title}
-                                        onChange={(e) => updateTitleInput(box.id, idx, e.target.value)}
-                                        placeholder="Titel einfügen"
-                                    />
-                                    <button className="btn-delete-chapter" onClick={() => deleteTitleInput(box.id, idx)}>X</button>
-                                </div>
-                            ))}
-                            <button className="btn-new-chapter" onClick={() => addTitleInput(box.id)}>Titel hinzufügen</button>
-                        </>
-                    ) : (
-                        <div className="btn-new-chapter" style={{cursor: "default"}}>Karte {index +1}</div>
-                    )}
-                    </div>
-                    <button className="btn-delete-chapter" onClick={() => deleteBox(box.id)}>Karte löschen</button>
+                        <button className="btn-chapter" onClick={() => toggleSelectedBox(box.id)}>
+                            {selectedBoxId === box.id ? 'Karte schließen' : 'Karte editieren'}
+                        </button>
+                        <div>{selectedBoxId === box.id ? (
+                            <>
+                                <input
+                                    value={box.gifLink}
+                                    onChange={(e) => updateGifLink(box.id, e.target.value)}
+                                    placeholder="GIF-Link hier einfügen"
+                                />
+                                {titleInputs[box.id]?.map((title, idx) => (
+                                    <div key={idx}>
+                                        <input
+                                            value={title.test}
+                                            onChange={(e) => updateTitleInput(box.id, idx, e.target.value)}
+                                            placeholder="Titel einfügen"
+                                        />
+                                        <input
+                                            value={title.nummer}
+                                            onChange={(e) => updateTitleInput(box.id, idx, e.target.value, true)}
+                                            placeholder="ggf. Nummer einfügen"
+                                        />
+                                        <button className="btn-delete-chapter" onClick={() => deleteTitleInput(box.id, idx)}>X</button>
+                                    </div>
+                                ))}
+                                <button className="btn-new-chapter" onClick={() => addTitleInput(box.id)}>Titel hinzufügen</button>
+                            </>
+                        ) : (
+                            <div className="btn-new-chapter" style={{cursor: "default"}}>Karte {index +1}</div>
+                        )}
+                        </div>
+                        <button className="btn-delete-chapter" onClick={() => deleteBox(box.id)}>Karte löschen</button>
                     </div>
                 </div>
             ))}
