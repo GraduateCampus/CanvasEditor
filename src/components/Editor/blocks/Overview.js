@@ -14,7 +14,7 @@ function Overview() {
         }
     };
     const addBox = () => {
-        const newBox = { id: Date.now(), icon: '', title: '', nuggets: '', duration: '' };
+        const newBox = { id: Date.now(), icon: '', title: '', nuggets: '', duration: '', modullink: '' };
         setBoxes([...boxes, newBox]);
     };
 
@@ -60,6 +60,12 @@ function Overview() {
                                     value={box.duration}
                                     onChange={(e) => update(box.id, "duration", e.target.value)}
                                     placeholder="Dauer hier einfügen"
+                                />
+                                <input
+                                    name="modullink"
+                                    value={box.modullink}
+                                    onChange={(e) => update(box.id, "modullink", e.target.value)}
+                                    placeholder="ggf. Modullink einfügen"
                                 />
                             </>
                         ) : (
