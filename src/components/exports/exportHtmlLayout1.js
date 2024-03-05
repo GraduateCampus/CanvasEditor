@@ -4,7 +4,7 @@ export default function makeHtml(l1welcomeBackground, l1welcomeHeadline, l1welco
                                  l1welcomeCourseName2, l1courseEntry,l1modulplan, l1courseNr,
                                  l1boxes, l1contactBoxes) {
     const overviewBoxes = l1boxes.map((box, index) => `
-        <a href="/courses/${l1courseNr}/modules/$${box.modullink}" class="l1OverviewCard" key={box.id}>
+        <a href="/courses/${l1courseNr}/modules/${box.modullink}" class="l1OverviewCard" key={box.id}>
                     <div class="l1OverviewNumber">
                         ${index+1}
                     </div>
