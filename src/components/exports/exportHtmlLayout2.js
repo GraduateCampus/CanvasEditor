@@ -70,7 +70,7 @@ export default function makeHtml2(
                 <p class="newCanvasHeadline">Neu bei Canvas?</p>
                 <p class="newCanvasText"> Weitere Informationen zu Canvas finden Sie hier:</p>
             </div>
-            <a class="newCanvasButton" href="https://graduatecampus.instructure.com/courses/354" target="_blank">Zu Canvas Modul</a>
+            <a class="newCanvasButton" href="https://graduatecampus.instructure.com/courses/354" target="_blank">Zu Canvas Videotutorials</a>
         </div>
         <div class="l2ContactBox">
             ${contactBoxes}
