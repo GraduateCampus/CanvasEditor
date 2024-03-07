@@ -1124,6 +1124,7 @@ font-weight: 100-900
     object-fit: contain;
     object-position: center;
     max-height: 250px;
+    margin-bottom: 1vw;
 }
 .l2OverviewTitles {
     padding: 20px 20px 20px 20px;
@@ -1135,6 +1136,7 @@ font-weight: 100-900
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
     border-radius: 20px;
+    text-decoration: none !important;
 }
 .newCanvasBox {
     display: flex;
