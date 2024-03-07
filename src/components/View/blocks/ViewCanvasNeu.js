@@ -9,7 +9,7 @@ function ViewCanvasNeu () {
                 Weitere Informationen zu Canvas finden Sie hier:
             </div>
             <button className="canvasbtn">
-                Zu Canvas Modul?
+                Zu Canvas Videotutorials?
             </button>
         </div>
     );
