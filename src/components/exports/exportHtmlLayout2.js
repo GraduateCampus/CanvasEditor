@@ -7,7 +7,8 @@ export default function makeHtml2(
     l2courseNr,
     l2modulplan,
     l2contactBoxes,
-    l2boxes
+    l2boxes,
+    l2avatar
 ) {
     const overviewBoxes = l2boxes.map((box, index) => `
         <div class="l2OverviewBox">
@@ -75,7 +76,7 @@ export default function makeHtml2(
         <div class="l2ContactBox">
             ${contactBoxes}
             <div class="l2ContactBoxAvatar">
-                <img src="https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/Prof_Herrmann2.png?raw=true" alt="Avatar" />
+                <img src="${l2avatar}" alt="Avatar" />
             </div>
         </div>
     </div>

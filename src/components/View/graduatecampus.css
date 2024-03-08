@@ -1137,6 +1137,7 @@ font-weight: 100-900
     font-weight: bold;
     border-radius: 20px;
     text-decoration: none !important;
+    margin-bottom: 1vw;
 }
 .newCanvasBox {
     display: flex;
@@ -1242,7 +1243,7 @@ font-weight: 100-900
     font-style: normal;
     font-weight: 300;
 }
-@media only screen and (min-width: 1800px) {
+@media only screen and (min-width: 2000px) {
     .l1OverviewIcon {
         margin-top: -5%;
     }
