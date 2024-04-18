@@ -987,7 +987,7 @@ font-weight: 100-900
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 0 50px 20px 50px;
+    padding: 0 20px 20px 20px;
     box-sizing: border-box;
 }
 .l1OverviewTextbox img {
@@ -1116,7 +1116,6 @@ font-weight: 100-900
 .l2OverviewBox {
     background-color: #F2F2F2;
     border-radius: 20px;
-    height: 100%;
     padding: 10px;
     text-decoration: none !important;
 }
@@ -1172,7 +1171,6 @@ font-weight: 100-900
     margin: 0;
 }
 .newCanvasButton {
-    width: 20%;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none !important;
