@@ -46,7 +46,7 @@ import {
     learniacPointUnitsText,
     learniacPointUnits,
     infoModalState,
-    learniacPointUnitsNumber, l2OverviewBoxes, l1OverviewBoxes, l1ContactBoxes,
+    learniacPointUnitsNumber, l2OverviewBoxes, l1OverviewBoxes, l1ContactBoxes, l2Avatar,
 } from "./services/atoms";
 import React, {useState} from "react";
 import {useRecoilState, useRecoilValue, useResetRecoilState} from "recoil";
@@ -85,6 +85,7 @@ function Header (index) {
     const l2modulplan = useRecoilValue(l2Metroplan);
     const l2boxes = useRecoilValue(l2OverviewBoxes);
     const l2contactBoxes = useRecoilValue(l2ContactBoxes);
+    const l2avatar = useRecoilValue(l2Avatar);
     /* Learniac States: */
     const lcWelcomeImage = useRecoilValue(learniacWelcomeImage);
     const lcModulButton = useRecoilValue(learniacModulButton);
@@ -146,7 +147,7 @@ function Header (index) {
         setShowModal(!showModal);
         const index = makeHtml2(l2welcomeBackground, l2welcomeHeadline,
             l2welcomeCourseName, l2welcomeCourseName2, l2courseEntry, l2courseNr, l2modulplan,
-            l2contactBoxes, l2boxes);
+            l2contactBoxes, l2boxes, l2avatar);
         setData(index);
     }
     const exportData3 = () => {

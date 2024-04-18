@@ -1,9 +1,11 @@
 import {useRecoilValue} from "recoil";
 import {
+    l2Avatar,
     l2ContactBoxes
 } from "../../services/atoms";
 function ViewContacts () {
     const contactBoxes = useRecoilValue(l2ContactBoxes);
+    const avatar = useRecoilValue(l2Avatar);
     return (
         <div className="l2ContactBox">
                 {contactBoxes.map((box) => (
@@ -19,6 +21,7 @@ function ViewContacts () {
                         </div>
                     </div>
                 ))}
+            <img src={avatar} alt='Professor'/>
         </div>
     );
 
