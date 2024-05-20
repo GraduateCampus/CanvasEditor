@@ -1036,9 +1036,9 @@ font-weight: 100-900
 .l2WelcomeBoxTextBox {
     position: absolute;
     top: 50%;
-    left: 55%;
-    transform: translate(-50%,-50%);
-    width: 100%;
+    left: 5%;
+    transform: translateY(-50%);
+    width: 50%;
 }
 .l2WelcomeBoxHeadline {
     color: #808080;
