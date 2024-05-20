@@ -72,9 +72,6 @@ export default function makeHtml2(
         </div>
         <div class="l2ContactBox">
             ${contactBoxes}
-            <div class="l2ContactBoxAvatar">
-                <img src="https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/Prof_Herrmann2.png?raw=true" alt="Avatar" />
-            </div>
         </div>
     </div>
     </body>

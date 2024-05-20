@@ -75,17 +75,6 @@ function Contacts() {
                     </div>
                 </div>
             ))}
-            <div className="container">
-                <form>
-                <div className="editorTextColor">Avatar einfügen:</div>
-                <input
-                    name="avatar"
-                    value={avatar}
-                    onChange={(e) => setAvatar(e.target.value)}
-                    placeholder="Avatar-Link hier einfügen"
-                />
-                </form>
-            </div>
         </div>
     );
 }
