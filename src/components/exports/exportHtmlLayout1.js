@@ -1,8 +1,8 @@
 
 
 export default function makeHtml(l1welcomeBackground, l1welcomeHeadline, l1welcomeCourseName,
-                                 l1welcomeCourseName2, l1courseEntry,l1modulplan, l1courseNr,
-                                 l1boxes, l1contactBoxes) {
+                                 l1welcomeCourseName2, l1courseEntry,l1modulplan, l1modulplanCheckbox,
+                                 l1courseNr, l1boxes, l1contactBoxes) {
     const overviewBoxes = l1boxes.map((box, index) => `
         <a href="/courses/${l1courseNr}/modules/${box.modullink}" class="l1OverviewCard" key={box.id}>
                     <div class="l1OverviewNumber">
@@ -34,6 +34,7 @@ export default function makeHtml(l1welcomeBackground, l1welcomeHeadline, l1welco
             </div>
         </div>
     `).join('');
+    const metroplan = l1modulplanCheckbox ? '' : `<img class="l2MetroPlanImage" alt="Metroplan" src="${l1modulplan}" />`;
     return `<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -60,23 +61,19 @@ export default function makeHtml(l1welcomeBackground, l1welcomeHeadline, l1welco
             <img class="l2CourseEntryBoxRakete" src="https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/rakete2.png?raw=true"/>
             </div>
             <div class="l2CourseEntryTextBox">
-            <h1 class="l2CourseEntryBoxHeadline">Kurseinstieg</h1>
-            <p class="l2CourseEntryBoxText">${l1courseEntry}</p>
-            <a class="l2CourseEntryBoxButton" href="/courses/${l1courseNr}/modules">Direkt zu den Modulen</a>
+                <h1 class="l2CourseEntryBoxHeadline">Kurseinstieg</h1>
+                <p class="l2CourseEntryBoxText">${l1courseEntry}</p>
+                <div class="courseEntryBoxButtons">
+                    <a class="helpingPage" href="https://graduatecampus.instructure.com/courses/1717" target="_blank">Hilfe für den Kurseinstieg</a>
+                    <a class="l2CourseEntryBoxButton" href="/courses/${l1courseNr}/modules">Direkt zu den Modulen</a>
+                </div>
             </div>
         </div>
         <div class="l2MetroplanBox">
-            <img class="l2MetroPlanImage" alt="Metroplan" src="${l1modulplan}" />
+            ${metroplan}
         </div>
         <div class="l2OverviewBigBox">
             ${overviewBoxes}
-        </div>
-        <div class="newCanvasBox">
-            <div class="newCanvasBoxText">
-                <p class="newCanvasHeadline">Neu bei Canvas?</p>
-                <p class="newCanvasText"> Weitere Informationen zu Canvas finden Sie hier:</p>
-            </div>
-            <a class="newCanvasButton" href="https://graduatecampus.instructure.com/enroll/EJADM9" target="_blank">Zu Canvas Videotutorials</a>
         </div>
         <div class="l2ContactBox">
             ${contactBoxes}

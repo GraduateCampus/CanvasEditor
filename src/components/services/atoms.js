@@ -39,6 +39,10 @@ export const l1Metroplan = atom ( {
     key: 'l1Metroplan',
     default: "",
 });
+export const l1MetroplanCheckbox = atom ( {
+    key: 'l1MetroplanCheckbox',
+    default: false,
+});
 export const l1OverviewBoxes = atom({
     key: 'l1OverviewBoxes',
     default: [],
@@ -75,6 +79,10 @@ export const l2CourseNr = atom ( {
 export const l2Metroplan = atom ( {
     key: 'l2Metroplan',
     default: "",
+});
+export const l2MetroplanCheckbox = atom ( {
+    key: 'l2MetroplanCheckbox',
+    default: false,
 });
 export const l2OverviewBoxes = atom({
     key: 'boxState',

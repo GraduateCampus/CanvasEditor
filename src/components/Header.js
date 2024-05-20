@@ -46,7 +46,12 @@ import {
     learniacPointUnitsText,
     learniacPointUnits,
     infoModalState,
-    learniacPointUnitsNumber, l2OverviewBoxes, l1OverviewBoxes, l1ContactBoxes, l2Avatar,
+    learniacPointUnitsNumber,
+    l2OverviewBoxes,
+    l1OverviewBoxes,
+    l1ContactBoxes,
+    l2MetroplanCheckbox,
+    l1MetroplanCheckbox
 } from "./services/atoms";
 import React, {useState} from "react";
 import {useRecoilState, useRecoilValue, useResetRecoilState} from "recoil";
@@ -72,6 +77,7 @@ function Header (index) {
     const welcomeCourse2 = useRecoilValue(l1WelcomeCourseName2);
     const kurseinstieg = useRecoilValue(l1CourseEntry);
     const modulplan = useRecoilValue(l1Metroplan);
+    const l1modulplanCheckbox = useRecoilValue(l1MetroplanCheckbox);
     const l1courseNr = useRecoilValue(l1CourseNr);
     const l1boxes = useRecoilValue(l1OverviewBoxes);
     const l1contactBoxes = useRecoilValue(l1ContactBoxes);
@@ -83,6 +89,7 @@ function Header (index) {
     const l2courseEntry = useRecoilValue(l2CourseEntry);
     const l2courseNr = useRecoilValue(l2CourseNr);
     const l2modulplan = useRecoilValue(l2Metroplan);
+    const l2modulplanCheckbox = useRecoilValue(l2MetroplanCheckbox);
     const l2boxes = useRecoilValue(l2OverviewBoxes);
     const l2contactBoxes = useRecoilValue(l2ContactBoxes);
     const l2avatar = useRecoilValue(l2Avatar);
@@ -140,14 +147,15 @@ function Header (index) {
         setShowModal(!showModal);
         const index = makeHtml(welcomeImage,
             welcomeText, welcomeCourse, welcomeCourse2,
-            kurseinstieg, modulplan, l1courseNr, l1boxes, l1contactBoxes);
+            kurseinstieg, modulplan, l1modulplanCheckbox,
+            l1courseNr, l1boxes, l1contactBoxes);
         setData(index);
     };
     const exportData2 = () => {
         setShowModal(!showModal);
         const index = makeHtml2(l2welcomeBackground, l2welcomeHeadline,
-            l2welcomeCourseName, l2welcomeCourseName2, l2courseEntry, l2courseNr, l2modulplan,
-            l2contactBoxes, l2boxes, l2avatar);
+            l2welcomeCourseName, l2welcomeCourseName2, l2courseEntry, l2courseNr,
+            l2modulplan, l2modulplanCheckbox, l2contactBoxes, l2boxes);
         setData(index);
     }
     const exportData3 = () => {

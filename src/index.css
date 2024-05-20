@@ -212,7 +212,10 @@ body {
 }
 
 /* Styling für Metroplan */
-
+.modulplancheckbox {
+  min-width: 20px;
+  min-height: 20px;
+}
 .vModulplan {
   position: relative;
   overflow: hidden;

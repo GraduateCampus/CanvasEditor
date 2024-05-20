@@ -5,7 +5,6 @@ import {l2Avatar, l2ContactBoxes} from "../../services/atoms";
 function Contacts() {
     const [boxes, setBoxes] = useRecoilState(l2ContactBoxes);
     const [selectedBoxId, setSelectedBoxId] = useState(null);
-    const [avatar, setAvatar] = useRecoilState(l2Avatar);
     const toggleSelectedBox = (id) => {
         if (selectedBoxId === id) {
             setSelectedBoxId(null);
@@ -75,17 +74,6 @@ function Contacts() {
                     </div>
                 </div>
             ))}
-            <div className="container">
-                <form>
-                <div className="editorTextColor">Avatar einfügen:</div>
-                <input
-                    name="avatar"
-                    value={avatar}
-                    onChange={(e) => setAvatar(e.target.value)}
-                    placeholder="Avatar-Link hier einfügen"
-                />
-                </form>
-            </div>
         </div>
     );
 }
