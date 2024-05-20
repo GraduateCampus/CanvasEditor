@@ -34,6 +34,7 @@ function Overview() {
     const addTitleInput = (boxId) => {
         const newTitles = [...(titleInputs[boxId] || []), { test: '', nummer: '' }];
         setTitleInputs(prev => ({ ...prev, [boxId]: newTitles }));
+        setBoxes(boxes.map(box => box.id === boxId ? { ...box, titles: newTitles } : box));
     };
 
     const updateTitleInput = (boxId, index, value, isNumber = false) => {
