@@ -1,8 +1,9 @@
 import {useRecoilState} from "recoil";
-import {l1Metroplan} from "../../services/atoms";
+import {l1Metroplan, l1MetroplanCheckbox} from "../../services/atoms";
 
 function Metroplan() {
     const [metroplan, setMetroplan] = useRecoilState(l1Metroplan);
+    const [metroplanCheckbox, setMetroplanCheckbox] = useRecoilState(l1MetroplanCheckbox);
     return (
         <div className="container">
             <form>
@@ -15,6 +16,13 @@ function Metroplan() {
                     value={metroplan}
                     placeholder="Bildlink hier einfügen"
                     onChange={(e) => setMetroplan(e.target.value)}
+                />
+                <div>Metroplan deaktivieren?:</div>
+                <input
+                    type="checkbox"
+                    className="modulplancheckbox"
+                    checked={metroplanCheckbox}
+                    onChange={(e) => setMetroplanCheckbox(e.target.checked)}
                 />
             </form>
         </div>

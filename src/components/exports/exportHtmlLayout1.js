@@ -1,8 +1,8 @@
 
 
 export default function makeHtml(l1welcomeBackground, l1welcomeHeadline, l1welcomeCourseName,
-                                 l1welcomeCourseName2, l1courseEntry,l1modulplan, l1courseNr,
-                                 l1boxes, l1contactBoxes) {
+                                 l1welcomeCourseName2, l1courseEntry,l1modulplan, l1modulplanCheckbox,
+                                 l1courseNr, l1boxes, l1contactBoxes) {
     const overviewBoxes = l1boxes.map((box, index) => `
         <a href="/courses/${l1courseNr}/modules/${box.modullink}" class="l1OverviewCard" key={box.id}>
                     <div class="l1OverviewNumber">
@@ -34,6 +34,7 @@ export default function makeHtml(l1welcomeBackground, l1welcomeHeadline, l1welco
             </div>
         </div>
     `).join('');
+    const metroplan = l1modulplanCheckbox ? '' : `<img class="l2MetroPlanImage" alt="Metroplan" src="${l1modulplan}" />`;
     return `<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -66,7 +67,7 @@ export default function makeHtml(l1welcomeBackground, l1welcomeHeadline, l1welco
             </div>
         </div>
         <div class="l2MetroplanBox">
-            <img class="l2MetroPlanImage" alt="Metroplan" src="${l1modulplan}" />
+            ${metroplan}
         </div>
         <div class="l2OverviewBigBox">
             ${overviewBoxes}

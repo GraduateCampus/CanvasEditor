@@ -6,6 +6,7 @@ export default function makeHtml2(
     l2courseEntry,
     l2courseNr,
     l2modulplan,
+    l2modulplanCheckbox,
     l2contactBoxes,
     l2boxes
 ) {
@@ -28,6 +29,7 @@ export default function makeHtml2(
             </div>
         </div>
     `).join('');
+    const metroplan = l2modulplanCheckbox ? '' : `<img class="l2MetroPlanImage" alt="Metroplan" src="${l2modulplan}" />`;
     return `<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -60,7 +62,7 @@ export default function makeHtml2(
             </div>
         </div>
         <div class="l2MetroplanBox">
-            <img class="l2MetroPlanImage" alt="Metroplan" src="${l2modulplan}" />
+            ${metroplan}
         </div>
         <div class="l2OverviewBigBox">
             ${overviewBoxes}
