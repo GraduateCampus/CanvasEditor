@@ -51,7 +51,7 @@ import {
     l1OverviewBoxes,
     l1ContactBoxes,
     l2MetroplanCheckbox,
-    l1MetroplanCheckbox,
+    l1MetroplanCheckbox
 } from "./services/atoms";
 import React, {useState} from "react";
 import {useRecoilState, useRecoilValue, useResetRecoilState} from "recoil";
@@ -92,6 +92,7 @@ function Header (index) {
     const l2modulplanCheckbox = useRecoilValue(l2MetroplanCheckbox);
     const l2boxes = useRecoilValue(l2OverviewBoxes);
     const l2contactBoxes = useRecoilValue(l2ContactBoxes);
+    const l2avatar = useRecoilValue(l2Avatar);
     /* Learniac States: */
     const lcWelcomeImage = useRecoilValue(learniacWelcomeImage);
     const lcModulButton = useRecoilValue(learniacModulButton);
