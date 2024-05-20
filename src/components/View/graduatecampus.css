@@ -1200,8 +1200,6 @@ font-weight: 100-900
     display: grid;
     justify-content: space-between;
     grid-template-columns: repeat(2, 1fr);
-    gap: 100px;
-    grid-template-rows: 500px;
     align-items: start;
     background: #6A6969;
     border-radius: 10px;
@@ -1219,7 +1217,7 @@ font-weight: 100-900
     font-size: 1.4em;
 }
 .l2ContactBoxIcon {
-    width: 70%;
+    width: 50%;
     height: auto;
     border-radius: 50%;
     overflow: hidden;
@@ -1262,6 +1260,9 @@ font-weight: 100-900
     }
     .l2ContactBoxAvatar {
         height: auto;
+    }
+    .l2ContactBoxIcon {
+        width: 30%;
     }
 }
 /* Layout von Ali */
