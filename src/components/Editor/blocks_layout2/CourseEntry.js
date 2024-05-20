@@ -23,7 +23,6 @@ function CourseEntry() {
                 value={courseNr}
                 placeholder="Kursnummer hier einfügen"
                 onChange={(e) => setCourseNr(e.target.value)}
-
             />
             </form>
         </div>

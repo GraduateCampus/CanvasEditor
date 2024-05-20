@@ -951,6 +951,7 @@ font-weight: 100-900
     flex-direction: column;
     align-items: center;
     text-decoration: none !important;
+    text-align: center;
 }
 .l1OverviewCard h1 {
     font-family: Oswald;
@@ -963,6 +964,7 @@ font-weight: 100-900
     width: 100%;
     padding: 20px 10px 20px 50px;
     font-family: Oswald;
+    text-align: left;
 }
 .l1OverviewIcon {
     width: 150px;
@@ -973,12 +975,21 @@ font-weight: 100-900
     justify-content: center;
     align-items: center;
     background-color: #8c7c02;
-    margin-top: -10%;
+    margin-top: calc((-105px - 3rem) / 2);
+    /*
+    -40px padding from ovNumber
+    +10px from some margin??
+    -75px from iconHeight
+    -3rem from font-size
+     */
 }
 .l1OverviewIcon img {
     width: 50%;
     height: auto;
     object-fit: cover;
+}
+.l1OverviewCard h1 {
+    margin: 20px;
 }
 .l1OverviewTextbox {
     text-align: center;
@@ -1078,6 +1089,10 @@ font-weight: 100-900
     font-style: normal;
     font-weight: 400;
     font-size: 1vw;
+}
+.courseEntryBoxButtons {
+    display: flex;
+    flex-direction: row-reverse;
 }
 .l2CourseEntryBoxButton {
     padding: 10px 20px;
@@ -1184,12 +1199,13 @@ font-weight: 100-900
 .l2ContactBox {
     display: grid;
     justify-content: space-between;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 100px;
     grid-template-rows: 500px;
     align-items: start;
+    background: #6A6969;
+    border-radius: 10px;
 }
-
 .l2ContactBoxCard {
     background: #6A6969;
     color: #ffffff;

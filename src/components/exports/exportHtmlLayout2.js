@@ -56,9 +56,12 @@ export default function makeHtml2(
             <img class="l2CourseEntryBoxRakete" src="https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/rakete2.png?raw=true"/>
             </div>
             <div class="l2CourseEntryTextBox">
-            <h1 class="l2CourseEntryBoxHeadline">Kurseinstieg</h1>
-            <p class="l2CourseEntryBoxText">${l2courseEntry}</p>
-            <a class="l2CourseEntryBoxButton" href="/courses/${l2courseNr}/modules">Direkt zu den Modulen</a>
+                <h1 class="l2CourseEntryBoxHeadline">Kurseinstieg</h1>
+                <p class="l2CourseEntryBoxText">${l2courseEntry}</p>
+                <div class="courseEntryBoxButtons">
+                    <a class="helpingPage" href="https://graduatecampus.instructure.com/courses/1717" target="_blank">Hilfe für den Kurseinstieg</a>
+                    <a class="l2CourseEntryBoxButton" href="/courses/${l2courseNr}/modules">Direkt zu den Modulen</a>
+                </div>
             </div>
         </div>
         <div class="l2MetroplanBox">
@@ -66,13 +69,6 @@ export default function makeHtml2(
         </div>
         <div class="l2OverviewBigBox">
             ${overviewBoxes}
-        </div>
-        <div class="newCanvasBox">
-            <div class="newCanvasBoxText">
-                <p class="newCanvasHeadline">Neu bei Canvas?</p>
-                <p class="newCanvasText"> Weitere Informationen zu Canvas finden Sie hier:</p>
-            </div>
-            <a class="newCanvasButton" href="https://graduatecampus.instructure.com/courses/354" target="_blank">Zu Canvas Videotutorials</a>
         </div>
         <div class="l2ContactBox">
             ${contactBoxes}
