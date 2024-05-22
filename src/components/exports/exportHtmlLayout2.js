@@ -8,13 +8,13 @@ export default function makeHtml2(
     l2modulplan,
     l2modulplanCheckbox,
     l2contactBoxes,
-    l2boxes
+    l2boxes,
+    l2avatar
 ) {
     const overviewBoxes = l2boxes.map((box, index) => `
         <a href="/courses/${l2courseNr}/modules" class="l2OverviewBox" type="button">
             <img src="${box.gifLink}" alt="Gif for box ${index + 1}" />
             ${box.titles.map((item,idx) => `<a href="/courses/${l2courseNr}/modules/${item.nummer}" class="l2OverviewTitles">${idx + 1}. ${item.test}</a>`).join('')}
-        </a>
     `).join('');
     const contactBoxes = l2contactBoxes.map((box, index) => `
         <div class="l2ContactBoxCard">

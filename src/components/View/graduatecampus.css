@@ -998,7 +998,7 @@ font-weight: 100-900
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 0 50px 20px 50px;
+    padding: 0 20px 20px 20px;
     box-sizing: border-box;
 }
 .l1OverviewTextbox img {
@@ -1027,7 +1027,6 @@ font-weight: 100-900
     border-radius: 10px;
 }
 .l2WelcomeBoxBackground {
-    width: 50%;
     height: auto;
     object-fit: cover;
     object-position: center;
@@ -1047,6 +1046,7 @@ font-weight: 100-900
     font-size: 2vw;
     font-family: Oswald;
     margin: 0;
+    width: 50%;
 }
 .l2CourseEntryBox {
     display: flex;
@@ -1100,7 +1100,7 @@ font-weight: 100-900
     font-weight: 400;
     text-align: center;
     text-decoration: none !important;
-    border-radius: 15px;
+    border-radius: 10px;
     align-self: flex-end;
     margin-right: 20px;
     white-space: nowrap;
@@ -1108,11 +1108,13 @@ font-weight: 100-900
 .l2MetroplanBox {
     width: 100%;
     overflow: hidden;
+    border-radius: 10px;
 }
 .l2MetroplanImage {
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 10px;
 }
 .l2OverviewBigBox {
     width: 100%;
@@ -1126,7 +1128,6 @@ font-weight: 100-900
 .l2OverviewBox {
     background-color: #F2F2F2;
     border-radius: 20px;
-    height: 100%;
     padding: 10px;
     text-decoration: none !important;
 }
@@ -1136,6 +1137,7 @@ font-weight: 100-900
     object-fit: contain;
     object-position: center;
     max-height: 250px;
+    margin-bottom: 1vw;
 }
 .l2OverviewTitles {
     padding: 20px 20px 20px 20px;
@@ -1147,6 +1149,8 @@ font-weight: 100-900
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
     border-radius: 20px;
+    text-decoration: none !important;
+    margin-bottom: 1vw;
 }
 .newCanvasBox {
     display: flex;
@@ -1155,7 +1159,7 @@ font-weight: 100-900
     padding: 20px;
     max-height: 200px;
     background-image: linear-gradient(to bottom right, #e8dca0, #d9c65a );
-    border-radius: 20px;
+    border-radius: 10px;
     min-height: 200px;
 }
 .newCanvasBoxText {
@@ -1179,7 +1183,6 @@ font-weight: 100-900
     margin: 0;
 }
 .newCanvasButton {
-    width: 20%;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none !important;
@@ -1204,7 +1207,7 @@ font-weight: 100-900
 .l2ContactBoxCard {
     background: #6A6969;
     color: #ffffff;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 20px;
     text-align: center;
     display: flex;
@@ -1251,7 +1254,7 @@ font-weight: 100-900
     font-style: normal;
     font-weight: 300;
 }
-@media only screen and (min-width: 1800px) {
+@media only screen and (min-width: 2000px) {
     .l1OverviewIcon {
         margin-top: -5%;
     }
