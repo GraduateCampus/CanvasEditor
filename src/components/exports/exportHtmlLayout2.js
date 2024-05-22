@@ -29,7 +29,10 @@ export default function makeHtml2(
             </div>
         </div>
     `).join('');
-    const metroplan = l2modulplanCheckbox ? '' : `<img class="l2MetroPlanImage" alt="Metroplan" src="${l2modulplan}" />`;
+    const metroplan = l2modulplanCheckbox ? '' :
+        `<div class="l2MetroplanBox">
+            <img class="l2MetroPlanImage" alt="Metroplan" src="${l2modulplan}" />
+        </div>`;
     return `<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -59,14 +62,12 @@ export default function makeHtml2(
                 <h1 class="l2CourseEntryBoxHeadline">Kurseinstieg</h1>
                 <p class="l2CourseEntryBoxText">${l2courseEntry}</p>
                 <div class="courseEntryBoxButtons">
-                    <a class="helpingPage" href="https://graduatecampus.instructure.com/courses/1717" target="_blank">Hilfe für den Kurseinstieg</a>
+                    <a class="l2CourseEntryBoxButton" href="https://graduatecampus.instructure.com/courses/1717" target="_blank">Hilfe für den Kurseinstieg</a>
                     <a class="l2CourseEntryBoxButton" href="/courses/${l2courseNr}/modules">Direkt zu den Modulen</a>
                 </div>
             </div>
         </div>
-        <div class="l2MetroplanBox">
-            ${metroplan}
-        </div>
+        ${metroplan}
         <div class="l2OverviewBigBox">
             ${overviewBoxes}
         </div>
