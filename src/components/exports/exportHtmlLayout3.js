@@ -1,14 +1,35 @@
-export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcPointWelcomeHeader,
-                                  lcPointWelcomeText, lcPointWelcomeImage, lcModulbutton,
-                                  lcModulButtonText, lcPointUnitsHeader, lcPointUnitsText,
-                                  lcPointUnits, lcPointUnitsNumber, lcPointUnitsImage, lcPointCourseHeader, lcPointCourseText,
-                                  lcPointCourseImage, lcPointLearningHeader, lcPointLearningText,
-                                  lcPointLearningImage, lcPointInfoHeader, lcPointInfoText,
-                                  lcPointInfoImage, lcRocketText, lcContactsHeader, lcContactsHeader2,
-                                  lcContactsText, lcContactName, lcContactPhone,
-                                  lcContactMobil, lcContactMail) {
-
-    return `<!DOCTYPE html>
+export default function makeHtml3(
+  lcWelcomeImage,
+  lcWelcomeText,
+  lcPointWelcomeHeader,
+  lcPointWelcomeText,
+  lcPointWelcomeImage,
+  lcModulbutton,
+  lcModulButtonText,
+  lcPointUnitsHeader,
+  lcPointUnitsText,
+  lcPointUnits,
+  lcPointUnitsNumber,
+  lcPointUnitsImage,
+  lcPointCourseHeader,
+  lcPointCourseText,
+  lcPointCourseImage,
+  lcPointLearningHeader,
+  lcPointLearningText,
+  lcPointLearningImage,
+  lcPointInfoHeader,
+  lcPointInfoText,
+  lcPointInfoImage,
+  lcRocketText,
+  lcContactsHeader,
+  lcContactsHeader2,
+  lcContactsText,
+  lcContactName,
+  lcContactPhone,
+  lcContactMobil,
+  lcContactMail
+) {
+  return `<!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -23,7 +44,6 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcPointWelcomeH
     <div class="everything">
         <div class="lvWelcomeBox col-11">
             <span class="lvWelcomeCourse">${lcWelcomeText}</span>
-                <img class="lvHeaderImage" alt="HeaderImage" src=${lcWelcomeImage}/>
         </div>
         <div class="lvTimeline col-11">
             <div class="lvContainer">
@@ -52,7 +72,11 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcPointWelcomeH
                 <div class="lvContent pointUnitsbg">
                     <h1 class="lvPointUnitsHeader lvContentHeadline">${lcPointUnitsHeader}</h1>
                     <div class="lvPointUnitsText lvContentText">${lcPointUnitsText}</div>
-                        ${makeUnits(lcPointUnits, lcPointUnitsNumber, lcModulbutton)}
+                        ${makeUnits(
+                          lcPointUnits,
+                          lcPointUnitsNumber,
+                          lcModulbutton
+                        )}
                 </div>         
             </div>
             <div class="lvContainer">
@@ -92,20 +116,21 @@ export default function makeHtml3(lcWelcomeImage, lcWelcomeText, lcPointWelcomeH
                 <a href="mailto:${lcContactMail}" class="lvContactMail">${lcContactMail}</a>
             </div>
         </div>
-        <img class="learniacLogo" alt="LEARNIAC" src="https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/Learniac.png?raw=true" />
     </div>
     </body>
     </html>
     `;
 }
 function makeUnits(lcPointUnits, lcPointUnitsNumber, lcModulbutton) {
-    let unitBox = `<ul class="lvPointUnits lvContentText">`;
-    lcPointUnits.map((units, index) => {
-        let newUnits =`    
-                        <li><a class="lvUnits" href="https://graduatecampus.instructure.com/courses/${lcModulbutton}/modules#module_${lcPointUnitsNumber[index]}">&emsp;${index+1}. ${units}</a></li>`;
-        unitBox += newUnits;
-    });
-    unitBox +=`
+  let unitBox = `<ul class="lvPointUnits lvContentText">`;
+  lcPointUnits.map((units, index) => {
+    let newUnits = `    
+                        <li><a class="lvUnits" href="https://graduatecampus.instructure.com/courses/${lcModulbutton}/modules#module_${
+      lcPointUnitsNumber[index]
+    }">&emsp;${index + 1}. ${units}</a></li>`;
+    unitBox += newUnits;
+  });
+  unitBox += `
                         </ul>`;
-    return unitBox;
+  return unitBox;
 }
