@@ -1,5 +1,4 @@
 export default function makeHtml3(
-  lcWelcomeImage,
   lcWelcomeText,
   lcPointWelcomeHeader,
   lcPointWelcomeText,

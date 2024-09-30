@@ -1,4 +1,4 @@
-import { atom, atomFamily, DefaultValue, selector } from "recoil";
+import { atom, DefaultValue, selector } from "recoil";
 export const modalState = atom({
   key: "modalState",
   default: false,
