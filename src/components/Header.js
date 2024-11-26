@@ -118,7 +118,7 @@ function Header(index) {
   const [lcPointUnitsText, setLcPointUnitsText] = useRecoilState(
     learniacPointUnitsText
   );
-  const [lcPointUnits, setLcPointUnits] = useRecoilState(learniacPointUnits);
+  const [lcPointUnits] = useRecoilValue(learniacPointUnits);
   const lcPointUnitsNumber = useRecoilValue(learniacPointUnitsNumber);
   const lcPointUnitsImage = useRecoilValue(learniacPointUnitsImage);
   const [lcPointLearningHeader, setLcPointLearningHeader] = useRecoilState(
@@ -360,6 +360,7 @@ function Header(index) {
           </button>
           <img
             className="modal-content"
+            alt="Info Button"
             src="https://github.com/GraduateCampus/CanvasEditor/blob/main/src/components/images/Infobutton%20CanvasEditor.png?raw=true"
           />
         </div>

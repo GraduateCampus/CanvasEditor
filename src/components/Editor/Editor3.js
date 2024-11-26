@@ -77,7 +77,7 @@ function Editor3() {
             className={`editor-button ${showLinks ? "active" : ""}`}
             onClick={() => setShowLinks(!showLinks)}
           >
-            Kursnummer + DonwloadLink
+            Kursnummer + DownloadLink
           </button>
           {showLinks && <Links />}
         </li>

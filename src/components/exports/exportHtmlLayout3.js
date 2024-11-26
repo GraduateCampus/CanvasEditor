@@ -123,6 +123,7 @@ export default function makeHtml3(
 }
 function makeUnits(lcPointUnits, lcPointUnitsNumber, lcModulbutton) {
   let unitBox = `<ul class="lvPointUnits lvContentText">`;
+  // eslint-disable-next-line array-callback-return
   lcPointUnits.map((units, index) => {
     let newUnits = `    
                         <li><a class="lvUnits" href="https://graduatecampus.instructure.com/courses/${lcModulbutton}/modules#module_${
