@@ -118,7 +118,7 @@ function Header(index) {
   const [lcPointUnitsText, setLcPointUnitsText] = useRecoilState(
     learniacPointUnitsText
   );
-  const [lcPointUnits] = useRecoilValue(learniacPointUnits);
+  const lcPointUnits = useRecoilValue(learniacPointUnits);
   const lcPointUnitsNumber = useRecoilValue(learniacPointUnitsNumber);
   const lcPointUnitsImage = useRecoilValue(learniacPointUnitsImage);
   const [lcPointLearningHeader, setLcPointLearningHeader] = useRecoilState(
