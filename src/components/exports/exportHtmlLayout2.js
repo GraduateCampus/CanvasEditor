@@ -1,22 +1,34 @@
 export default function makeHtml2(
-    l2welcomeBackground,
-    l2welcomeHeadline,
-    l2welcomeCourseName,
-    l2welcomeCourseName2,
-    l2courseEntry,
-    l2courseNr,
-    l2modulplan,
-    l2modulplanCheckbox,
-    l2contactBoxes,
-    l2boxes,
-    l2avatar
+  l2welcomeBackground,
+  l2welcomeHeadline,
+  l2welcomeCourseName,
+  l2welcomeCourseName2,
+  l2courseEntry,
+  l2courseNr,
+  l2modulplan,
+  l2modulplanCheckbox,
+  l2contactBoxes,
+  l2boxes
 ) {
-    const overviewBoxes = l2boxes.map((box, index) => `
+  const overviewBoxes = l2boxes
+    .map(
+      (box, index) => `
         <a href="/courses/${l2courseNr}/modules" class="l2OverviewBox" type="button">
             <img src="${box.gifLink}" alt="Gif for box ${index + 1}" />
-            ${box.titles.map((item,idx) => `<a href="/courses/${l2courseNr}/modules/${item.nummer}" class="l2OverviewTitles">${idx + 1}. ${item.test}</a>`).join('')}
-    `).join('');
-    const contactBoxes = l2contactBoxes.map((box, index) => `
+            ${box.titles
+              .map(
+                (item, idx) =>
+                  `<a href="/courses/${l2courseNr}/modules/${
+                    item.nummer
+                  }" class="l2OverviewTitles">${idx + 1}. ${item.test}</a>`
+              )
+              .join("")}
+    `
+    )
+    .join("");
+  const contactBoxes = l2contactBoxes
+    .map(
+      (box, index) => `
         <div class="l2ContactBoxCard">
             <div class="l2ContactBoxIcon">
                 <img src="${box.icon}" alt="Icon for box ${index + 1}" />
@@ -28,12 +40,15 @@ export default function makeHtml2(
             <a href="mailto:${box.mail}">${box.mail}</a>
             </div>
         </div>
-    `).join('');
-    const metroplan = l2modulplanCheckbox ? '' :
-        `<div class="l2MetroplanBox">
+    `
+    )
+    .join("");
+  const metroplan = l2modulplanCheckbox
+    ? ""
+    : `<div class="l2MetroplanBox">
             <img class="l2MetroPlanImage" alt="Metroplan" src="${l2modulplan}" />
         </div>`;
-    return `<!DOCTYPE html>
+  return `<!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8" />
