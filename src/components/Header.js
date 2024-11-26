@@ -51,6 +51,7 @@ import {
   l1ContactBoxes,
   l2MetroplanCheckbox,
   l1MetroplanCheckbox,
+  learniacDownloadButtonLink,
 } from "./services/atoms";
 import React, { useState } from "react";
 import { useRecoilState, useRecoilValue, useResetRecoilState } from "recoil";
@@ -147,6 +148,7 @@ function Header(index) {
   const lcContactPhone = useRecoilValue(learniacContactsPhone);
   const lcContactMobil = useRecoilValue(learniacContactsMobil);
   const lcContactMail = useRecoilValue(learniacContactsMail);
+  const lcDownloadLink = useRecoilValue(learniacDownloadButtonLink);
   const [data, setData] = useRecoilState(dataState);
 
   const showTab = (id) => {
@@ -227,7 +229,8 @@ function Header(index) {
       lcContactName,
       lcContactPhone,
       lcContactMobil,
-      lcContactMail
+      lcContactMail,
+      lcDownloadLink
     );
     setData(index);
   };

@@ -26,7 +26,8 @@ export default function makeHtml3(
   lcContactName,
   lcContactPhone,
   lcContactMobil,
-  lcContactMail
+  lcContactMail,
+  lcDownloadLink
 ) {
   return `<!DOCTYPE html>
     <html lang="en">
@@ -85,7 +86,7 @@ export default function makeHtml3(
                 <div class="lvContent pointLearningbg">
                     <h1 class="lvPointLearningHeader lvContentHeadline">${lcPointLearningHeader}</h1>
                     <div class="lvPointLearningText lvContentText">${lcPointLearningText}</div>
-                        <a href="https://graduatecampus.instructure.com/files/56220/download?download_frd=1" class="lvDownloadButton">Download</a>
+                        <a href="${lcDownloadLink}" class="lvDownloadButton">Download</a>
                 </div>            
             </div>
             <div class="lvContainer">

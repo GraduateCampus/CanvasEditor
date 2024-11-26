@@ -230,6 +230,11 @@ export const learniacModulButtonText = atom({
   key: "learniacModulButtonText",
   default: "Zu den Modulen",
 });
+export const learniacDownloadButtonLink = atom({
+  key: "learniacDownloadButtonLink",
+  default:
+    "https://graduatecampus.instructure.com/files/56220/download?download_frd=1",
+});
 export const selectEverything = selector({
   key: "everything",
   get: ({ get }) => {
